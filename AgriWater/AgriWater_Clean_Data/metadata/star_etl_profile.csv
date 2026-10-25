@@ -1,0 +1,41 @@
+﻿source_table,source_rows,warehouse_rows,excluded_rows,transform_summary
+district,11,11,0,Preserved source IDs and parent administration hierarchy.
+grid_point,38,38,0,One location dimension row per project grid point; not treated as parcel boundary.
+season,17,17,0,Season-year dimension; canonical source boundaries preserved; study-only years have no invented start/end dates.
+data_source,21,21,0,Retained publisher/source URLs and lineage.
+literature_study,18,18,0,One study dimension per publication; methods and limitations retained.
+crop_reference,7,7,0,Aliases indexed for previous-crop matching; Rice mapped to the existing reference member.
+rice_variety + rice_variety_reference,37,19,0,One row per variety; catalog traits joined by declared variety ID; placeholder flagged.
+rice_variety_field_guide,14,14,0,Dated variety-guide snapshots retained separately from catalogue traits; source ranges are not collapsed.
+source date columns,3585,3585,0,Only ISO dates parsed into calendar keys; free-text windows remain unparsed.
+weather_daily,1089840,1089840,0,Long-form weather fact; NULL values preserved and flagged; NASA/grid status retained.
+soil_point + soil_awc,76,292,0,Soil and AWC columns unpivoted to property rows; map/interpolated status preserved. Organic-carbon and bulk-density units flagged for review.
+rice_daily_water_demand,46550,46550,0,ET0/ETc retained as derived crop-water estimates; not relabelled as irrigation volume.
+water_scenario_by_variety*,14364,14364,0,Separate water-model dimension and version-specific seasonal scenario fact; v3 is identifiable and legacy records are not pooled.
+regional_stats,7,7,0,Regional crop area/production/yield kept at reported scale and source level.
+literature_trial_result,470,470,0,Trial outcomes linked to study/year/variety/treatment/metric; source units retained with explicit standard unit where supported.
+literature_trial_observation,688,688,0,Published trial observations linked to study/year/metric; previous crop aliases matched where unambiguous.
+literature_environmental_measurement,104,104,0,"Measurements separated by sample kind, treatment and study; original unit/status preserved."
+literature_evidence,19,19,0,Qualitative assertions retained as non-additive evidence; not mixed into numeric measures.
+crop_calendar,7,7,0,Textual windows are preserved verbatim; only exact date columns can become date keys.
+agronomy_recommendation + ministry_rule,30,30,0,"Unified guidance fact keeps source type, scope, validity, confidence and review notes distinct."
+plant_protection_reference,5,5,0,Preserved as reference guidance; records lacking product/rate/PHI are flagged non-operational.
+pump_catalog_series,6,6,0,Catalog families retained; no matched flow/head pair inferred.
+irrigation_method,2,2,0,Method reference dimension.
+machinery_inventory,1,1,0,Aggregate machinery inventory retained at published geographic level; not interpreted as farmer pump inventory.
+point_season_summary,266,266,0,Per-location season summary retained with weather coverage/readiness flags; estimates are labelled as estimates.
+water_scenario,266,266,0,Baseline per-location scenarios kept separately from variety-specific model versions.
+crop_water_parameter,10,10,0,"Water coefficients/assumptions retained with stage, range, source and validity conditions."
+pump_type,0,0,0,Installed pump dimension defined; current source has no rows.
+field,0,0,0,Parcel dimension defined; no parcel records imported.
+sentinel2_scene + sentinel2_shortlist,3894,3775,0,Scene metadata and shortlist flags retained; imagery indices not downloaded or calculated.
+field_season,0,0,0,"Future field-level fact structure exists; source table is empty, so no synthetic rows were created."
+irrigation_event,0,0,0,"Future field-level fact structure exists; source table is empty, so no synthetic rows were created."
+field_operation,0,0,0,"Future field-level fact structure exists; source table is empty, so no synthetic rows were created."
+crop_history,0,0,0,"Future field-level fact structure exists; source table is empty, so no synthetic rows were created."
+canal_schedule,0,0,0,"Future field-level fact structure exists; source table is empty, so no synthetic rows were created."
+groundwater_level,0,0,0,"Future field-level fact structure exists; source table is empty, so no synthetic rows were created."
+soil_salinity,0,0,0,"Future field-level fact structure exists; source table is empty, so no synthetic rows were created."
+vegetation_index,0,0,0,"Future field-level fact structure exists; source table is empty, so no synthetic rows were created."
+database_metadata,37,37,0,Release metadata retained in the source; it does not describe a measurement grain.
+sentinel2_shortlist,119,119,0,Shortlist membership is represented on the satellite-scene fact.

@@ -1,0 +1,16 @@
+{
+  "dataset": "Rice variety field guide, May 2025",
+  "retrieved_on": "2026-10-25",
+  "source_url": "https://misrelzraea.com/محصول-الأرز-توصيات-مايو-2025-للمزارعين/",
+  "claimed_issuer": "Egypt Ministry of Agriculture and Land Reclamation, Agricultural Extension Sector; republished by Egypt Agricultural Portal",
+  "source_date": "2025-05-22",
+  "coverage": "13 varieties matched to the existing ARC rice_variety dimension; published maturity, yield, planting spacing, fertilizer and stress/salinity notes where present.",
+  "method": "Manual transcription from the public article, retaining variety-specific fields only where stated. Missing values remain blank.",
+  "limitations": [
+    "This is a dated extension bulletin repost, not a current seed availability or approval list.",
+    "Published yield values are not guarantees or field measurements from Kafr El-Sheikh farms.",
+    "The guide reports different Sakha 109 characteristics from other ARC catalogue listings; records remain separate and the discrepancy is flagged.",
+    "Giza 182's stated 25-30 percent water saving claim has no comparison protocol in the captured entry; it is retained as a note, not converted to a water quantity.",
+    "No full field irrigation calendar or machine run-time curve is supplied by this source."
+  ]
+}

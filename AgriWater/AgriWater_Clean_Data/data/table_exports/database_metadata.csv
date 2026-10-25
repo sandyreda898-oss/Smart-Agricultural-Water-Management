@@ -1,0 +1,38 @@
+﻿item,details
+project,"AgriWater - rice and water analysis, Kafr El-Sheikh"
+period,2017-2023
+database_created_from,data/processed CSV source files
+source_files_modified,No
+sentinel2_imagery,Not downloaded; scene catalog excluded
+import_policy,Source values imported as TEXT to preserve them
+validation_note,"Review types, missing values, units, and relationships before analysis"
+schema_version,"v2 - normalized, built by build_agriwater_db.py"
+arc_rice_varieties_import,4 varieties from ARC product catalogue; imported 20261024_161255; catalogue yield figures are not local yield guarantees.
+rice_variety_reference_arc_import,Source: https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1; accessed: 2026-10-25; curated catalogue rows: 18; Sakha 109 conflicting catalogue traits withheld.
+ghazy2019_giza179_trial_import,DOI: 10.21608/jpp.2019.77743; source: https://jpp.journals.ekb.eg/article_77743_f9b526e5d27c1bf722163cd4fc68665d.pdf; curated observations: 48; research-station results only; absolute treatment irrigation volumes are not in this extract.
+reference_quality_repair,20261025_115621; corrected negative HWSD2 nodata sentinel; added explicit numeric min/max fields to crop_water_parameter; backup=agriwater_v2_before_quality_repair_20261025_115621.sqlite
+reference_quality_repair,20261025_115719; corrected negative HWSD2 nodata sentinel; added explicit numeric min/max fields to crop_water_parameter; backup=agriwater_v2_before_quality_repair_20261025_115719.sqlite
+reference_quality_repair,20261025_120003; corrected negative HWSD2 nodata sentinel; added explicit numeric min/max fields to crop_water_parameter; backup=agriwater_v2_before_quality_repair_20261025_120003.sqlite
+reference_quality_repair,20261025_120613; corrected negative HWSD2 nodata sentinel; added explicit numeric min/max fields to crop_water_parameter; backup=agriwater_v2_before_quality_repair_20261025_120613.sqlite
+reference_quality_repair,20261025_121223; corrected negative HWSD2 nodata sentinel; added explicit numeric min/max fields to crop_water_parameter; backup=agriwater_v2_before_quality_repair_20261025_121223.sqlite
+ministry_rule_review,Existing press-derived records are tagged SECONDARY_PRESS_UNVERIFIED and excluded from operational recommendations pending primary official sources.
+kfs_previous_crop_soil_trial,"Imported 104 published treatment/crop/depth means from El-Henawy (2013), Kafr El-Sheikh experiment season 2007. Research-farm evidence only; not transferable as parcel measurements."
+sakha_soil_baseline_2016_2017,Imported 20 published soil property/nutrient values from Sakha RRTC site; not field-specific.
+kfs_previous_crop_soil_trial,"Imported 104 published treatment/crop/depth means from El-Henawy (2013), Kafr El-Sheikh experiment season 2007. Research-farm evidence only; not transferable as parcel measurements."
+sakha_previous_rice_history_evidence,One published 15-site study-level evidence record from near Sakha; not farmer field predictions or plot-level labels.
+sakha_soil_baseline_2016_2017,Imported 20 published soil property/nutrient values from Sakha RRTC site; not field-specific.
+kfs_previous_crop_soil_trial,"Imported 104 published treatment/crop/depth means from El-Henawy (2013), Kafr El-Sheikh experiment season 2007. Research-farm evidence only; not transferable as parcel measurements."
+sakha_previous_rice_history_evidence,One published 15-site study-level evidence record from near Sakha; not farmer field predictions or plot-level labels.
+kfs_previous_crop_soil_trial,"Imported 104 published treatment/crop/depth means from El-Henawy (2013), Kafr El-Sheikh experiment season 2007. Research-farm evidence only; not transferable as parcel measurements."
+sakha_soil_baseline_2016_2017,Imported 20 published soil property/nutrient values from Sakha RRTC site; not field-specific.
+sakha_previous_rice_history_evidence,One published 15-site study-level evidence record from near Sakha; not farmer field predictions or plot-level labels.
+tag_el_ezz_previous_crop_trial,"Imported 20 published treatment-factor means from Dakahlia station experiment, 2000-2001; comparator evidence only, not Kafr El-Sheikh parcel values."
+darwesh_sakha_trial_2013_2014,"Imported 288 transcribed table values: irrigation/yield/water productivity (Tables 3-4), soil profile (Table 2), monthly climate (Table 1). Station experiment only; source https://jssae.journals.ekb.eg/article_39351_2bc01450304a3b34c9f247b4a7d2d871.pdf"
+darwesh_sakha_trial_2013_2014,"Imported 288 transcribed table values: irrigation/yield/water productivity (Tables 3-4), soil profile (Table 2), monthly climate (Table 1). Station experiment only; source https://jssae.journals.ekb.eg/article_39351_2bc01450304a3b34c9f247b4a7d2d871.pdf"
+darwesh_sakha_trial_2013_2014,"Imported 288 transcribed table values: irrigation/yield/water productivity (Tables 3-4), soil profile (Table 2), monthly climate (Table 1). Station experiment only; source https://jssae.journals.ekb.eg/article_39351_2bc01450304a3b34c9f247b4a7d2d871.pdf"
+darwesh_sakha_trial_2013_2014,"Imported 288 transcribed table values: irrigation/yield/water productivity (Tables 3-4), soil profile (Table 2), monthly climate (Table 1). Station experiment only; source https://jssae.journals.ekb.eg/article_39351_2bc01450304a3b34c9f247b4a7d2d871.pdf"
+moursi_sakha_water_components_2012_2013,"Imported 144 published observations from Tables 1, 3, 4, 5 and results text; location-specific station results, not field labels. Source: https://asejaiqjsae.journals.ekb.eg/article_2859_6ce5a0229c306dd687cba488da0d80a1.pdf"
+ghazy_sakha106_water_trial_2022_2023,"Imported 22 Table 8 observations: irrigation volume, yield, water saving, WUE by irrigation interval and season. Marginal experiment means; not field labels. Source https://jenvbs.journals.ekb.eg/article_381943_b6ecf5a9d1e34c93ee93c4aa9ae8bd96.pdf"
+eid_north_delta_trial_2023_2024,Imported 54 numeric Table 3 values from regional Northern Nile Delta rice study. Exact site and cultivar not recorded in this table extract. Source: https://ejss.journals.ekb.eg/article_454852_c802bb5b9041bcd26fd8efe4eebbce92.pdf
+abou_el_hassan_karada_2014_2015,Imported 36 Table 8 treatment means for 2014-2015. Table/abstract discrepancy retained: 2014 W_MT water saving is 6.33% in Table 8 and 6.37% in abstract. Source https://jssae.journals.ekb.eg/article_37229_e5bf0274832efce6190833e3b1117c5b.pdf
+establishment_method,"Rice establishment mode captured as transplanted, direct_seeded, or not_sure; nullable for historical records."

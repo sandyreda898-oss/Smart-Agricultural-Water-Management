@@ -1,0 +1,8 @@
+﻿year,country,governorate,governorate_ar,crop,season,area_feddan,production_ton,governorate_yield_ton_per_feddan,data_level
+2017,Egypt,Kafr El Sheikh,كفر الشيخ,Rice,Summer,258338,1026424,3.9732,GOVERNORATE_YEAR_AGGREGATE_NOT_FIELD_LABEL
+2018,Egypt,Kafr El Sheikh,كفر الشيخ,Rice,Summer,190460,760126,3.991,GOVERNORATE_YEAR_AGGREGATE_NOT_FIELD_LABEL
+2019,Egypt,Kafr El Sheikh,كفر الشيخ,Rice,Summer,265903,1060012,3.9865,GOVERNORATE_YEAR_AGGREGATE_NOT_FIELD_LABEL
+2020,Egypt,Kafr El Sheikh,كفر الشيخ,Rice,Summer,256127,1023101,3.9945,GOVERNORATE_YEAR_AGGREGATE_NOT_FIELD_LABEL
+2021,Egypt,Kafr El Sheikh,كفر الشيخ,Rice,Summer,251857,1025309,4.071,GOVERNORATE_YEAR_AGGREGATE_NOT_FIELD_LABEL
+2022,Egypt,Kafr El Sheikh,كفر الشيخ,Rice,Summer,244143,972145,3.9819,GOVERNORATE_YEAR_AGGREGATE_NOT_FIELD_LABEL
+2023,Egypt,Kafr El Sheikh,كفر الشيخ,Rice,Summer,333160,1319880,3.9617,GOVERNORATE_YEAR_AGGREGATE_NOT_FIELD_LABEL

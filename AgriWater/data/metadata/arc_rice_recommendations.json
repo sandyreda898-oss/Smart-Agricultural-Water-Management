@@ -1,0 +1,14 @@
+{
+  "dataset": "ARC rice technical recommendation excerpts",
+  "retrieved_on": "2026-10-25",
+  "main_page": "https://www.arc.sci.eg/Products/Details/9704",
+  "attachment": "https://www.arc.sci.eg/files/9704/Attachment.pdf",
+  "page_publication_date": "2026-01-26",
+  "method": "Transcribed only text visible in ARC search-index excerpts and the official ARC product page.",
+  "limitations": [
+    "The PDF attachment timed out when opened in the browser parser; extracted entries are marked official_pdf_excerpt rather than full-document-verified.",
+    "Several recommendations are specific to saline soils and must not be generalized to all Kafr El-Sheikh fields.",
+    "Fertilizer cultivar lists and amounts require review against the complete bulletin before they are used to issue farmer instructions.",
+    "This dataset does not yet provide a verified full rice irrigation calendar or a universal sowing/transplanting schedule for Kafr El-Sheikh."
+  ]
+}

@@ -1,0 +1,8 @@
+﻿season_year,crop,area_feddan,production_ton,yield_ton_per_feddan,source_url,source_status
+2017,Rice,258338.0,1026424.0,3.9732,https://www.agri.gov.eg/uploads/topics/16590155437448.pdf,PRIMARY_MINISTRY_AREA_PRODUCTION_YIELD_DERIVED
+2018,Rice,190460.0,760126.0,3.991,https://www.agri.gov.eg/uploads/topics/16590144036403.pdf,PRIMARY_MINISTRY_AREA_PRODUCTION_YIELD_DERIVED
+2019,Rice,265903.0,1060012.0,3.9865,https://www.agri.gov.eg/uploads/topics/16590722424936.pdf,PRIMARY_MINISTRY_ALL_FIELDS
+2020,Rice,256127.0,1023101.0,3.9945,https://www.capmas.gov.eg/pdf/new_Pdf/2022228132150_%D9%86%D8%B4%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%AD%D8%A7%D8%AA%202020_Compressed.pdf,PRIMARY_CAPMAS_AREA_PRODUCTION_YIELD_DERIVED
+2021,Rice,251857.0,1025309.0,4.071,https://www.agri.gov.eg/uploads/topics/16692385498467.pdf,PRIMARY_MINISTRY_OFFICIAL
+2022,Rice,244143.0,972145.0,3.9819,https://www.agri.gov.eg/uploads/topics/17172249083909.pdf,PRIMARY_MINISTRY_OFFICIAL
+2023,Rice,333160.0,1319880.0,3.9617,https://www.agri.gov.eg/uploads/topics/17329628961779.pdf,PRIMARY_MINISTRY_OFFICIAL

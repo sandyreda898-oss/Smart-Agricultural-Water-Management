@@ -1,0 +1,23 @@
+{
+  "endpoint": "https://rest.isric.org/soilgrids/v2.0/properties/query",
+  "properties_requested": [
+    "clay",
+    "sand",
+    "silt",
+    "phh2o",
+    "soc",
+    "bdod",
+    "nitrogen"
+  ],
+  "depths_requested": [
+    "0-5cm",
+    "5-15cm",
+    "15-30cm",
+    "30-60cm",
+    "60-100cm",
+    "100-200cm"
+  ],
+  "coverage": "limited point sample, not exhaustive",
+  "fair_use": "5 API calls/minute per ISRIC REST landing page",
+  "limitations": "REST response schema may evolve; raw response retained. Obtain official rasters for complete mapping."
+}

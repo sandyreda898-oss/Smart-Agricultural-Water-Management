@@ -1,0 +1,20 @@
+{
+  "administrative_boundary_available": true,
+  "boundary_is_legal_cadastral_parcels": false,
+  "grid_sampling_points": 38,
+  "grid_spacing_degrees": 0.1,
+  "grid_points_are_parcel_boundaries": false,
+  "date_range_requested": {
+    "start": "2017-01-01",
+    "end": "2023-12-31"
+  },
+  "coverage_statement": "Coverage must be assessed per source from successful records, scene footprints, and date chunks. A request window is not proof of complete coverage.",
+  "not_collected_automatically": [
+    "official rice area/production by center",
+    "field-level irrigation volumes",
+    "farmer records",
+    "legal cadastral parcels",
+    "full SoilGrids raster",
+    "Sentinel-2 image pixels"
+  ]
+}

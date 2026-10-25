@@ -1,0 +1,3 @@
+study_id,location,season_year,cultivar,planting_method,sowing_date,grain_yield_t_per_feddan,source_locator,source_url,data_status,limitations
+kfsu_rehan_2012_2013,Sakha Agriculture Research Station,2012,GZ 9057,transplanting,April 15,4.31,University thesis repository PDF p.19 abstract,https://kfs.edu.eg/post/pdf/98201523335246.pdf,abstract_transcription,"Abstract-level result; DUS experiment, not a farmer-field target or guaranteed yield."
+kfsu_rehan_2012_2013,Sakha Agriculture Research Station,2013,GZ 9057,transplanting,April 15,4.65,University thesis repository PDF p.19 abstract,https://kfs.edu.eg/post/pdf/98201523335246.pdf,abstract_transcription,"Abstract-level result; DUS experiment, not a farmer-field target or guaranteed yield."

@@ -1,0 +1,209 @@
+<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><title>AgriWater | تقرير Star Schema النهائي</title><style>
+@page{size:A4;margin:15mm 14mm}*{box-sizing:border-box}body{font-family:Arial,Tahoma,sans-serif;color:#183746;font-size:9.5pt;line-height:1.58;margin:0}h1,h2,h3,h4{font-family:Arial,Tahoma,sans-serif;color:#0b6267;break-after:avoid}h1{font-size:25pt;color:#fff;margin:0 0 8mm}h2{font-size:17pt;border-bottom:2px solid #cce3df;padding-bottom:2.4mm;margin:0 0 5mm}h3{font-size:12.5pt;margin:5mm 0 2mm;color:#087b78}p{margin:0 0 2.8mm}ul,ol{margin:1mm 0 4mm;padding-right:7mm}li{margin:1mm 0}table{width:100%;border-collapse:collapse;margin:3mm 0 5mm;font-size:7.7pt;direction:rtl;break-inside:auto}thead{display:table-header-group}tr{break-inside:avoid}td,th{border:1px solid #bfced2;padding:1.5mm 1.6mm;vertical-align:top;overflow-wrap:anywhere}th{background:#0c5962;color:white}tbody tr:nth-child(even){background:#f1f7f6}a{color:#006c74;text-decoration:underline;overflow-wrap:anywhere}code{font-family:Consolas,'Courier New',monospace;direction:ltr;unicode-bidi:embed;color:#0b5360;background:#eff5f4;padding:0.3mm 0.8mm;border-radius:1mm}.code{direction:ltr;text-align:left;white-space:pre-wrap;word-break:break-word;background:#102c39;color:#e7f2f0;padding:4mm;border-radius:2mm;font-size:7.7pt;line-height:1.4;break-inside:avoid}.code code{color:inherit;background:transparent;padding:0}blockquote{margin:3mm 0;padding:3mm 4mm;border-right:4px solid #128579;background:#eff8f6}.cover{height:180mm;padding:22mm 18mm;background:linear-gradient(140deg,#0b3548,#087d78);color:white;border-radius:4mm;position:relative;page-break-after:always}.cover .eyebrow{font-size:12pt;color:#cce7e1}.cover .subtitle{font-size:15pt;color:#def0ed;margin-top:9mm}.cover .meta{position:absolute;bottom:18mm;right:18mm;color:#d6ece7;font-size:10pt}.section{break-before:page}.section.first{break-before:auto}.call{padding:3mm 4mm;margin:3mm 0 5mm;border-right:4px solid #0c8077;background:#eff8f6}.small{font-size:8pt;color:#516a74}.ltr{direction:ltr;text-align:left;unicode-bidi:embed}.title-wrap{display:block}hr{border:0;border-top:1px solid #cbd9dc;margin:5mm 0}.page-label{font-size:8pt;color:#668088}
+</style><body>
+<section class="cover"><p class="eyebrow">AgriWater | تسليم قاعدة البيانات والتحليل</p><h1>التقرير النهائي: قاعدة البيانات وStar Schema لمشروع AgriWater</h1><p class="subtitle">مخطط تحليلي نجمي، معالجة ETL، دليل استخدام، وحدود جاهزية بيانات النموذج</p><div class="meta">محصول الأرز | محافظة كفر الشيخ<br>لقطة البيانات: 25 أكتوبر 2026<br>مستودع تحليلي منفصل عن قاعدة المصدر</div></section>
+<section class="section first"><h2>1. الملخص التنفيذي</h2>
+<p>تم الحفاظ على قاعدة البيانات المرجعية ذات 44 جدولًا، ثم إنشاء مستودع منفصل باسم <code>agriwater_star.sqlite</code> مبني على نموذج نجمي متعدد الحقائق. التصميم يستخدم أبعادًا مشتركة مثل الموقع والموسم والصنف والدراسة والمقياس والمصدر، ويربطها بجداول حقائق مختلفة حسب مستوى البيانات.</p>
+<p>أهم نتائج البناء:</p>
+<table><thead><tr><th>البند</th><th>النتيجة</th></tr></thead><tbody>
+<tr><td>جداول القاعدة المرجعية</td><td>44</td></tr>
+<tr><td>علاقات FK في القاعدة المرجعية</td><td>48</td></tr>
+<tr><td>أعمدة موثقة في القاعدة المرجعية</td><td>461</td></tr>
+<tr><td>أبعاد Star Schema</td><td>17</td></tr>
+<tr><td>جداول حقائق في Star Schema</td><td>27</td></tr>
+<tr><td>صفوف طقس محملة</td><td>1,089,840</td></tr>
+<tr><td>صفوف سيناريو مياه حسب الصنف/النموذج</td><td>14,364</td></tr>
+<tr><td>نتائج تجارب منشورة</td><td>470</td></tr>
+<tr><td>ملاحظات تجارب منشورة</td><td>688</td></tr>
+<tr><td>قياسات بيئية/ملخصات منشورة</td><td>104</td></tr>
+<tr><td>سجلات فعلية لحقول وريّ الفلاحين</td><td>0 حاليًا</td></tr>
+<tr><td>عناصر مراجعة يدوية محددة</td><td>19</td></tr>
+<tr><td>فحص سلامة المستودع</td><td><code>integrity_check = ok</code>، ومخالفات FK = 0</td></tr>
+</tbody></table>
+<p>النموذج التحليلي لا يخلط بين الطقس الشبكي، ونتائج التجارب، والتربة الخرائطية، وسيناريوهات المياه، والقياسات الحقلية. كما لا يعوض القيم المفقودة ولا يحول التقديرات إلى مشاهدات فعلية.</p></section>
+<section class="section"><h2>2. المشروع من البداية إلى النتيجة المطلوبة</h2>
+<p>المشروع يستقبل من الفلاح مدخلات بسيطة، ثم يربطها بمراجع ومعلومات زراعية ليعرض اختيار صنف وخطة موسمية وتوصيات. المدخلات الحالية هي:</p>
+<ol>
+<li><strong>مكان الأرض على الخريطة:</strong> لتحديد المركز/نقطة الشبكة المناخية ومجموعة التربة الخرائطية الأقرب. نقطة الشبكة ليست حدود الحقل ولا تحليلًا معمليًا له.</li>
+<li><strong>مساحة القطعة بالفدان:</strong> لتحويل احتياج الماء المنشور لكل فدان إلى كمية تقديرية للقطعة.</li>
+<li><strong>آخر ثلاثة محاصيل:</strong> لربطها بمرجع المحاصيل وبالأدلة البحثية عن التتابع. هذه السجلات غير موجودة على مستوى الحقول داخل القاعدة الآن.</li>
+<li><strong>نوع/موديل ماكينة الري:</strong> لمطابقة معلومات الشركة أو منحنى الأداء. إدخال اسم عام مثل «طلمبة ديزل» لا يكفي لاستخراج تصرف مؤكد.</li>
+<li><strong>الصنف الذي ينوي زراعته:</strong> لمقارنته بخصائص الأصناف ودليلها وتقويمها وسيناريو المياه المرتبط به.</li>
+</ol>
+<p>تسلسل النظام المقترح هو:</p>
+<p><strong>مدخلات الفلاح → مطابقة موقع/موسم/صنف → استرجاع بيانات ومراجع مناسبة → حساب احتياج مائي تقديري ونطاقه → تحويل الحجم إلى زمن فقط عند معرفة تصرف الطلمبة الفعلي → عرض توصية مشروطة ومصدرها → استقبال تنفيذ ونتائج فعلية مستقبلًا لتحسين التوصية.</strong></p>
+<p>قاعدة البيانات تغطي خطوات المطابقة والسياق والتقديرات المنشورة/المحسوبة. أما خطوة التعلم من نتيجة حقل حقيقي والتأكد من زمن تشغيل الماكينة فلا يمكن إكمالها من مراجع الإنترنت العامة وحدها.</p></section>
+<section class="section"><h2>3. ما الذي تحتويه البيانات وما طبيعتها؟</h2>
+<table><thead><tr><th>مجموعة البيانات</th><th>الموجود</th><th>ما تعنيه وما لا تعنيه</th></tr></thead><tbody>
+<tr><td>الطقس</td><td>1,089,840 سجلًا، 38 نقطة × 8 عناصر يومية، من 2017-01-01 إلى 2026-10-25، و1,292 قيمة NULL</td><td>تقديرات شبكية/نموذجية من NASA POWER وليست محطة داخل كل قطعة. عام 2026 جزئي.</td></tr>
+<tr><td>التربة</td><td>38 نقطة خرائطية، مرتبطة بـ8 وحدات خريطة؛ 36 نقطة حالتها مكتملة</td><td>وصف مكاني استرشادي وليس عينة مأخوذة من أرض الفلاح.</td></tr>
+<tr><td>خصائص الصنف</td><td>19 صنفًا؛ 18 مرجع كتالوج، و14 سجل دليل حقلي مؤرخ</td><td>مدى/صفة منشورة لا يضمن غلة الحقل أو توفر التقاوي محليًا.</td></tr>
+<tr><td>التقويم والتوصيات</td><td>7 أسطر تقويم، 23 توصية زراعية، و7 قواعد ثانوية تحتاج تحققًا</td><td>قاعدة معرفة أولية؛ مصدر كل بند وحالته محفوظان.</td></tr>
+<tr><td>المياه</td><td>46,550 سجل ET0/ETc يومي، 266 ملخص موسم-نقطة، 266 سيناريو أساسيًا، و14,364 سيناريو للصنف عبر ثلاثة إصدارات</td><td>طلب/سيناريو محسوب بافتراضات؛ ليس حجم الماء الذي استلمه الفلاح بالفعل.</td></tr>
+<tr><td>الدراسات</td><td>18 دراسة، 470 نتيجة رقمية، 688 ملاحظة، 104 قياسًا بيئيًا/ملخص خريطة، و19 استنتاجًا وصفيًا</td><td>نتائج منشورة تختلف في الموقع والموسم والوحدة ونوع العينة؛ لا تُعامل كصفوف متجانسة.</td></tr>
+<tr><td>الطلمبات</td><td>6 نطاقات سلاسل تجارية</td><td>حدود تدفق/رفع منشورة وليست نقطة تشغيل مطابقة لمنحنى الطلمبة المركبة.</td></tr>
+<tr><td>صور Sentinel-2</td><td>3,775 سجل مشهد و119 مشهدًا في القائمة المختصرة</td><td>فهرس بيانات وصفية فقط. مؤشرات NDVI/EVI مؤجلة ولم تُحسب.</td></tr>
+<tr><td>الحقول والنتائج الفعلية</td><td>الجداول معرفة لكنها بلا سجلات</td><td>لا يوجد هدف حقل فعلي لحجم الري أو زمن التشغيل أو الإنتاجية.</td></tr>
+</tbody></table></section>
+<section class="section"><h2>4. تصميم المخطط النجمي</h2>
+<p>لأن بيانات المشروع ذات مستويات مختلفة، فإن التصميم الصحيح هو <strong>مجموعة نجوم مترابطة بأبعاد مشتركة</strong> (Fact Constellation)، وليس جدول حقائق واحدًا يخلط كل القياسات. لكل جدول حقيقة مستوى تفصيل معلن في [تعريف مستوى كل جدول](../schema/star_fact_grain.csv). العلاقات الفعلية موضحة في [مخطط Mermaid](../schema/star_schema_overview.mmd)، وتعريف SQL الكامل موجود في [star_schema.sql](../schema/star_schema.sql).</p>
+<h3>الأبعاد المشتركة</h3>
+<table><thead><tr><th>البعد</th><th>الصفوف</th><th>وظيفته</th></tr></thead><tbody>
+<tr><td><code>dim_date</code></td><td>3,585</td><td>يوم محدد للطقس والعمليات المستقبلية؛ لا تُنشأ تواريخ من نافذة نصية تقريبية.</td></tr>
+<tr><td><code>dim_admin_area</code></td><td>11</td><td>المركز/الوحدة الإدارية والارتباط الأبوي.</td></tr>
+<tr><td><code>dim_location</code></td><td>38</td><td>نقاط الشبكة بإحداثياتها ومستوى دعمها المكاني.</td></tr>
+<tr><td><code>dim_season</code></td><td>17</td><td>مواسم المصدر وسنوات التجارب؛ سنوات الدراسات التي ليس لها حدود موسم دقيقة تسجل بلا تاريخ بداية/نهاية مخترع.</td></tr>
+<tr><td><code>dim_crop</code></td><td>7</td><td>مرجع الأرز والمحاصيل السابقة وأسمائها البديلة.</td></tr>
+<tr><td><code>dim_variety</code></td><td>19</td><td>الصنف مع خصائص الكتالوج الأساسية؛ الصنف الافتراضي موسوم كـplaceholder.</td></tr>
+<tr><td><code>dim_study</code></td><td>18</td><td>الدراسة وموقعها ومنهجيتها وحدودها.</td></tr>
+<tr><td><code>dim_source</code></td><td>49</td><td>مصادر الجداول وروابطها ومراجعها.</td></tr>
+<tr><td><code>dim_metric</code></td><td>149</td><td>اسم المقياس ووحدته الأصلية ومجاله؛ الوحدة جزء من هوية المقياس.</td></tr>
+<tr><td><code>dim_treatment</code></td><td>29</td><td>توليفات معاملات الري والمسافات في نتائج التجارب.</td></tr>
+<tr><td><code>dim_sample_context</code></td><td>4</td><td>نوع العينة وتسميتها والمعاملة المرتبطة بها.</td></tr>
+<tr><td><code>dim_water_model</code></td><td>5</td><td>يميز v3 والإصدارات الأقدم والحساسية والطريقة الأساسية وملخص الموسم.</td></tr>
+<tr><td><code>dim_soil_unit</code></td><td>8</td><td>وحدات الخريطة/التربة <code>SMU</code>، لا حقول المزارعين.</td></tr>
+<tr><td><code>dim_pump_series</code></td><td>6</td><td>سلسلة/نطاق الشركة المنشور.</td></tr>
+<tr><td><code>dim_irrigation_method</code></td><td>2</td><td>مرجع طريقة الري.</td></tr>
+<tr><td><code>dim_field</code></td><td>0</td><td>بعد حقل مستقبلي؛ لا توجد قطع مسجلة.</td></tr>
+<tr><td><code>dim_pump</code></td><td>0</td><td>بعد ماكينة مركبة/محددة؛ الجدول المصدر <code>pump_type</code> فارغ.</td></tr>
+</tbody></table>
+<h3>جداول الحقائق الرئيسية</h3>
+<table><thead><tr><th>جدول الحقيقة</th><th>الصفوف</th><th>مستوى السجل</th><th>الاستخدام</th></tr></thead><tbody>
+<tr><td><code>fact_weather_daily</code></td><td>1,089,840</td><td>نقطة شبكة × يوم × عنصر طقس</td><td>خصائص الطقس المرتبطة بالموقع والتاريخ.</td></tr>
+<tr><td><code>fact_soil_measurement</code></td><td>292</td><td>نقطة × خاصية تربة × عمق</td><td>صفات خرائط التربة وAWC بصيغة طولية.</td></tr>
+<tr><td><code>fact_daily_crop_water</code></td><td>46,550</td><td>نقطة × يوم × محصول</td><td>ET0 وKc وETc المحسوبة.</td></tr>
+<tr><td><code>fact_seasonal_water_scenario</code></td><td>14,364</td><td>سجل سيناريو × موسم × نقطة × صنف × إصدار</td><td>مقارنة نطاقات المياه، مع عدم دمج الإصدارات.</td></tr>
+<tr><td><code>fact_baseline_water_scenario</code></td><td>266</td><td>نقطة × موسم</td><td>السيناريو الأساسي على مستوى الموقع.</td></tr>
+<tr><td><code>fact_point_season_summary</code></td><td>266</td><td>نقطة × موسم</td><td>تلخيص مناخ الموسم وحالة اكتمال/جاهزية القيم.</td></tr>
+<tr><td><code>fact_trial_result</code></td><td>470</td><td>نتيجة منشورة لمعاملة تجريبية</td><td>مقارنة رقمية بين نتائج الدراسات بعد حفظ الوحدة وحالة المصدر.</td></tr>
+<tr><td><code>fact_trial_observation</code></td><td>688</td><td>ملاحظة منشورة واحدة</td><td>سياق المحصول السابق/العمق/الفترة/المقياس في الدراسة.</td></tr>
+<tr><td><code>fact_environmental_measurement</code></td><td>104</td><td>عينة دراسة × سياق عينة × مقياس</td><td>دليل التربة أو الماء المنشور؛ يلزم التصفية بنوع العينة والحالة.</td></tr>
+<tr><td><code>fact_literature_evidence</code></td><td>19</td><td>عبارة دليل/استنتاج واحد</td><td>دليل وصفي غير جمعي؛ لا يضاف إلى القياسات الرقمية.</td></tr>
+<tr><td><code>fact_regional_crop_stat</code></td><td>7</td><td>قيمة محصول منشورة على مستوى إداري وموسم</td><td>اتجاهات إقليمية وليست إنتاجية قطعة معينة.</td></tr>
+<tr><td><code>fact_crop_calendar</code></td><td>7</td><td>صف تقويم/مرحلة/صنف</td><td>نوافذ زراعة مكتوبة؛ تبقى النصوص كما هي إذا لم تكن تاريخًا دقيقًا.</td></tr>
+<tr><td><code>fact_variety_field_guide</code></td><td>14</td><td>نسخة دليل مؤرخة للصنف</td><td>حدود النضج والغلة والاستجابة، منفصلة عن بطاقة الكتالوج.</td></tr>
+<tr><td><code>fact_crop_water_parameter</code></td><td>10</td><td>معامل/افتراض لمحصول ومرحلة</td><td>قيم Kc أو نطاقات وشرط صلاحيتها.</td></tr>
+<tr><td><code>fact_agronomy_guidance</code></td><td>30</td><td>توصية أو قاعدة منشورة</td><td>نص وتطبيق جغرافي/مرحلي وحالة تحقق ومصدر.</td></tr>
+<tr><td><code>fact_plant_protection_guidance</code></td><td>5</td><td>سجل آفة/مشكلة مرجعية</td><td>معلومات الرصد فقط ما لم تكتمل الوصفة المسموح بها.</td></tr>
+<tr><td><code>fact_pump_catalog</code></td><td>6</td><td>سجل سلسلة مضخة</td><td>فهرسة الكتالوج؛ لا تستنتج منه زمن التشغيل.</td></tr>
+<tr><td><code>fact_satellite_scene</code></td><td>3,775</td><td>مشهد فضائي</td><td>التاريخ والسحب والبلاطة وعلامة القائمة المختصرة فقط.</td></tr>
+<tr><td><code>fact_machinery_inventory</code></td><td>1</td><td>سجل جرد منشور مجمع</td><td>عدد معدات على مستوى إحصائي، لا معدات مزارع مفردة.</td></tr>
+</tbody></table>
+<p>توجد أيضًا حقائق مستقبلية فارغة: <code>fact_field_season</code>, <code>fact_irrigation_event</code>, <code>fact_field_operation</code>, <code>fact_crop_history</code>, <code>fact_canal_schedule</code>, <code>fact_groundwater_level</code>, <code>fact_soil_salinity</code>, و<code>fact_vegetation_index</code>. إبقاءها يحدد مكان البيانات عند توفرها دون إنشاء بيانات وهمية.</p></section>
+<section class="section"><h2>5. التنظيف والتحويل الذي نفذه ETL</h2>
+<p>البرنامج القابل لإعادة التشغيل هو [build_star_schema.py](../etl/build_star_schema.py). يقرأ قاعدة البيانات المرجعية وينشئ مستودعًا منفصلًا؛ لا يعدل المصدر. خطواته:</p>
+<ol>
+<li>إنشاء مفاتيح بديلة للأبعاد وربط مفاتيح المصدر بها.</li>
+<li>دمج صفات <code>rice_variety_reference</code> في بعد الصنف بحسب معرف الصنف، مع إبقاء الدليل المؤرخ في جدول حقيقة منفصل حتى لا تضيع اختلافات النسخ.</li>
+<li>تحويل صف التربة الأفقي إلى صفوف خصائص طويلة (unpivot) وتسجيل <code>metric + unit + domain</code> في بعد المقياس.</li>
+<li>ربط قياسات الطقس بتاريخ وموقع ومقياس ومصدر؛ قيمة <code>NULL</code> محفوظة ومعلّمة ولا تعوض بمتوسط.</li>
+<li>إنشاء بعد للموسم يشمل سنوات المصدر وسنوات التجارب. إذا لم يحدد المصدر بداية ونهاية سنة الدراسة، تظل التواريخ <code>NULL</code> ولا يُختلق موسم زراعي كامل.</li>
+<li>إنشاء بعد إصدار نموذج الماء وفصل v3 عن الإصدارات القديمة وعن السيناريو الأساسي وملخص الموسم.</li>
+<li>حفظ النصوص الإرشادية في حقائق معرفة مع المصدر وحالة الثقة/المراجعة، بدل تحويل كل نص إلى رقم.</li>
+<li>تحويل وحدات عددية فقط عندما يكون التحويل محددًا من اسم الوحدة: طن/فدان إلى طن/هكتار، كجم/فدان إلى كجم/هكتار، وم³/فدان إلى مم مكافئ. تبقى القيمة والوحدة الأصلية محفوظتين بجانب القيمة القياسية.</li>
+<li>ربط أسماء المحاصيل السابقة بواسطة القاموس والـaliases؛ قيم <code>not_reported</code> تظل بلا محصول بدل اختراع اسم.</li>
+<li>كتابة سجل تحويلات، قائمة المراجعة اليدوية، والتحقق من <code>integrity_check</code> ومفاتيح FK.</li>
+</ol>
+<h3>أعمدة/معانٍ لا يمكن تنظيفها آليًا بأمان</h3>
+<ul>
+<li>وحدة <code>bulk</code> و<code>organic_carbon</code> في مصدر التربة غير مؤكدة في الجدول المنقول؛ لا تستخدمهما في مقارنة كمية قبل مراجعة المصدر الأصلي.</li>
+<li>أدلة التربة تظل خرائط/استيفاء وليست نتيجة تحليل حقل؛ لم تربط بحقل شخصي.</li>
+<li>الوحدات غير القياسية أو غير الواضحة تحفظ كما هي؛ التحويل الآلي لا يخمن معناها.</li>
+<li>نوافذ التقويم النصية لا تتحول إلى تواريخ دقيقة من غير قاعدة منشورة تحدد يومًا.</li>
+<li>أوصاف الدراسة/القياسات المنشورة لا تتساوى في مستوى العينة أو الدقة؛ status/source_locator يظلان جزءًا من التصفية.</li>
+<li>حقول نتائج الفلاحين فارغة، ولذلك لا توجد طريقة صادقة لتعويض الغلة أو مياه الري المطبقة.</li>
+</ul>
+<p>ملف [profile التحويل](../metadata/star_etl_profile.csv) يعرض عدد صفوف المصدر والمستودع وطريقة المعالجة. ملف [قائمة المراجعة اليدوية](../metadata/manual_review_queue.csv) يحوي 19 بندًا.</p></section>
+<section class="section"><h2>6. ربط مدخلات الفلاح بالنموذج</h2>
+<table><thead><tr><th>مدخل الفلاح</th><th>الربط في المستودع</th><th>ما يمكن عرضه الآن</th><th>ما يحتاج بيانات/تأكيدًا إضافيًا</th></tr></thead><tbody>
+<tr><td>نقطة الخريطة</td><td><code>dim_location</code> ثم <code>fact_weather_daily</code>, <code>fact_soil_measurement</code>, حقائق الموسم</td><td>الطقس الشبكي والخصائص الخرائطية ونطاق سيناريو الموقع</td><td>مضلع القطعة أو مسافة النقطة عن مركز الحقل؛ تحليل تربة الحقل غير موجود</td></tr>
+<tr><td>المساحة بالفدان</td><td>ليست بعدًا تاريخيًا؛ تحفظ كقيمة إدخال للطلب/جلسة المستخدم، ثم تضرب في قيمة لكل فدان</td><td>إجمالي حجم تقديري للقطعة عند إدخال المساحة</td><td>المساحة الفعلية وحدودها تظل إدخالًا من المستخدم ولا تستنتج من grid point</td></tr>
+<tr><td>آخر 3 محاصيل</td><td><code>dim_crop</code>، وسياق <code>fact_trial_observation</code>، ومستقبلًا <code>fact_crop_history</code></td><td>مطابقة اسم المحصول وربط الدليل المتاح</td><td>سجل المحصول السابق لقطعة المستخدم ليس موجودًا في الإنترنت على مستوى الحقل</td></tr>
+<tr><td>الطلمبة</td><td><code>dim_pump_series</code> و<code>fact_pump_catalog</code>؛ البعد الفعلي <code>dim_pump</code> فارغ</td><td>عرض سلاسل منشورة للمقارنة</td><td>موديل الطلمبة المركبة، منحنى الأداء، الرفع الكلي TDH والتصرف المقاس</td></tr>
+<tr><td>صنف الأرز</td><td><code>dim_variety</code>, <code>fact_variety_field_guide</code>, <code>fact_crop_calendar</code>, <code>fact_trial_result</code>, <code>fact_seasonal_water_scenario</code></td><td>خصائص ومواعيد ومدى مياه تقديري ومراجع تجربة</td><td>التوفر المحلي للتقاوي، اعتماد/قيود الموسم الحالي، وتأكيد ملائمة القطعة</td></tr>
+<tr><td>تاريخ البداية الذي يحدده النظام</td><td><code>dim_date</code>, الموسم، الصنف، والطقس</td><td>حساب طول الموسم ومطابقة بيانات اليوم</td><td>لا تخلط تاريخ الزراعة بتاريخ الشتل؛ مصدر التوصية يجب أن يحدد معنى كل موعد</td></tr>
+</tbody></table>
+<p>قاعدة تحويل الوحدة المكانية: <strong>1 مم ماء على فدان واحد = 4.2 م³</strong> لأن مساحة الفدان 4,200 م². لذلك:</p>
+<p><code>الحجم الكلي بالمتر المكعب = عمق الماء بالملليمتر × 4.2 × مساحة الأرض بالفدان</code></p>
+<p>أو إذا كان السيناريو مخزنًا بم³/فدان:</p>
+<p><code>حجم القطعة = نطاق م³/فدان × مساحة الأرض بالفدان</code></p>
+<p>والمدة النظرية:</p>
+<p><code>زمن التشغيل بالساعات = حجم الماء المطلوب بالمتر المكعب ÷ التصرف المقاس للمضخة بالمتر المكعب/ساعة</code></p>
+<p>لا يحسب النظام زمن تشغيل موثوقًا إلا بعد إدخال تصرف فعلي عند الرفع والضغط وظروف التركيب، ومراعاة كفاءة الشبكة. أكبر قيمة تصرف وأكبر ارتفاع من كتالوج السلسلة لا يشكلان نقطة تشغيل واحدة.</p></section>
+<section class="section"><h2>7. كيف تساعد البيانات في بناء النموذج؟</h2>
+<h3>المرحلة الأولى: محرك قواعد وتوصيات قابل للتفسير</h3>
+<p>هذه أنسب مرحلة حاليًا. يستخدم النظام المكان والتاريخ والصنف لاسترجاع الطقس والجدول والدليل الرسمي، ثم يعرض نطاقًا للمياه لكل فدان، الافتراضات التي بني عليها، ومصدر المعلومة ودرجة الثقة. يجب أن يوضح للمزارع أنها <strong>توصية مرجعية/تقديرية</strong> وأن يتوقف عن عرض دقائق تشغيل إذا لم تتوفر بيانات المضخة.</p>
+<h3>المرحلة الثانية: نماذج مساعدة بعد تحديد هدف واضح</h3>
+<ul>
+<li>توقع ETc أو الطلب المائي: يمكن اختبار نماذج على ET0/طقس/مرحلة نمو، لكن الهدف الحالي مشتق حسابيًا من الطقس/المعاملات، وليس قياس ري ميداني مستقلًا.</li>
+<li>توقع الغلة أو الاستجابة للماء: لا يبدأ تدريب إشرافي محلي قبل وجود غلة فعلية وظروف الحقل والمعاملة والموسم.</li>
+<li>توقع زمن التشغيل: يتطلب قياس تصرف المضخة عند ظروف التشغيل، كمية الري، وطريقة التطبيق/كفاءة التوصيل.</li>
+<li>توصية الصنف: يمكن بدء ترتيب قواعدي باستخدام خصائص الصنف والتربة/الملوحة وموعد الزراعة، لكن يجب إظهار سبب الاختيار والمصدر وعدم ادعاء أنه أفضل صنف لكل حقل.</li>
+</ul>
+<h3>منع تسرب البيانات عند التدريب</h3>
+<p>لا تقسّم قياسات الدراسة الواحدة عشوائيًا بين التدريب والاختبار؛ اجعل الاختبار على موسم أو دراسة أو منطقة لم يرها التدريب. افصل صفوف التجارب المنشورة عن بيانات الفلاحين، ولا تستخدم <code>scenario</code> المحسوب كأنه label لقياس ماء فعلي. اختر هدفًا واحدًا وعمودًا واضحًا لكل نموذج، وسجّل نسخة المعادلة والمصدر والوحدة.</p></section>
+<section class="section"><h2>8. استخدام المستودع: أمثلة عملية</h2>
+<p>افتح <code>warehouse/agriwater_star.sqlite</code> في DB Browser for SQLite أو Python. توجد خمس Views للقراءة الميسرة.</p>
+<h3>قراءة الطقس مع الموقع والمقياس</h3>
+<pre class="code"><code>SELECT full_date, district_ar, source_point_id, metric_name, source_unit, value, data_status
+FROM vw_weather_daily_readable
+WHERE source_point_id = :point_id
+  AND full_date BETWEEN :date_from AND :date_to
+ORDER BY full_date, metric_name;</code></pre>
+<h3>مقارنة سيناريوهات الصنف لكل فدان</h3>
+<pre class="code"><code>SELECT season_year, variety, duration_basis, model_version,
+       with_prep_low_m3_feddan, with_prep_high_m3_feddan, data_status
+FROM vw_variety_water_scenario_readable
+WHERE source_point_id = :point_id AND season_year = :season_year
+ORDER BY variety, duration_basis, model_version;</code></pre>
+<p>ابدأ بإصدار <code>v3</code> في المقارنة الحالية، ولا تجمعه مع <code>legacy</code> أو <code>clay_sensitivity</code>. إذا كانت مساحة القطعة 5 فدادين مثلًا، اضرب طرفي النطاق بمقدار 5 لتقدير حجم القطعة؛ لا تحول إلى دقائق دون تصرف فعلي.</p>
+<h3>عرض خصائص التربة المجمعة لنقطة الخريطة</h3>
+<pre class="code"><code>SELECT * FROM vw_soil_point_profile WHERE source_point_id = :point_id;</code></pre>
+<h3>مراجعة نتائج الدراسات والإرشاد</h3>
+<pre class="code"><code>SELECT source_study_id, title, season_year, variety, irrigation_regime,
+       metric_name, value, standardized_value, standardized_unit, data_status
+FROM vw_trial_results_readable
+WHERE metric_name = 'grain_yield';</code></pre>
+<p>استخدم <code>vw_agronomy_guidance_readable</code> لعرض النص والتطبيق والمصدر وحالة التحقق. لا تعرض قواعد <code>secondary</code> أو سجلات حماية النبات الناقصة كتعليمات مؤكدة.</p></section>
+<section class="section"><h2>9. القضايا التي تتطلب معالجة بشرية</h2>
+<table><thead><tr><th>الأولوية</th><th>الموضوع</th><th>المطلوب</th></tr></thead><tbody>
+<tr><td>عالية</td><td>وحدات <code>bulk</code> و<code>organic_carbon</code> للتربة</td><td>مراجعة المصدر الأصلي/وصف الطريقة وتثبيت الوحدة قبل المقارنة أو إدخالها للنموذج.</td></tr>
+<tr><td>عالية</td><td>تصرف الطلمبة</td><td>ربط الموديل الفعلي بمنحنى الشركة، TDH، قطر المواسير، كفاءة التشغيل، ثم قياس/تأكيد التصرف.</td></tr>
+<tr><td>عالية</td><td>قواعد وزارة الزراعة السبعة</td><td>مطابقة كل قاعدة بمصدر ARC/MoA أولي حديث، وتسجيل صفحة/سنة/نطاق جغرافي وصلاحية.</td></tr>
+<tr><td>عالية</td><td>خمس مراجع حماية النبات</td><td>لا تحتوي جميعها المنتج الفعال/الجرعة/فترة ما قبل الحصاد؛ تظل للإشعار بالرصد لا لوصفة رش. مراجعتها مع دليل رسمي حديث ومختص.</td></tr>
+<tr><td>متوسطة</td><td>المحصول السابق</td><td>قيم <code>not_reported</code> صحيحة كغياب للمعلومة؛ لم تملأ. دليل أثر المحصول السابق ليس معامل NPK لكل مزرعة.</td></tr>
+<tr><td>متوسطة</td><td>موسمية المناوبات</td><td>جدول القناة فارغ؛ يحتاج بيانات دور/قناة/مركز/تاريخ إن أمكن من مصدر رسمي.</td></tr>
+<tr><td>مؤجل باتفاق المشروع</td><td>NDVI/EVI</td><td>سجل المشاهد موجود، لكن تنزيل/معالجة الصور لم ينفذ لتأجيله.</td></tr>
+<tr><td>غير قابل للاستكمال من الإنترنت وحده</td><td>سجلات حقل الفلاح</td><td>ريات، مدة التشغيل، الغلة، العمليات الفعلية، وتحليل التربة الشخصي. لا توجد صفوف حقيقية في المصدر.</td></tr>
+</tbody></table>
+<p>عدد الصفوف في <code>manual_review_queue.csv</code> هو 19: بند تربة واحد، 7 قواعد، 5 مراجع حماية نبات، و6 سلاسل طلمبات. هذه قائمة عمل محددة وليست 19 قيمة رقمية يمكن ملؤها آليًا.</p></section>
+<section class="section"><h2>10. تفسير حالة الإنجاز وحدود التسليم</h2>
+<p><strong>مكتمل في هذا التسليم:</strong> مخطط Star Schema منفصل، تعريف SQL قابل لإعادة البناء، سكربت ETL، 17 بعدًا و27 حقيقة، مفاتيح FK سليمة، خمس Views، سجل مستويات الصفوف، تقرير جودة/تحويل، وقائمة مراجعة يدوية. القاعدة المرجعية الأصلية لم تُستبدل.</p>
+<p><strong>ليس مكتملًا/لا يمكن ادعاؤه:</strong> قاعدة تدريب ميدانية، دقة توصية لكل قطعة، زمن تشغيل موثوق، NDVI/EVI، مواعيد مناوبات حية، أو اعتماد كل التوصيات المنشورة. إكمال هذه البنود يحتاج سجلات حقيقية أو تحققًا من جهة رسمية/خبير، وليس إعادة تشكيل الجداول.</p>
+<p>الاختبارات التي أجريت على قاعدة البيانات: <code>PRAGMA integrity_check = ok</code>، و<code>PRAGMA foreign_key_check</code> بلا مخالفات. وتم الاستعلام عن الصفوف الأساسية والـViews والتأكد من تطابق عدد الطقس والسيناريوهات والنتائج مع مصدرها. لم يتم تعديل قاعدة المصدر.</p></section>
+<section class="section"><h2>11. ملفات التسليم وطريقة إعادة البناء</h2>
+<ul>
+<li>قاعدة المرجع: <code>database/agriwater_clean.sqlite</code>.</li>
+<li>المستودع النجمي: <code>warehouse/agriwater_star.sqlite</code>.</li>
+<li>مخطط الإنشاء والعلاقات: <code>schema/star_schema.sql</code>, <code>schema/star_schema_overview.mmd</code>.</li>
+<li>مستويات الصفوف: <code>schema/star_fact_grain.csv</code>.</li>
+<li>سكربت ETL: <code>etl/build_star_schema.py</code>.</li>
+<li>ملخص صفوف الأبعاد/الحقائق: <code>metadata/star_schema_summary.json</code>.</li>
+<li>سجل تحويلات ETL: <code>metadata/star_etl_profile.csv</code>.</li>
+<li>قائمة المراجعة: <code>metadata/manual_review_queue.csv</code>.</li>
+<li>قاموس الأعمدة الأصلية: <code>schema/data_dictionary.csv</code> و<code>schema/column_profile.csv</code>.</li>
+<li>مشكلات جودة المصدر: <code>metadata/data_quality_issues.csv</code>.</li>
+</ul>
+<p>لإعادة بناء المستودع بعد تحديث القاعدة المرجعية، شغّل من مجلد المشروع:</p>
+<pre class="code"><code>python .\AgriWater_Clean_Data\etl\build_star_schema.py</code></pre>
+<p>السكربت يحذف ويعيد إنشاء نسخة المستودع فقط؛ لا يكتب إلى قاعدة المرجع. افحص الملخص وقائمة المراجعة بعد كل إعادة بناء.</p></section>
+<section class="section"><h2>12. المراجع البحثية التي تدعم الأدلة المدرجة</h2>
+<ul>
+<li>تجربة فترات الري والمسافات في محطة سخا، مواسمي 2019 و2020، منشورة في Journal of Plant Production عام 2024: <a href="https://journals.ekb.eg/article_391562_0.html">صفحة الدراسة</a>. النتيجة تجربة محطة وليست قاعدة لكل حقل.</li>
+<li>تجربة مواعيد الزراعة والنيتروجين وآفات سخا سوبر 300 في سخا، موسما 2019 و2020: <a href="https://journals.ekb.eg/article_158820_834e39d9898852671da8db2a0feaed32.pdf">النص المنشور</a>. النطاق صنف وتجربة محددان؛ لا تستخدم كتعليمات مبيد حديثة.</li>
+<li>تحليل الكفاءة الاقتصادية/التكنولوجية لأصناف أرز في كفر الشيخ، ملخص مستودع جامعة عين شمس: <a href="https://scholar.asu.edu.eg/handle/123456789/219920">سجل الدراسة</a>. تقدير توفير المياه فيه مشتق من تحليل كفاءة وأساس حجمه غير محدد بالملخص؛ لا يحول إلى م³/فدان أو زمن مضخة.</li>
+<li>صفات الأصناف وتوصيات الأرز الرسمية الموجودة في الحزمة ترتبط بمرجع مركز البحوث الزراعية المحفوظ في سجل المصادر؛ يجب إعادة التحقق من سنة النشرة قبل استخدامها موسمًا جديدًا.</li>
+</ul>
+<hr>
+<p><strong>الخلاصة التنفيذية:</strong> قاعدة المشروع أصبحت لها طبقة تحليلية قابلة لإعادة البناء والشرح والاستخدام في الاستعلام وإعداد السمات. أفضل مخرج حالي للمزارع هو محرك توصيات شفاف قائم على القواعد والنطاقات مع عرض المصدر والافتراضات. لا يوجد بعد هدف حقل حقيقي يسمح بتدريب نموذج غلة/ري متحقق، ولا يوجد تصرف مضخة فعلي يحول حجم الماء إلى دقائق تشغيل.</p>
+</section></body></html>

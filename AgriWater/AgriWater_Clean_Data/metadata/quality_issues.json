@@ -1,0 +1,121 @@
+[
+  {
+    "issue_id": "Q01",
+    "table_or_column": "weather_daily",
+    "field": "value",
+    "issue_ar": "1292 قيمة NULL موزعة في سجل الطقس؛ 2026 سنة جزئية/قريبة من الزمن الحقيقي.",
+    "handling_ar": "إبقاء NULL كما هو؛ لا تعويض متوسطات تلقائيًا؛ فحص مصدر اليوم والعنصر قبل ET0."
+  },
+  {
+    "issue_id": "Q02",
+    "table_or_column": "soil_point",
+    "field": "soil_data_status",
+    "issue_ar": "36 من 38 نقطة مكتملة؛ تعتمد النقاط على 8 وحدات خريطة فقط.",
+    "handling_ar": "عدم تقديمها كتحليل للتربة أو قياس لكل قطعة؛ استخدام الحالة المعلنة."
+  },
+  {
+    "issue_id": "Q03",
+    "table_or_column": "field / field_season / irrigation_event",
+    "field": "كل السجلات",
+    "issue_ar": "جداول الحقول والمواسم والريات بلا صفوف.",
+    "handling_ar": "تسميات التدريب والمخرجات الحقلية غير متاحة من الإنترنت؛ لا تُنشأ بيانات اصطناعية."
+  },
+  {
+    "issue_id": "Q04",
+    "table_or_column": "pump_type / pump_catalog_series",
+    "field": "discharge/head",
+    "issue_ar": "لا توجد نقطة تصرف مؤكدة لمضخة بعينها عند الرفع الكلي الفعلي؛ الموجود 6 نطاقات كتالوج.",
+    "handling_ar": "لا تحوّل كمية الماء إلى زمن تشغيل مؤكد من بيانات السلسلة فقط."
+  },
+  {
+    "issue_id": "Q05",
+    "table_or_column": "canal_schedule",
+    "field": "كل السجلات",
+    "issue_ar": "جدول المناوبات فارغ؛ المواعيد محلية وموسمية.",
+    "handling_ar": "لا تستنتج دور مياه ثابتًا للمحافظة."
+  },
+  {
+    "issue_id": "Q06",
+    "table_or_column": "soil_salinity / groundwater_level",
+    "field": "كل السجلات",
+    "issue_ar": "الجداول النقطية/الحقلية فارغة. توجد نتائج منشورة منفصلة؛ خريطة 2023 جيوتقنية ومجموع مساحتها يخالف مساحة المحافظة المذكورة بالمقال.",
+    "handling_ar": "حفظ الدليل المنشور في literature_environmental_measurement وعدم ربطه بحقل فردي."
+  },
+  {
+    "issue_id": "Q07",
+    "table_or_column": "vegetation_index",
+    "field": "كل السجلات",
+    "issue_ar": "لا توجد قيم NDVI/EVI؛ فهرس المشاهد موجود فقط.",
+    "handling_ar": "مؤجل حسب نطاق المستخدم؛ لا يُعد نقصًا مطلوبًا لإقفال الحزمة الحالية."
+  },
+  {
+    "issue_id": "Q08",
+    "table_or_column": "ministry_rule",
+    "field": "source_status",
+    "issue_ar": "7 قواعد منقولة من مصادر ثانوية/صحفية وليست مطابقة لمصدر رسمي داخل المشروع.",
+    "handling_ar": "استبعادها من التوصيات التشغيلية إلى حين المطابقة الرسمية."
+  },
+  {
+    "issue_id": "Q09",
+    "table_or_column": "plant_protection_reference",
+    "field": "pesticide_product / rate / preharvest interval",
+    "issue_ar": "خمسة سجلات أعراض/توقيت، لكن اسم المنتج والمادة والجرعة وفترة ما قبل الحصاد غير مكتملة.",
+    "handling_ar": "لا تعرض كتعليمات رش؛ التحقق من كتاب APC الرسمي وتسجيل المنتج."
+  },
+  {
+    "issue_id": "Q10",
+    "table_or_column": "crop_water_parameter",
+    "field": "kc / seepage",
+    "issue_ar": "Kc المتأخر مخزن كنطاق/غير محدد كرقم واحد؛ الرشح والتهيئة افتراضات نطاقية/مرجعية.",
+    "handling_ar": "إبقاء حدود القيم ووصف المرجع؛ لا استخدام كجدول ري معاير."
+  },
+  {
+    "issue_id": "Q11",
+    "table_or_column": "rice_variety / rice_variety_field_guide",
+    "field": "season_length_days",
+    "issue_ar": "سخا سوبر 300 مدة نموه متغيرة حسب موعد الزراعة؛ عمود المدة المفردة NULL والنطاق موجود في البطاقة.",
+    "handling_ar": "على المستهلك استخدام maturity_days_min/max وربطها بموعد الزراعة."
+  },
+  {
+    "issue_id": "Q12",
+    "table_or_column": "rice_variety",
+    "field": "name_en",
+    "issue_ar": "السجل NOT_SPECIFIED صف بديل للتجميعات التي لا تحدد صنفًا.",
+    "handling_ar": "استبعاده من توصية صنف مزارع أو من فئات الأصناف دون معالجة صريحة."
+  },
+  {
+    "issue_id": "Q13",
+    "table_or_column": "water_scenario*",
+    "field": "scenario/model versions",
+    "issue_ar": "توجد إصدارات متعددة لسيناريوهات الماء؛ بعضها حسب الطين وبعضها أقدم.",
+    "handling_ar": "اعتماد v3 عند الحاجة مع تسجيل إصدار المعادلة؛ لا تجمع الجداول كأنها ملاحظات مستقلة."
+  },
+  {
+    "issue_id": "Q14",
+    "table_or_column": "literature_environmental_measurement",
+    "field": "sample_kind / unit / source_locator",
+    "issue_ar": "الجدول يضم قياسات تجربة، مؤشرات مشتقة، وملخصات خريطة؛ الوحدات والمستوى تختلف حسب المصدر.",
+    "handling_ar": "التصفية حسب sample_kind وdata_status وstudy_id وsource_locator قبل التحليل."
+  },
+  {
+    "issue_id": "Q15",
+    "table_or_column": "crop_history / fertilizer evidence",
+    "field": "previous_crop",
+    "issue_ar": "أدلة أثر المحصول السابق محدودة ولا تعطي معاملات NPK محلية موحدة لكل محاصيل التتابع.",
+    "handling_ar": "استخدم تاريخ المحصول كميزة سياقية، لا كبديل جرعة سماد أو تحليل تربة."
+  },
+  {
+    "issue_id": "Q16",
+    "table_or_column": "source registry / file extracts",
+    "field": "versioning",
+    "issue_ar": "مجلد المصدر يحتوي نسخًا قديمة/مراجعة وملفات وسيطة؛ بعض الأسماء تشير إلى OLD أو before_* ولا ينبغي اعتبارها النسخة النهائية.",
+    "handling_ar": "الحزمة تعتمد SQLite الحالية وتصديراتها؛ يحتفظ المشروع الأم بالأصول والنسخ السابقة للتتبع."
+  },
+  {
+    "issue_id": "Q17",
+    "table_or_column": "literature_study / literature_evidence",
+    "field": "data_status / source_locator",
+    "issue_ar": "أضيفت نتائج منشورة حديثة نسبيًا من تجارب محطة سخا وملخص جامعي؛ بعضها نوعي أو مشتق ولا يمثل قياس حقول المزارعين.",
+    "handling_ar": "استخدمها كسياق مرجعي ومقارنة فقط؛ لا تخلطها بأهداف الري أو الغلة الحقلية ولا تحول وفورات DEA إلى قيمة للفدان."
+  }
+]

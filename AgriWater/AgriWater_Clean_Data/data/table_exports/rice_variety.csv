@@ -1,0 +1,20 @@
+﻿variety_id,name_en,name_ar,season_length_days,source_url,data_status
+1,NOT_SPECIFIED,,,,PLACEHOLDER_FOR_REGIONAL_REFERENCE_ROWS
+2,Sakha 101,سخا 101,145,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+3,Sakha 102,سخا 102,125,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+4,Sakha 103,سخا 103,120,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+5,Sakha 104,سخا 104,135,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+6,Sakha 106,سخا 106,128,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+7,Giza 177,جيزة 177,125,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+8,Giza 178,جيزة 178,135,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+9,Egyptian Hybrid 1,هجين مصر 1,135,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+10,Sakha 107,سخا 107,125,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+11,Sakha 108,سخا 108,135,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+12,Sakha 109,سخا 109,125,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_SOURCE_LISTINGS_CONFLICT_YIELD_AND_PLANT_TYPE_WITHHELD
+13,Giza 179,جيزة 179,120,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+14,Giza 183,جيزة 183,120,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+15,Sakha 105,سخا 105,125,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+16,Egyptian Jasmine,الياسمين المصري,145,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+17,Giza 182,جيزة 182,125,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE
+18,Sakha Super 300,سخا سوبر 300,,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE_VARIABLE_DURATION
+19,Sakha Asmar 1,سخا الأسمر 1,125,https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1,ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE

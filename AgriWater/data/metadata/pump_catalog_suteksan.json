@@ -1,0 +1,17 @@
+{
+  "dataset": "Suteksan Egypt SEP pump series catalogue extract",
+  "retrieved_on": "2026-10-25",
+  "publisher": "Suteksan Egypt",
+  "source_urls": [
+    "https://www.suteksanegypt.com/index.php/en/product-en/pumps/sep-6-pump-series",
+    "https://www.suteksanegypt.com/index.php/en/product-en/pumps/sep-5-pump-series",
+    "https://suteksanegypt.com/index.php/ar/product-ar/pumps-ar/pump-60hz-3"
+  ],
+  "method": "Manual transcription of publicly indexed manufacturer product-family specifications.",
+  "limitations": [
+    "These are family-level published ranges, not a model-specific pump curve.",
+    "Maximum flow and maximum head are separate envelope extrema and must not be assumed to occur simultaneously.",
+    "No pump power was entered because it was not verified in the product-family excerpts.",
+    "These catalog values cannot establish a farmer's actual field discharge or pump run time without exact model, operating frequency, total dynamic head, pipe configuration, and preferably field calibration."
+  ]
+}

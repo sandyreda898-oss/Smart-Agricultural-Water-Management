@@ -1,0 +1,156 @@
+{
+  "project": "AgriWater Intelligence",
+  "started_utc": "2026-10-22T06:18:17.090363+00:00",
+  "sources": {
+    "boundary": {
+      "status": "success",
+      "finished_utc": "2026-10-22T06:18:24.502663+00:00",
+      "feature_count": 1,
+      "geometry_type": "Polygon",
+      "file": "data\\raw\\boundaries\\kafr_el_sheikh_adm1.geojson",
+      "source": "https://www.geoboundaries.org/api/current/gbOpen/EGY/ADM1/",
+      "note": "Administrative outline only; no legal parcel polygons."
+    },
+    "nasa_power": {
+      "status": "reused_existing",
+      "finished_utc": "2026-10-22T06:18:26.932485+00:00",
+      "table": {
+        "rows": 777024,
+        "csv": "data\\processed\\nasa_power_daily.csv",
+        "parquet": "data\\processed\\nasa_power_daily.parquet"
+      },
+      "note": "Existing climate table preserved; download skipped. Set runtime.force_refresh_climate=true to explicitly refresh."
+    },
+    "soilgrids": {
+      "status": "partial",
+      "finished_utc": "2026-10-22T06:20:14.051417+00:00",
+      "points_requested": 24,
+      "response_count": 0,
+      "failed_points": [
+        {
+          "point_id": "grid_0001",
+          "error": "HTTP 504 https://rest.isric.org/soilgrids/v2.0/properties/query :: <html>\r <head><title>504 Gateway Time-out</title></head>\r <body>\r <center><h1>504 Gateway Time-out</h1></center>\r <hr><center>nginx</center>\r </body>\r </html>\r "
+        },
+        {
+          "point_id": "grid_0002",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0003",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0004",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0005",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0006",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0007",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0008",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0009",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0010",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0011",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0012",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0013",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0014",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0015",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0016",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0017",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0018",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0019",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0020",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0021",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0022",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0023",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        },
+        {
+          "point_id": "grid_0024",
+          "error": "Not requested because SoilGrids returned HTTP 504; retry in a later run."
+        }
+      ],
+      "table": null,
+      "note": "Sample points only; no full-area raster generated. See raw JSON for original API schema."
+    },
+    "sentinel2_catalog": {
+      "status": "success",
+      "finished_utc": "2026-10-22T06:22:49.046610+00:00",
+      "pages": 42,
+      "unique_scenes": 3775,
+      "errors": [],
+      "table": {
+        "rows": 3775,
+        "csv": "data\\processed\\sentinel2_scene_catalog.csv",
+        "parquet": "data\\processed\\sentinel2_scene_catalog.parquet"
+      },
+      "requested_period": "2017-01-01T00:00:00Z/2023-12-31T23:59:59Z",
+      "cloud_cover_max": 80,
+      "download_products": false,
+      "note": "Scene metadata only. No raster pixels downloaded by this collector."
+    }
+  },
+  "warnings": [],
+  "coverage": {},
+  "finished_utc": "2026-10-22T06:22:49.653306+00:00",
+  "summary": {
+    "sources_attempted": 4,
+    "successful_or_empty": 3,
+    "partial": 1,
+    "failed_or_skipped": 0
+  }
+}

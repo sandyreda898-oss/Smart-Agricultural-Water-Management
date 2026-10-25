@@ -1,0 +1,3 @@
+﻿ID,FIELD,UNIT,DESCRIPTION,DATATYPE,DOMAIN
+17.0,ROOT_DEPTH,Class,Rooting Depth,Number,D_ROOT_DEPTH
+18.0,AWC,mm/m,Available Water Capacity,Number,

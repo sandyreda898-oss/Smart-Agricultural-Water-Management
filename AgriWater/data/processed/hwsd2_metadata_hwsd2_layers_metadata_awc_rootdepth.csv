@@ -1,0 +1,3 @@
+﻿ID,FIELD,UNIT,DESCRIPTION,DATATYPE,DOMAIN
+14,ROOT_DEPTH,Class,Rootable Soil Depth,Number,D_ROOT_DEPTH
+21,AWC ,mm,AWC for Rootable Soil Depth,,

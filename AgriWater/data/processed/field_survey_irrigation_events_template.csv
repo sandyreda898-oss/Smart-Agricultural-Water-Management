@@ -1,0 +1,2 @@
+﻿farmer_code,season_year,event_date,volume_m3,duration_hours,measurement_method
+EXAMPLE-KS-0001,2025,2025-06-15,380,4.2,pump_hours_x_discharge

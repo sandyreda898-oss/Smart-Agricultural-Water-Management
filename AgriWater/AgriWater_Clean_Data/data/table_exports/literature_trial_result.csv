@@ -1,0 +1,471 @@
+﻿result_id,study_id,season_year,variety_id,irrigation_regime,irrigation_interval_days,row_spacing_cm,hill_spacing_cm,metric_name,metric_value,unit,table_reference,data_status
+1,ghazy2019_giza179,2017,13,continuous_flooding,,15.0,20.0,grain_yield,11.47,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+2,ghazy2019_giza179,2017,13,interval_6_days,6.0,15.0,20.0,grain_yield,11.12,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+3,ghazy2019_giza179,2017,13,interval_9_days,9.0,15.0,20.0,grain_yield,9.72,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+4,ghazy2019_giza179,2017,13,continuous_flooding,,20.0,20.0,grain_yield,11.4,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+5,ghazy2019_giza179,2017,13,interval_6_days,6.0,20.0,20.0,grain_yield,11.07,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+6,ghazy2019_giza179,2017,13,interval_9_days,9.0,20.0,20.0,grain_yield,9.07,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+7,ghazy2019_giza179,2017,13,continuous_flooding,,25.0,20.0,grain_yield,11.37,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+8,ghazy2019_giza179,2017,13,interval_6_days,6.0,25.0,20.0,grain_yield,10.88,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+9,ghazy2019_giza179,2017,13,interval_9_days,9.0,25.0,20.0,grain_yield,8.46,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+10,ghazy2019_giza179,2017,13,continuous_flooding,,30.0,20.0,grain_yield,11.22,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+11,ghazy2019_giza179,2017,13,interval_6_days,6.0,30.0,20.0,grain_yield,10.53,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+12,ghazy2019_giza179,2017,13,interval_9_days,9.0,30.0,20.0,grain_yield,7.8,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+13,ghazy2019_giza179,2018,13,continuous_flooding,,15.0,20.0,grain_yield,11.5,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+14,ghazy2019_giza179,2018,13,interval_6_days,6.0,15.0,20.0,grain_yield,11.33,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+15,ghazy2019_giza179,2018,13,interval_9_days,9.0,15.0,20.0,grain_yield,9.72,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+16,ghazy2019_giza179,2018,13,continuous_flooding,,20.0,20.0,grain_yield,11.48,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+17,ghazy2019_giza179,2018,13,interval_6_days,6.0,20.0,20.0,grain_yield,11.23,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+18,ghazy2019_giza179,2018,13,interval_9_days,9.0,20.0,20.0,grain_yield,9.04,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+19,ghazy2019_giza179,2018,13,continuous_flooding,,25.0,20.0,grain_yield,11.2,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+20,ghazy2019_giza179,2018,13,interval_6_days,6.0,25.0,20.0,grain_yield,10.92,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+21,ghazy2019_giza179,2018,13,interval_9_days,9.0,25.0,20.0,grain_yield,8.64,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+22,ghazy2019_giza179,2018,13,continuous_flooding,,30.0,20.0,grain_yield,11.13,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+23,ghazy2019_giza179,2018,13,interval_6_days,6.0,30.0,20.0,grain_yield,10.74,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+24,ghazy2019_giza179,2018,13,interval_9_days,9.0,30.0,20.0,grain_yield,7.85,t/ha,Table 6,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+25,ghazy2019_giza179,2017,13,continuous_flooding,,15.0,20.0,water_productivity,0.817,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+26,ghazy2019_giza179,2017,13,interval_6_days,6.0,15.0,20.0,water_productivity,0.853,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+27,ghazy2019_giza179,2017,13,interval_9_days,9.0,15.0,20.0,water_productivity,0.978,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+28,ghazy2019_giza179,2017,13,continuous_flooding,,20.0,20.0,water_productivity,0.812,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+29,ghazy2019_giza179,2017,13,interval_6_days,6.0,20.0,20.0,water_productivity,0.849,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+30,ghazy2019_giza179,2017,13,interval_9_days,9.0,20.0,20.0,water_productivity,0.912,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+31,ghazy2019_giza179,2017,13,continuous_flooding,,25.0,20.0,water_productivity,0.81,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+32,ghazy2019_giza179,2017,13,interval_6_days,6.0,25.0,20.0,water_productivity,0.835,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+33,ghazy2019_giza179,2017,13,interval_9_days,9.0,25.0,20.0,water_productivity,0.851,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+34,ghazy2019_giza179,2017,13,continuous_flooding,,30.0,20.0,water_productivity,0.799,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+35,ghazy2019_giza179,2017,13,interval_6_days,6.0,30.0,20.0,water_productivity,0.808,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+36,ghazy2019_giza179,2017,13,interval_9_days,9.0,30.0,20.0,water_productivity,0.784,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+37,ghazy2019_giza179,2018,13,continuous_flooding,,15.0,20.0,water_productivity,0.821,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+38,ghazy2019_giza179,2018,13,interval_6_days,6.0,15.0,20.0,water_productivity,0.872,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+39,ghazy2019_giza179,2018,13,interval_9_days,9.0,15.0,20.0,water_productivity,0.994,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+40,ghazy2019_giza179,2018,13,continuous_flooding,,20.0,20.0,water_productivity,0.819,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+41,ghazy2019_giza179,2018,13,interval_6_days,6.0,20.0,20.0,water_productivity,0.864,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+42,ghazy2019_giza179,2018,13,interval_9_days,9.0,20.0,20.0,water_productivity,0.924,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+43,ghazy2019_giza179,2018,13,continuous_flooding,,25.0,20.0,water_productivity,0.8,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+44,ghazy2019_giza179,2018,13,interval_6_days,6.0,25.0,20.0,water_productivity,0.84,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+45,ghazy2019_giza179,2018,13,interval_9_days,9.0,25.0,20.0,water_productivity,0.884,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+46,ghazy2019_giza179,2018,13,continuous_flooding,,30.0,20.0,water_productivity,0.794,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+47,ghazy2019_giza179,2018,13,interval_6_days,6.0,30.0,20.0,water_productivity,0.826,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+48,ghazy2019_giza179,2018,13,interval_9_days,9.0,30.0,20.0,water_productivity,0.803,kg/m3,Table 9,RESEARCH_STATION_TRIAL_NOT_FARM_LABEL
+351,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=FW,,,,panicle_weight,3.09,g,Table 10,table_transcription
+352,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=FW,,,,panicle_weight,3.07,g,Table 10,table_transcription
+353,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=FW,,,,unfilled_grain,6.12,percent,Table 10,table_transcription
+354,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=FW,,,,unfilled_grain,6.1,percent,Table 10,table_transcription
+355,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=FW,,,,thousand_grain_weight,25.51,g,Table 10,table_transcription
+356,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=FW,,,,thousand_grain_weight,25.45,g,Table 10,table_transcription
+357,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=DW,,,,panicle_weight,2.91,g,Table 10,table_transcription
+358,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=DW,,,,panicle_weight,2.88,g,Table 10,table_transcription
+359,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=DW,,,,unfilled_grain,8.17,percent,Table 10,table_transcription
+360,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=DW,,,,unfilled_grain,8.15,percent,Table 10,table_transcription
+361,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=DW,,,,thousand_grain_weight,22.71,g,Table 10,table_transcription
+362,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=DW,,,,thousand_grain_weight,22.65,g,Table 10,table_transcription
+363,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:1DW,,,,panicle_weight,3.92,g,Table 10,table_transcription
+364,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:1DW,,,,panicle_weight,3.89,g,Table 10,table_transcription
+365,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:1DW,,,,unfilled_grain,7.0,percent,Table 10,table_transcription
+366,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:1DW,,,,unfilled_grain,6.97,percent,Table 10,table_transcription
+367,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:1DW,,,,thousand_grain_weight,25.01,g,Table 10,table_transcription
+368,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:1DW,,,,thousand_grain_weight,24.5,g,Table 10,table_transcription
+369,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=2FW:1DW,,,,panicle_weight,4.01,g,Table 10,table_transcription
+370,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=2FW:1DW,,,,panicle_weight,3.99,g,Table 10,table_transcription
+371,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=2FW:1DW,,,,unfilled_grain,7.24,percent,Table 10,table_transcription
+372,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=2FW:1DW,,,,unfilled_grain,7.23,percent,Table 10,table_transcription
+373,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=2FW:1DW,,,,thousand_grain_weight,25.01,g,Table 10,table_transcription
+374,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=2FW:1DW,,,,thousand_grain_weight,24.0,g,Table 10,table_transcription
+375,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:2DW,,,,panicle_weight,3.11,g,Table 10,table_transcription
+376,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:2DW,,,,panicle_weight,3.07,g,Table 10,table_transcription
+377,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:2DW,,,,unfilled_grain,8.67,percent,Table 10,table_transcription
+378,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:2DW,,,,unfilled_grain,8.56,percent,Table 10,table_transcription
+379,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:2DW,,,,thousand_grain_weight,24.01,g,Table 10,table_transcription
+380,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:2DW,,,,thousand_grain_weight,24.5,g,Table 10,table_transcription
+381,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=FW,,,,panicle_weight,3.81,g,Table 10,table_transcription
+382,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=FW,,,,panicle_weight,3.78,g,Table 10,table_transcription
+383,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=FW,,,,unfilled_grain,5.92,percent,Table 10,table_transcription
+384,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=FW,,,,unfilled_grain,5.9,percent,Table 10,table_transcription
+385,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=FW,,,,thousand_grain_weight,20.51,g,Table 10,table_transcription
+386,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=FW,,,,thousand_grain_weight,20.5,g,Table 10,table_transcription
+387,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=DW,,,,panicle_weight,3.19,g,Table 10,table_transcription
+388,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=DW,,,,panicle_weight,3.16,g,Table 10,table_transcription
+389,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=DW,,,,unfilled_grain,7.54,percent,Table 10,table_transcription
+390,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=DW,,,,unfilled_grain,7.52,percent,Table 10,table_transcription
+391,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=DW,,,,thousand_grain_weight,19.14,g,Table 10,table_transcription
+392,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=DW,,,,thousand_grain_weight,19.1,g,Table 10,table_transcription
+393,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:1DW,,,,panicle_weight,3.44,g,Table 10,table_transcription
+394,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:1DW,,,,panicle_weight,3.44,g,Table 10,table_transcription
+395,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:1DW,,,,unfilled_grain,6.87,percent,Table 10,table_transcription
+396,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:1DW,,,,unfilled_grain,6.85,percent,Table 10,table_transcription
+397,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:1DW,,,,thousand_grain_weight,21.41,g,Table 10,table_transcription
+398,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:1DW,,,,thousand_grain_weight,21.0,g,Table 10,table_transcription
+399,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=2FW:1DW,,,,panicle_weight,3.61,g,Table 10,table_transcription
+400,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=2FW:1DW,,,,panicle_weight,3.61,g,Table 10,table_transcription
+401,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=2FW:1DW,,,,unfilled_grain,5.0,percent,Table 10,table_transcription
+402,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=2FW:1DW,,,,unfilled_grain,4.97,percent,Table 10,table_transcription
+403,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=2FW:1DW,,,,thousand_grain_weight,20.26,g,Table 10,table_transcription
+404,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=2FW:1DW,,,,thousand_grain_weight,20.22,g,Table 10,table_transcription
+405,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:2DW,,,,panicle_weight,3.26,g,Table 10,table_transcription
+406,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:2DW,,,,panicle_weight,3.22,g,Table 10,table_transcription
+407,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:2DW,,,,unfilled_grain,8.27,percent,Table 10,table_transcription
+408,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:2DW,,,,unfilled_grain,8.25,percent,Table 10,table_transcription
+409,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:2DW,,,,thousand_grain_weight,19.26,g,Table 10,table_transcription
+410,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:2DW,,,,thousand_grain_weight,19.23,g,Table 10,table_transcription
+411,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=FW,,,,panicle_weight,3.01,g,Table 10,table_transcription
+412,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=FW,,,,panicle_weight,3.01,g,Table 10,table_transcription
+413,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=FW,,,,unfilled_grain,4.87,percent,Table 10,table_transcription
+414,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=FW,,,,unfilled_grain,4.85,percent,Table 10,table_transcription
+415,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=FW,,,,thousand_grain_weight,26.76,g,Table 10,table_transcription
+416,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=FW,,,,thousand_grain_weight,26.7,g,Table 10,table_transcription
+417,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=DW,,,,panicle_weight,2.15,g,Table 10,table_transcription
+418,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=DW,,,,panicle_weight,2.12,g,Table 10,table_transcription
+419,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=DW,,,,unfilled_grain,7.25,percent,Table 10,table_transcription
+420,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=DW,,,,unfilled_grain,7.23,percent,Table 10,table_transcription
+421,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=DW,,,,thousand_grain_weight,22.13,g,Table 10,table_transcription
+422,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=DW,,,,thousand_grain_weight,22.07,g,Table 10,table_transcription
+423,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:1DW,,,,panicle_weight,2.64,g,Table 10,table_transcription
+424,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:1DW,,,,panicle_weight,2.61,g,Table 10,table_transcription
+425,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:1DW,,,,unfilled_grain,6.44,percent,Table 10,table_transcription
+426,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:1DW,,,,unfilled_grain,6.42,percent,Table 10,table_transcription
+427,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:1DW,,,,thousand_grain_weight,26.46,g,Table 10,table_transcription
+428,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:1DW,,,,thousand_grain_weight,26.41,g,Table 10,table_transcription
+429,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=2FW:1DW,,,,panicle_weight,2.86,g,Table 10,table_transcription
+430,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=2FW:1DW,,,,panicle_weight,2.83,g,Table 10,table_transcription
+431,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=2FW:1DW,,,,unfilled_grain,4.57,percent,Table 10,table_transcription
+432,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=2FW:1DW,,,,unfilled_grain,4.55,percent,Table 10,table_transcription
+433,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=2FW:1DW,,,,thousand_grain_weight,26.51,g,Table 10,table_transcription
+434,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=2FW:1DW,,,,thousand_grain_weight,26.45,g,Table 10,table_transcription
+435,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:2DW,,,,panicle_weight,2.21,g,Table 10,table_transcription
+436,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:2DW,,,,panicle_weight,2.19,g,Table 10,table_transcription
+437,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:2DW,,,,unfilled_grain,4.7,percent,Table 10,table_transcription
+438,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:2DW,,,,unfilled_grain,4.67,percent,Table 10,table_transcription
+439,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:2DW,,,,thousand_grain_weight,22.44,g,Table 10,table_transcription
+440,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:2DW,,,,thousand_grain_weight,22.4,g,Table 10,table_transcription
+441,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=FW,,,,panicle_weight,4.14,g,Table 10,table_transcription
+442,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=FW,,,,panicle_weight,4.11,g,Table 10,table_transcription
+443,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=FW,,,,unfilled_grain,7.29,percent,Table 10,table_transcription
+444,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=FW,,,,unfilled_grain,7.27,percent,Table 10,table_transcription
+445,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=FW,,,,thousand_grain_weight,25.76,g,Table 10,table_transcription
+446,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=FW,,,,thousand_grain_weight,25.7,g,Table 10,table_transcription
+447,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=DW,,,,panicle_weight,3.11,g,Table 10,table_transcription
+448,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=DW,,,,panicle_weight,3.07,g,Table 10,table_transcription
+449,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=DW,,,,unfilled_grain,11.59,percent,Table 10,table_transcription
+450,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=DW,,,,unfilled_grain,11.57,percent,Table 10,table_transcription
+451,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=DW,,,,thousand_grain_weight,24.08,g,Table 10,table_transcription
+452,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=DW,,,,thousand_grain_weight,24.0,g,Table 10,table_transcription
+453,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:1DW,,,,panicle_weight,3.96,g,Table 10,table_transcription
+454,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:1DW,,,,panicle_weight,3.93,g,Table 10,table_transcription
+455,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:1DW,,,,unfilled_grain,7.81,percent,Table 10,table_transcription
+456,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:1DW,,,,unfilled_grain,7.79,percent,Table 10,table_transcription
+457,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:1DW,,,,thousand_grain_weight,25.39,g,Table 10,table_transcription
+458,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:1DW,,,,thousand_grain_weight,25.35,g,Table 10,table_transcription
+459,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=2FW:1DW,,,,panicle_weight,4.03,g,Table 10,table_transcription
+460,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=2FW:1DW,,,,panicle_weight,4.0,g,Table 10,table_transcription
+461,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=2FW:1DW,,,,unfilled_grain,6.14,percent,Table 10,table_transcription
+462,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=2FW:1DW,,,,unfilled_grain,6.12,percent,Table 10,table_transcription
+463,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=2FW:1DW,,,,thousand_grain_weight,25.76,g,Table 10,table_transcription
+464,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=2FW:1DW,,,,thousand_grain_weight,25.74,g,Table 10,table_transcription
+465,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:2DW,,,,panicle_weight,3.22,g,Table 10,table_transcription
+466,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:2DW,,,,panicle_weight,3.2,g,Table 10,table_transcription
+467,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:2DW,,,,unfilled_grain,10.92,percent,Table 10,table_transcription
+468,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:2DW,,,,unfilled_grain,10.9,percent,Table 10,table_transcription
+469,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:2DW,,,,thousand_grain_weight,24.1,g,Table 10,table_transcription
+470,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:2DW,,,,thousand_grain_weight,24.07,g,Table 10,table_transcription
+471,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,grain_yield,9.74,t_per_ha,Table 11 water-quality main effect,table_transcription
+472,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,straw_yield,12.5,t_per_ha,Table 11 water-quality main effect,table_transcription
+473,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,harvest_index,0.44,ratio,Table 11 water-quality main effect,table_transcription
+474,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,grain_yield,10.72,t_per_ha,Table 11 water-quality main effect,table_transcription
+475,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,straw_yield,12.58,t_per_ha,Table 11 water-quality main effect,table_transcription
+476,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,harvest_index,0.45,ratio,Table 11 water-quality main effect,table_transcription
+477,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,grain_yield,8.06,t_per_ha,Table 11 water-quality main effect,table_transcription
+478,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,straw_yield,10.77,t_per_ha,Table 11 water-quality main effect,table_transcription
+479,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,harvest_index,0.42,ratio,Table 11 water-quality main effect,table_transcription
+480,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,grain_yield,8.4,t_per_ha,Table 11 water-quality main effect,table_transcription
+481,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,straw_yield,11.08,t_per_ha,Table 11 water-quality main effect,table_transcription
+482,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,harvest_index,0.44,ratio,Table 11 water-quality main effect,table_transcription
+483,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_yield,9.24,t_per_ha,Table 11 water-quality main effect,table_transcription
+484,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,straw_yield,12.21,t_per_ha,Table 11 water-quality main effect,table_transcription
+485,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,harvest_index,0.43,ratio,Table 11 water-quality main effect,table_transcription
+486,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_yield,9.83,t_per_ha,Table 11 water-quality main effect,table_transcription
+487,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,straw_yield,12.88,t_per_ha,Table 11 water-quality main effect,table_transcription
+488,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,harvest_index,0.44,ratio,Table 11 water-quality main effect,table_transcription
+489,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_yield,9.66,t_per_ha,Table 11 water-quality main effect,table_transcription
+490,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,straw_yield,12.39,t_per_ha,Table 11 water-quality main effect,table_transcription
+491,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,harvest_index,0.44,ratio,Table 11 water-quality main effect,table_transcription
+492,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_yield,10.37,t_per_ha,Table 11 water-quality main effect,table_transcription
+493,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,straw_yield,12.73,t_per_ha,Table 11 water-quality main effect,table_transcription
+494,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,harvest_index,0.45,ratio,Table 11 water-quality main effect,table_transcription
+495,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_yield,8.39,t_per_ha,Table 11 water-quality main effect,table_transcription
+496,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,straw_yield,11.61,t_per_ha,Table 11 water-quality main effect,table_transcription
+497,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,harvest_index,0.43,ratio,Table 11 water-quality main effect,table_transcription
+498,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_yield,9.05,t_per_ha,Table 11 water-quality main effect,table_transcription
+499,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,straw_yield,11.71,t_per_ha,Table 11 water-quality main effect,table_transcription
+500,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,harvest_index,0.44,ratio,Table 11 water-quality main effect,table_transcription
+501,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_yield,9.53,t_per_ha,Table 11 cultivar main effect,table_transcription
+502,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,straw_yield,11.77,t_per_ha,Table 11 cultivar main effect,table_transcription
+503,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,harvest_index,0.44,ratio,Table 11 cultivar main effect,table_transcription
+504,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_yield,10.34,t_per_ha,Table 11 cultivar main effect,table_transcription
+505,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,straw_yield,11.78,t_per_ha,Table 11 cultivar main effect,table_transcription
+506,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,harvest_index,0.45,ratio,Table 11 cultivar main effect,table_transcription
+507,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_yield,9.7,t_per_ha,Table 11 cultivar main effect,table_transcription
+508,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,straw_yield,11.82,t_per_ha,Table 11 cultivar main effect,table_transcription
+509,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,harvest_index,0.44,ratio,Table 11 cultivar main effect,table_transcription
+510,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_yield,10.57,t_per_ha,Table 11 cultivar main effect,table_transcription
+511,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,straw_yield,11.73,t_per_ha,Table 11 cultivar main effect,table_transcription
+512,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,harvest_index,0.45,ratio,Table 11 cultivar main effect,table_transcription
+513,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_yield,7.77,t_per_ha,Table 11 cultivar main effect,table_transcription
+514,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,straw_yield,10.91,t_per_ha,Table 11 cultivar main effect,table_transcription
+515,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,harvest_index,0.41,ratio,Table 11 cultivar main effect,table_transcription
+516,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_yield,7.83,t_per_ha,Table 11 cultivar main effect,table_transcription
+517,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,straw_yield,10.36,t_per_ha,Table 11 cultivar main effect,table_transcription
+518,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,harvest_index,0.42,ratio,Table 11 cultivar main effect,table_transcription
+519,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_yield,9.07,t_per_ha,Table 11 cultivar main effect,table_transcription
+520,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,straw_yield,12.09,t_per_ha,Table 11 cultivar main effect,table_transcription
+521,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,harvest_index,0.43,ratio,Table 11 cultivar main effect,table_transcription
+522,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_yield,9.94,t_per_ha,Table 11 cultivar main effect,table_transcription
+523,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,straw_yield,12.79,t_per_ha,Table 11 cultivar main effect,table_transcription
+524,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,harvest_index,0.44,ratio,Table 11 cultivar main effect,table_transcription
+525,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=FW,,,,grain_yield,10.0,t_per_ha,Table 12,table_transcription
+526,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=FW,,,,harvest_index,0.47,ratio,Table 12,table_transcription
+527,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=FW,,,,grain_yield,11.2,t_per_ha,Table 12,table_transcription
+528,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=FW,,,,harvest_index,0.48,ratio,Table 12,table_transcription
+529,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=DW,,,,grain_yield,8.83,t_per_ha,Table 12,table_transcription
+530,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=DW,,,,harvest_index,0.39,ratio,Table 12,table_transcription
+531,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=DW,,,,grain_yield,9.47,t_per_ha,Table 12,table_transcription
+532,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=DW,,,,harvest_index,0.42,ratio,Table 12,table_transcription
+533,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:1DW,,,,grain_yield,9.6,t_per_ha,Table 12,table_transcription
+534,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:1DW,,,,harvest_index,0.45,ratio,Table 12,table_transcription
+535,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:1DW,,,,grain_yield,10.5,t_per_ha,Table 12,table_transcription
+536,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:1DW,,,,harvest_index,0.46,ratio,Table 12,table_transcription
+537,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=2FW:1DW,,,,grain_yield,10.2,t_per_ha,Table 12,table_transcription
+538,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=2FW:1DW,,,,harvest_index,0.46,ratio,Table 12,table_transcription
+539,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=2FW:1DW,,,,grain_yield,10.8,t_per_ha,Table 12,table_transcription
+540,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=2FW:1DW,,,,harvest_index,0.46,ratio,Table 12,table_transcription
+541,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:2DW,,,,grain_yield,8.9,t_per_ha,Table 12,table_transcription
+542,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=1FW:2DW,,,,harvest_index,0.43,ratio,Table 12,table_transcription
+543,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:2DW,,,,grain_yield,9.58,t_per_ha,Table 12,table_transcription
+544,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=1FW:2DW,,,,harvest_index,0.45,ratio,Table 12,table_transcription
+545,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=FW,,,,grain_yield,10.2,t_per_ha,Table 12,table_transcription
+546,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=FW,,,,harvest_index,0.45,ratio,Table 12,table_transcription
+547,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=FW,,,,grain_yield,11.2,t_per_ha,Table 12,table_transcription
+548,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=FW,,,,harvest_index,0.46,ratio,Table 12,table_transcription
+549,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=DW,,,,grain_yield,8.97,t_per_ha,Table 12,table_transcription
+550,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=DW,,,,harvest_index,0.44,ratio,Table 12,table_transcription
+551,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=DW,,,,grain_yield,9.87,t_per_ha,Table 12,table_transcription
+552,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=DW,,,,harvest_index,0.45,ratio,Table 12,table_transcription
+553,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:1DW,,,,grain_yield,9.86,t_per_ha,Table 12,table_transcription
+554,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:1DW,,,,harvest_index,0.44,ratio,Table 12,table_transcription
+555,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:1DW,,,,grain_yield,10.7,t_per_ha,Table 12,table_transcription
+556,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:1DW,,,,harvest_index,0.45,ratio,Table 12,table_transcription
+557,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=2FW:1DW,,,,grain_yield,10.0,t_per_ha,Table 12,table_transcription
+558,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=2FW:1DW,,,,harvest_index,0.45,ratio,Table 12,table_transcription
+559,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=2FW:1DW,,,,grain_yield,10.9,t_per_ha,Table 12,table_transcription
+560,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=2FW:1DW,,,,harvest_index,0.46,ratio,Table 12,table_transcription
+561,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:2DW,,,,grain_yield,9.38,t_per_ha,Table 12,table_transcription
+562,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=1FW:2DW,,,,harvest_index,0.44,ratio,Table 12,table_transcription
+563,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:2DW,,,,grain_yield,10.1,t_per_ha,Table 12,table_transcription
+564,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=1FW:2DW,,,,harvest_index,0.45,ratio,Table 12,table_transcription
+565,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=FW,,,,grain_yield,8.56,t_per_ha,Table 12,table_transcription
+566,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=FW,,,,harvest_index,0.39,ratio,Table 12,table_transcription
+567,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=FW,,,,grain_yield,8.83,t_per_ha,Table 12,table_transcription
+568,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=FW,,,,harvest_index,0.42,ratio,Table 12,table_transcription
+569,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=DW,,,,grain_yield,6.93,t_per_ha,Table 12,table_transcription
+570,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=DW,,,,harvest_index,0.42,ratio,Table 12,table_transcription
+571,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=DW,,,,grain_yield,6.55,t_per_ha,Table 12,table_transcription
+572,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=DW,,,,harvest_index,0.44,ratio,Table 12,table_transcription
+573,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:1DW,,,,grain_yield,7.81,t_per_ha,Table 12,table_transcription
+574,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:1DW,,,,harvest_index,0.4,ratio,Table 12,table_transcription
+575,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:1DW,,,,grain_yield,7.55,t_per_ha,Table 12,table_transcription
+576,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:1DW,,,,harvest_index,0.41,ratio,Table 12,table_transcription
+577,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=2FW:1DW,,,,grain_yield,8.27,t_per_ha,Table 12,table_transcription
+578,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=2FW:1DW,,,,harvest_index,0.42,ratio,Table 12,table_transcription
+579,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=2FW:1DW,,,,grain_yield,8.8,t_per_ha,Table 12,table_transcription
+580,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=2FW:1DW,,,,harvest_index,0.43,ratio,Table 12,table_transcription
+581,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:2DW,,,,grain_yield,7.28,t_per_ha,Table 12,table_transcription
+582,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=1FW:2DW,,,,harvest_index,0.41,ratio,Table 12,table_transcription
+583,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:2DW,,,,grain_yield,7.43,t_per_ha,Table 12,table_transcription
+584,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=1FW:2DW,,,,harvest_index,0.42,ratio,Table 12,table_transcription
+585,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=FW,,,,grain_yield,10.1,t_per_ha,Table 12,table_transcription
+586,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=FW,,,,harvest_index,0.44,ratio,Table 12,table_transcription
+587,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=FW,,,,grain_yield,11.5,t_per_ha,Table 12,table_transcription
+588,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=FW,,,,harvest_index,0.45,ratio,Table 12,table_transcription
+589,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=DW,,,,grain_yield,7.5,t_per_ha,Table 12,table_transcription
+590,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=DW,,,,harvest_index,0.42,ratio,Table 12,table_transcription
+591,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=DW,,,,grain_yield,7.7,t_per_ha,Table 12,table_transcription
+592,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=DW,,,,harvest_index,0.43,ratio,Table 12,table_transcription
+593,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:1DW,,,,grain_yield,9.7,t_per_ha,Table 12,table_transcription
+594,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:1DW,,,,harvest_index,0.43,ratio,Table 12,table_transcription
+595,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:1DW,,,,grain_yield,10.5,t_per_ha,Table 12,table_transcription
+596,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:1DW,,,,harvest_index,0.44,ratio,Table 12,table_transcription
+597,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=2FW:1DW,,,,grain_yield,10.0,t_per_ha,Table 12,table_transcription
+598,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=2FW:1DW,,,,harvest_index,0.43,ratio,Table 12,table_transcription
+599,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=2FW:1DW,,,,grain_yield,10.9,t_per_ha,Table 12,table_transcription
+600,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=2FW:1DW,,,,harvest_index,0.44,ratio,Table 12,table_transcription
+601,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:2DW,,,,grain_yield,7.98,t_per_ha,Table 12,table_transcription
+602,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=1FW:2DW,,,,harvest_index,0.42,ratio,Table 12,table_transcription
+603,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:2DW,,,,grain_yield,9.08,t_per_ha,Table 12,table_transcription
+604,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=1FW:2DW,,,,harvest_index,0.44,ratio,Table 12,table_transcription
+605,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,K_percent,0.47,percent,Table 13,table_transcription_indexed_publisher_pdf
+606,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,K_percent,0.47,percent,Table 13,table_transcription_indexed_publisher_pdf
+607,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,K_percent,0.44,percent,Table 13,table_transcription_indexed_publisher_pdf
+608,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,K_percent,0.44,percent,Table 13,table_transcription_indexed_publisher_pdf
+609,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,K_percent,0.37,percent,Table 13,table_transcription_indexed_publisher_pdf
+610,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,K_percent,0.38,percent,Table 13,table_transcription_indexed_publisher_pdf
+611,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,K_percent,0.32,percent,Table 13,table_transcription_indexed_publisher_pdf
+612,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,K_percent,0.32,percent,Table 13,table_transcription_indexed_publisher_pdf
+613,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,K_percent,0.28,percent,Table 13,table_transcription_indexed_publisher_pdf
+614,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,K_percent,0.27,percent,Table 13,table_transcription_indexed_publisher_pdf
+615,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,Na_percent,0.1,percent,Table 13,table_transcription_indexed_publisher_pdf
+616,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,Na_percent,0.11,percent,Table 13,table_transcription_indexed_publisher_pdf
+617,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,Na_percent,0.11,percent,Table 13,table_transcription_indexed_publisher_pdf
+618,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,Na_percent,0.12,percent,Table 13,table_transcription_indexed_publisher_pdf
+619,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,Na_percent,0.11,percent,Table 13,table_transcription_indexed_publisher_pdf
+620,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,Na_percent,0.12,percent,Table 13,table_transcription_indexed_publisher_pdf
+621,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,Na_percent,0.12,percent,Table 13,table_transcription_indexed_publisher_pdf
+622,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,Na_percent,0.16,percent,Table 13,table_transcription_indexed_publisher_pdf
+623,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,Na_percent,0.13,percent,Table 13,table_transcription_indexed_publisher_pdf
+624,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,Na_percent,0.16,percent,Table 13,table_transcription_indexed_publisher_pdf
+625,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,grain_Zn,94.55,ppm,Table 13,table_transcription_indexed_publisher_pdf
+626,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,grain_Zn,96.73,ppm,Table 13,table_transcription_indexed_publisher_pdf
+627,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,grain_Zn,92.68,ppm,Table 13,table_transcription_indexed_publisher_pdf
+628,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,grain_Zn,94.85,ppm,Table 13,table_transcription_indexed_publisher_pdf
+629,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Zn,76.05,ppm,Table 13,table_transcription_indexed_publisher_pdf
+630,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Zn,78.88,ppm,Table 13,table_transcription_indexed_publisher_pdf
+631,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Zn,69.51,ppm,Table 13,table_transcription_indexed_publisher_pdf
+632,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Zn,75.47,ppm,Table 13,table_transcription_indexed_publisher_pdf
+633,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Zn,68.93,ppm,Table 13,table_transcription_indexed_publisher_pdf
+634,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Zn,72.56,ppm,Table 13,table_transcription_indexed_publisher_pdf
+635,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,grain_Fe,88.5,ppm,Table 13,table_transcription_indexed_publisher_pdf
+636,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,grain_Fe,83.5,ppm,Table 13,table_transcription_indexed_publisher_pdf
+637,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,grain_Fe,94.1,ppm,Table 13,table_transcription_indexed_publisher_pdf
+638,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,grain_Fe,87.1,ppm,Table 13,table_transcription_indexed_publisher_pdf
+639,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Fe,111.5,ppm,Table 13,table_transcription_indexed_publisher_pdf
+640,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Fe,109.4,ppm,Table 13,table_transcription_indexed_publisher_pdf
+641,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Fe,124.0,ppm,Table 13,table_transcription_indexed_publisher_pdf
+642,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Fe,124.5,ppm,Table 13,table_transcription_indexed_publisher_pdf
+643,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Fe,131.8,ppm,Table 13,table_transcription_indexed_publisher_pdf
+644,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Fe,128.8,ppm,Table 13,table_transcription_indexed_publisher_pdf
+645,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,K_percent,0.38,percent,Table 13,table_transcription_indexed_publisher_pdf
+646,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,K_percent,0.38,percent,Table 13,table_transcription_indexed_publisher_pdf
+647,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,K_percent,0.41,percent,Table 13,table_transcription_indexed_publisher_pdf
+648,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,K_percent,0.41,percent,Table 13,table_transcription_indexed_publisher_pdf
+649,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,K_percent,0.34,percent,Table 13,table_transcription_indexed_publisher_pdf
+650,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,K_percent,0.35,percent,Table 13,table_transcription_indexed_publisher_pdf
+651,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,K_percent,0.45,percent,Table 13,table_transcription_indexed_publisher_pdf
+652,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,K_percent,0.44,percent,Table 13,table_transcription_indexed_publisher_pdf
+653,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,Na_percent,0.12,percent,Table 13,table_transcription_indexed_publisher_pdf
+654,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,Na_percent,0.13,percent,Table 13,table_transcription_indexed_publisher_pdf
+655,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,Na_percent,0.11,percent,Table 13,table_transcription_indexed_publisher_pdf
+656,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,Na_percent,0.13,percent,Table 13,table_transcription_indexed_publisher_pdf
+657,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,Na_percent,0.12,percent,Table 13,table_transcription_indexed_publisher_pdf
+658,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,Na_percent,0.14,percent,Table 13,table_transcription_indexed_publisher_pdf
+659,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,Na_percent,0.11,percent,Table 13,table_transcription_indexed_publisher_pdf
+660,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,Na_percent,0.13,percent,Table 13,table_transcription_indexed_publisher_pdf
+661,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Zn,80.2,ppm,Table 13,table_transcription_indexed_publisher_pdf
+662,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Zn,84.92,ppm,Table 13,table_transcription_indexed_publisher_pdf
+663,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Zn,85.19,ppm,Table 13,table_transcription_indexed_publisher_pdf
+664,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Zn,86.06,ppm,Table 13,table_transcription_indexed_publisher_pdf
+665,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Zn,74.57,ppm,Table 13,table_transcription_indexed_publisher_pdf
+666,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Zn,75.48,ppm,Table 13,table_transcription_indexed_publisher_pdf
+667,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Zn,85.57,ppm,Table 13,table_transcription_indexed_publisher_pdf
+668,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Zn,90.31,ppm,Table 13,table_transcription_indexed_publisher_pdf
+669,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Fe,105.39,ppm,Table 13,table_transcription_indexed_publisher_pdf
+670,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Fe,103.17,ppm,Table 13,table_transcription_indexed_publisher_pdf
+671,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Fe,113.0,ppm,Table 13,table_transcription_indexed_publisher_pdf
+672,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Fe,111.94,ppm,Table 13,table_transcription_indexed_publisher_pdf
+673,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Fe,110.61,ppm,Table 13,table_transcription_indexed_publisher_pdf
+674,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Fe,103.17,ppm,Table 13,table_transcription_indexed_publisher_pdf
+675,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Fe,109.94,ppm,Table 13,table_transcription_indexed_publisher_pdf
+676,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Fe,108.39,ppm,Table 13,table_transcription_indexed_publisher_pdf
+677,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,grain_Mn,92.75,ppm,Table 14,table_transcription_indexed_publisher_pdf
+678,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,grain_Mn,63.2,ppm,Table 14,table_transcription_indexed_publisher_pdf
+679,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,grain_Mn,95.25,ppm,Table 14,table_transcription_indexed_publisher_pdf
+680,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,grain_Mn,115.5,ppm,Table 14,table_transcription_indexed_publisher_pdf
+681,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Mn,69.33,ppm,Table 14,table_transcription_indexed_publisher_pdf
+682,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Mn,68.17,ppm,Table 14,table_transcription_indexed_publisher_pdf
+683,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Mn,64.33,ppm,Table 14,table_transcription_indexed_publisher_pdf
+684,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Mn,64.25,ppm,Table 14,table_transcription_indexed_publisher_pdf
+685,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Mn,88.67,ppm,Table 14,table_transcription_indexed_publisher_pdf
+686,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Mn,101.25,ppm,Table 14,table_transcription_indexed_publisher_pdf
+687,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,grain_Ni,0.97,ppm,Table 14,table_transcription_indexed_publisher_pdf
+688,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,grain_Ni,1.05,ppm,Table 14,table_transcription_indexed_publisher_pdf
+689,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,grain_Ni,1.61,ppm,Table 14,table_transcription_indexed_publisher_pdf
+690,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,grain_Ni,1.69,ppm,Table 14,table_transcription_indexed_publisher_pdf
+691,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Ni,1.13,ppm,Table 14,table_transcription_indexed_publisher_pdf
+692,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Ni,1.25,ppm,Table 14,table_transcription_indexed_publisher_pdf
+693,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Ni,1.09,ppm,Table 14,table_transcription_indexed_publisher_pdf
+694,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Ni,1.17,ppm,Table 14,table_transcription_indexed_publisher_pdf
+695,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Ni,1.55,ppm,Table 14,table_transcription_indexed_publisher_pdf
+696,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Ni,1.63,ppm,Table 14,table_transcription_indexed_publisher_pdf
+697,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,grain_Cd,0.13,ppm,Table 14,table_transcription_indexed_publisher_pdf
+698,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,grain_Cd,0.17,ppm,Table 14,table_transcription_indexed_publisher_pdf
+699,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,grain_Cd,0.37,ppm,Table 14,table_transcription_indexed_publisher_pdf
+700,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,grain_Cd,0.52,ppm,Table 14,table_transcription_indexed_publisher_pdf
+701,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Cd,0.17,ppm,Table 14,table_transcription_indexed_publisher_pdf
+702,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Cd,0.22,ppm,Table 14,table_transcription_indexed_publisher_pdf
+703,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Cd,0.16,ppm,Table 14,table_transcription_indexed_publisher_pdf
+704,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Cd,0.21,ppm,Table 14,table_transcription_indexed_publisher_pdf
+705,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Cd,0.29,ppm,Table 14,table_transcription_indexed_publisher_pdf
+706,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Cd,0.43,ppm,Table 14,table_transcription_indexed_publisher_pdf
+707,gaber_sakha_water_quality_2022_2023,2022,,water_quality=FW; mean across tested cultivars,,,,grain_Pb,0.6,ppm,Table 14,table_transcription_indexed_publisher_pdf
+708,gaber_sakha_water_quality_2022_2023,2023,,water_quality=FW; mean across tested cultivars,,,,grain_Pb,0.45,ppm,Table 14,table_transcription_indexed_publisher_pdf
+709,gaber_sakha_water_quality_2022_2023,2022,,water_quality=DW; mean across tested cultivars,,,,grain_Pb,0.98,ppm,Table 14,table_transcription_indexed_publisher_pdf
+710,gaber_sakha_water_quality_2022_2023,2023,,water_quality=DW; mean across tested cultivars,,,,grain_Pb,1.18,ppm,Table 14,table_transcription_indexed_publisher_pdf
+711,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Pb,0.67,ppm,Table 14,table_transcription_indexed_publisher_pdf
+712,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:1DW; mean across tested cultivars,,,,grain_Pb,0.51,ppm,Table 14,table_transcription_indexed_publisher_pdf
+713,gaber_sakha_water_quality_2022_2023,2022,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Pb,0.64,ppm,Table 14,table_transcription_indexed_publisher_pdf
+714,gaber_sakha_water_quality_2022_2023,2023,,water_quality=2FW:1DW; mean across tested cultivars,,,,grain_Pb,0.49,ppm,Table 14,table_transcription_indexed_publisher_pdf
+715,gaber_sakha_water_quality_2022_2023,2022,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Pb,0.92,ppm,Table 14,table_transcription_indexed_publisher_pdf
+716,gaber_sakha_water_quality_2022_2023,2023,,water_quality=1FW:2DW; mean across tested cultivars,,,,grain_Pb,1.09,ppm,Table 14,table_transcription_indexed_publisher_pdf
+717,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Mn,74.56,ppm,Table 14,table_transcription_indexed_publisher_pdf
+718,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Mn,71.0,ppm,Table 14,table_transcription_indexed_publisher_pdf
+719,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Mn,76.61,ppm,Table 14,table_transcription_indexed_publisher_pdf
+720,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Mn,82.44,ppm,Table 14,table_transcription_indexed_publisher_pdf
+721,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Mn,74.99,ppm,Table 14,table_transcription_indexed_publisher_pdf
+722,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Mn,73.17,ppm,Table 14,table_transcription_indexed_publisher_pdf
+723,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Mn,81.78,ppm,Table 14,table_transcription_indexed_publisher_pdf
+724,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Mn,101.06,ppm,Table 14,table_transcription_indexed_publisher_pdf
+725,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Ni,1.39,ppm,Table 14,table_transcription_indexed_publisher_pdf
+726,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Ni,1.47,ppm,Table 14,table_transcription_indexed_publisher_pdf
+727,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Ni,1.18,ppm,Table 14,table_transcription_indexed_publisher_pdf
+728,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Ni,1.26,ppm,Table 14,table_transcription_indexed_publisher_pdf
+729,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Ni,1.62,ppm,Table 14,table_transcription_indexed_publisher_pdf
+730,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Ni,1.7,ppm,Table 14,table_transcription_indexed_publisher_pdf
+731,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Ni,0.95,ppm,Table 14,table_transcription_indexed_publisher_pdf
+732,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Ni,1.06,ppm,Table 14,table_transcription_indexed_publisher_pdf
+733,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Cd,0.26,ppm,Table 14,table_transcription_indexed_publisher_pdf
+734,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Cd,0.36,ppm,Table 14,table_transcription_indexed_publisher_pdf
+735,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Cd,0.19,ppm,Table 14,table_transcription_indexed_publisher_pdf
+736,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Cd,0.29,ppm,Table 14,table_transcription_indexed_publisher_pdf
+737,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Cd,0.25,ppm,Table 14,table_transcription_indexed_publisher_pdf
+738,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Cd,0.35,ppm,Table 14,table_transcription_indexed_publisher_pdf
+739,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Cd,0.18,ppm,Table 14,table_transcription_indexed_publisher_pdf
+740,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Cd,0.28,ppm,Table 14,table_transcription_indexed_publisher_pdf
+741,gaber_sakha_water_quality_2022_2023,2022,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Pb,0.74,ppm,Table 14,table_transcription_indexed_publisher_pdf
+742,gaber_sakha_water_quality_2022_2023,2023,14,water_quality=ALL_WATER_TREATMENTS,,,,grain_Pb,0.81,ppm,Table 14,table_transcription_indexed_publisher_pdf
+743,gaber_sakha_water_quality_2022_2023,2022,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Pb,0.71,ppm,Table 14,table_transcription_indexed_publisher_pdf
+744,gaber_sakha_water_quality_2022_2023,2023,8,water_quality=ALL_WATER_TREATMENTS,,,,grain_Pb,0.74,ppm,Table 14,table_transcription_indexed_publisher_pdf
+745,gaber_sakha_water_quality_2022_2023,2022,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Pb,0.82,ppm,Table 14,table_transcription_indexed_publisher_pdf
+746,gaber_sakha_water_quality_2022_2023,2023,6,water_quality=ALL_WATER_TREATMENTS,,,,grain_Pb,0.86,ppm,Table 14,table_transcription_indexed_publisher_pdf
+747,gaber_sakha_water_quality_2022_2023,2022,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Pb,0.7,ppm,Table 14,table_transcription_indexed_publisher_pdf
+748,gaber_sakha_water_quality_2022_2023,2023,11,water_quality=ALL_WATER_TREATMENTS,,,,grain_Pb,0.73,ppm,Table 14,table_transcription_indexed_publisher_pdf
+749,el_karada_planting_methods_2006_2007,2006,5,T1 - traditional transplanting,,,,grain_yield,3883.33,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+750,el_karada_planting_methods_2006_2007,2006,5,T1 - traditional transplanting,,,,irrigation_water_applied,6564.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+751,el_karada_planting_methods_2006_2007,2006,5,T2 - flat transplanting 20 cm rows x 15 cm hills,,,,grain_yield,5120.0,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+752,el_karada_planting_methods_2006_2007,2006,5,T2 - flat transplanting 20 cm rows x 15 cm hills,,,,irrigation_water_applied,6300.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+753,el_karada_planting_methods_2006_2007,2006,5,T3 - flat transplanting 20 cm rows x 12.5 cm hills,,,,grain_yield,5509.33,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+754,el_karada_planting_methods_2006_2007,2006,5,T3 - flat transplanting 20 cm rows x 12.5 cm hills,,,,irrigation_water_applied,6340.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+755,el_karada_planting_methods_2006_2007,2006,5,T4 - flat transplanting 20 cm rows x 10 cm hills,,,,grain_yield,6438.0,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+756,el_karada_planting_methods_2006_2007,2006,5,T4 - flat transplanting 20 cm rows x 10 cm hills,,,,irrigation_water_applied,6420.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+757,el_karada_planting_methods_2006_2007,2006,5,T5 - transplanting in furrow bottom (30 cm furrow),,,,grain_yield,3897.0,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+758,el_karada_planting_methods_2006_2007,2006,5,T5 - transplanting in furrow bottom (30 cm furrow),,,,irrigation_water_applied,4244.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+759,el_karada_planting_methods_2006_2007,2006,5,T6 - transplanting in bed bottom (35 cm bed),,,,grain_yield,3907.0,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+760,el_karada_planting_methods_2006_2007,2006,5,T6 - transplanting in bed bottom (35 cm bed),,,,irrigation_water_applied,3878.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+761,el_karada_planting_methods_2006_2007,2007,5,T1 - traditional transplanting,,,,grain_yield,3898.33,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+762,el_karada_planting_methods_2006_2007,2007,5,T1 - traditional transplanting,,,,irrigation_water_applied,6597.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+763,el_karada_planting_methods_2006_2007,2007,5,T2 - flat transplanting 20 cm rows x 15 cm hills,,,,grain_yield,5158.5,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+764,el_karada_planting_methods_2006_2007,2007,5,T2 - flat transplanting 20 cm rows x 15 cm hills,,,,irrigation_water_applied,6551.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+765,el_karada_planting_methods_2006_2007,2007,5,T3 - flat transplanting 20 cm rows x 12.5 cm hills,,,,grain_yield,5431.0,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+766,el_karada_planting_methods_2006_2007,2007,5,T3 - flat transplanting 20 cm rows x 12.5 cm hills,,,,irrigation_water_applied,6593.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+767,el_karada_planting_methods_2006_2007,2007,5,T4 - flat transplanting 20 cm rows x 10 cm hills,,,,grain_yield,6460.67,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+768,el_karada_planting_methods_2006_2007,2007,5,T4 - flat transplanting 20 cm rows x 10 cm hills,,,,irrigation_water_applied,6617.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+769,el_karada_planting_methods_2006_2007,2007,5,T5 - transplanting in furrow bottom (30 cm furrow),,,,grain_yield,3994.67,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+770,el_karada_planting_methods_2006_2007,2007,5,T5 - transplanting in furrow bottom (30 cm furrow),,,,irrigation_water_applied,4490.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+771,el_karada_planting_methods_2006_2007,2007,5,T6 - transplanting in bed bottom (35 cm bed),,,,grain_yield,4065.0,kg_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription
+772,el_karada_planting_methods_2006_2007,2007,5,T6 - transplanting in bed bottom (35 cm bed),,,,irrigation_water_applied,4124.0,m3_per_feddan,Tables 1-2; Journal pages 8427-8429,table_transcription

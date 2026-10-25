@@ -1,0 +1,159 @@
+{
+  "weather_daily": 1089840,
+  "grid_point": 38,
+  "soil_point": 38,
+  "soil_awc": 38,
+  "literature_study": 18,
+  "literature_trial_observation": 688,
+  "literature_trial_result": 470,
+  "literature_environmental_measurement": 104,
+  "rice_variety": 19,
+  "rice_variety_reference": 18,
+  "rice_variety_field_guide": 14,
+  "agronomy_recommendation": 23,
+  "crop_calendar": 7,
+  "pump_catalog_series": 6,
+  "regional_stats": 7,
+  "rice_daily_water_demand": 46550,
+  "point_season_summary": 266,
+  "water_scenario": 266,
+  "water_scenario_by_variety_v3": 9044,
+  "sentinel2_scene": 3775,
+  "sentinel2_shortlist": 119,
+  "tables": 44,
+  "foreign_keys": 48,
+  "empty_tables": [
+    "canal_schedule",
+    "crop_history",
+    "field",
+    "field_operation",
+    "field_season",
+    "groundwater_level",
+    "irrigation_event",
+    "pump_type",
+    "soil_salinity",
+    "vegetation_index"
+  ],
+  "weather_nulls": 1292,
+  "weather_points": 38,
+  "weather_parameters": 8,
+  "weather_start": "2017-01-01",
+  "weather_end": "2026-10-25",
+  "foreign_key_errors": 0,
+  "integrity": "ok",
+  "column_count": 461,
+  "files_exported": 34,
+  "environment_statuses": [
+    [
+      "published_interpolated_map_summary_area_conflicts_with_reported_governorate_area",
+      2
+    ],
+    [
+      "published_interpolated_map_summary_not_current_field_observation",
+      10
+    ],
+    [
+      "transcribed_published_derived_water_quality_index",
+      20
+    ],
+    [
+      "transcribed_published_site_trial_not_farmer_field",
+      72
+    ]
+  ],
+  "source_studies": [
+    [
+      "IBRAHIM_TAG_ELEZZ_RICE_PREVIOUS_CROP_2000_2001",
+      2002,
+      "Tag El-Ezz Agricultural Research Station, Dakahlia Governorate (neighboring Delta; not Kafr El-Sheikh)",
+      "PUBLISHED_NEIGHBORING_DELTA_RICE_ROTATION_TRIAL"
+    ],
+    [
+      "el_karada_planting_methods_2006_2007",
+      2008,
+      "El-Karada Water Requirements Research Station, Kafr El-Sheikh",
+      "table_transcription"
+    ],
+    [
+      "ELHENAWY_KFS_RICE_PREVIOUS_CROP_2007",
+      2013,
+      "Faculty of Agriculture farm, Kafrelsheikh University; experiment season 2007",
+      "PUBLISHED_LOCAL_EXPERIMENT_SUMMARIES"
+    ],
+    [
+      "YAGETA_SAKHA_PREVIOUS_RICE_SALINITY_2010",
+      2013,
+      "15 study sites within 5 km of the Rice Research and Training Center, Sakha, Kafr El-Sheikh",
+      "PUBLISHED_NEAR_SAKHA_OBSERVATIONAL_EVIDENCE"
+    ],
+    [
+      "kfsu_rehan_2012_2013",
+      2013,
+      "Sakha Agriculture Research Station, Kafr El-Sheikh",
+      "abstract_transcription"
+    ],
+    [
+      "MOURSI_SAKHA_RICE_WATER_COMPONENTS_2012_2013",
+      2015,
+      "Sakha Agricultural Research Station, Kafr El-Sheikh",
+      "PUBLISHED_PRIMARY_RESEARCH_STATION_TRIAL"
+    ],
+    [
+      "DARWESH_SAKHA_IRRIGATION_DEPTH_INTERVAL_2013_2014",
+      2016,
+      "Sakha Agricultural Research Station Farm, Kafr El-Sheikh",
+      "PUBLISHED_PRIMARY_RESEARCH_STATION_TRIAL"
+    ],
+    [
+      "ABOU_EL_HASSAN_KARADA_WATER_DEFICIT_2014_2015",
+      2017,
+      "El-Karada Research Station, Kafr El-Sheikh",
+      "PUBLISHED_PRIMARY_RESEARCH_STATION_TRIAL"
+    ],
+    [
+      "GEWAILY_SAKHA_RICE_SOIL_BASELINE_2016_2017",
+      2018,
+      "Rice Research and Training Center experimental farm, Sakha, Kafr El-Sheikh",
+      "PUBLISHED_SAKHA_STATION_SOIL_BASELINE"
+    ],
+    [
+      "ghazy2019_giza179",
+      2019,
+      "Experimental Farm, Sakha Research Station, Kafr El-Sheikh, Egypt",
+      "PRIMARY_RESEARCH_STATION_RESULTS_TRANSCRIBED_NOT_FARM_LABELS"
+    ],
+    [
+      "eid_hammoul_rice_water_soil_2020_2021",
+      2022,
+      "Hammoul District, North Nile Delta, Egypt",
+      "publisher_pdf_tables_transcribed"
+    ],
+    [
+      "elbanna_kfs_geotechnical_groundwater_map_2023",
+      2023,
+      "Kafr El-Sheikh Governorate, Egypt",
+      "publisher_article_area_summary_transcribed"
+    ],
+    [
+      "GHAZY_SAKHA106_IRRIGATION_COMPOST_SILICATE_2022_2023",
+      2024,
+      "Experimental Farm, Sakha Agriculture Research Station, Kafr El-Sheikh",
+      "PUBLISHED_PRIMARY_RESEARCH_STATION_TRIAL"
+    ],
+    [
+      "EID_NORTH_DELTA_RICE_PLANTING_DEPTH_2023_2024",
+      2025,
+      "Northern Nile Delta, Egypt; exact station/location not confirmed in this extract",
+      "PUBLISHED_PRIMARY_RESEARCH_REGIONAL_TRIAL"
+    ],
+    [
+      "gaber_sakha_water_quality_2022_2023",
+      2025,
+      "Sakha Agriculture Research Station, Kafr El-Sheikh",
+      "tables_10_14_transcription"
+    ]
+  ],
+  "source_db_size_mb": 94.8,
+  "package_db_size_mb": 94.8,
+  "literature_evidence": 19
+}

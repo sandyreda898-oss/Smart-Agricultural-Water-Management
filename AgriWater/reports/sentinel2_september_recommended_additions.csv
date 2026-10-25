@@ -1,0 +1,3 @@
+﻿"year","date","scene_id","cloud_cover_percent","additional_area_km2","additional_coverage_percentage_points","B04_available","B08_available","product_url_available","review_status"
+"2019","2019-09-04","S2A_MSIL2A_20190904T083601_N0510_R064_T36RTV_20250602T085630","8.09","2470.87","58.72","yes","yes","yes","Proposed - imagery not downloaded or verified"
+"2022","2022-09-28","S2A_MSIL2A_20220928T083731_N0510_R064_T36RTV_20240731T004039","0.011549","2464.82","58.57","yes","yes","yes","Proposed - imagery not downloaded or verified"
