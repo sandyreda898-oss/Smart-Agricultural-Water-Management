@@ -1,0 +1,47 @@
+﻿source_type,table_or_file,location,rows,columns,size_mb
+CSV,crop_water_parameters.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\crop_water_parameters.csv,6,9,0.001
+CSV,field_survey_template.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\field_survey_template.csv,0,23,0.0
+CSV,hwsd2_awc_database_audit.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_database_audit.csv,92,53,0.024
+CSV,hwsd2_awc_final.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_final.csv,8,21,0.003
+CSV,hwsd2_awc_final_review.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_final_review.csv,38,44,0.024
+CSV,hwsd2_awc_final_review_repaired.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_final_review_repaired.csv,38,44,0.026
+CSV,hwsd2_awc_rootable_depth_by_smu.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_rootable_depth_by_smu.csv,8,15,0.002
+CSV,hwsd2_awc_rootable_depth_point_candidates.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,38,48,0.029
+CSV,hwsd2_awc_samples.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_samples.csv,38,8,0.004
+CSV,hwsd2_awc_semantics_audit.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_semantics_audit.csv,38,50,0.04
+CSV,hwsd2_awc_semantics_by_smu.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_semantics_by_smu.csv,8,11,0.004
+CSV,hwsd2_awc_source_layer_records.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_source_layer_records.csv,84,10,0.003
+CSV,hwsd2_awc_source_smu_records.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_source_smu_records.csv,8,5,0.0
+CSV,hwsd2_awc_validation.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_validation.csv,8,15,0.001
+CSV,hwsd2_metadata_d_awc.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_metadata_d_awc.csv,7,2,0.0
+CSV,hwsd2_metadata_d_root_depth.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_metadata_d_root_depth.csv,4,2,0.0
+CSV,hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv,2,6,0.0
+CSV,hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv,2,6,0.0
+CSV,hwsd2_raster_spatial_check.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_raster_spatial_check.csv,38,26,0.007
+CSV,hwsd2_soil_model_candidates.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_soil_model_candidates.csv,36,50,0.031
+CSV,hwsd2_soil_model_screening.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_soil_model_screening.csv,38,50,0.032
+CSV,hwsd2_soil_samples.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_soil_samples.csv,38,18,0.005
+CSV,hwsd2_soil_samples_awc_review.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_soil_samples_awc_review.csv,38,28,0.016
+CSV,hwsd2_soil_samples_clean.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_soil_samples_clean.csv,38,20,0.005
+CSV,nasa_power_daily.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\nasa_power_daily.csv,777024,9,70.067
+CSV,nasa_power_daily_units_fixed.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\nasa_power_daily_units_fixed.csv,777024,9,72.476
+CSV,rice_crop_calendar.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\rice_crop_calendar.csv,7,12,0.004
+CSV,rice_daily_water_demand_2017_2023.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\rice_daily_water_demand_2017_2023.csv,46550,16,6.997
+CSV,rice_field_season_features_2017_2023.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\rice_field_season_features_2017_2023.csv,266,42,0.154
+CSV,rice_governorate_year_reference_2017_2023.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\rice_governorate_year_reference_2017_2023.csv,7,10,0.001
+CSV,rice_statistics_2017_2023.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\rice_statistics_2017_2023.csv,7,11,0.001
+CSV,rice_water_scenarios_2017_2023.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\rice_water_scenarios_2017_2023.csv,266,18,0.068
+CSV,rice_water_scenarios_annual_summary.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\rice_water_scenarios_annual_summary.csv,7,7,0.001
+CSV,sentinel2_scene_catalog.csv,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\sentinel2_scene_catalog.csv,3775,8,266.377
+SQLite table,crop_calendar,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,7,12,
+SQLite table,crop_water_parameters,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,6,9,
+SQLite table,database_metadata,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,7,2,
+SQLite table,field_season_features,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,266,42,
+SQLite table,governorate_year_reference,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,7,10,
+SQLite table,rice_daily_water_demand,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,46550,16,
+SQLite table,rice_statistics,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,7,11,
+SQLite table,rice_water_scenarios,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,266,18,
+SQLite table,soil_samples,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,38,20,
+SQLite table,weather_daily,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,777024,9,
+SQLite view,v_field_season_with_scenarios,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,266,48,
+SQLite view,v_field_season_with_soil,C:\Users\D.L\Desktop\AgriWater_FIXED\database\agriwater_project.sqlite,266,48,

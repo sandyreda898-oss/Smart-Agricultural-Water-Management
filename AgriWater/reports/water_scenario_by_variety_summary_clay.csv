@@ -1,0 +1,11 @@
+﻿variety,duration_basis,field_days,mean_low_m3_per_feddan,mean_high_m3_per_feddan,mean_etc_mm,mean_rain_mm,n_records
+Sakha 101,length_from_sowing,119,6272.0,7910.0,873.7,10.9,252
+Sakha 101,length_from_transplanting,143,7000.0,8968.0,986.4,17.1,252
+Sakha 104,length_from_sowing,111,6024.0,7552.0,828.9,2.9,252
+Sakha 104,length_from_transplanting,135,6763.0,8621.0,951.2,16.1,252
+Giza 177,length_from_sowing,101,5652.0,7042.0,768.0,2.9,252
+Giza 177,length_from_transplanting,125,6472.0,8192.0,904.7,11.0,252
+Giza 178,length_from_sowing,111,6024.0,7552.0,828.9,2.9,252
+Giza 178,length_from_transplanting,135,6763.0,8621.0,951.2,16.1,252
+Egyptian Hybrid 1,length_from_sowing,111,6024.0,7552.0,828.9,2.9,252
+Egyptian Hybrid 1,length_from_transplanting,135,6763.0,8621.0,951.2,16.1,252

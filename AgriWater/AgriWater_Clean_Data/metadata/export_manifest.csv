@@ -1,0 +1,35 @@
+﻿table_name,row_count,file,format,generated_from,notes
+agronomy_recommendation,23,data/table_exports/agronomy_recommendation.csv,CSV,database/agriwater_clean.sqlite,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.
+crop_calendar,7,data/table_exports/crop_calendar.csv,CSV,database/agriwater_clean.sqlite,تقويم زراعي موسمي مرجعي للأرز.
+crop_reference,7,data/table_exports/crop_reference.csv,CSV,database/agriwater_clean.sqlite,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.
+crop_water_parameter,10,data/table_exports/crop_water_parameter.csv,CSV,database/agriwater_clean.sqlite,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.
+data_source,21,data/table_exports/data_source.csv,CSV,database/agriwater_clean.sqlite,مصادر البيانات وروابطها وملاحظاتها.
+database_metadata,37,data/table_exports/database_metadata.csv,CSV,database/agriwater_clean.sqlite,ملاحظات النسخ والاستيراد وإصدارات مراحل البناء.
+district,11,data/table_exports/district.csv,CSV,database/agriwater_clean.sqlite,المحافظة والمراكز الإدارية المستخدمة في الربط المكاني.
+grid_point,38,data/table_exports/grid_point.csv,CSV,database/agriwater_clean.sqlite,نقاط الشبكة المرجعية للطقس والتربة.
+irrigation_method,2,data/table_exports/irrigation_method.csv,CSV,database/agriwater_clean.sqlite,قاموس طرق الري.
+literature_environmental_measurement,104,data/table_exports/literature_environmental_measurement.csv,CSV,database/agriwater_clean.sqlite,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.
+literature_evidence,19,data/table_exports/literature_evidence.csv,CSV,database/agriwater_clean.sqlite,نتائج واستنتاجات وصفية من دراسات منشورة.
+literature_study,18,data/table_exports/literature_study.csv,CSV,database/agriwater_clean.sqlite,بيانات تعريف الدراسات المنشورة وحدودها.
+literature_trial_observation,688,data/table_exports/literature_trial_observation.csv,CSV,database/agriwater_clean.sqlite,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).
+literature_trial_result,470,data/table_exports/literature_trial_result.csv,CSV,database/agriwater_clean.sqlite,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.
+machinery_inventory,1,data/table_exports/machinery_inventory.csv,CSV,database/agriwater_clean.sqlite,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.
+ministry_rule,7,data/table_exports/ministry_rule.csv,CSV,database/agriwater_clean.sqlite,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.
+plant_protection_reference,5,data/table_exports/plant_protection_reference.csv,CSV,database/agriwater_clean.sqlite,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.
+point_season_summary,266,data/table_exports/point_season_summary.csv,CSV,database/agriwater_clean.sqlite,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.
+pump_catalog_series,6,data/table_exports/pump_catalog_series.csv,CSV,database/agriwater_clean.sqlite,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.
+regional_stats,7,data/table_exports/regional_stats.csv,CSV,database/agriwater_clean.sqlite,إحصاءات الأرز السنوية على مستوى المحافظة.
+rice_daily_water_demand,46550,data/table_exports/rice_daily_water_demand.csv,CSV,database/agriwater_clean.sqlite,تقدير يومي مرجعي لاحتياج ماء الأرز ETc.
+rice_variety,19,data/table_exports/rice_variety.csv,CSV,database/agriwater_clean.sqlite,قاموس أصناف الأرز ومدد الموسم المتاحة.
+rice_variety_field_guide,14,data/table_exports/rice_variety_field_guide.csv,CSV,database/agriwater_clean.sqlite,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.
+rice_variety_reference,18,data/table_exports/rice_variety_reference.csv,CSV,database/agriwater_clean.sqlite,صفات مرجعية للأصناف من ARC.
+season,7,data/table_exports/season.csv,CSV,database/agriwater_clean.sqlite,قاموس السنوات/المواسم.
+sentinel2_scene,3775,data/table_exports/sentinel2_scene.csv,CSV,database/agriwater_clean.sqlite,فهرس مشاهد Sentinel-2، وليس الصور أو مؤشرات الغطاء النباتي.
+sentinel2_shortlist,119,data/table_exports/sentinel2_shortlist.csv,CSV,database/agriwater_clean.sqlite,المشاهد المرشحة للمعالجة اللاحقة.
+soil_awc,38,data/table_exports/soil_awc.csv,CSV,database/agriwater_clean.sqlite,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.
+soil_point,38,data/table_exports/soil_point.csv,CSV,database/agriwater_clean.sqlite,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.
+water_scenario,266,data/table_exports/water_scenario.csv,CSV,database/agriwater_clean.sqlite,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.
+water_scenario_by_variety,2660,data/table_exports/water_scenario_by_variety.csv,CSV,database/agriwater_clean.sqlite,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.
+water_scenario_by_variety_clay,2660,data/table_exports/water_scenario_by_variety_clay.csv,CSV,database/agriwater_clean.sqlite,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.
+water_scenario_by_variety_v3,9044,data/table_exports/water_scenario_by_variety_v3.csv,CSV,database/agriwater_clean.sqlite,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.
+weather_daily,1089840,data/table_exports/weather_daily.csv.gz,CSV.GZ,database/agriwater_clean.sqlite,تقديرات طقس يومية شبكية من NASA POWER؛ ليست قياسات محطة/حقل.

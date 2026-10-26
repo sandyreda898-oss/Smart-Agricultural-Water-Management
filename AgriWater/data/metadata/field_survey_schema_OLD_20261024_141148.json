@@ -1,0 +1,37 @@
+{
+  "file": "data\\processed\\field_survey_template.csv",
+  "columns": [
+    "record_id",
+    "field_id",
+    "farmer_consent_id",
+    "survey_date",
+    "sowing_date",
+    "harvest_date",
+    "rice_variety",
+    "soil_type_observed",
+    "irrigation_method",
+    "irrigation_event_date",
+    "irrigation_volume_m3",
+    "irrigation_duration_hours",
+    "fertilizer_type",
+    "fertilizer_amount_kg",
+    "pesticide_or_operation",
+    "harvest_yield_kg",
+    "cultivated_area_m2",
+    "longitude",
+    "latitude",
+    "field_polygon_geojson",
+    "measurement_method",
+    "data_collector",
+    "source_notes"
+  ],
+  "privacy": "Use consent, minimize personal data, and do not publish identifiable farmer information.",
+  "units": {
+    "irrigation_volume_m3": "m3",
+    "irrigation_duration_hours": "hours",
+    "fertilizer_amount_kg": "kg",
+    "harvest_yield_kg": "kg",
+    "cultivated_area_m2": "m2"
+  },
+  "note": "Blank template only; no field observations have been invented."
+}

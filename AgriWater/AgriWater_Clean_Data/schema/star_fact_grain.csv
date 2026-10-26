@@ -1,0 +1,28 @@
+fact_table,grain,source_table,warehouse_rows,measure_or_payload,model_use,status
+fact_weather_daily,one grid point x calendar day x weather parameter,weather_daily,1089840,value plus source unit,location and weather features,gridded estimate; nulls preserved
+fact_soil_measurement,one grid point x soil property x sampled/map depth,soil_point + soil_awc,292,value and property unit,soil feature context,interpolated/map-derived; not parcel lab test
+fact_daily_crop_water,one grid point x day x crop,rice_daily_water_demand,46550,ET0 Kc estimated ETc,water-demand feature/estimate,derived; not applied irrigation
+fact_seasonal_water_scenario,one source scenario row x point x season x variety x model version,water_scenario_by_variety* (3 versions),14364,water depths and per-feddan scenario ranges,scenario comparison and planning,model-derived assumptions; versions retained
+fact_baseline_water_scenario,one location x season,water_scenario,266,baseline water scenario ranges,baseline comparison,model-derived; not observed irrigation
+fact_point_season_summary,one location x season,point_season_summary,266,seasonal climate and ET summaries,season context and feature aggregation,estimated summary; readiness flags retained
+fact_regional_crop_stat,one reported crop x area x season row,regional_stats,7,area production yield,regional trend/context,reported aggregate; not parcel outcome
+fact_trial_result,one published treatment result row,literature_trial_result,470,metric outcome and standard-unit companion,agronomic evidence/benchmark,station or published trial; not farmer label
+fact_trial_observation,one published observation row,literature_trial_observation,688,metric value and depth/period context,soil/water/crop context,study-level result; source status retained
+fact_environmental_measurement,one study x sample context x parameter row,literature_environmental_measurement,104,environmental parameter,soil/water quality context,heterogeneous samples; filter sample kind and status
+fact_literature_evidence,one qualitative evidence assertion,literature_evidence,19,result narrative and study context,rule evidence/context,non-additive qualitative evidence
+fact_crop_calendar,one source calendar x season x variety x growth-stage row,crop_calendar,7,textual planting/transplant/harvest/stage windows,calendar/rule engine,source windows preserved as text
+fact_variety_field_guide,one dated variety-guide row,rice_variety_field_guide,14,variety growth/yield ranges and response notes,seed variety selection,guide ranges; not guaranteed yield
+fact_crop_water_parameter,one crop x variety x growth-stage parameter,crop_water_parameter,10,Kc or parameter range,ET and water-rule parameters,reference assumptions; conditions/status retained
+fact_agronomy_guidance,one recommendation or rule source row,agronomy_recommendation + ministry_rule,30,text and optional numeric range,rule-based recommendations,source confidence and review state retained
+fact_plant_protection_guidance,one pest/issue reference row,plant_protection_reference,5,symptom/timing/product fields,monitoring information only,non-operational where product/rate/PHI incomplete
+fact_pump_catalog,one manufacturer series row,pump_catalog_series,6,catalog flow/head ranges,pump catalogue lookup,range endpoints are not a matched duty point
+fact_satellite_scene,one satellite scene metadata row,sentinel2_scene + shortlist flag,3775,date tile cloud/footprint metadata,optional future remote sensing,metadata only; NDVI/EVI not calculated
+fact_machinery_inventory,one published administrative inventory row,machinery_inventory,1,mobile/stationary totals,equipment context,aggregate count; not farmer pump inventory
+fact_field_season,one actual field x crop season,field_season,0,actual season inputs and outcomes,future labelled training data,empty source table
+fact_irrigation_event,one measured irrigation event,irrigation_event,0,volume and duration,future water/runtime labels,empty source table
+fact_field_operation,one dated operation per field season,field_operation,0,operation and input amount,future operation history,empty source table
+fact_crop_history,one recorded field x year x crop history row,crop_history,0,previous crop by field and season,future parcel history,empty source table
+fact_canal_schedule,one canal x district x scheduled period,canal_schedule,0,turn and dates,future water-access constraint,empty source table
+fact_groundwater_level,one location x measurement date,groundwater_level,0,depth measurement,groundwater context,empty source table
+fact_soil_salinity,one location x date x depth,soil_salinity,0,EC/ESP,soil salinity context,empty source table
+fact_vegetation_index,one field/grid point x satellite scene,vegetation_index,0,NDVI/EVI,optional future crop condition feature,empty by current project scope

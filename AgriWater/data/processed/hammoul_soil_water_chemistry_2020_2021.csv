@@ -1,0 +1,93 @@
+﻿sample_kind,sample_label,sample_year,treatment_code,parameter_name,parameter_value,unit,source_locator,data_status
+soil,pre-cultivation soil,2020,,sand,14.7,%,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,sand,14.7,%,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,silt,32.3,%,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,silt,32.3,%,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,clay,53.0,%,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,clay,53.0,%,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,pH_1_to_1,8.2,pH,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,pH_1_to_1,8.4,pH,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,EC_1_to_1,5.57,dS/m,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,EC_1_to_1,3.86,dS/m,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,Ca,6.64,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,Ca,6.264,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,Mg,13.08,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,Mg,12.744,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,Na,34.65,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,Na,16.87,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,K,1.44,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,K,2.66,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,CO3,0,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,CO3,0,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,HCO3,1.6,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,HCO3,1.6,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,Cl,19.7,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,Cl,16.5,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,SO4,34.5,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,SO4,20.5,meq/L,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,available_K,900,mg/kg,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,available_K,901.6,mg/kg,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,available_P,23.4,mg/kg,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,available_P,23.1,mg/kg,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2020,,available_N,54.6,mg/kg,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+soil,pre-cultivation soil,2021,,available_N,54.4,mg/kg,"Table 1, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,EC,1.67,dS/m,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,EC,2.7,dS/m,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,EC,1.73,dS/m,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,EC,2.86,dS/m,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,pH,7.56,pH,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,pH,7.25,pH,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,pH,7.4,pH,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,pH,7.78,pH,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,Na,8.8,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,Na,14.3,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,Na,9.5,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,Na,16.8,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,K,0.8,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,K,2.2,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,K,0.9,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,K,1.5,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,Ca,3.5,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,Ca,6.0,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,Ca,3.4,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,Ca,6.1,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,Mg,3.8,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,Mg,5.4,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,Mg,3.7,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,Mg,5.5,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,CO3,0,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,CO3,0,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,CO3,0,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,CO3,0,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,HCO3,5.4,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,HCO3,9.7,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,HCO3,5.3,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,HCO3,9.9,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,Cl,8.0,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,Cl,12.6,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,Cl,7.3,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,Cl,14.1,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,SO4,3.5,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,SO4,4.7,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2021,blended_canal_water,SO4,4.9,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,SO4,5.9,meq/L,"Table 2, p. 135",transcribed_published_site_trial_not_farmer_field
+irrigation_water,blended_canal_water,2020,blended_canal_water,SAR,4.6,dimensionless,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,SAR,6.3,dimensionless,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,blended_canal_water,2021,blended_canal_water,SAR,5.0,dimensionless,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,SAR,7.0,dimensionless,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,blended_canal_water,2020,blended_canal_water,RSC,0,meq/L,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,RSC,0,meq/L,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,blended_canal_water,2021,blended_canal_water,RSC,0,meq/L,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,RSC,0,meq/L,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,blended_canal_water,2020,blended_canal_water,SSP,52.1,%,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,SSP,51.3,%,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,blended_canal_water,2021,blended_canal_water,SSP,54.3,%,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,SSP,56.2,%,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,blended_canal_water,2020,blended_canal_water,SMgP,22.5,%,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,SMgP,19.4,%,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,blended_canal_water,2021,blended_canal_water,SMgP,21.1,%,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,SMgP,18.4,%,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,blended_canal_water,2020,blended_canal_water,PS,9.8,meq/L,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2020,agricultural_drainage_water,PS,14.9,meq/L,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,blended_canal_water,2021,blended_canal_water,PS,9.8,meq/L,"Table 4, p. 136",transcribed_published_derived_water_quality_index
+irrigation_water,agricultural_drainage_water,2021,agricultural_drainage_water,PS,16.4,meq/L,"Table 4, p. 136",transcribed_published_derived_water_quality_index

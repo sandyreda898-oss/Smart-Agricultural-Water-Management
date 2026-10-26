@@ -1,0 +1,19 @@
+{
+  "source": "Agricultural Research Center, Rice Research Department product catalogue",
+  "source_url": "https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1",
+  "accessed_on": "2026-10-25",
+  "extract_file": "data/processed/rice_variety_reference_arc.csv",
+  "extraction_method": "Manually curated from the public ARC catalogue listing; not a live scraper.",
+  "record_count": 18,
+  "fields": [
+    "cultivar name", "Arabic name", "growth duration", "catalogue yield range", "grain type", "quality", "plant type", "lodging", "disease response", "soil suitability", "temperature range"
+  ],
+  "limitations": [
+    "ARC catalogue values describe published cultivar traits and are not guaranteed farm outcomes.",
+    "The catalogue listing is not an annual approved-seed availability list.",
+    "The ARC catalogue provides no local irrigation volumes or cultivar-specific water requirements in this extract.",
+    "The ARC catalogue pages conflict for Sakha 109 yield and plant type; those disputed traits were not imported.",
+    "Giza 184 appears in the catalogue without a trait profile and is not included in this extract."
+  ],
+  "unit_note": "Published yields are stored in tonnes per hectare as shown by the ARC catalogue."
+}

@@ -1,0 +1,186 @@
+AgriWater audit | 2026-10-25 16:27
+القاعدة: database\agriwater_v2.sqlite (94.8 MB)
+
+=== 1) الجداول وعدد الصفوف ===
+agronomy_recommendation                    23
+canal_schedule                              0
+crop_calendar                               7
+crop_history                                0
+crop_reference                              7
+crop_water_parameter                       10
+data_source                                21
+database_metadata                          37
+district                                   11
+field                                       0
+field_operation                             0
+field_season                                0
+grid_point                                 38
+groundwater_level                           0
+irrigation_event                            0
+irrigation_method                           2
+literature_environmental_measurement          104
+literature_evidence                         9
+literature_study                           15
+literature_trial_observation              688
+literature_trial_result                   470
+machinery_inventory                         1
+ministry_rule                               7
+plant_protection_reference                  5
+point_season_summary                      266
+pump_catalog_series                         6
+pump_type                                   0
+regional_stats                              7
+rice_daily_water_demand                46,550
+rice_variety                               19
+rice_variety_field_guide                   14
+rice_variety_reference                     18
+season                                      7
+sentinel2_scene                         3,775
+sentinel2_shortlist                       119
+soil_awc                                   38
+soil_point                                 38
+soil_salinity                               0
+vegetation_index                            0
+water_scenario                            266
+water_scenario_by_variety               2,660
+water_scenario_by_variety_clay          2,660
+water_scenario_by_variety_v3            9,044
+weather_daily                       1,089,840
+
+جداول فاضية (10): ['canal_schedule', 'crop_history', 'field', 'field_operation', 'field_season', 'groundwater_level', 'irrigation_event', 'pump_type', 'soil_salinity', 'vegetation_index']
+
+=== 2) الطقس (weather_daily) ===
+نقاط: 38 | بارامترات: 8 | من 2017-01-01 إلى 2026-10-25
+قيم NULL: 1292
+
+=== 3) المراكز والنقاط ===
+نقاط من غير مركز: 0 من 38
+مراكز من غير اسم عربي: 0
+  الحامول      Al Hamul           نقاط: 7
+  بيلا         Biyalu             نقاط: 6
+  البرلس       Burullus           نقاط: 3
+  دسوق         Disuq              نقاط: 2
+  فوه          Fuwwa              نقاط: 1
+  كفر الشيخ    Kafr Al-Shaykh     نقاط: 5
+  مطوبس        Mitubas            نقاط: 2
+  قلين         Qillin             نقاط: 3
+  الرياض       Riyad              نقاط: 3
+  سيدي سالم    Sidi Salim         نقاط: 6
+
+=== 4) الأصناف و Kc ===
+  (1, 'NOT_SPECIFIED', None, None, 'PLACEHOLDER_FOR_REGIONAL_REFERENCE_ROWS')
+  (2, 'Sakha 101', 'سخا 101', 145, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (3, 'Sakha 102', 'سخا 102', 125, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (4, 'Sakha 103', 'سخا 103', 120, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (5, 'Sakha 104', 'سخا 104', 135, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (6, 'Sakha 106', 'سخا 106', 128, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (7, 'Giza 177', 'جيزة 177', 125, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (8, 'Giza 178', 'جيزة 178', 135, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (9, 'Egyptian Hybrid 1', 'هجين مصر 1', 135, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (10, 'Sakha 107', 'سخا 107', 125, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (11, 'Sakha 108', 'سخا 108', 135, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (12, 'Sakha 109', 'سخا 109', 125, 'ARC_SOURCE_LISTINGS_CONFLICT_YIELD_AND_PLANT_TYPE_WITHHELD')
+  (13, 'Giza 179', 'جيزة 179', 120, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (14, 'Giza 183', 'جيزة 183', 120, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (15, 'Sakha 105', 'سخا 105', 125, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (16, 'Egyptian Jasmine', 'الياسمين المصري', 145, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (17, 'Giza 182', 'جيزة 182', 125, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+  (18, 'Sakha Super 300', 'سخا سوبر 300', None, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE_VARIABLE_DURATION')
+  (19, 'Sakha Asmar 1', 'سخا الأسمر 1', 125, 'ARC_CATALOGUE_TRAITS_NOT_LOCAL_YIELD_GUARANTEE')
+أصناف بلا مدة مفردة أو نطاق موثق: 0
+
+crop_water_parameter:
+  (1, 'initial', 1.05, 'Kc', 1.05, 'dimensionless', 'FAO_REFERENCE_NOT_LOCALLY_CALIBRATED')
+  (2, 'mid_season', 1.2, 'Kc', 1.2, 'dimensionless', 'FAO_REFERENCE_NOT_LOCALLY_CALIBRATED')
+  (3, 'late_season', None, 'Kc', None, 'dimensionless', 'FAO_REFERENCE_RANGE_NOT_LOCALLY_CALIBRATED')
+  (4, 'land_preparation', None, 'soil_saturation_requirement', 200.0, 'mm', 'LITERATURE_ASSUMPTION_REQUIRES_LOCAL_VALIDATION')
+  (5, 'growing_season', None, 'seepage_percolation_rate', None, 'mm/day', 'LITERATURE_RANGE_REQUIRES_LOCAL_VALIDATION')
+  (6, 'establishment', None, 'water_layer_establishment', 100.0, 'mm', 'LITERATURE_ASSUMPTION_REQUIRES_LOCAL_VALIDATION')
+  (7, 'initial', None, 'stage_length', 30.0, 'days', 'FAO_REFERENCE_NOT_LOCALLY_CALIBRATED')
+  (8, 'development', None, 'stage_length', 30.0, 'days', 'FAO_REFERENCE_NOT_LOCALLY_CALIBRATED')
+  (9, 'mid_season', None, 'stage_length', 60.0, 'days', 'FAO_REFERENCE_NOT_LOCALLY_CALIBRATED')
+  (10, 'late_season', None, 'stage_length', 30.0, 'days', 'FAO_REFERENCE_NOT_LOCALLY_CALIBRATED')
+صفوف فيها قيمة Kc: 2
+
+=== 5) بيانات الحقول الحقيقية ===
+حقول: 0 | مواسم حقل: 0 | ريّات: 0
+مواسم فيها إجمالي ري (الهدف 1): 0 | فيها إنتاجية (الهدف 2): 0
+
+=== 6) Sentinel-2 ===
+مشاهد: 3775 | shortlist: 119 | vegetation_index: 0
+نطاق المشاهد: 2017-01-04T08:33:32.026000Z -> 2023-12-29T08:33:51.024000Z
+ملاحظة: استخراج NDVI/EVI مؤجل حسب نطاق المشروع؛ وجود مشاهد مفهرسة لا يعني وجود قيم مؤشرات.
+
+=== 7) الإحصاءات والمواسم ===
+regional_stats: 7 صف
+  2017: 1 صف
+  2018: 1 صف
+  2019: 1 صف
+  2020: 1 صف
+  2021: 1 صف
+  2022: 1 صف
+  2023: 1 صف
+point_season_summary: 266 | water_scenario: 266
+  training_readiness = FEATURES_READY_TARGET_LABELS_REQUIRED: 266
+  actual_irrigation_status = NOT_MEASURED: 266
+
+=== 8) بيانات بيئية وتنظيمية ===
+قياسات تربة/مياه منشورة: 104 | دراسات مرتبطة: 15
+ملوحة التربة       (soil_salinity): 0
+المياه الجوفية     (groundwater_level): 0
+مناوبات الري       (canal_schedule): 0
+قواعد الوزارة      (ministry_rule): 7
+التقويم الزراعي    (crop_calendar): 7
+كتالوج سلاسل المضخات: 6 | أنواع موحدة/نقاط تصرف عند الرفع الفعلي: 0
+soil_point: 38 | soil_awc: 38 | نقاط من غير تربة: 0
+
+=== 9) سلامة القاعدة ===
+foreign_key_check problems: 0
+integrity_check: ok
+
+=== 10) الملفات والفولدرات ===
+data               ملفات:   242 |     954.1 MB
+database           ملفات:    68 |    4941.8 MB
+logs               ملفات:     2 |       0.0 MB
+reports            ملفات:    44 |       1.7 MB
+review_output      ملفات:   325 |    1553.0 MB
+src                ملفات:     7 |       0.1 MB
+tests              ملفات:     2 |       0.0 MB
+tmp                ملفات:    10 |       0.0 MB
+
+محتوى data (المستوى الأول):
+  field_survey                 ملفات: 0
+  metadata                     ملفات: 14
+  processed                    ملفات: 67
+  raw                          ملفات: 161
+
+فولدر data/field_survey موجود: True | ملفات CSV: []
+
+نسخ احتياطية في database: 17 (1128 MB)
+  agriwater_v2_backup_20261024_125149.sqlite (65.4 MB)
+  agriwater_v2_backup_20261024_125330.sqlite (65.4 MB)
+  agriwater_v2_backup_20261024_130900.sqlite (65.4 MB)
+  agriwater_v2_backup_20261024_134045.sqlite (65.4 MB)
+  agriwater_v2_backup_20261024_143651.sqlite (65.4 MB)
+  agriwater_v2_backup_20261024_145011.sqlite (65.4 MB)
+  agriwater_v2_backup_20261024_150011.sqlite (65.4 MB)
+  agriwater_v2_backup_20261024_150329.sqlite (65.9 MB)
+  agriwater_v2_backup_20261025_115725.sqlite (67.0 MB)
+  agriwater_v2_backup_20261025_115731.sqlite (67.0 MB)
+  agriwater_v2_backup_before_arc_import_20261025_112903.sqlite (66.9 MB)
+  agriwater_v2_backup_before_reference_import_20261025_113931.sqlite (66.9 MB)
+  agriwater_v2_backup_before_reference_import_20261025_114146.sqlite (66.9 MB)
+  agriwater_v2_backup_before_reference_import_20261025_114221.sqlite (67.0 MB)
+  agriwater_v2_backup_before_reference_import_20261025_114253.sqlite (67.0 MB)
+  agriwater_v2_backup_before_reference_import_20261025_120851.sqlite (68.1 MB)
+  agriwater_v2_backup_before_trial_import_20261025_113256.sqlite (66.9 MB)
+ملفات مساعدة ممكن تتمسح: ['show_methods.py', 'make_snapshot.py', 'import_field_survey_OLD_20261024_141344.py']
+
+============================================================
+الخلاصة: الناقص مرتب بالأولوية (1 = الأهم)
+============================================================
+[1] لا يوجد أي حقل حقيقي. الموديل لسه ما عندوش بيانات قياس فعلية (أهم نقص)
+[2] لا توجد بيانات تصرف مؤكدة لموديل المضخة عند الرفع الفعلي؛ الكتالوج الحالي نطاقات سلاسل فقط
+[3] لا توجد طبقة ملوحة مكانية لحقول الأرز؛ توجد عينات/دراسات منشورة محدودة في جدول الأدلة البيئية
+[3] لا توجد قياسات جوفية زراعية على مستوى النقاط/الحقول؛ أضيف ملخص خريطة جيوتقنية منشورة 2023 مع تحذير جودة
+[3] مناوبات الري (canal_schedule) فاضي

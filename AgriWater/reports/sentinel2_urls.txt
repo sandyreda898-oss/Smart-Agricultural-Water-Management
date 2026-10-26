@@ -1,0 +1,4 @@
+https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/36/S/TA/2018/10/S2B_36STA_20181014_1_L2A/B04.tif
+https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/36/S/TA/2018/10/S2B_36STA_20181014_1_L2A/B08.tif
+https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/36/S/TA/2018/10/S2B_36STA_20181014_1_L2A/SCL.tif
+https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/36/S/TA/2018/10/S2B_36STA_20181014_1_L2A/B02.tif

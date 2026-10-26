@@ -1,0 +1,25 @@
+AGRIWATER FULL DATA AUDIT
+Run time: 2026-10-24T10:57:44
+Project folder: C:\Users\D.L\Desktop\AgriWater_FIXED
+Files discovered: 105
+Files scanned successfully: 55
+Files with read errors: 0
+Tables/sheets inspected: 67
+Columns inspected: 1115
+Column entries with missing/blank values: 199
+Total missing/blank cell counts across column reports: 1560575
+Duplicate row records written: 0
+
+IMPORTANT:
+- Missing/blank does not automatically mean an error; interpret it using each field's meaning.
+- Exact duplicate rows are flagged for review, not automatically deleted.
+- This audit does not modify source files or database contents.
+- CSV parsing can vary by encoding/delimiter; inspect read_errors.csv and file_inventory.csv.
+
+Reports:
+C:\Users\D.L\Desktop\AgriWater_FIXED\reports\full_data_audit\file_inventory.csv
+C:\Users\D.L\Desktop\AgriWater_FIXED\reports\full_data_audit\table_inventory.csv
+C:\Users\D.L\Desktop\AgriWater_FIXED\reports\full_data_audit\column_missingness.csv
+C:\Users\D.L\Desktop\AgriWater_FIXED\reports\full_data_audit\missing_values_only.csv
+C:\Users\D.L\Desktop\AgriWater_FIXED\reports\full_data_audit\duplicate_rows.csv
+C:\Users\D.L\Desktop\AgriWater_FIXED\reports\full_data_audit\read_errors.csv

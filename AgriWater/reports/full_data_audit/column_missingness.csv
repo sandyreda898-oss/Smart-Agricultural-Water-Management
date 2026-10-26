@@ -1,0 +1,1116 @@
+﻿source_file,sheet_or_table,column,dtype_detected,rows,missing_or_blank_count,missing_percent,unique_nonmissing_values,example_values
+project_file_inventory.csv,(file),Folder,str,8640,9,0.1,849,.venv || .venv\Lib\site-packages || .venv\Lib\site-packages\affine
+project_file_inventory.csv,(file),Name,str,8640,0,0.0,5485,.env.example || collect.py || config.json || extract_hwsd2_samples.py || project_file_inventory.csv
+project_file_inventory.csv,(file),Size_MB,float64,8640,0,0.0,128,0.0
+project_file_inventory.csv,(file),Extension,str,8640,798,9.24,79,.example || .py || .json || .csv
+source_registry.json,(file),source,str,6,0,0.0,6,geoBoundaries gbOpen ADM1 || NASA POWER Daily API || ISRIC SoilGrids REST API v2.0 || Copernicus Data Space STAC Catalog || Egypt Ministry of Agriculture
+source_registry.json,(file),url,str,6,0,0.0,6,https://www.geoboundaries.org/api/current/gbOpen/EGY/ADM1/ || https://power.larc.nasa.gov/docs/services/api/temporal/daily/ || https://rest.isric.org/soilgrids/v2.0/docs || https://documentation.dataspace.copernicus.eu/APIs.html || https://www.agri.gov.eg/databases/42
+source_registry.json,(file),dataset,str,6,0,0.0,6,administrative boundary || daily gridded meteorological estimates || soil property point queries || Sentinel-2 L2A scene metadata || official rice area/production/irrigation records
+source_registry.json,(file),coverage,str,6,0,0.0,6,country admin level 1; filtered by name || sample grid points inside the retrieved boundary || limited sample points in this starter run; not a full raster || scene footprints intersecting admin boundary and date window || not automatically collected by this starter because no stable documented public API was verified
+source_registry.json,(file),access,str,6,0,0.0,5,"public HTTP || public HTTP, fair-use limit applies || public catalog search || manual/source-specific"
+source_registry.json,(file),limitations,str,6,0,0.0,6,"Open boundary dataset, not a cadastral/legal parcel boundary. || Grid-cell/modelled estimates, not field weather-station measurements. Large jobs are split into date chunks. || Point values are modelled soil maps. For full-coverage analysis obtain official SoilGrids raster layers. || Catalog records are not image downloads. Actual imagery processing/download may require OAuth credentials and quota. || No official production numbers are fabricated; import verified tables when available."
+database\agriwater_project.sqlite,table:crop_calendar,season_year,str,7,0,0.0,7,2017 || 2018 || 2019 || 2020 || 2021
+database\agriwater_project.sqlite,table:crop_calendar,start_date,str,7,0,0.0,7,2017-05-10 || 2018-05-10 || 2019-05-10 || 2020-05-10 || 2021-05-10
+database\agriwater_project.sqlite,table:crop_calendar,end_date,str,7,0,0.0,7,2017-10-31 || 2018-10-31 || 2019-10-31 || 2020-10-31 || 2021-10-31
+database\agriwater_project.sqlite,table:crop_calendar,planting_date,str,7,0,0.0,7,2017-05-10 to 2017-05-31 || 2018-05-10 to 2018-05-31 || 2019-05-10 to 2019-05-31 || 2020-05-10 to 2020-05-31 || 2021-05-10 to 2021-05-31
+database\agriwater_project.sqlite,table:crop_calendar,transplanting_date,str,7,0,0.0,7,2017-06-05 to 2017-06-21 || 2018-06-05 to 2018-06-21 || 2019-06-05 to 2019-06-21 || 2020-06-05 to 2020-06-21 || 2021-06-05 to 2021-06-21
+database\agriwater_project.sqlite,table:crop_calendar,harvest_date,str,7,0,0.0,7,2017-08-15 to 2017-10-07 || 2018-08-15 to 2018-10-07 || 2019-08-15 to 2019-10-07 || 2020-08-15 to 2020-10-07 || 2021-08-15 to 2021-10-07
+database\agriwater_project.sqlite,table:crop_calendar,variety,str,7,0,0.0,1,Not specified in regional reference
+database\agriwater_project.sqlite,table:crop_calendar,growth_stage,str,7,0,0.0,1,whole_season_reference_window
+database\agriwater_project.sqlite,table:crop_calendar,stage_start_date,str,7,0,0.0,7,2017-05-10 || 2018-05-10 || 2019-05-10 || 2020-05-10 || 2021-05-10
+database\agriwater_project.sqlite,table:crop_calendar,stage_end_date,str,7,0,0.0,7,2017-10-31 || 2018-10-31 || 2019-10-31 || 2020-10-31 || 2021-10-31
+database\agriwater_project.sqlite,table:crop_calendar,source_url,str,7,0,0.0,1,https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_ || https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_ || https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_ || https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_ || https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_
+database\agriwater_project.sqlite,table:crop_calendar,data_status,str,7,0,0.0,1,REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records
+database\agriwater_project.sqlite,table:crop_water_parameters,crop,str,6,0,0.0,1,rice
+database\agriwater_project.sqlite,table:crop_water_parameters,growth_stage,str,6,0,0.0,6,initial || mid_season || late_season || land_preparation || growing_season
+database\agriwater_project.sqlite,table:crop_water_parameters,kc,str,6,3,50.0,3,1.05 || 1.20 || 0.60-0.90
+database\agriwater_project.sqlite,table:crop_water_parameters,parameter_name,str,6,0,0.0,4,Kc || soil_saturation_requirement || seepage_percolation_rate
+database\agriwater_project.sqlite,table:crop_water_parameters,parameter_value,str,6,0,0.0,6,1.05 || 1.20 || 0.60-0.90 || 200 || 4-8
+database\agriwater_project.sqlite,table:crop_water_parameters,unit,str,6,0,0.0,3,dimensionless || mm || mm/day
+database\agriwater_project.sqlite,table:crop_water_parameters,valid_conditions,str,6,0,0.0,6,FAO-56 reference for paddy rice under subhumid climate and calm-to-moderate wind; local adjustment required || FAO-56 standard reference; adjust for local climate and crop conditions || FAO-56 reference range; exact value depends on harvest and crop conditions || General FAO manual assumption; not a local field measurement || General FAO range depending on soil and field conditions; do not assign a single local value yet
+database\agriwater_project.sqlite,table:crop_water_parameters,source_url,str,6,0,0.0,2,https://www.fao.org/4/x0490e/x0490e0b.htm || https://www.fao.org/4/s2022e/s2022e08.htm
+database\agriwater_project.sqlite,table:crop_water_parameters,data_status,str,6,0,0.0,4,FAO_REFERENCE_NOT_LOCALLY_CALIBRATED || FAO_REFERENCE_RANGE_NOT_LOCALLY_CALIBRATED || LITERATURE_ASSUMPTION_REQUIRES_LOCAL_VALIDATION || LITERATURE_RANGE_REQUIRES_LOCAL_VALIDATION
+database\agriwater_project.sqlite,table:database_metadata,item,str,7,0,0.0,7,project || period || database_created_from || source_files_modified || sentinel2_imagery
+database\agriwater_project.sqlite,table:database_metadata,details,str,7,0,0.0,7,"AgriWater - rice and water analysis, Kafr El-Sheikh || 2017-2023 || data/processed CSV source files || No || Not downloaded; scene catalog excluded"
+database\agriwater_project.sqlite,table:field_season_features,year,str,266,0,0.0,7,2017
+database\agriwater_project.sqlite,table:field_season_features,point_id,str,266,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+database\agriwater_project.sqlite,table:field_season_features,latitude,str,266,0,0.0,6,31.012854 || 31.112854
+database\agriwater_project.sqlite,table:field_season_features,longitude,str,266,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+database\agriwater_project.sqlite,table:field_season_features,season_start_date,str,266,0,0.0,7,2017-05-10
+database\agriwater_project.sqlite,table:field_season_features,season_end_date,str,266,0,0.0,7,2017-10-31
+database\agriwater_project.sqlite,table:field_season_features,weather_day_count,str,266,0,0.0,1,175
+database\agriwater_project.sqlite,table:field_season_features,tmin_c_season_mean,str,266,0,0.0,28,20.6513 || 20.3323
+database\agriwater_project.sqlite,table:field_season_features,tmax_c_season_mean,str,266,0,0.0,28,35.2165 || 36.2024
+database\agriwater_project.sqlite,table:field_season_features,relative_humidity_pct_season_mean,str,266,0,0.0,28,55.3132 || 54.087
+database\agriwater_project.sqlite,table:field_season_features,wind_speed_m_s_season_mean,str,266,0,0.0,28,3.0455 || 2.7469
+database\agriwater_project.sqlite,table:field_season_features,solar_radiation_mj_m2_day_season_mean,str,266,0,0.0,14,24.3676 || 23.9281
+database\agriwater_project.sqlite,table:field_season_features,pressure_kpa_season_mean,str,266,0,0.0,28,101.1118 || 101.0585
+database\agriwater_project.sqlite,table:field_season_features,rainfall_season_mm,str,266,0,0.0,28,63.65 || 74.02
+database\agriwater_project.sqlite,table:field_season_features,et0_season_mm,str,266,0,0.0,84,1181.9163 || 1170.7573 || 1181.801
+database\agriwater_project.sqlite,table:field_season_features,estimated_etc_season_mm,str,266,0,0.0,84,1313.1063 || 1300.6993 || 1312.9959
+database\agriwater_project.sqlite,table:field_season_features,estimated_etc_minus_rain_mm,str,266,0,0.0,84,1249.4563 || 1226.6793 || 1249.3459
+database\agriwater_project.sqlite,table:field_season_features,water_values_status,str,266,0,0.0,1,MODEL_ESTIMATE_NOT_OBSERVED_IRRIGATION
+database\agriwater_project.sqlite,table:field_season_features,water_method,str,266,0,0.0,1,FAO56_PM_WITH_ESTIMATED_SEASONAL_KC
+database\agriwater_project.sqlite,table:field_season_features,variety,str,266,0,0.0,1,Not specified in regional reference
+database\agriwater_project.sqlite,table:field_season_features,calendar_status,str,266,0,0.0,1,REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records
+database\agriwater_project.sqlite,table:field_season_features,planting_window,str,266,0,0.0,7,2017-05-10 to 2017-05-31
+database\agriwater_project.sqlite,table:field_season_features,transplanting_window,str,266,0,0.0,7,2017-06-05 to 2017-06-21
+database\agriwater_project.sqlite,table:field_season_features,harvest_window,str,266,0,0.0,7,2017-08-15 to 2017-10-07
+database\agriwater_project.sqlite,table:field_season_features,soil_HWSD2_SMU_ID,str,266,0,0.0,8,16413 || 7001
+database\agriwater_project.sqlite,table:field_season_features,soil_top_depth_cm,str,266,0,0.0,1,0
+database\agriwater_project.sqlite,table:field_season_features,soil_bottom_depth_cm,str,266,0,0.0,1,20
+database\agriwater_project.sqlite,table:field_season_features,soil_sand_pct,str,266,7,2.63,5,21
+database\agriwater_project.sqlite,table:field_season_features,soil_silt_pct,str,266,7,2.63,5,24
+database\agriwater_project.sqlite,table:field_season_features,soil_clay_pct,str,266,7,2.63,5,55
+database\agriwater_project.sqlite,table:field_season_features,soil_bulk,str,266,7,2.63,5,1.6399999856948853
+database\agriwater_project.sqlite,table:field_season_features,soil_organic_carbon,str,266,7,2.63,5,0.9010000228881836
+database\agriwater_project.sqlite,table:field_season_features,soil_ph_water,str,266,7,2.63,5,7.300000190734863
+database\agriwater_project.sqlite,table:field_season_features,soil_texture_usda,str,266,14,5.26,4,3
+database\agriwater_project.sqlite,table:field_season_features,soil_texture_soter,str,266,0,0.0,3,F || -
+database\agriwater_project.sqlite,table:field_season_features,soil_soil_data_status,str,266,0,0.0,2,COMPLETE || INCOMPLETE
+database\agriwater_project.sqlite,table:field_season_features,soil_missing_properties,str,266,259,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+database\agriwater_project.sqlite,table:field_season_features,actual_irrigation_m3_per_feddan,object,266,266,100.0,0,
+database\agriwater_project.sqlite,table:field_season_features,actual_yield_ton_per_feddan,object,266,266,100.0,0,
+database\agriwater_project.sqlite,table:field_season_features,actual_irrigation_label_status,str,266,0,0.0,1,NOT_AVAILABLE
+database\agriwater_project.sqlite,table:field_season_features,actual_yield_label_status,str,266,0,0.0,1,NOT_AVAILABLE
+database\agriwater_project.sqlite,table:field_season_features,training_readiness,str,266,0,0.0,1,FEATURES_READY_TARGET_LABELS_REQUIRED
+database\agriwater_project.sqlite,table:governorate_year_reference,year,str,7,0,0.0,7,2017 || 2018 || 2019 || 2020 || 2021
+database\agriwater_project.sqlite,table:governorate_year_reference,country,str,7,0,0.0,1,Egypt
+database\agriwater_project.sqlite,table:governorate_year_reference,governorate,str,7,0,0.0,1,Kafr El Sheikh
+database\agriwater_project.sqlite,table:governorate_year_reference,governorate_ar,str,7,0,0.0,1,كفر الشيخ
+database\agriwater_project.sqlite,table:governorate_year_reference,crop,str,7,0,0.0,1,Rice
+database\agriwater_project.sqlite,table:governorate_year_reference,season,str,7,0,0.0,1,Summer
+database\agriwater_project.sqlite,table:governorate_year_reference,area_feddan,str,7,0,0.0,7,258338 || 190460 || 265903 || 256127 || 251857
+database\agriwater_project.sqlite,table:governorate_year_reference,production_ton,str,7,0,0.0,7,1026424 || 760126 || 1060012 || 1023101 || 1025309
+database\agriwater_project.sqlite,table:governorate_year_reference,governorate_yield_ton_per_feddan,str,7,0,0.0,7,3.9732 || 3.991 || 3.9865 || 3.9945 || 4.071
+database\agriwater_project.sqlite,table:governorate_year_reference,data_level,str,7,0,0.0,1,GOVERNORATE_YEAR_AGGREGATE_NOT_FIELD_LABEL
+database\agriwater_project.sqlite,table:rice_daily_water_demand,year,str,46550,0,0.0,7,2017
+database\agriwater_project.sqlite,table:rice_daily_water_demand,date,str,46550,0,0.0,1225,2017-05-10 || 2017-05-11 || 2017-05-12 || 2017-05-13 || 2017-05-14
+database\agriwater_project.sqlite,table:rice_daily_water_demand,point_id,str,46550,0,0.0,38,grid_0001
+database\agriwater_project.sqlite,table:rice_daily_water_demand,latitude,str,46550,0,0.0,6,31.012854
+database\agriwater_project.sqlite,table:rice_daily_water_demand,longitude,str,46550,0,0.0,9,30.818041
+database\agriwater_project.sqlite,table:rice_daily_water_demand,tmin_c,str,46550,0,0.0,1077,17.67 || 16.06 || 15.54 || 16.14 || 18.6
+database\agriwater_project.sqlite,table:rice_daily_water_demand,tmax_c,str,46550,0,0.0,1669,33.02 || 28.71 || 32.45 || 36.51 || 38.19
+database\agriwater_project.sqlite,table:rice_daily_water_demand,relative_humidity_pct,str,46550,0,0.0,2375,48.83 || 60.81 || 57.33 || 53.62 || 50.6
+database\agriwater_project.sqlite,table:rice_daily_water_demand,wind_speed_m_s,str,46550,0,0.0,491,4.01 || 3.73 || 3.45 || 3.16 || 2.56
+database\agriwater_project.sqlite,table:rice_daily_water_demand,solar_radiation_mj_m2_day,str,46550,0,0.0,1162,27.17 || 29.07 || 28.4 || 25.95 || 25.77
+database\agriwater_project.sqlite,table:rice_daily_water_demand,pressure_kpa,str,46550,0,0.0,191,101.01 || 101.49 || 101.55 || 101.45 || 101.29
+database\agriwater_project.sqlite,table:rice_daily_water_demand,rainfall_mm_day,str,46550,0,0.0,133,0.0
+database\agriwater_project.sqlite,table:rice_daily_water_demand,et0_mm_day,str,46550,0,0.0,12143,7.6551 || 6.2747 || 6.7975 || 7.2091 || 7.2693
+database\agriwater_project.sqlite,table:rice_daily_water_demand,estimated_kc,str,46550,0,0.0,84,1.05
+database\agriwater_project.sqlite,table:rice_daily_water_demand,estimated_etc_mm_day,str,46550,0,0.0,12649,8.0378 || 6.5884 || 7.1374 || 7.5695 || 7.6328
+database\agriwater_project.sqlite,table:rice_daily_water_demand,method_note,str,46550,0,0.0,1,FAO56_PM; Kc curve is an explicit seasonal estimate
+database\agriwater_project.sqlite,table:rice_statistics,year,str,7,0,0.0,7,2017 || 2018 || 2019 || 2020 || 2021
+database\agriwater_project.sqlite,table:rice_statistics,country,str,7,0,0.0,1,Egypt
+database\agriwater_project.sqlite,table:rice_statistics,governorate,str,7,0,0.0,1,Kafr El Sheikh
+database\agriwater_project.sqlite,table:rice_statistics,governorate_ar,str,7,0,0.0,1,كفر الشيخ
+database\agriwater_project.sqlite,table:rice_statistics,crop,str,7,0,0.0,1,Rice
+database\agriwater_project.sqlite,table:rice_statistics,crop_ar,str,7,0,0.0,1,الأرز
+database\agriwater_project.sqlite,table:rice_statistics,season,str,7,0,0.0,1,Summer
+database\agriwater_project.sqlite,table:rice_statistics,season_year_label,str,7,0,0.0,7,Summer 2017 || Summer 2018 || Summer 2019 || Summer 2020 || Summer 2021
+database\agriwater_project.sqlite,table:rice_statistics,area_feddan,str,7,0,0.0,7,258338 || 190460 || 265903 || 256127 || 251857
+database\agriwater_project.sqlite,table:rice_statistics,production_ton,str,7,0,0.0,7,1026424 || 760126 || 1060012 || 1023101 || 1025309
+database\agriwater_project.sqlite,table:rice_statistics,yield_ton_per_feddan,str,7,0,0.0,7,3.9732 || 3.9910 || 3.9865 || 3.9945 || 4.0710
+database\agriwater_project.sqlite,table:rice_water_scenarios,year,str,266,0,0.0,7,2017
+database\agriwater_project.sqlite,table:rice_water_scenarios,point_id,str,266,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+database\agriwater_project.sqlite,table:rice_water_scenarios,latitude,str,266,0,0.0,6,31.012854 || 31.112854
+database\agriwater_project.sqlite,table:rice_water_scenarios,longitude,str,266,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+database\agriwater_project.sqlite,table:rice_water_scenarios,season_days,str,266,0,0.0,1,175
+database\agriwater_project.sqlite,table:rice_water_scenarios,estimated_etc_season_mm,str,266,0,0.0,84,1313.11 || 1300.7 || 1313.0
+database\agriwater_project.sqlite,table:rice_water_scenarios,rainfall_season_mm,str,266,0,0.0,28,63.65 || 74.02
+database\agriwater_project.sqlite,table:rice_water_scenarios,land_preparation_assumption_mm,str,266,0,0.0,1,200
+database\agriwater_project.sqlite,table:rice_water_scenarios,establishment_water_assumption_mm,str,266,0,0.0,1,100
+database\agriwater_project.sqlite,table:rice_water_scenarios,seepage_low_mm_day,str,266,0,0.0,1,4
+database\agriwater_project.sqlite,table:rice_water_scenarios,seepage_high_mm_day,str,266,0,0.0,1,8
+database\agriwater_project.sqlite,table:rice_water_scenarios,scenario_low_depth_mm,str,266,0,0.0,84,2249.46 || 2226.68 || 2249.35
+database\agriwater_project.sqlite,table:rice_water_scenarios,scenario_high_depth_mm,str,266,0,0.0,84,2949.46 || 2926.68 || 2949.35
+database\agriwater_project.sqlite,table:rice_water_scenarios,scenario_low_m3_per_feddan,str,266,0,0.0,84,9447.72 || 9352.05 || 9447.25
+database\agriwater_project.sqlite,table:rice_water_scenarios,scenario_high_m3_per_feddan,str,266,0,0.0,84,12387.72 || 12292.05 || 12387.25
+database\agriwater_project.sqlite,table:rice_water_scenarios,actual_irrigation_status,str,266,0,0.0,1,NOT_MEASURED
+database\agriwater_project.sqlite,table:rice_water_scenarios,assumption_note,str,266,0,0.0,1,"All rainfall treated as effective; Kc, seepage, land preparation and establishment values require local validation."
+database\agriwater_project.sqlite,table:rice_water_scenarios,method_status,str,266,0,0.0,1,SCENARIO_ESTIMATE_NOT_FIELD_VALIDATED
+database\agriwater_project.sqlite,table:soil_samples,point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+database\agriwater_project.sqlite,table:soil_samples,longitude,str,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+database\agriwater_project.sqlite,table:soil_samples,latitude,str,38,0,0.0,6,31.012854 || 31.112854
+database\agriwater_project.sqlite,table:soil_samples,raster_row,str,38,0,0.0,6,7078 || 7066
+database\agriwater_project.sqlite,table:soil_samples,raster_col,str,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+database\agriwater_project.sqlite,table:soil_samples,HWSD2_SMU_ID,str,38,0,0.0,8,16413 || 7001
+database\agriwater_project.sqlite,table:soil_samples,nodata,str,38,0,0.0,1,False
+database\agriwater_project.sqlite,table:soil_samples,top_depth_cm,str,38,0,0.0,1,0
+database\agriwater_project.sqlite,table:soil_samples,bottom_depth_cm,str,38,0,0.0,1,20
+database\agriwater_project.sqlite,table:soil_samples,sand_pct,str,38,1,2.63,5,21
+database\agriwater_project.sqlite,table:soil_samples,silt_pct,str,38,1,2.63,5,24
+database\agriwater_project.sqlite,table:soil_samples,clay_pct,str,38,1,2.63,5,55
+database\agriwater_project.sqlite,table:soil_samples,bulk,str,38,1,2.63,5,1.6399999856948853
+database\agriwater_project.sqlite,table:soil_samples,organic_carbon,str,38,1,2.63,5,0.9010000228881836
+database\agriwater_project.sqlite,table:soil_samples,ph_water,str,38,1,2.63,5,7.300000190734863
+database\agriwater_project.sqlite,table:soil_samples,texture_usda,str,38,2,5.26,4,3
+database\agriwater_project.sqlite,table:soil_samples,texture_soter,str,38,0,0.0,3,F || -
+database\agriwater_project.sqlite,table:soil_samples,match_found,str,38,0,0.0,1,True
+database\agriwater_project.sqlite,table:soil_samples,soil_data_status,str,38,0,0.0,2,COMPLETE || INCOMPLETE
+database\agriwater_project.sqlite,table:soil_samples,missing_soil_properties,str,38,37,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+database\agriwater_project.sqlite,table:weather_daily,point_id,str,777024,0,0.0,38,grid_0001
+database\agriwater_project.sqlite,table:weather_daily,latitude,str,777024,0,0.0,6,31.012854
+database\agriwater_project.sqlite,table:weather_daily,longitude,str,777024,0,0.0,9,30.818041
+database\agriwater_project.sqlite,table:weather_daily,date,str,777024,0,0.0,2556,2017-01-01 || 2017-01-02 || 2017-01-03 || 2017-01-04 || 2017-01-05
+database\agriwater_project.sqlite,table:weather_daily,parameter,str,777024,0,0.0,8,T2M
+database\agriwater_project.sqlite,table:weather_daily,value,str,777024,0,0.0,7737,9.79 || 10.76 || 11.64 || 12.06 || 11.77
+database\agriwater_project.sqlite,table:weather_daily,unit,str,777024,0,0.0,6,C
+database\agriwater_project.sqlite,table:weather_daily,source,str,777024,0,0.0,1,NASA POWER Daily API
+database\agriwater_project.sqlite,table:weather_daily,spatial_support,str,777024,0,0.0,1,gridded estimate
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,year,str,266,0,0.0,7,2017
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,point_id,str,266,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,latitude,str,266,0,0.0,6,31.012854 || 31.112854
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,longitude,str,266,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,season_start_date,str,266,0,0.0,7,2017-05-10
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,season_end_date,str,266,0,0.0,7,2017-10-31
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,weather_day_count,str,266,0,0.0,1,175
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,tmin_c_season_mean,str,266,0,0.0,28,20.6513 || 20.3323
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,tmax_c_season_mean,str,266,0,0.0,28,35.2165 || 36.2024
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,relative_humidity_pct_season_mean,str,266,0,0.0,28,55.3132 || 54.087
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,wind_speed_m_s_season_mean,str,266,0,0.0,28,3.0455 || 2.7469
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,solar_radiation_mj_m2_day_season_mean,str,266,0,0.0,14,24.3676 || 23.9281
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,pressure_kpa_season_mean,str,266,0,0.0,28,101.1118 || 101.0585
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,rainfall_season_mm,str,266,0,0.0,28,63.65 || 74.02
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,et0_season_mm,str,266,0,0.0,84,1181.9163 || 1170.7573 || 1181.801
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,estimated_etc_season_mm,str,266,0,0.0,84,1313.1063 || 1300.6993 || 1312.9959
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,estimated_etc_minus_rain_mm,str,266,0,0.0,84,1249.4563 || 1226.6793 || 1249.3459
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,water_values_status,str,266,0,0.0,1,MODEL_ESTIMATE_NOT_OBSERVED_IRRIGATION
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,water_method,str,266,0,0.0,1,FAO56_PM_WITH_ESTIMATED_SEASONAL_KC
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,variety,str,266,0,0.0,1,Not specified in regional reference
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,calendar_status,str,266,0,0.0,1,REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,planting_window,str,266,0,0.0,7,2017-05-10 to 2017-05-31
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,transplanting_window,str,266,0,0.0,7,2017-06-05 to 2017-06-21
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,harvest_window,str,266,0,0.0,7,2017-08-15 to 2017-10-07
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_HWSD2_SMU_ID,str,266,0,0.0,8,16413 || 7001
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_top_depth_cm,str,266,0,0.0,1,0
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_bottom_depth_cm,str,266,0,0.0,1,20
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_sand_pct,str,266,7,2.63,5,21
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_silt_pct,str,266,7,2.63,5,24
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_clay_pct,str,266,7,2.63,5,55
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_bulk,str,266,7,2.63,5,1.6399999856948853
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_organic_carbon,str,266,7,2.63,5,0.9010000228881836
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_ph_water,str,266,7,2.63,5,7.300000190734863
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_texture_usda,str,266,14,5.26,4,3
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_texture_soter,str,266,0,0.0,3,F || -
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_soil_data_status,str,266,0,0.0,2,COMPLETE || INCOMPLETE
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,soil_missing_properties,str,266,259,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,actual_irrigation_m3_per_feddan,object,266,266,100.0,0,
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,actual_yield_ton_per_feddan,object,266,266,100.0,0,
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,actual_irrigation_label_status,str,266,0,0.0,1,NOT_AVAILABLE
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,actual_yield_label_status,str,266,0,0.0,1,NOT_AVAILABLE
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,training_readiness,str,266,0,0.0,1,FEATURES_READY_TARGET_LABELS_REQUIRED
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,scenario_low_depth_mm,str,266,0,0.0,84,2249.46 || 2226.68 || 2249.35
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,scenario_high_depth_mm,str,266,0,0.0,84,2949.46 || 2926.68 || 2949.35
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,scenario_low_m3_per_feddan,str,266,0,0.0,84,9447.72 || 9352.05 || 9447.25
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,scenario_high_m3_per_feddan,str,266,0,0.0,84,12387.72 || 12292.05 || 12387.25
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,actual_irrigation_status,str,266,0,0.0,1,NOT_MEASURED
+database\agriwater_project.sqlite,view:v_field_season_with_scenarios,scenario_method_status,str,266,0,0.0,1,SCENARIO_ESTIMATE_NOT_FIELD_VALIDATED
+database\agriwater_project.sqlite,view:v_field_season_with_soil,year,str,266,0,0.0,7,2017
+database\agriwater_project.sqlite,view:v_field_season_with_soil,point_id,str,266,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+database\agriwater_project.sqlite,view:v_field_season_with_soil,latitude,str,266,0,0.0,6,31.012854 || 31.112854
+database\agriwater_project.sqlite,view:v_field_season_with_soil,longitude,str,266,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+database\agriwater_project.sqlite,view:v_field_season_with_soil,season_start_date,str,266,0,0.0,7,2017-05-10
+database\agriwater_project.sqlite,view:v_field_season_with_soil,season_end_date,str,266,0,0.0,7,2017-10-31
+database\agriwater_project.sqlite,view:v_field_season_with_soil,weather_day_count,str,266,0,0.0,1,175
+database\agriwater_project.sqlite,view:v_field_season_with_soil,tmin_c_season_mean,str,266,0,0.0,28,20.6513 || 20.3323
+database\agriwater_project.sqlite,view:v_field_season_with_soil,tmax_c_season_mean,str,266,0,0.0,28,35.2165 || 36.2024
+database\agriwater_project.sqlite,view:v_field_season_with_soil,relative_humidity_pct_season_mean,str,266,0,0.0,28,55.3132 || 54.087
+database\agriwater_project.sqlite,view:v_field_season_with_soil,wind_speed_m_s_season_mean,str,266,0,0.0,28,3.0455 || 2.7469
+database\agriwater_project.sqlite,view:v_field_season_with_soil,solar_radiation_mj_m2_day_season_mean,str,266,0,0.0,14,24.3676 || 23.9281
+database\agriwater_project.sqlite,view:v_field_season_with_soil,pressure_kpa_season_mean,str,266,0,0.0,28,101.1118 || 101.0585
+database\agriwater_project.sqlite,view:v_field_season_with_soil,rainfall_season_mm,str,266,0,0.0,28,63.65 || 74.02
+database\agriwater_project.sqlite,view:v_field_season_with_soil,et0_season_mm,str,266,0,0.0,84,1181.9163 || 1170.7573 || 1181.801
+database\agriwater_project.sqlite,view:v_field_season_with_soil,estimated_etc_season_mm,str,266,0,0.0,84,1313.1063 || 1300.6993 || 1312.9959
+database\agriwater_project.sqlite,view:v_field_season_with_soil,estimated_etc_minus_rain_mm,str,266,0,0.0,84,1249.4563 || 1226.6793 || 1249.3459
+database\agriwater_project.sqlite,view:v_field_season_with_soil,water_values_status,str,266,0,0.0,1,MODEL_ESTIMATE_NOT_OBSERVED_IRRIGATION
+database\agriwater_project.sqlite,view:v_field_season_with_soil,water_method,str,266,0,0.0,1,FAO56_PM_WITH_ESTIMATED_SEASONAL_KC
+database\agriwater_project.sqlite,view:v_field_season_with_soil,variety,str,266,0,0.0,1,Not specified in regional reference
+database\agriwater_project.sqlite,view:v_field_season_with_soil,calendar_status,str,266,0,0.0,1,REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records
+database\agriwater_project.sqlite,view:v_field_season_with_soil,planting_window,str,266,0,0.0,7,2017-05-10 to 2017-05-31
+database\agriwater_project.sqlite,view:v_field_season_with_soil,transplanting_window,str,266,0,0.0,7,2017-06-05 to 2017-06-21
+database\agriwater_project.sqlite,view:v_field_season_with_soil,harvest_window,str,266,0,0.0,7,2017-08-15 to 2017-10-07
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_HWSD2_SMU_ID,str,266,0,0.0,8,16413 || 7001
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_top_depth_cm,str,266,0,0.0,1,0
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_bottom_depth_cm,str,266,0,0.0,1,20
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_sand_pct,str,266,7,2.63,5,21
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_silt_pct,str,266,7,2.63,5,24
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_clay_pct,str,266,7,2.63,5,55
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_bulk,str,266,7,2.63,5,1.6399999856948853
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_organic_carbon,str,266,7,2.63,5,0.9010000228881836
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_ph_water,str,266,7,2.63,5,7.300000190734863
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_texture_usda,str,266,14,5.26,4,3
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_texture_soter,str,266,0,0.0,3,F || -
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_soil_data_status,str,266,0,0.0,2,COMPLETE || INCOMPLETE
+database\agriwater_project.sqlite,view:v_field_season_with_soil,soil_missing_properties,str,266,259,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+database\agriwater_project.sqlite,view:v_field_season_with_soil,actual_irrigation_m3_per_feddan,object,266,266,100.0,0,
+database\agriwater_project.sqlite,view:v_field_season_with_soil,actual_yield_ton_per_feddan,object,266,266,100.0,0,
+database\agriwater_project.sqlite,view:v_field_season_with_soil,actual_irrigation_label_status,str,266,0,0.0,1,NOT_AVAILABLE
+database\agriwater_project.sqlite,view:v_field_season_with_soil,actual_yield_label_status,str,266,0,0.0,1,NOT_AVAILABLE
+database\agriwater_project.sqlite,view:v_field_season_with_soil,training_readiness,str,266,0,0.0,1,FEATURES_READY_TARGET_LABELS_REQUIRED
+database\agriwater_project.sqlite,view:v_field_season_with_soil,linked_soil_SMU_ID,str,266,0,0.0,8,16413 || 7001
+database\agriwater_project.sqlite,view:v_field_season_with_soil,linked_soil_sand_pct,str,266,7,2.63,5,21
+database\agriwater_project.sqlite,view:v_field_season_with_soil,linked_soil_silt_pct,str,266,7,2.63,5,24
+database\agriwater_project.sqlite,view:v_field_season_with_soil,linked_soil_clay_pct,str,266,7,2.63,5,55
+database\agriwater_project.sqlite,view:v_field_season_with_soil,linked_soil_ph,str,266,7,2.63,5,7.300000190734863
+database\agriwater_project.sqlite,view:v_field_season_with_soil,linked_soil_status,str,266,0,0.0,2,COMPLETE || INCOMPLETE
+reports\project_file_inventory_20261022_123717.csv,(file),RelativePath,str,100,0,0.0,100,.env.example || collect.py || config.json || data\metadata\boundary_metadata.json || data\metadata\field_survey_schema.json
+reports\project_file_inventory_20261022_123717.csv,(file),FileName,str,100,0,0.0,98,.env.example || collect.py || config.json || boundary_metadata.json || field_survey_schema.json
+reports\project_file_inventory_20261022_123717.csv,(file),SizeKB,float64,100,0,0.0,96,0.18 || 0.09 || 2.16 || 2.46 || 1.0
+reports\project_file_inventory_20261022_123717.csv,(file),Modified,str,100,0,0.0,73,10/22/2026 5:52:16 AM || 10/22/2026 9:07:18 AM || 10/22/2026 9:18:24 AM
+reports\rice_annual_water_summary_2017_2023.csv,(file),year,int64,7,0,0.0,7,2017 || 2018 || 2019 || 2020 || 2021
+reports\rice_annual_water_summary_2017_2023.csv,(file),daily_point_records,int64,7,0,0.0,1,6650
+reports\rice_annual_water_summary_2017_2023.csv,(file),valid_et0_records,int64,7,0,0.0,1,6650
+reports\rice_annual_water_summary_2017_2023.csv,(file),et0_sum_mm,float64,7,0,0.0,7,41891.34 || 42220.11 || 42445.27 || 41791.25 || 43020.22
+reports\rice_annual_water_summary_2017_2023.csv,(file),estimated_etc_sum_mm,float64,7,0,0.0,7,46450.56 || 46707.78 || 47058.73 || 46287.18 || 47667.26
+reports\rice_annual_water_summary_2017_2023.csv,(file),rainfall_sum_mm,float64,7,0,0.0,7,2748.58 || 627.83 || 481.78 || 105.25 || 67.24
+reports\rice_annual_water_summary_2017_2023.csv,(file),climatic_deficit_etc_minus_rain_mm,float64,7,0,0.0,7,43701.98 || 46079.95 || 46576.95 || 46181.93 || 47600.02
+reports\rice_annual_water_summary_2017_2023.csv,(file),valid_rainfall_records,int64,7,0,0.0,1,6650
+reports\rice_annual_water_summary_2017_2023.csv,(file),interpretation,str,7,0,0.0,1,Grid-point seasonal sums; climatic deficit is NOT actual irrigation withdrawal
+reports\sentinel2_annual_union_coverage.csv,(file),scenes,int64,7,0,0.0,1,17
+reports\sentinel2_annual_union_coverage.csv,(file),distinct_dates,int64,7,0,0.0,1,17
+reports\sentinel2_annual_union_coverage.csv,(file),first_date,str,7,0,0.0,7,2017-05-14 || 2018-05-19 || 2019-05-14 || 2020-05-18 || 2021-05-18
+reports\sentinel2_annual_union_coverage.csv,(file),last_date,str,7,0,0.0,7,2017-10-26 || 2018-10-29 || 2019-10-31 || 2020-10-23 || 2021-10-23
+reports\sentinel2_annual_union_coverage.csv,(file),mean_scene_cloud_percent,float64,7,0,0.0,7,0.06 || 0.35 || 0.07 || 0.21 || 0.62
+reports\sentinel2_annual_union_coverage.csv,(file),union_covered_area_km2,float64,7,0,0.0,3,4208.1
+reports\sentinel2_annual_union_coverage.csv,(file),union_governorate_coverage_percent,float64,7,0,0.0,3,100.0
+reports\sentinel2_annual_union_coverage.csv,(file),year,int64,7,0,0.0,7,2017 || 2018 || 2019 || 2020 || 2021
+reports\sentinel2_download_manifest.csv,(file),date,str,2,0,0.0,2,2022-09-28T08:37:31.024Z || 2019-09-04T08:36:01.024000Z
+reports\sentinel2_download_manifest.csv,(file),scene_id,str,2,0,0.0,2,S2A_MSIL2A_20220928T083731_N0510_R064_T36RTV_20240731T004039 || S2A_MSIL2A_20190904T083601_N0510_R064_T36RTV_20250602T085630
+reports\sentinel2_download_manifest.csv,(file),collection,str,2,0,0.0,1,sentinel-2-l2a
+reports\sentinel2_download_manifest.csv,(file),B04_10m_available,bool,2,0,0.0,1,True
+reports\sentinel2_download_manifest.csv,(file),B08_10m_available,bool,2,0,0.0,1,True
+reports\sentinel2_download_manifest.csv,(file),SCL_20m_available,bool,2,0,0.0,1,True
+reports\sentinel2_download_manifest.csv,(file),product_download_url,str,2,0,0.0,2,https://download.dataspace.copernicus.eu/odata/v1/Products(25c9f555-bd31-4bfb-a4c0-4808d896732e)/$value || https://download.dataspace.copernicus.eu/odata/v1/Products(b99457c8-a4e9-4054-a228-70afa8a34751)/$value
+reports\sentinel2_download_manifest.csv,(file),download_status,str,2,0,0.0,1,Not downloaded
+reports\sentinel2_exact_intersection.csv,(file),date,str,1690,0,0.0,465,2017-05-12 || 2017-05-14
+reports\sentinel2_exact_intersection.csv,(file),year,int64,1690,0,0.0,7,2017
+reports\sentinel2_exact_intersection.csv,(file),month,int64,1690,0,0.0,6,5
+reports\sentinel2_exact_intersection.csv,(file),dekad,int64,1690,0,0.0,3,2
+reports\sentinel2_exact_intersection.csv,(file),cloud_cover_percent,float64,1690,0,0.0,1022,4.28 || 5.26 || 8.84 || 9.28 || 0.0
+reports\sentinel2_exact_intersection.csv,(file),boundary_overlap_percent_approx,float64,1690,0,0.0,394,55.05 || 5.183 || 1.627 || 60.149
+reports\sentinel2_exact_intersection.csv,(file),scene_id,str,1690,0,0.0,1690,S2B_MSIL2A_20170512T084009_N0500_R064_T36RUV_20231111T081508 || S2B_MSIL2A_20170512T084009_N0500_R064_T36SUA_20231111T081508 || S2B_MSIL2A_20170512T084009_N0500_R064_T36STA_20231111T081508 || S2B_MSIL2A_20170512T084009_N0500_R064_T36RTV_20231111T081508 || S2A_MSIL2A_20170514T082611_N0500_R021_T36RUV_20231112T091625
+reports\sentinel2_exact_intersection.csv,(file),B04_10m_available,str,1690,0,0.0,1,yes
+reports\sentinel2_exact_intersection.csv,(file),B08_10m_available,str,1690,0,0.0,1,yes
+reports\sentinel2_exact_intersection.csv,(file),product_url_available,str,1690,0,0.0,1,yes
+reports\sentinel2_monthly_union_coverage.csv,(file),scenes,int64,42,0,0.0,2,2 || 3
+reports\sentinel2_monthly_union_coverage.csv,(file),distinct_dates,int64,42,0,0.0,2,2 || 3
+reports\sentinel2_monthly_union_coverage.csv,(file),first_date,str,42,0,0.0,42,2017-05-14 || 2017-06-08 || 2017-07-03 || 2017-08-02 || 2017-09-04
+reports\sentinel2_monthly_union_coverage.csv,(file),last_date,str,42,0,0.0,42,2017-05-27 || 2017-06-28 || 2017-07-26 || 2017-08-22 || 2017-09-21
+reports\sentinel2_monthly_union_coverage.csv,(file),mean_scene_cloud_percent,float64,42,0,0.0,24,0.23 || 0.0 || 0.16 || 0.01
+reports\sentinel2_monthly_union_coverage.csv,(file),union_covered_area_km2,float64,42,0,0.0,33,2334.82 || 2315.08 || 4208.1 || 1596.34 || 3048.7
+reports\sentinel2_monthly_union_coverage.csv,(file),union_governorate_coverage_percent,float64,42,0,0.0,32,55.48 || 55.01 || 100.0 || 37.93 || 72.45
+reports\sentinel2_monthly_union_coverage.csv,(file),year,int64,42,0,0.0,7,2017
+reports\sentinel2_monthly_union_coverage.csv,(file),month,int64,42,0,0.0,6,5 || 6 || 7 || 8 || 9
+reports\sentinel2_overlap_projected_audit.csv,(file),date,str,119,0,0.0,119,2017-05-14 || 2017-05-27 || 2017-06-08 || 2017-06-13 || 2017-06-28
+reports\sentinel2_overlap_projected_audit.csv,(file),year,int64,119,0,0.0,7,2017
+reports\sentinel2_overlap_projected_audit.csv,(file),month,int64,119,0,0.0,6,5 || 6
+reports\sentinel2_overlap_projected_audit.csv,(file),dekad,int64,119,0,0.0,3,2 || 3 || 1
+reports\sentinel2_overlap_projected_audit.csv,(file),cloud_cover_percent,float64,119,0,0.0,41,0.0 || 0.46
+reports\sentinel2_overlap_projected_audit.csv,(file),boundary_overlap_percent_approx,float64,119,0,0.0,48,55.05 || 1.627
+reports\sentinel2_overlap_projected_audit.csv,(file),scene_id,str,119,0,0.0,119,S2A_MSIL2A_20170514T082611_N0500_R021_T36RUV_20231112T091625 || S2A_MSIL2A_20170527T083601_N0500_R064_T36STA_20231114T022736 || S2B_MSIL2A_20170608T083009_N0500_R021_T36RUV_20231114T141104 || S2A_MSIL2A_20170613T083011_N0500_R021_T36RUV_20231009T082949 || S2B_MSIL2A_20170628T083009_N0500_R021_T36RUV_20231012T191431
+reports\sentinel2_overlap_projected_audit.csv,(file),B04_10m_available,str,119,0,0.0,1,yes
+reports\sentinel2_overlap_projected_audit.csv,(file),B08_10m_available,str,119,0,0.0,1,yes
+reports\sentinel2_overlap_projected_audit.csv,(file),product_url_available,str,119,0,0.0,1,yes
+reports\sentinel2_overlap_projected_audit.csv,(file),intersection_area_km2,float64,119,0,0.0,67,2315.0836 || 67.2949
+reports\sentinel2_overlap_projected_audit.csv,(file),governorate_coverage_percent,float64,119,0,0.0,62,55.015 || 1.5992
+reports\sentinel2_overlap_projected_audit.csv,(file),scene_inside_governorate_percent,float64,119,0,0.0,76,19.2027 || 0.5582
+reports\sentinel2_overlap_projected_audit.csv,(file),audit_status,str,119,0,0.0,1,OK
+reports\sentinel2_rice_candidates.csv,(file),date,str,1781,0,0.0,490,2017-05-02 || 2017-05-04
+reports\sentinel2_rice_candidates.csv,(file),year,int64,1781,0,0.0,7,2017
+reports\sentinel2_rice_candidates.csv,(file),month,int64,1781,0,0.0,6,5
+reports\sentinel2_rice_candidates.csv,(file),cloud_cover_percent,float64,1781,0,0.0,1077,12.46 || 29.21 || 0.4 || 1.4 || 20.2
+reports\sentinel2_rice_candidates.csv,(file),scene_id,str,1781,0,0.0,1781,S2B_MSIL2A_20170502T084009_N0500_R064_T36STA_20231114T094916 || S2B_MSIL2A_20170502T084009_N0500_R064_T36SUA_20231114T094916 || S2A_MSIL2A_20170504T083011_N0500_R021_T36RUV_20231112T054109 || S2A_MSIL2A_20170504T083011_N0500_R021_T36RTV_20231112T054109 || S2A_MSIL2A_20170504T083011_N0500_R021_T36STA_20231112T054109
+reports\sentinel2_rice_candidates.csv,(file),collection,str,1781,0,0.0,1,sentinel-2-l2a
+reports\sentinel2_rice_candidates.csv,(file),bbox_overlaps_kafr_el_sheikh,str,1781,0,0.0,1,yes
+reports\sentinel2_rice_candidates.csv,(file),B04_asset_available,str,1781,0,0.0,1,yes
+reports\sentinel2_rice_candidates.csv,(file),B08_asset_available,str,1781,0,0.0,1,yes
+reports\sentinel2_rice_candidates.csv,(file),product_url_available,str,1781,0,0.0,1,yes
+reports\sentinel2_rice_shortlist.csv,(file),date,str,119,0,0.0,119,2017-05-14 || 2017-05-27 || 2017-06-08 || 2017-06-13 || 2017-06-28
+reports\sentinel2_rice_shortlist.csv,(file),year,int64,119,0,0.0,7,2017
+reports\sentinel2_rice_shortlist.csv,(file),month,int64,119,0,0.0,6,5 || 6
+reports\sentinel2_rice_shortlist.csv,(file),dekad,int64,119,0,0.0,3,2 || 3 || 1
+reports\sentinel2_rice_shortlist.csv,(file),cloud_cover_percent,float64,119,0,0.0,41,0.0 || 0.46
+reports\sentinel2_rice_shortlist.csv,(file),boundary_overlap_percent_approx,float64,119,0,0.0,48,55.05 || 1.627
+reports\sentinel2_rice_shortlist.csv,(file),scene_id,str,119,0,0.0,119,S2A_MSIL2A_20170514T082611_N0500_R021_T36RUV_20231112T091625 || S2A_MSIL2A_20170527T083601_N0500_R064_T36STA_20231114T022736 || S2B_MSIL2A_20170608T083009_N0500_R021_T36RUV_20231114T141104 || S2A_MSIL2A_20170613T083011_N0500_R021_T36RUV_20231009T082949 || S2B_MSIL2A_20170628T083009_N0500_R021_T36RUV_20231012T191431
+reports\sentinel2_rice_shortlist.csv,(file),B04_10m_available,str,119,0,0.0,1,yes
+reports\sentinel2_rice_shortlist.csv,(file),B08_10m_available,str,119,0,0.0,1,yes
+reports\sentinel2_rice_shortlist.csv,(file),product_url_available,str,119,0,0.0,1,yes
+reports\sentinel2_september_alternatives_projected.csv,(file),year,int64,89,0,0.0,2,2019
+reports\sentinel2_september_alternatives_projected.csv,(file),date,str,89,0,0.0,23,2019-09-04 || 2019-09-19 || 2019-09-09 || 2019-09-26 || 2019-09-06
+reports\sentinel2_september_alternatives_projected.csv,(file),cloud_cover_percent,float64,89,0,0.0,86,8.09 || 20.1 || 21.41 || 0.02 || 0.6
+reports\sentinel2_september_alternatives_projected.csv,(file),scene_id,str,89,0,0.0,89,S2A_MSIL2A_20190904T083601_N0510_R064_T36RTV_20250602T085630 || S2B_MSIL2A_20190919T083619_N0500_R064_T36RTV_20230630T125147 || S2B_MSIL2A_20190909T083559_N0500_R064_T36RTV_20230703T014234 || S2B_MSIL2A_20190926T082709_N0500_R021_T36RUV_20230628T080954 || S2B_MSIL2A_20190906T082609_N0500_R021_T36RUV_20230628T032343
+reports\sentinel2_september_alternatives_projected.csv,(file),already_in_shortlist,str,89,0,0.0,2,no
+reports\sentinel2_september_alternatives_projected.csv,(file),intersection_area_km2,float64,89,0,0.0,45,2532.7 || 2315.08
+reports\sentinel2_september_alternatives_projected.csv,(file),governorate_coverage_percent,float64,89,0,0.0,31,60.19 || 55.01
+reports\sentinel2_september_alternatives_projected.csv,(file),scene_inside_governorate_percent,float64,89,0,0.0,48,21.01 || 19.2
+reports\sentinel2_september_incremental_coverage.csv,(file),year,int64,89,0,0.0,2,2019
+reports\sentinel2_september_incremental_coverage.csv,(file),date,str,89,0,0.0,23,2019-09-04 || 2019-09-19 || 2019-09-09 || 2019-09-26 || 2019-09-06
+reports\sentinel2_september_incremental_coverage.csv,(file),cloud_cover_percent,float64,89,0,0.0,86,8.09 || 20.1 || 21.41 || 0.02 || 0.6
+reports\sentinel2_september_incremental_coverage.csv,(file),already_in_shortlist,str,89,0,0.0,2,no
+reports\sentinel2_september_incremental_coverage.csv,(file),current_september_coverage_percent,float64,89,0,0.0,2,5.43
+reports\sentinel2_september_incremental_coverage.csv,(file),coverage_after_adding_candidate_percent,float64,89,0,0.0,25,64.14 || 55.35
+reports\sentinel2_september_incremental_coverage.csv,(file),additional_coverage_percentage_points,float64,89,0,0.0,24,58.72 || 49.92
+reports\sentinel2_september_incremental_coverage.csv,(file),additional_area_km2,float64,89,0,0.0,31,2470.87 || 2100.83
+reports\sentinel2_september_incremental_coverage.csv,(file),scene_id,str,89,0,0.0,89,S2A_MSIL2A_20190904T083601_N0510_R064_T36RTV_20250602T085630 || S2B_MSIL2A_20190919T083619_N0500_R064_T36RTV_20230630T125147 || S2B_MSIL2A_20190909T083559_N0500_R064_T36RTV_20230703T014234 || S2B_MSIL2A_20190926T082709_N0500_R021_T36RUV_20230628T080954 || S2B_MSIL2A_20190906T082609_N0500_R021_T36RUV_20230628T032343
+reports\sentinel2_september_recommended_additions.csv,(file),year,int64,2,0,0.0,2,2019 || 2022
+reports\sentinel2_september_recommended_additions.csv,(file),date,str,2,0,0.0,2,2019-09-04 || 2022-09-28
+reports\sentinel2_september_recommended_additions.csv,(file),scene_id,str,2,0,0.0,2,S2A_MSIL2A_20190904T083601_N0510_R064_T36RTV_20250602T085630 || S2A_MSIL2A_20220928T083731_N0510_R064_T36RTV_20240731T004039
+reports\sentinel2_september_recommended_additions.csv,(file),cloud_cover_percent,float64,2,0,0.0,2,8.09 || 0.011549
+reports\sentinel2_september_recommended_additions.csv,(file),additional_area_km2,float64,2,0,0.0,2,2470.87 || 2464.82
+reports\sentinel2_september_recommended_additions.csv,(file),additional_coverage_percentage_points,float64,2,0,0.0,2,58.72 || 58.57
+reports\sentinel2_september_recommended_additions.csv,(file),B04_available,str,2,0,0.0,1,yes
+reports\sentinel2_september_recommended_additions.csv,(file),B08_available,str,2,0,0.0,1,yes
+reports\sentinel2_september_recommended_additions.csv,(file),product_url_available,str,2,0,0.0,1,yes
+reports\sentinel2_september_recommended_additions.csv,(file),review_status,str,2,0,0.0,1,Proposed - imagery not downloaded or verified
+reports\database_inventory\column_inventory.csv,(file),table_or_file,str,951,0,0.0,46,crop_water_parameters.csv
+reports\database_inventory\column_inventory.csv,(file),column_position,int64,951,0,0.0,53,1 || 2 || 3 || 4 || 5
+reports\database_inventory\column_inventory.csv,(file),column_name,str,951,0,0.0,266,crop || growth_stage || kc || parameter_name || parameter_value
+reports\database_inventory\sqlite_objects.csv,(file),object_name,str,12,0,0.0,12,crop_calendar || crop_water_parameters || database_metadata || field_season_features || governorate_year_reference
+reports\database_inventory\sqlite_objects.csv,(file),object_type,str,12,0,0.0,2,table
+reports\database_inventory\table_inventory.csv,(file),source_type,str,46,0,0.0,3,CSV
+reports\database_inventory\table_inventory.csv,(file),table_or_file,str,46,0,0.0,46,crop_water_parameters.csv || field_survey_template.csv || hwsd2_awc_database_audit.csv || hwsd2_awc_final.csv || hwsd2_awc_final_review.csv
+reports\database_inventory\table_inventory.csv,(file),location,str,46,0,0.0,35,C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\crop_water_parameters.csv || C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\field_survey_template.csv || C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_database_audit.csv || C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_final.csv || C:\Users\D.L\Desktop\AgriWater_FIXED\data\processed\hwsd2_awc_final_review.csv
+reports\database_inventory\table_inventory.csv,(file),rows,int64,46,0,0.0,14,6 || 0 || 92 || 8 || 38
+reports\database_inventory\table_inventory.csv,(file),columns,int64,46,0,0.0,22,9 || 23 || 53 || 21 || 44
+reports\database_inventory\table_inventory.csv,(file),size_mb,float64,46,12,26.09,20,0.001 || 0.0 || 0.024 || 0.003
+data\metadata\boundary_metadata.json,(file),source,str,37,0,0.0,1,https://www.geoboundaries.org/api/current/gbOpen/EGY/ADM1/
+data\metadata\boundary_metadata.json,(file),download_metadata,str,37,6,16.22,30,EGY-ADM1-46179711 || Egypt || EGY || 2017 || ADM1
+data\metadata\boundary_metadata.json,(file),selected_properties,str,37,32,86.49,5,Kafr el-Sheikh Governorate || EG-KFS || 46179711B94393740490008 || EGY || ADM1
+data\metadata\boundary_metadata.json,(file),crs,str,37,0,0.0,1,EPSG:4326
+data\metadata\boundary_metadata.json,(file),geometry_type,str,37,0,0.0,1,Polygon
+data\metadata\boundary_metadata.json,(file),area_km2_approx_degree_based,float64,37,0,0.0,1,4220.4854532534455
+data\metadata\boundary_metadata.json,(file),area_note,str,37,0,0.0,1,Approximate QA metric only; use equal-area projection/geodesic area for authoritative area.
+data\metadata\boundary_metadata.json,(file),boundary_type,str,37,0,0.0,1,"administrative boundary, not parcel/cadastral boundary"
+data\processed\crop_water_parameters.csv,(file),crop,str,6,0,0.0,1,rice
+data\processed\crop_water_parameters.csv,(file),growth_stage,str,6,0,0.0,6,initial || mid_season || late_season || land_preparation || growing_season
+data\processed\crop_water_parameters.csv,(file),kc,str,6,3,50.0,3,1.05 || 1.20 || 0.60-0.90
+data\processed\crop_water_parameters.csv,(file),parameter_name,str,6,0,0.0,4,Kc || soil_saturation_requirement || seepage_percolation_rate
+data\processed\crop_water_parameters.csv,(file),parameter_value,str,6,0,0.0,6,1.05 || 1.20 || 0.60-0.90 || 200 || 4-8
+data\processed\crop_water_parameters.csv,(file),unit,str,6,0,0.0,3,dimensionless || mm || mm/day
+data\processed\crop_water_parameters.csv,(file),valid_conditions,str,6,0,0.0,6,FAO-56 reference for paddy rice under subhumid climate and calm-to-moderate wind; local adjustment required || FAO-56 standard reference; adjust for local climate and crop conditions || FAO-56 reference range; exact value depends on harvest and crop conditions || General FAO manual assumption; not a local field measurement || General FAO range depending on soil and field conditions; do not assign a single local value yet
+data\processed\crop_water_parameters.csv,(file),source_url,str,6,0,0.0,2,https://www.fao.org/4/x0490e/x0490e0b.htm || https://www.fao.org/4/s2022e/s2022e08.htm
+data\processed\crop_water_parameters.csv,(file),data_status,str,6,0,0.0,4,FAO_REFERENCE_NOT_LOCALLY_CALIBRATED || FAO_REFERENCE_RANGE_NOT_LOCALLY_CALIBRATED || LITERATURE_ASSUMPTION_REQUIRES_LOCAL_VALIDATION || LITERATURE_RANGE_REQUIRES_LOCAL_VALIDATION
+data\processed\field_survey_template.csv,(file),record_id,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),field_id,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),farmer_consent_id,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),survey_date,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),sowing_date,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),harvest_date,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),rice_variety,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),soil_type_observed,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),irrigation_method,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),irrigation_event_date,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),irrigation_volume_m3,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),irrigation_duration_hours,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),fertilizer_type,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),fertilizer_amount_kg,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),pesticide_or_operation,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),harvest_yield_kg,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),cultivated_area_m2,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),longitude,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),latitude,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),field_polygon_geojson,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),measurement_method,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),data_collector,object,0,0,0,0,
+data\processed\field_survey_template.csv,(file),source_notes,object,0,0,0,0,
+data\processed\hwsd2_awc_database_audit.csv,(file),source_table,str,92,0,0.0,2,HWSD2_SMU
+data\processed\hwsd2_awc_database_audit.csv,(file),ID,int64,92,0,0.0,84,80722 || 80723 || 279402 || 279410 || 279412
+data\processed\hwsd2_awc_database_audit.csv,(file),HWSD2_SMU_ID,int64,92,0,0.0,8,16414 || 16413 || 16501 || 16502 || 16500
+data\processed\hwsd2_awc_database_audit.csv,(file),WISE30s_SMU_ID,str,92,0,0.0,8,WD20016414 || WD20016413 || WD20016501 || WD20016502 || WD20016500
+data\processed\hwsd2_awc_database_audit.csv,(file),HWSD1_SMU_ID,int64,92,0,0.0,8,16414 || 16413 || 16501 || 16502 || 16500
+data\processed\hwsd2_awc_database_audit.csv,(file),COVERAGE,int64,92,0,0.0,2,3
+data\processed\hwsd2_awc_database_audit.csv,(file),SHARE,int64,92,0,0.0,7,100 || 50 || 60
+data\processed\hwsd2_awc_database_audit.csv,(file),WRB4,str,92,0,0.0,7,FLca || SCgl
+data\processed\hwsd2_awc_database_audit.csv,(file),WRB_PHASES,str,92,0,0.0,8,FLca || FLcakk || SCgl
+data\processed\hwsd2_awc_database_audit.csv,(file),WRB2,str,92,0,0.0,6,FL || SC
+data\processed\hwsd2_awc_database_audit.csv,(file),WRB2_CODE,float64,92,84,91.3,4,10.0 || 28.0
+data\processed\hwsd2_awc_database_audit.csv,(file),FAO90,str,92,0,0.0,7,FLc || SCg
+data\processed\hwsd2_awc_database_audit.csv,(file),KOPPEN,str,92,84,91.3,2,B
+data\processed\hwsd2_awc_database_audit.csv,(file),TEXTURE_USDA,float64,92,16,17.39,5,9.0 || 5.0
+data\processed\hwsd2_awc_database_audit.csv,(file),REF_BULK_DENSITY,float64,92,86,93.48,3,1.7100000381469729 || 1.840000033378601
+data\processed\hwsd2_awc_database_audit.csv,(file),BULK_DENSITY,float64,92,84,91.3,5,1.4900000095367432 || 1.3300000429153442
+data\processed\hwsd2_awc_database_audit.csv,(file),DRAINAGE,str,92,16,17.39,3,MW || P
+data\processed\hwsd2_awc_database_audit.csv,(file),ROOT_DEPTH,float64,92,72,78.26,1,1.0
+data\processed\hwsd2_awc_database_audit.csv,(file),AWC,float64,92,72,78.26,6,172.0 || 89.0
+data\processed\hwsd2_awc_database_audit.csv,(file),PHASE1,float64,92,88,95.65,1,1.0
+data\processed\hwsd2_awc_database_audit.csv,(file),PHASE2,float64,92,88,95.65,1,0.0
+data\processed\hwsd2_awc_database_audit.csv,(file),ROOTS,float64,92,92,100.0,0,
+data\processed\hwsd2_awc_database_audit.csv,(file),IL,float64,92,92,100.0,0,
+data\processed\hwsd2_awc_database_audit.csv,(file),ADD_PROP,float64,92,8,8.7,2,0.0 || 3.0
+data\processed\hwsd2_awc_database_audit.csv,(file),NSC_MU_SOURCE1,float64,92,92,100.0,0,
+data\processed\hwsd2_awc_database_audit.csv,(file),NSC_MU_SOURCE2,float64,92,92,100.0,0,
+data\processed\hwsd2_awc_database_audit.csv,(file),SEQUENCE,float64,92,8,8.7,3,1.0
+data\processed\hwsd2_awc_database_audit.csv,(file),NSC,float64,92,92,100.0,0,
+data\processed\hwsd2_awc_database_audit.csv,(file),SWR,float64,92,92,100.0,0,
+data\processed\hwsd2_awc_database_audit.csv,(file),LAYER,str,92,8,8.7,7,D1 || D2 || D3
+data\processed\hwsd2_awc_database_audit.csv,(file),TOPDEP,float64,92,8,8.7,7,0.0 || 20.0 || 40.0
+data\processed\hwsd2_awc_database_audit.csv,(file),BOTDEP,float64,92,8,8.7,7,20.0 || 40.0 || 60.0
+data\processed\hwsd2_awc_database_audit.csv,(file),COARSE,float64,92,8,8.7,20,3.0 || 5.0
+data\processed\hwsd2_awc_database_audit.csv,(file),SAND,float64,92,8,8.7,24,40.0 || 39.0
+data\processed\hwsd2_awc_database_audit.csv,(file),SILT,float64,92,8,8.7,19,40.0 || 41.0
+data\processed\hwsd2_awc_database_audit.csv,(file),CLAY,float64,92,8,8.7,21,20.0
+data\processed\hwsd2_awc_database_audit.csv,(file),TEXTURE_SOTER,str,92,8,8.7,3,M
+data\processed\hwsd2_awc_database_audit.csv,(file),BULK,float64,92,8,8.7,21,1.4900000095367432 || 1.4800000190734863 || 1.4700000286102295
+data\processed\hwsd2_awc_database_audit.csv,(file),REF_BULK,float64,92,22,23.91,16,1.7100000381469729
+data\processed\hwsd2_awc_database_audit.csv,(file),ORG_CARBON,float64,92,8,8.7,36,0.6949999928474426 || 0.531000018119812 || 0.4719999730587005
+data\processed\hwsd2_awc_database_audit.csv,(file),PH_WATER,float64,92,8,8.7,18,8.199999809265137
+data\processed\hwsd2_awc_database_audit.csv,(file),TOTAL_N,float64,92,8,8.7,28,0.9200000166893004 || 0.6100000143051147 || 0.5099999904632568
+data\processed\hwsd2_awc_database_audit.csv,(file),CN_RATIO,float64,92,8,8.7,9,9.0 || 8.0
+data\processed\hwsd2_awc_database_audit.csv,(file),CEC_SOIL,float64,92,8,8.7,11,16.0 || 17.0
+data\processed\hwsd2_awc_database_audit.csv,(file),CEC_CLAY,float64,92,8,8.7,24,71.0 || 75.0 || 74.0
+data\processed\hwsd2_awc_database_audit.csv,(file),CEC_EFF,float64,92,8,8.7,26,37.0 || 39.0 || 38.0
+data\processed\hwsd2_awc_database_audit.csv,(file),TEB,float64,92,8,8.7,27,38.0 || 39.0 || 40.0
+data\processed\hwsd2_awc_database_audit.csv,(file),BSAT,float64,92,8,8.7,13,97.0 || 98.0
+data\processed\hwsd2_awc_database_audit.csv,(file),ALUM_SAT,float64,92,8,8.7,3,0.0
+data\processed\hwsd2_awc_database_audit.csv,(file),ESP,float64,92,8,8.7,24,7.0 || 8.0
+data\processed\hwsd2_awc_database_audit.csv,(file),TCARBON_EQ,float64,92,8,8.7,29,11.300000190734863 || 11.699999809265137 || 11.899999618530272
+data\processed\hwsd2_awc_database_audit.csv,(file),GYPSUM,float64,92,8,8.7,27,0.6000000238418579 || 0.699999988079071 || 0.8999999761581421
+data\processed\hwsd2_awc_database_audit.csv,(file),ELEC_COND,float64,92,8,8.7,11,2.0 || 1.0
+data\processed\hwsd2_awc_final.csv,(file),HWSD2_SMU_ID,int64,8,0,0.0,8,7001 || 16413 || 16414 || 16487 || 16500
+data\processed\hwsd2_awc_final.csv,(file),WISE30s_SMU_ID,str,8,0,0.0,8,WD30007001 || WD20016413 || WD20016414 || WD20016487 || WD20016500
+data\processed\hwsd2_awc_final.csv,(file),COVERAGE,int64,8,0,0.0,2,1 || 3
+data\processed\hwsd2_awc_final.csv,(file),SHARE,int64,8,0,0.0,4,100 || 50 || 80 || 60
+data\processed\hwsd2_awc_final.csv,(file),WRB4,str,8,0,0.0,5,TC || FLca || SCha || SCgl
+data\processed\hwsd2_awc_final.csv,(file),WRB2,str,8,0,0.0,4,TC || FL || SC
+data\processed\hwsd2_awc_final.csv,(file),FAO90,str,8,0,0.0,5,UR || FLc || SCh || SCg
+data\processed\hwsd2_awc_final.csv,(file),TEXTURE_USDA,float64,8,2,25.0,3,9.0 || 10.0 || 5.0
+data\processed\hwsd2_awc_final.csv,(file),DRAINAGE,str,8,2,25.0,2,MW || P
+data\processed\hwsd2_awc_final.csv,(file),ROOT_DEPTH,int64,8,0,0.0,1,1
+data\processed\hwsd2_awc_final.csv,(file),AWC_raw,int64,8,0,0.0,4,0 || 172 || 90 || 89
+data\processed\hwsd2_awc_final.csv,(file),AWC_unit,str,8,0,0.0,1,mm/m
+data\processed\hwsd2_awc_final.csv,(file),AWC_model_value,float64,8,2,25.0,3,172.0 || 90.0 || 89.0
+data\processed\hwsd2_awc_final.csv,(file),validation_status,str,8,0,0.0,2,REVIEW_NOT_VALIDATED || VALID_METADATA_UNIT
+data\processed\hwsd2_awc_final.csv,(file),validation_note,str,8,0,0.0,2,"Raw value preserved; do not use as a confirmed soil-water capacity until soil data are verified. || AWC unit mm/m confirmed in HWSD2_SMU_METADATA; spatial soil estimate, not a field measurement."
+data\processed\hwsd2_awc_final.csv,(file),agricultural_soil_candidate,str,8,0,0.0,3,NO || REVIEW || YES_CANDIDATE
+data\processed\hwsd2_awc_final.csv,(file),final_review_status,str,8,0,0.0,4,EXCLUDED_NON_SOIL_MAPPING || MIXED_COMPONENTS_REVIEW || SOURCE_VALUE_RETAINED_NOT_FIELD_VALIDATED
+data\processed\hwsd2_awc_final.csv,(file),review_reason,str,8,0,0.0,4,Source classification TC/UR; do not interpret AWC=0 as true soil AWC || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Positive source AWC retained; mapping and suitability for the target field still require spatial verification || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit
+data\processed\hwsd2_awc_final.csv,(file),awc_use_recommendation,str,8,0,0.0,3,EXCLUDE || REVIEW_BEFORE_MODEL_USE || CANDIDATE_AFTER_SPATIAL_CHECK
+data\processed\hwsd2_awc_final.csv,(file),source_dataset,str,8,0,0.0,1,HWSD2
+data\processed\hwsd2_awc_final.csv,(file),data_type,str,8,0,0.0,1,"Spatial soil database estimate, not field/lab measurement"
+data\processed\hwsd2_awc_final_review.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_awc_final_review.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_awc_final_review.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_awc_final_review.csv,(file),raster_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_awc_final_review.csv,(file),raster_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_awc_final_review.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_awc_final_review.csv,(file),nodata,bool,38,0,0.0,1,False
+data\processed\hwsd2_awc_final_review.csv,(file),top_depth_cm,int64,38,0,0.0,1,0
+data\processed\hwsd2_awc_final_review.csv,(file),bottom_depth_cm,int64,38,0,0.0,1,20
+data\processed\hwsd2_awc_final_review.csv,(file),sand_pct,float64,38,1,2.63,5,21.0
+data\processed\hwsd2_awc_final_review.csv,(file),silt_pct,float64,38,1,2.63,5,24.0
+data\processed\hwsd2_awc_final_review.csv,(file),clay_pct,float64,38,1,2.63,5,55.0
+data\processed\hwsd2_awc_final_review.csv,(file),bulk,float64,38,1,2.63,5,1.6399999856948853
+data\processed\hwsd2_awc_final_review.csv,(file),organic_carbon,float64,38,1,2.63,5,0.9010000228881836
+data\processed\hwsd2_awc_final_review.csv,(file),ph_water,float64,38,1,2.63,5,7.300000190734863
+data\processed\hwsd2_awc_final_review.csv,(file),texture_usda,float64,38,2,5.26,4,3.0
+data\processed\hwsd2_awc_final_review.csv,(file),texture_soter,str,38,0,0.0,3,F || -
+data\processed\hwsd2_awc_final_review.csv,(file),match_found,bool,38,0,0.0,1,True
+data\processed\hwsd2_awc_final_review.csv,(file),soil_data_status,str,38,0,0.0,2,COMPLETE || INCOMPLETE
+data\processed\hwsd2_awc_final_review.csv,(file),missing_soil_properties,str,38,37,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+data\processed\hwsd2_awc_final_review.csv,(file),AWC_raw,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_awc_final_review.csv,(file),AWC_unit,str,38,0,0.0,1,mm/m
+data\processed\hwsd2_awc_final_review.csv,(file),final_review_status,str,38,0,0.0,4,MIXED_COMPONENTS_REVIEW || EXCLUDED_NON_SOIL_MAPPING
+data\processed\hwsd2_awc_final_review.csv,(file),review_reason,str,38,0,0.0,4,Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Source classification TC/UR; do not interpret AWC=0 as true soil AWC || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit
+data\processed\hwsd2_awc_final_review.csv,(file),awc_use_recommendation,str,38,0,0.0,3,REVIEW_BEFORE_MODEL_USE || EXCLUDE
+data\processed\hwsd2_awc_final_review.csv,(file),source_dataset,str,38,0,0.0,1,HWSD2
+data\processed\hwsd2_awc_final_review.csv,(file),data_type,str,38,0,0.0,1,"Spatial soil database estimate, not field/lab measurement"
+data\processed\hwsd2_awc_final_review.csv,(file),awc_join_status,str,38,0,0.0,1,MATCHED_TO_VALIDATION
+data\processed\hwsd2_awc_final_review.csv,(file),WRB4,str,38,0,0.0,5,FLca || TC
+data\processed\hwsd2_awc_final_review.csv,(file),WRB2,str,38,0,0.0,4,FL || TC
+data\processed\hwsd2_awc_final_review.csv,(file),FAO90,str,38,0,0.0,5,FLc || UR
+data\processed\hwsd2_awc_final_review.csv,(file),TEXTURE_USDA,float64,38,2,5.26,3,9.0
+data\processed\hwsd2_awc_final_review.csv,(file),REF_BULK_DENSITY,float64,38,2,5.26,3,1.7100000381469729
+data\processed\hwsd2_awc_final_review.csv,(file),BULK_DENSITY,float64,38,0,0.0,5,1.4900000095367432 || -9.0
+data\processed\hwsd2_awc_final_review.csv,(file),DRAINAGE,str,38,2,5.26,2,MW
+data\processed\hwsd2_awc_final_review.csv,(file),ROOT_DEPTH_class_code,int64,38,0,0.0,1,1
+data\processed\hwsd2_awc_final_review.csv,(file),AWC_SMU_source_mm_per_m,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_awc_final_review.csv,(file),D1_component_count,float64,38,38,100.0,0,
+data\processed\hwsd2_awc_final_review.csv,(file),D1_component_shares_sum_pct,float64,38,38,100.0,0,
+data\processed\hwsd2_awc_final_review.csv,(file),D1_component_AWC_weighted_mm_diagnostic,float64,38,38,100.0,0,
+data\processed\hwsd2_awc_final_review.csv,(file),D1_components_detail,float64,38,38,100.0,0,
+data\processed\hwsd2_awc_final_review.csv,(file),AWC_review_status,str,38,0,0.0,3,CANDIDATE_NOT_FIELD_VALIDATED || EXCLUDE_NON_SOIL_MAPPING
+data\processed\hwsd2_awc_final_review.csv,(file),AWC_model_use_note,str,38,0,0.0,1,SMU source AWC retained; spatial match does not prove field validation
+data\processed\hwsd2_awc_final_review.csv,(file),D1_weighted_AWC_note,str,38,0,0.0,1,Diagnostic only; component-layer AWC is not a replacement for SMU AWC
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),raster_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),raster_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),nodata,bool,38,0,0.0,1,False
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),top_depth_cm,int64,38,0,0.0,1,0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),bottom_depth_cm,int64,38,0,0.0,1,20
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),sand_pct,float64,38,1,2.63,5,21.0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),silt_pct,float64,38,1,2.63,5,24.0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),clay_pct,float64,38,1,2.63,5,55.0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),bulk,float64,38,1,2.63,5,1.6399999856948853
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),organic_carbon,float64,38,1,2.63,5,0.9010000228881836
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),ph_water,float64,38,1,2.63,5,7.300000190734863
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),texture_usda,float64,38,2,5.26,4,3.0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),texture_soter,str,38,0,0.0,3,F || -
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),match_found,bool,38,0,0.0,1,True
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),soil_data_status,str,38,0,0.0,2,COMPLETE || INCOMPLETE
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),missing_soil_properties,str,38,37,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),AWC_raw,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),AWC_unit,str,38,0,0.0,1,mm/m
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),final_review_status,str,38,0,0.0,4,MIXED_COMPONENTS_REVIEW || EXCLUDED_NON_SOIL_MAPPING
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),review_reason,str,38,0,0.0,4,Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Source classification TC/UR; do not interpret AWC=0 as true soil AWC || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),awc_use_recommendation,str,38,0,0.0,3,REVIEW_BEFORE_MODEL_USE || EXCLUDE
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),source_dataset,str,38,0,0.0,1,HWSD2
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),data_type,str,38,0,0.0,1,"Spatial soil database estimate, not field/lab measurement"
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),awc_join_status,str,38,0,0.0,1,MATCHED_TO_VALIDATION
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),WRB4,str,38,0,0.0,5,FLca || TC
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),WRB2,str,38,0,0.0,4,FL || TC
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),FAO90,str,38,0,0.0,5,FLc || UR
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),TEXTURE_USDA,float64,38,2,5.26,3,9.0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),REF_BULK_DENSITY,float64,38,2,5.26,3,1.7100000381469729
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),BULK_DENSITY,float64,38,0,0.0,5,1.4900000095367432 || -9.0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),DRAINAGE,str,38,2,5.26,2,MW
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),ROOT_DEPTH_class_code,int64,38,0,0.0,1,1
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),AWC_SMU_source_mm_per_m,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),D1_component_count,int64,38,0,0.0,3,3 || 1
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),D1_component_shares_sum_pct,int64,38,0,0.0,1,100
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),D1_component_AWC_weighted_mm_diagnostic,float64,38,0,0.0,6,178.0 || 0.0
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),D1_components_detail,str,38,0,0.0,7,"FLca: share=50%, AWC=172 | GLeu: share=25%, AWC=169 | VRha: share=25%, AWC=199 || TC: share=100%, AWC=0"
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),AWC_review_status,str,38,0,0.0,4,REVIEW_MIXED_COMPONENTS || EXCLUDE_NON_SOIL_MAPPING
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),AWC_model_use_note,str,38,0,0.0,1,Original SMU AWC retained; no field validation implied
+data\processed\hwsd2_awc_final_review_repaired.csv,(file),D1_weighted_AWC_note,str,38,0,0.0,1,Diagnostic component-weighted value only; not a replacement for the source SMU AWC
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),HWSD2_SMU_ID,int64,8,0,0.0,8,7001 || 16413 || 16414 || 16487 || 16500
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),component_count_in_D1_records,int64,8,0,0.0,3,1 || 3 || 2
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),valid_component_count,int64,8,0,0.0,3,1 || 3 || 2
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),component_shares_sum_pct,int64,8,0,0.0,1,100
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),valid_component_shares_sum_pct,int64,8,0,0.0,1,100
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),AWC_rootable_depth_weighted_mm_estimate,float64,8,0,0.0,6,0.0 || 178.0 || 172.0 || 89.8 || 89.4
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),AWC_component_status,str,8,0,0.0,1,PROVISIONAL_WEIGHTED_ROOTABLE_AWC
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),AWC_definition,str,8,0,0.0,1,AWC for Rootable Soil Depth
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),AWC_unit,str,8,0,0.0,1,mm
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),method,str,8,0,0.0,1,SHARE-weighted component estimate; not field validated
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),AWC_SMU_source_mm_per_m,int64,8,0,0.0,4,0 || 172 || 90 || 89
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),ROOT_DEPTH_source_class,int64,8,0,0.0,1,1
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),WRB4,str,8,0,0.0,5,TC || FLca || SCha || SCgl
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),FAO90,str,8,0,0.0,5,UR || FLc || SCh || SCg
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,(file),model_screening_status,str,8,0,0.0,3,EXCLUDE_NON_SOIL_MAPPING || PROVISIONAL_NOT_FIELD_VALIDATED
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),raster_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),raster_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),nodata,bool,38,0,0.0,1,False
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),top_depth_cm,int64,38,0,0.0,1,0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),bottom_depth_cm,int64,38,0,0.0,1,20
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),sand_pct,float64,38,1,2.63,5,21.0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),silt_pct,float64,38,1,2.63,5,24.0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),clay_pct,float64,38,1,2.63,5,55.0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),bulk,float64,38,1,2.63,5,1.6399999856948853
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),organic_carbon,float64,38,1,2.63,5,0.9010000228881836
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),ph_water,float64,38,1,2.63,5,7.300000190734863
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),texture_usda,float64,38,2,5.26,4,3.0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),texture_soter,str,38,0,0.0,3,F || -
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),match_found,bool,38,0,0.0,1,True
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),soil_data_status,str,38,0,0.0,2,COMPLETE || INCOMPLETE
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),missing_soil_properties,str,38,37,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),AWC_raw,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),AWC_unit,str,38,0,0.0,1,mm/m
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),final_review_status,str,38,0,0.0,4,MIXED_COMPONENTS_REVIEW || EXCLUDED_NON_SOIL_MAPPING
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),review_reason,str,38,0,0.0,4,Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Source classification TC/UR; do not interpret AWC=0 as true soil AWC || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),awc_use_recommendation,str,38,0,0.0,3,REVIEW_BEFORE_MODEL_USE || EXCLUDE
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),source_dataset,str,38,0,0.0,1,HWSD2
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),data_type,str,38,0,0.0,1,"Spatial soil database estimate, not field/lab measurement"
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),awc_join_status,str,38,0,0.0,1,MATCHED_TO_VALIDATION
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),WRB4,str,38,0,0.0,5,FLca || TC
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),WRB2,str,38,0,0.0,4,FL || TC
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),FAO90,str,38,0,0.0,5,FLc || UR
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),TEXTURE_USDA,float64,38,2,5.26,3,9.0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),REF_BULK_DENSITY,float64,38,2,5.26,3,1.7100000381469729
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),BULK_DENSITY,float64,38,0,0.0,5,1.4900000095367432 || -9.0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),DRAINAGE,str,38,2,5.26,2,MW
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),ROOT_DEPTH_class_code,int64,38,0,0.0,1,1
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),AWC_SMU_source_mm_per_m,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),D1_component_count,int64,38,0,0.0,3,3 || 1
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),D1_component_shares_sum_pct,int64,38,0,0.0,1,100
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),D1_component_AWC_weighted_mm_diagnostic,float64,38,0,0.0,6,178.0 || 0.0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),D1_components_detail,str,38,0,0.0,7,"FLca: share=50%, AWC=172 | GLeu: share=25%, AWC=169 | VRha: share=25%, AWC=199 || TC: share=100%, AWC=0"
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),AWC_review_status,str,38,0,0.0,4,REVIEW_MIXED_COMPONENTS || EXCLUDE_NON_SOIL_MAPPING
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),AWC_model_use_note,str,38,0,0.0,1,Original SMU AWC retained; no field validation implied
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),D1_weighted_AWC_note,str,38,0,0.0,1,Diagnostic component-weighted value only; not a replacement for the source SMU AWC
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),AWC_rootable_depth_weighted_mm_estimate,float64,38,0,0.0,6,178.0 || 0.0
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),AWC_component_status,str,38,0,0.0,1,PROVISIONAL_WEIGHTED_ROOTABLE_AWC
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),ROOT_DEPTH_source_class,int64,38,0,0.0,1,1
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,(file),model_screening_status,str,38,0,0.0,3,PROVISIONAL_NOT_FIELD_VALIDATED || EXCLUDE_NON_SOIL_MAPPING
+data\processed\hwsd2_awc_samples.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_awc_samples.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_awc_samples.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_awc_samples.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_awc_samples.csv,(file),AWC_raw,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_awc_samples.csv,(file),AWC_unit,str,38,0,0.0,1,VERIFY_IN_HWSD2_DOCUMENTATION
+data\processed\hwsd2_awc_samples.csv,(file),AWC_source,str,38,0,0.0,1,HWSD2_SMU.AWC
+data\processed\hwsd2_awc_samples.csv,(file),soil_data_status,str,38,0,0.0,1,AWC_RETRIEVED
+data\processed\hwsd2_awc_semantics_audit.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_awc_semantics_audit.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_awc_semantics_audit.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_awc_semantics_audit.csv,(file),raster_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_awc_semantics_audit.csv,(file),raster_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_awc_semantics_audit.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_awc_semantics_audit.csv,(file),nodata,bool,38,0,0.0,1,False
+data\processed\hwsd2_awc_semantics_audit.csv,(file),top_depth_cm,int64,38,0,0.0,1,0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),bottom_depth_cm,int64,38,0,0.0,1,20
+data\processed\hwsd2_awc_semantics_audit.csv,(file),sand_pct,float64,38,1,2.63,5,21.0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),silt_pct,float64,38,1,2.63,5,24.0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),clay_pct,float64,38,1,2.63,5,55.0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),bulk,float64,38,1,2.63,5,1.6399999856948853
+data\processed\hwsd2_awc_semantics_audit.csv,(file),organic_carbon,float64,38,1,2.63,5,0.9010000228881836
+data\processed\hwsd2_awc_semantics_audit.csv,(file),ph_water,float64,38,1,2.63,5,7.300000190734863
+data\processed\hwsd2_awc_semantics_audit.csv,(file),texture_usda,float64,38,2,5.26,4,3.0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),texture_soter,str,38,0,0.0,3,F || -
+data\processed\hwsd2_awc_semantics_audit.csv,(file),match_found,bool,38,0,0.0,1,True
+data\processed\hwsd2_awc_semantics_audit.csv,(file),soil_data_status,str,38,0,0.0,2,COMPLETE || INCOMPLETE
+data\processed\hwsd2_awc_semantics_audit.csv,(file),missing_soil_properties,str,38,37,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+data\processed\hwsd2_awc_semantics_audit.csv,(file),AWC_raw,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),AWC_unit,str,38,0,0.0,1,mm/m
+data\processed\hwsd2_awc_semantics_audit.csv,(file),final_review_status,str,38,0,0.0,4,MIXED_COMPONENTS_REVIEW || EXCLUDED_NON_SOIL_MAPPING
+data\processed\hwsd2_awc_semantics_audit.csv,(file),review_reason,str,38,0,0.0,4,Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Source classification TC/UR; do not interpret AWC=0 as true soil AWC || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit
+data\processed\hwsd2_awc_semantics_audit.csv,(file),awc_use_recommendation,str,38,0,0.0,3,REVIEW_BEFORE_MODEL_USE || EXCLUDE
+data\processed\hwsd2_awc_semantics_audit.csv,(file),source_dataset,str,38,0,0.0,1,HWSD2
+data\processed\hwsd2_awc_semantics_audit.csv,(file),data_type,str,38,0,0.0,1,"Spatial soil database estimate, not field/lab measurement"
+data\processed\hwsd2_awc_semantics_audit.csv,(file),awc_join_status,str,38,0,0.0,1,MATCHED_TO_VALIDATION
+data\processed\hwsd2_awc_semantics_audit.csv,(file),WRB4,str,38,0,0.0,5,FLca || TC
+data\processed\hwsd2_awc_semantics_audit.csv,(file),WRB2,str,38,0,0.0,4,FL || TC
+data\processed\hwsd2_awc_semantics_audit.csv,(file),FAO90,str,38,0,0.0,5,FLc || UR
+data\processed\hwsd2_awc_semantics_audit.csv,(file),TEXTURE_USDA,float64,38,2,5.26,3,9.0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),REF_BULK_DENSITY,float64,38,2,5.26,3,1.7100000381469729
+data\processed\hwsd2_awc_semantics_audit.csv,(file),BULK_DENSITY,float64,38,0,0.0,5,1.4900000095367432 || -9.0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),DRAINAGE,str,38,2,5.26,2,MW
+data\processed\hwsd2_awc_semantics_audit.csv,(file),ROOT_DEPTH_class_code,int64,38,0,0.0,1,1
+data\processed\hwsd2_awc_semantics_audit.csv,(file),AWC_SMU_source_mm_per_m,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),D1_component_count,int64,38,0,0.0,3,3 || 1
+data\processed\hwsd2_awc_semantics_audit.csv,(file),D1_component_shares_sum_pct,int64,38,0,0.0,1,100
+data\processed\hwsd2_awc_semantics_audit.csv,(file),D1_component_AWC_weighted_mm_diagnostic,float64,38,0,0.0,6,178.0 || 0.0
+data\processed\hwsd2_awc_semantics_audit.csv,(file),D1_components_detail,str,38,0,0.0,7,"FLca: share=50%, AWC=172 | GLeu: share=25%, AWC=169 | VRha: share=25%, AWC=199 || TC: share=100%, AWC=0"
+data\processed\hwsd2_awc_semantics_audit.csv,(file),AWC_review_status,str,38,0,0.0,4,REVIEW_MIXED_COMPONENTS || EXCLUDE_NON_SOIL_MAPPING
+data\processed\hwsd2_awc_semantics_audit.csv,(file),AWC_model_use_note,str,38,0,0.0,1,Original SMU AWC retained; no field validation implied
+data\processed\hwsd2_awc_semantics_audit.csv,(file),D1_weighted_AWC_note,str,38,0,0.0,1,Diagnostic component-weighted value only; not a replacement for the source SMU AWC
+data\processed\hwsd2_awc_semantics_audit.csv,(file),SMU_AWC_interpretation,str,38,0,0.0,1,Source SMU AWC; metadata unit mm/m. Preserve as reported.
+data\processed\hwsd2_awc_semantics_audit.csv,(file),Layer_table_AWC_interpretation,str,38,0,0.0,1,Metadata describes AWC for rootable soil depth in mm; do not assume this is AWC of the D1 layer alone.
+data\processed\hwsd2_awc_semantics_audit.csv,(file),D1_weighted_value_use_status,str,38,0,0.0,1,DIAGNOSTIC_ONLY_NOT_VALIDATED_AS_D1_LAYER_AWC
+data\processed\hwsd2_awc_semantics_audit.csv,(file),AWC_model_use_status,str,38,0,0.0,1,HOLD_PENDING_CONFIRMATION_OF_FIELD_DEFINITION_AND_DEPTH
+data\processed\hwsd2_awc_semantics_audit.csv,(file),AWC_documentation_source,str,38,0,0.0,1,FAO HWSD v2.0 technical report and database field metadata
+data\processed\hwsd2_awc_semantics_audit.csv,(file),AWC_documentation_url,str,38,0,0.0,1,https://www.fao.org/land-water/resources/tools/databases/hwsd/en
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),HWSD2_SMU_ID,int64,8,0,0.0,8,7001 || 16413 || 16414 || 16487 || 16500
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),AWC_SMU_source_mm_per_m,int64,8,0,0.0,4,0 || 172 || 90 || 89
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),D1_component_count,int64,8,0,0.0,3,1 || 3 || 2
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),D1_component_AWC_weighted_mm_diagnostic,float64,8,0,0.0,6,0.0 || 178.0 || 172.0 || 89.8 || 89.4
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),AWC_review_status,str,8,0,0.0,4,EXCLUDE_NON_SOIL_MAPPING || REVIEW_MIXED_COMPONENTS || CANDIDATE_NOT_FIELD_VALIDATED
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),SMU_AWC_interpretation,str,8,0,0.0,1,Source SMU AWC; metadata unit mm/m. Preserve as reported.
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),Layer_table_AWC_interpretation,str,8,0,0.0,1,Metadata describes AWC for rootable soil depth in mm; do not assume this is AWC of the D1 layer alone.
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),D1_weighted_value_use_status,str,8,0,0.0,1,DIAGNOSTIC_ONLY_NOT_VALIDATED_AS_D1_LAYER_AWC
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),AWC_model_use_status,str,8,0,0.0,1,HOLD_PENDING_CONFIRMATION_OF_FIELD_DEFINITION_AND_DEPTH
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),AWC_documentation_source,str,8,0,0.0,1,FAO HWSD v2.0 technical report and database field metadata
+data\processed\hwsd2_awc_semantics_by_smu.csv,(file),AWC_documentation_url,str,8,0,0.0,1,https://www.fao.org/land-water/resources/tools/databases/hwsd/en
+data\processed\hwsd2_awc_source_layer_records.csv,(file),HWSD2_SMU_ID,int64,84,0,0.0,8,7001
+data\processed\hwsd2_awc_source_layer_records.csv,(file),SEQUENCE,int64,84,0,0.0,3,1
+data\processed\hwsd2_awc_source_layer_records.csv,(file),SHARE,int64,84,0,0.0,7,100
+data\processed\hwsd2_awc_source_layer_records.csv,(file),WRB4,str,84,0,0.0,7,TC
+data\processed\hwsd2_awc_source_layer_records.csv,(file),FAO90,str,84,0,0.0,7,UR
+data\processed\hwsd2_awc_source_layer_records.csv,(file),ROOT_DEPTH,float64,84,72,85.71,1,1.0
+data\processed\hwsd2_awc_source_layer_records.csv,(file),AWC,float64,84,72,85.71,6,0.0 || 172.0 || 199.0 || 169.0
+data\processed\hwsd2_awc_source_layer_records.csv,(file),LAYER,str,84,0,0.0,7,D1 || D2 || D3 || D4 || D5
+data\processed\hwsd2_awc_source_layer_records.csv,(file),TOPDEP,int64,84,0,0.0,7,0 || 20 || 40 || 60 || 80
+data\processed\hwsd2_awc_source_layer_records.csv,(file),BOTDEP,int64,84,0,0.0,7,20 || 40 || 60 || 80 || 100
+data\processed\hwsd2_awc_source_smu_records.csv,(file),HWSD2_SMU_ID,int64,8,0,0.0,8,16414 || 16413 || 16501 || 16502 || 16500
+data\processed\hwsd2_awc_source_smu_records.csv,(file),AWC,int64,8,0,0.0,4,172 || 89
+data\processed\hwsd2_awc_source_smu_records.csv,(file),ROOT_DEPTH,int64,8,0,0.0,1,1
+data\processed\hwsd2_awc_source_smu_records.csv,(file),WRB4,str,8,0,0.0,5,FLca || SCgl
+data\processed\hwsd2_awc_source_smu_records.csv,(file),FAO90,str,8,0,0.0,5,FLc || SCg
+data\processed\hwsd2_awc_validation.csv,(file),HWSD2_SMU_ID,int64,8,0,0.0,8,7001 || 16413 || 16414 || 16487 || 16500
+data\processed\hwsd2_awc_validation.csv,(file),WISE30s_SMU_ID,str,8,0,0.0,8,WD30007001 || WD20016413 || WD20016414 || WD20016487 || WD20016500
+data\processed\hwsd2_awc_validation.csv,(file),COVERAGE,int64,8,0,0.0,2,1 || 3
+data\processed\hwsd2_awc_validation.csv,(file),SHARE,int64,8,0,0.0,4,100 || 50 || 80 || 60
+data\processed\hwsd2_awc_validation.csv,(file),WRB4,str,8,0,0.0,5,TC || FLca || SCha || SCgl
+data\processed\hwsd2_awc_validation.csv,(file),WRB2,str,8,0,0.0,4,TC || FL || SC
+data\processed\hwsd2_awc_validation.csv,(file),FAO90,str,8,0,0.0,5,UR || FLc || SCh || SCg
+data\processed\hwsd2_awc_validation.csv,(file),TEXTURE_USDA,float64,8,2,25.0,3,9.0 || 10.0 || 5.0
+data\processed\hwsd2_awc_validation.csv,(file),DRAINAGE,str,8,2,25.0,2,MW || P
+data\processed\hwsd2_awc_validation.csv,(file),ROOT_DEPTH,int64,8,0,0.0,1,1
+data\processed\hwsd2_awc_validation.csv,(file),AWC_raw,int64,8,0,0.0,4,0 || 172 || 90 || 89
+data\processed\hwsd2_awc_validation.csv,(file),AWC_unit,str,8,0,0.0,1,mm/m
+data\processed\hwsd2_awc_validation.csv,(file),AWC_model_value,float64,8,2,25.0,3,172.0 || 90.0 || 89.0
+data\processed\hwsd2_awc_validation.csv,(file),validation_status,str,8,0,0.0,2,REVIEW_NOT_VALIDATED || VALID_METADATA_UNIT
+data\processed\hwsd2_awc_validation.csv,(file),validation_note,str,8,0,0.0,2,"Raw value preserved; do not use as a confirmed soil-water capacity until soil data are verified. || AWC unit mm/m confirmed in HWSD2_SMU_METADATA; spatial soil estimate, not a field measurement."
+data\processed\hwsd2_metadata_d_awc.csv,(file),CODE,int64,7,0,0.0,7,1 || 2 || 3 || 4 || 5
+data\processed\hwsd2_metadata_d_awc.csv,(file),VALUE,int64,7,0,0.0,7,150 || 125 || 100 || 75 || 50
+data\processed\hwsd2_metadata_d_root_depth.csv,(file),CODE,int64,4,0,0.0,4,1 || 2 || 3 || 4
+data\processed\hwsd2_metadata_d_root_depth.csv,(file),VALUE,str,4,0,0.0,4,Deep  (> 100cm) || Moderately Deep  (< 100cm) || Shallow  (< 50cm) || Very shallow  (< 10cm)
+data\processed\hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv,(file),ID,int64,2,0,0.0,2,14 || 21
+data\processed\hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv,(file),FIELD,str,2,0,0.0,2,ROOT_DEPTH || AWC
+data\processed\hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv,(file),UNIT,str,2,0,0.0,2,Class || mm
+data\processed\hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv,(file),DESCRIPTION,str,2,0,0.0,2,Rootable Soil Depth || AWC for Rootable Soil Depth
+data\processed\hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv,(file),DATATYPE,str,2,1,50.0,1,Number
+data\processed\hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv,(file),DOMAIN,str,2,1,50.0,1,D_ROOT_DEPTH
+data\processed\hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv,(file),ID,float64,2,0,0.0,2,17.0 || 18.0
+data\processed\hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv,(file),FIELD,str,2,0,0.0,2,ROOT_DEPTH || AWC
+data\processed\hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv,(file),UNIT,str,2,0,0.0,2,Class || mm/m
+data\processed\hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv,(file),DESCRIPTION,str,2,0,0.0,2,Rooting Depth || Available Water Capacity
+data\processed\hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv,(file),DATATYPE,str,2,0,0.0,1,Number
+data\processed\hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv,(file),DOMAIN,str,2,1,50.0,1,D_ROOT_DEPTH
+data\processed\hwsd2_raster_spatial_check.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_raster_spatial_check.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_raster_spatial_check.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_raster_spatial_check.csv,(file),raster_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_raster_spatial_check.csv,(file),raster_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_raster_spatial_check.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_raster_spatial_check.csv,(file),nodata,bool,38,0,0.0,1,False
+data\processed\hwsd2_raster_spatial_check.csv,(file),top_depth_cm,int64,38,0,0.0,1,0
+data\processed\hwsd2_raster_spatial_check.csv,(file),bottom_depth_cm,int64,38,0,0.0,1,20
+data\processed\hwsd2_raster_spatial_check.csv,(file),sand_pct,float64,38,1,2.63,5,21.0
+data\processed\hwsd2_raster_spatial_check.csv,(file),silt_pct,float64,38,1,2.63,5,24.0
+data\processed\hwsd2_raster_spatial_check.csv,(file),clay_pct,float64,38,1,2.63,5,55.0
+data\processed\hwsd2_raster_spatial_check.csv,(file),bulk,float64,38,1,2.63,5,1.6399999856948853
+data\processed\hwsd2_raster_spatial_check.csv,(file),organic_carbon,float64,38,1,2.63,5,0.9010000228881836
+data\processed\hwsd2_raster_spatial_check.csv,(file),ph_water,float64,38,1,2.63,5,7.300000190734863
+data\processed\hwsd2_raster_spatial_check.csv,(file),texture_usda,float64,38,2,5.26,4,3.0
+data\processed\hwsd2_raster_spatial_check.csv,(file),texture_soter,str,38,0,0.0,3,F || -
+data\processed\hwsd2_raster_spatial_check.csv,(file),match_found,bool,38,0,0.0,1,True
+data\processed\hwsd2_raster_spatial_check.csv,(file),soil_data_status,str,38,0,0.0,2,COMPLETE || INCOMPLETE
+data\processed\hwsd2_raster_spatial_check.csv,(file),missing_soil_properties,str,38,37,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+data\processed\hwsd2_raster_spatial_check.csv,(file),raster_check_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_raster_spatial_check.csv,(file),raster_check_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_raster_spatial_check.csv,(file),raster_smu_id,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_raster_spatial_check.csv,(file),raster_check_status,str,38,0,0.0,1,MATCH
+data\processed\hwsd2_raster_spatial_check.csv,(file),previous_row_matches,bool,38,0,0.0,1,True
+data\processed\hwsd2_raster_spatial_check.csv,(file),previous_col_matches,bool,38,0,0.0,1,True
+data\processed\hwsd2_soil_model_candidates.csv,(file),point_id,str,36,0,0.0,36,grid_0001 || grid_0003 || grid_0004 || grid_0005 || grid_0006
+data\processed\hwsd2_soil_model_candidates.csv,(file),longitude,float64,36,0,0.0,9,30.818041 || 31.018041 || 30.718041 || 30.918041
+data\processed\hwsd2_soil_model_candidates.csv,(file),latitude,float64,36,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_soil_model_candidates.csv,(file),raster_row,int64,36,0,0.0,6,7078 || 7066
+data\processed\hwsd2_soil_model_candidates.csv,(file),raster_col,int64,36,0,0.0,9,25298 || 25322 || 25286 || 25310
+data\processed\hwsd2_soil_model_candidates.csv,(file),HWSD2_SMU_ID,int64,36,0,0.0,6,16413
+data\processed\hwsd2_soil_model_candidates.csv,(file),nodata,bool,36,0,0.0,1,False
+data\processed\hwsd2_soil_model_candidates.csv,(file),top_depth_cm,int64,36,0,0.0,1,0
+data\processed\hwsd2_soil_model_candidates.csv,(file),bottom_depth_cm,int64,36,0,0.0,1,20
+data\processed\hwsd2_soil_model_candidates.csv,(file),sand_pct,float64,36,0,0.0,4,21.0
+data\processed\hwsd2_soil_model_candidates.csv,(file),silt_pct,float64,36,0,0.0,4,24.0
+data\processed\hwsd2_soil_model_candidates.csv,(file),clay_pct,float64,36,0,0.0,4,55.0
+data\processed\hwsd2_soil_model_candidates.csv,(file),bulk,float64,36,0,0.0,4,1.6399999856948853
+data\processed\hwsd2_soil_model_candidates.csv,(file),organic_carbon,float64,36,0,0.0,4,0.9010000228881836
+data\processed\hwsd2_soil_model_candidates.csv,(file),ph_water,float64,36,0,0.0,4,7.300000190734863
+data\processed\hwsd2_soil_model_candidates.csv,(file),texture_usda,float64,36,0,0.0,4,3.0
+data\processed\hwsd2_soil_model_candidates.csv,(file),texture_soter,str,36,0,0.0,2,F
+data\processed\hwsd2_soil_model_candidates.csv,(file),match_found,bool,36,0,0.0,1,True
+data\processed\hwsd2_soil_model_candidates.csv,(file),soil_data_status,str,36,0,0.0,1,COMPLETE
+data\processed\hwsd2_soil_model_candidates.csv,(file),missing_soil_properties,float64,36,36,100.0,0,
+data\processed\hwsd2_soil_model_candidates.csv,(file),AWC_raw,int64,36,0,0.0,3,172
+data\processed\hwsd2_soil_model_candidates.csv,(file),AWC_unit,str,36,0,0.0,1,mm/m
+data\processed\hwsd2_soil_model_candidates.csv,(file),final_review_status,str,36,0,0.0,2,MIXED_COMPONENTS_REVIEW
+data\processed\hwsd2_soil_model_candidates.csv,(file),review_reason,str,36,0,0.0,2,Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit
+data\processed\hwsd2_soil_model_candidates.csv,(file),awc_use_recommendation,str,36,0,0.0,2,REVIEW_BEFORE_MODEL_USE
+data\processed\hwsd2_soil_model_candidates.csv,(file),source_dataset,str,36,0,0.0,1,HWSD2
+data\processed\hwsd2_soil_model_candidates.csv,(file),data_type,str,36,0,0.0,1,"Spatial soil database estimate, not field/lab measurement"
+data\processed\hwsd2_soil_model_candidates.csv,(file),awc_join_status,str,36,0,0.0,1,MATCHED_TO_VALIDATION
+data\processed\hwsd2_soil_model_candidates.csv,(file),WRB4,str,36,0,0.0,3,FLca
+data\processed\hwsd2_soil_model_candidates.csv,(file),WRB2,str,36,0,0.0,2,FL
+data\processed\hwsd2_soil_model_candidates.csv,(file),FAO90,str,36,0,0.0,3,FLc
+data\processed\hwsd2_soil_model_candidates.csv,(file),TEXTURE_USDA,float64,36,0,0.0,3,9.0
+data\processed\hwsd2_soil_model_candidates.csv,(file),REF_BULK_DENSITY,float64,36,0,0.0,3,1.7100000381469729
+data\processed\hwsd2_soil_model_candidates.csv,(file),BULK_DENSITY,float64,36,0,0.0,3,1.4900000095367432
+data\processed\hwsd2_soil_model_candidates.csv,(file),DRAINAGE,str,36,0,0.0,2,MW
+data\processed\hwsd2_soil_model_candidates.csv,(file),ROOT_DEPTH_class_code,int64,36,0,0.0,1,1
+data\processed\hwsd2_soil_model_candidates.csv,(file),AWC_SMU_source_mm_per_m,int64,36,0,0.0,3,172
+data\processed\hwsd2_soil_model_candidates.csv,(file),D1_component_count,int64,36,0,0.0,3,3
+data\processed\hwsd2_soil_model_candidates.csv,(file),D1_component_shares_sum_pct,int64,36,0,0.0,1,100
+data\processed\hwsd2_soil_model_candidates.csv,(file),D1_component_AWC_weighted_mm_diagnostic,float64,36,0,0.0,5,178.0
+data\processed\hwsd2_soil_model_candidates.csv,(file),D1_components_detail,str,36,0,0.0,5,"FLca: share=50%, AWC=172 | GLeu: share=25%, AWC=169 | VRha: share=25%, AWC=199"
+data\processed\hwsd2_soil_model_candidates.csv,(file),AWC_review_status,str,36,0,0.0,2,REVIEW_MIXED_COMPONENTS
+data\processed\hwsd2_soil_model_candidates.csv,(file),AWC_model_use_note,str,36,0,0.0,1,Original SMU AWC retained; no field validation implied
+data\processed\hwsd2_soil_model_candidates.csv,(file),D1_weighted_AWC_note,str,36,0,0.0,1,Diagnostic component-weighted value only; not a replacement for the source SMU AWC
+data\processed\hwsd2_soil_model_candidates.csv,(file),soil_model_screening_decision,str,36,0,0.0,2,HOLD_FOR_MIXED_COMPONENT_REVIEW
+data\processed\hwsd2_soil_model_candidates.csv,(file),awc_source_unit,str,36,0,0.0,1,mm/m
+data\processed\hwsd2_soil_model_candidates.csv,(file),component_awc_unit,str,36,0,0.0,1,mm
+data\processed\hwsd2_soil_model_candidates.csv,(file),awc_values_comparable_directly,bool,36,0,0.0,1,False
+data\processed\hwsd2_soil_model_candidates.csv,(file),field_validation_confirmed,bool,36,0,0.0,1,False
+data\processed\hwsd2_soil_model_candidates.csv,(file),screening_note,str,36,0,0.0,1,"Screening only; verify field location, source definitions, and AWC/rootable-depth interpretation before model use."
+data\processed\hwsd2_soil_model_screening.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_soil_model_screening.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_soil_model_screening.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_soil_model_screening.csv,(file),raster_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_soil_model_screening.csv,(file),raster_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_soil_model_screening.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_soil_model_screening.csv,(file),nodata,bool,38,0,0.0,1,False
+data\processed\hwsd2_soil_model_screening.csv,(file),top_depth_cm,int64,38,0,0.0,1,0
+data\processed\hwsd2_soil_model_screening.csv,(file),bottom_depth_cm,int64,38,0,0.0,1,20
+data\processed\hwsd2_soil_model_screening.csv,(file),sand_pct,float64,38,1,2.63,5,21.0
+data\processed\hwsd2_soil_model_screening.csv,(file),silt_pct,float64,38,1,2.63,5,24.0
+data\processed\hwsd2_soil_model_screening.csv,(file),clay_pct,float64,38,1,2.63,5,55.0
+data\processed\hwsd2_soil_model_screening.csv,(file),bulk,float64,38,1,2.63,5,1.6399999856948853
+data\processed\hwsd2_soil_model_screening.csv,(file),organic_carbon,float64,38,1,2.63,5,0.9010000228881836
+data\processed\hwsd2_soil_model_screening.csv,(file),ph_water,float64,38,1,2.63,5,7.300000190734863
+data\processed\hwsd2_soil_model_screening.csv,(file),texture_usda,float64,38,2,5.26,4,3.0
+data\processed\hwsd2_soil_model_screening.csv,(file),texture_soter,str,38,0,0.0,3,F || -
+data\processed\hwsd2_soil_model_screening.csv,(file),match_found,bool,38,0,0.0,1,True
+data\processed\hwsd2_soil_model_screening.csv,(file),soil_data_status,str,38,0,0.0,2,COMPLETE || INCOMPLETE
+data\processed\hwsd2_soil_model_screening.csv,(file),missing_soil_properties,str,38,37,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+data\processed\hwsd2_soil_model_screening.csv,(file),AWC_raw,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_soil_model_screening.csv,(file),AWC_unit,str,38,0,0.0,1,mm/m
+data\processed\hwsd2_soil_model_screening.csv,(file),final_review_status,str,38,0,0.0,4,MIXED_COMPONENTS_REVIEW || EXCLUDED_NON_SOIL_MAPPING
+data\processed\hwsd2_soil_model_screening.csv,(file),review_reason,str,38,0,0.0,4,Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Source classification TC/UR; do not interpret AWC=0 as true soil AWC || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit
+data\processed\hwsd2_soil_model_screening.csv,(file),awc_use_recommendation,str,38,0,0.0,3,REVIEW_BEFORE_MODEL_USE || EXCLUDE
+data\processed\hwsd2_soil_model_screening.csv,(file),source_dataset,str,38,0,0.0,1,HWSD2
+data\processed\hwsd2_soil_model_screening.csv,(file),data_type,str,38,0,0.0,1,"Spatial soil database estimate, not field/lab measurement"
+data\processed\hwsd2_soil_model_screening.csv,(file),awc_join_status,str,38,0,0.0,1,MATCHED_TO_VALIDATION
+data\processed\hwsd2_soil_model_screening.csv,(file),WRB4,str,38,0,0.0,5,FLca || TC
+data\processed\hwsd2_soil_model_screening.csv,(file),WRB2,str,38,0,0.0,4,FL || TC
+data\processed\hwsd2_soil_model_screening.csv,(file),FAO90,str,38,0,0.0,5,FLc || UR
+data\processed\hwsd2_soil_model_screening.csv,(file),TEXTURE_USDA,float64,38,2,5.26,3,9.0
+data\processed\hwsd2_soil_model_screening.csv,(file),REF_BULK_DENSITY,float64,38,2,5.26,3,1.7100000381469729
+data\processed\hwsd2_soil_model_screening.csv,(file),BULK_DENSITY,float64,38,0,0.0,5,1.4900000095367432 || -9.0
+data\processed\hwsd2_soil_model_screening.csv,(file),DRAINAGE,str,38,2,5.26,2,MW
+data\processed\hwsd2_soil_model_screening.csv,(file),ROOT_DEPTH_class_code,int64,38,0,0.0,1,1
+data\processed\hwsd2_soil_model_screening.csv,(file),AWC_SMU_source_mm_per_m,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_soil_model_screening.csv,(file),D1_component_count,int64,38,0,0.0,3,3 || 1
+data\processed\hwsd2_soil_model_screening.csv,(file),D1_component_shares_sum_pct,int64,38,0,0.0,1,100
+data\processed\hwsd2_soil_model_screening.csv,(file),D1_component_AWC_weighted_mm_diagnostic,float64,38,0,0.0,6,178.0 || 0.0
+data\processed\hwsd2_soil_model_screening.csv,(file),D1_components_detail,str,38,0,0.0,7,"FLca: share=50%, AWC=172 | GLeu: share=25%, AWC=169 | VRha: share=25%, AWC=199 || TC: share=100%, AWC=0"
+data\processed\hwsd2_soil_model_screening.csv,(file),AWC_review_status,str,38,0,0.0,4,REVIEW_MIXED_COMPONENTS || EXCLUDE_NON_SOIL_MAPPING
+data\processed\hwsd2_soil_model_screening.csv,(file),AWC_model_use_note,str,38,0,0.0,1,Original SMU AWC retained; no field validation implied
+data\processed\hwsd2_soil_model_screening.csv,(file),D1_weighted_AWC_note,str,38,0,0.0,1,Diagnostic component-weighted value only; not a replacement for the source SMU AWC
+data\processed\hwsd2_soil_model_screening.csv,(file),soil_model_screening_decision,str,38,0,0.0,3,HOLD_FOR_MIXED_COMPONENT_REVIEW || EXCLUDE_FROM_AGRICULTURAL_SOIL_CANDIDATES
+data\processed\hwsd2_soil_model_screening.csv,(file),awc_source_unit,str,38,0,0.0,1,mm/m
+data\processed\hwsd2_soil_model_screening.csv,(file),component_awc_unit,str,38,0,0.0,1,mm
+data\processed\hwsd2_soil_model_screening.csv,(file),awc_values_comparable_directly,bool,38,0,0.0,1,False
+data\processed\hwsd2_soil_model_screening.csv,(file),field_validation_confirmed,bool,38,0,0.0,1,False
+data\processed\hwsd2_soil_model_screening.csv,(file),screening_note,str,38,0,0.0,1,"Screening only; verify field location, source definitions, and AWC/rootable-depth interpretation before model use."
+data\processed\hwsd2_soil_samples.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_soil_samples.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_soil_samples.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_soil_samples.csv,(file),raster_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_soil_samples.csv,(file),raster_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_soil_samples.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_soil_samples.csv,(file),nodata,bool,38,0,0.0,1,False
+data\processed\hwsd2_soil_samples.csv,(file),top_depth_cm,int64,38,0,0.0,1,0
+data\processed\hwsd2_soil_samples.csv,(file),bottom_depth_cm,int64,38,0,0.0,1,20
+data\processed\hwsd2_soil_samples.csv,(file),sand_pct,int64,38,0,0.0,6,21 || -9
+data\processed\hwsd2_soil_samples.csv,(file),silt_pct,int64,38,0,0.0,6,24 || -9
+data\processed\hwsd2_soil_samples.csv,(file),clay_pct,int64,38,0,0.0,6,55 || -9
+data\processed\hwsd2_soil_samples.csv,(file),bulk,float64,38,0,0.0,6,1.6399999856948853 || -9.0
+data\processed\hwsd2_soil_samples.csv,(file),organic_carbon,float64,38,0,0.0,6,0.9010000228881836 || -9.0
+data\processed\hwsd2_soil_samples.csv,(file),ph_water,float64,38,0,0.0,6,7.300000190734863 || -9.0
+data\processed\hwsd2_soil_samples.csv,(file),texture_usda,float64,38,2,5.26,4,3.0
+data\processed\hwsd2_soil_samples.csv,(file),texture_soter,str,38,0,0.0,3,F || -
+data\processed\hwsd2_soil_samples.csv,(file),match_found,bool,38,0,0.0,1,True
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),raster_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),raster_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),nodata,bool,38,0,0.0,1,False
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),top_depth_cm,int64,38,0,0.0,1,0
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),bottom_depth_cm,int64,38,0,0.0,1,20
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),sand_pct,float64,38,1,2.63,5,21.0
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),silt_pct,float64,38,1,2.63,5,24.0
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),clay_pct,float64,38,1,2.63,5,55.0
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),bulk,float64,38,1,2.63,5,1.6399999856948853
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),organic_carbon,float64,38,1,2.63,5,0.9010000228881836
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),ph_water,float64,38,1,2.63,5,7.300000190734863
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),texture_usda,float64,38,2,5.26,4,3.0
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),texture_soter,str,38,0,0.0,3,F || -
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),match_found,bool,38,0,0.0,1,True
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),soil_data_status,str,38,0,0.0,2,COMPLETE || INCOMPLETE
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),missing_soil_properties,str,38,37,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),AWC_raw,int64,38,0,0.0,4,172 || 0
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),AWC_unit,str,38,0,0.0,1,mm/m
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),final_review_status,str,38,0,0.0,4,MIXED_COMPONENTS_REVIEW || EXCLUDED_NON_SOIL_MAPPING
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),review_reason,str,38,0,0.0,4,Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Source classification TC/UR; do not interpret AWC=0 as true soil AWC || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit || Multiple soil components and shares are recorded in HWSD2_LAYERS; do not treat one component value as the validated unit
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),awc_use_recommendation,str,38,0,0.0,3,REVIEW_BEFORE_MODEL_USE || EXCLUDE
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),source_dataset,str,38,0,0.0,1,HWSD2
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),data_type,str,38,0,0.0,1,"Spatial soil database estimate, not field/lab measurement"
+data\processed\hwsd2_soil_samples_awc_review.csv,(file),awc_join_status,str,38,0,0.0,1,MATCHED_TO_VALIDATION
+data\processed\hwsd2_soil_samples_clean.csv,(file),point_id,str,38,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\hwsd2_soil_samples_clean.csv,(file),longitude,float64,38,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\hwsd2_soil_samples_clean.csv,(file),latitude,float64,38,0,0.0,6,31.012854 || 31.112854
+data\processed\hwsd2_soil_samples_clean.csv,(file),raster_row,int64,38,0,0.0,6,7078 || 7066
+data\processed\hwsd2_soil_samples_clean.csv,(file),raster_col,int64,38,0,0.0,9,25298 || 25310 || 25322 || 25286
+data\processed\hwsd2_soil_samples_clean.csv,(file),HWSD2_SMU_ID,int64,38,0,0.0,8,16413 || 7001
+data\processed\hwsd2_soil_samples_clean.csv,(file),nodata,bool,38,0,0.0,1,False
+data\processed\hwsd2_soil_samples_clean.csv,(file),top_depth_cm,int64,38,0,0.0,1,0
+data\processed\hwsd2_soil_samples_clean.csv,(file),bottom_depth_cm,int64,38,0,0.0,1,20
+data\processed\hwsd2_soil_samples_clean.csv,(file),sand_pct,float64,38,1,2.63,5,21.0
+data\processed\hwsd2_soil_samples_clean.csv,(file),silt_pct,float64,38,1,2.63,5,24.0
+data\processed\hwsd2_soil_samples_clean.csv,(file),clay_pct,float64,38,1,2.63,5,55.0
+data\processed\hwsd2_soil_samples_clean.csv,(file),bulk,float64,38,1,2.63,5,1.6399999856948853
+data\processed\hwsd2_soil_samples_clean.csv,(file),organic_carbon,float64,38,1,2.63,5,0.9010000228881836
+data\processed\hwsd2_soil_samples_clean.csv,(file),ph_water,float64,38,1,2.63,5,7.300000190734863
+data\processed\hwsd2_soil_samples_clean.csv,(file),texture_usda,float64,38,2,5.26,4,3.0
+data\processed\hwsd2_soil_samples_clean.csv,(file),texture_soter,str,38,0,0.0,3,F || -
+data\processed\hwsd2_soil_samples_clean.csv,(file),match_found,bool,38,0,0.0,1,True
+data\processed\hwsd2_soil_samples_clean.csv,(file),soil_data_status,str,38,0,0.0,2,COMPLETE || INCOMPLETE
+data\processed\hwsd2_soil_samples_clean.csv,(file),missing_soil_properties,str,38,37,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+data\processed\nasa_power_daily.csv,(file),point_id,str,777024,0,0.0,38,grid_0001
+data\processed\nasa_power_daily.csv,(file),latitude,float64,777024,0,0.0,6,31.012854
+data\processed\nasa_power_daily.csv,(file),longitude,float64,777024,0,0.0,9,30.818041
+data\processed\nasa_power_daily.csv,(file),date,str,777024,0,0.0,2556,2017-01-01 || 2017-01-02 || 2017-01-03 || 2017-01-04 || 2017-01-05
+data\processed\nasa_power_daily.csv,(file),parameter,str,777024,0,0.0,8,T2M
+data\processed\nasa_power_daily.csv,(file),value,float64,777024,0,0.0,7737,9.79 || 10.76 || 11.64 || 12.06 || 11.77
+data\processed\nasa_power_daily.csv,(file),unit,float64,777024,777024,100.0,0,
+data\processed\nasa_power_daily.csv,(file),source,str,777024,0,0.0,1,NASA POWER Daily API
+data\processed\nasa_power_daily.csv,(file),spatial_support,str,777024,0,0.0,1,gridded estimate
+data\processed\nasa_power_daily.parquet,(file),point_id,str,777024,0,0.0,38,grid_0001
+data\processed\nasa_power_daily.parquet,(file),latitude,float64,777024,0,0.0,6,31.012854
+data\processed\nasa_power_daily.parquet,(file),longitude,float64,777024,0,0.0,9,30.818041
+data\processed\nasa_power_daily.parquet,(file),date,str,777024,0,0.0,2556,2017-01-01 || 2017-01-02 || 2017-01-03 || 2017-01-04 || 2017-01-05
+data\processed\nasa_power_daily.parquet,(file),parameter,str,777024,0,0.0,8,T2M
+data\processed\nasa_power_daily.parquet,(file),value,float64,777024,0,0.0,7737,9.79 || 10.76 || 11.64 || 12.06 || 11.77
+data\processed\nasa_power_daily.parquet,(file),unit,object,777024,777024,100.0,0,
+data\processed\nasa_power_daily.parquet,(file),source,str,777024,0,0.0,1,NASA POWER Daily API
+data\processed\nasa_power_daily.parquet,(file),spatial_support,str,777024,0,0.0,1,gridded estimate
+data\processed\nasa_power_daily_units_fixed.csv,(file),point_id,str,777024,0,0.0,38,grid_0001
+data\processed\nasa_power_daily_units_fixed.csv,(file),latitude,float64,777024,0,0.0,6,31.012854
+data\processed\nasa_power_daily_units_fixed.csv,(file),longitude,float64,777024,0,0.0,9,30.818041
+data\processed\nasa_power_daily_units_fixed.csv,(file),date,str,777024,0,0.0,2556,2017-01-01 || 2017-01-02 || 2017-01-03 || 2017-01-04 || 2017-01-05
+data\processed\nasa_power_daily_units_fixed.csv,(file),parameter,str,777024,0,0.0,8,T2M
+data\processed\nasa_power_daily_units_fixed.csv,(file),value,float64,777024,0,0.0,7737,9.79 || 10.76 || 11.64 || 12.06 || 11.77
+data\processed\nasa_power_daily_units_fixed.csv,(file),unit,str,777024,0,0.0,6,C
+data\processed\nasa_power_daily_units_fixed.csv,(file),source,str,777024,0,0.0,1,NASA POWER Daily API
+data\processed\nasa_power_daily_units_fixed.csv,(file),spatial_support,str,777024,0,0.0,1,gridded estimate
+data\processed\nasa_power_daily_units_fixed.parquet,(file),point_id,str,777024,0,0.0,38,grid_0001
+data\processed\nasa_power_daily_units_fixed.parquet,(file),latitude,float64,777024,0,0.0,6,31.012854
+data\processed\nasa_power_daily_units_fixed.parquet,(file),longitude,float64,777024,0,0.0,9,30.818041
+data\processed\nasa_power_daily_units_fixed.parquet,(file),date,str,777024,0,0.0,2556,2017-01-01 || 2017-01-02 || 2017-01-03 || 2017-01-04 || 2017-01-05
+data\processed\nasa_power_daily_units_fixed.parquet,(file),parameter,str,777024,0,0.0,8,T2M
+data\processed\nasa_power_daily_units_fixed.parquet,(file),value,float64,777024,0,0.0,7737,9.79 || 10.76 || 11.64 || 12.06 || 11.77
+data\processed\nasa_power_daily_units_fixed.parquet,(file),unit,str,777024,0,0.0,6,C
+data\processed\nasa_power_daily_units_fixed.parquet,(file),source,str,777024,0,0.0,1,NASA POWER Daily API
+data\processed\nasa_power_daily_units_fixed.parquet,(file),spatial_support,str,777024,0,0.0,1,gridded estimate
+data\processed\rice_crop_calendar.csv,(file),season_year,int64,7,0,0.0,7,2017 || 2018 || 2019 || 2020 || 2021
+data\processed\rice_crop_calendar.csv,(file),start_date,str,7,0,0.0,7,2017-05-10 || 2018-05-10 || 2019-05-10 || 2020-05-10 || 2021-05-10
+data\processed\rice_crop_calendar.csv,(file),end_date,str,7,0,0.0,7,2017-10-31 || 2018-10-31 || 2019-10-31 || 2020-10-31 || 2021-10-31
+data\processed\rice_crop_calendar.csv,(file),planting_date,str,7,0,0.0,7,2017-05-10 to 2017-05-31 || 2018-05-10 to 2018-05-31 || 2019-05-10 to 2019-05-31 || 2020-05-10 to 2020-05-31 || 2021-05-10 to 2021-05-31
+data\processed\rice_crop_calendar.csv,(file),transplanting_date,str,7,0,0.0,7,2017-06-05 to 2017-06-21 || 2018-06-05 to 2018-06-21 || 2019-06-05 to 2019-06-21 || 2020-06-05 to 2020-06-21 || 2021-06-05 to 2021-06-21
+data\processed\rice_crop_calendar.csv,(file),harvest_date,str,7,0,0.0,7,2017-08-15 to 2017-10-07 || 2018-08-15 to 2018-10-07 || 2019-08-15 to 2019-10-07 || 2020-08-15 to 2020-10-07 || 2021-08-15 to 2021-10-07
+data\processed\rice_crop_calendar.csv,(file),variety,str,7,0,0.0,1,Not specified in regional reference
+data\processed\rice_crop_calendar.csv,(file),growth_stage,str,7,0,0.0,1,whole_season_reference_window
+data\processed\rice_crop_calendar.csv,(file),stage_start_date,str,7,0,0.0,7,2017-05-10 || 2018-05-10 || 2019-05-10 || 2020-05-10 || 2021-05-10
+data\processed\rice_crop_calendar.csv,(file),stage_end_date,str,7,0,0.0,7,2017-10-31 || 2018-10-31 || 2019-10-31 || 2020-10-31 || 2021-10-31
+data\processed\rice_crop_calendar.csv,(file),source_url,str,7,0,0.0,1,https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_ || https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_ || https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_ || https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_ || https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_
+data\processed\rice_crop_calendar.csv,(file),data_status,str,7,0,0.0,1,REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),year,int64,46550,0,0.0,7,2017
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),date,str,46550,0,0.0,1225,2017-05-10 || 2017-05-11 || 2017-05-12 || 2017-05-13 || 2017-05-14
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),point_id,str,46550,0,0.0,38,grid_0001
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),latitude,float64,46550,0,0.0,6,31.012854
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),longitude,float64,46550,0,0.0,9,30.818041
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),tmin_c,float64,46550,0,0.0,1077,17.67 || 16.06 || 15.54 || 16.14 || 18.6
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),tmax_c,float64,46550,0,0.0,1669,33.02 || 28.71 || 32.45 || 36.51 || 38.19
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),relative_humidity_pct,float64,46550,0,0.0,2375,48.83 || 60.81 || 57.33 || 53.62 || 50.6
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),wind_speed_m_s,float64,46550,0,0.0,491,4.01 || 3.73 || 3.45 || 3.16 || 2.56
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),solar_radiation_mj_m2_day,float64,46550,0,0.0,1162,27.17 || 29.07 || 28.4 || 25.95 || 25.77
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),pressure_kpa,float64,46550,0,0.0,191,101.01 || 101.49 || 101.55 || 101.45 || 101.29
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),rainfall_mm_day,float64,46550,0,0.0,133,0.0
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),et0_mm_day,float64,46550,0,0.0,12143,7.6551 || 6.2747 || 6.7975 || 7.2091 || 7.2693
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),estimated_kc,float64,46550,0,0.0,84,1.05
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),estimated_etc_mm_day,float64,46550,0,0.0,12649,8.0378 || 6.5884 || 7.1374 || 7.5695 || 7.6328
+data\processed\rice_daily_water_demand_2017_2023.csv,(file),method_note,str,46550,0,0.0,1,FAO56_PM; Kc curve is an explicit seasonal estimate
+data\processed\rice_field_season_features_2017_2023.csv,(file),year,int64,266,0,0.0,7,2017
+data\processed\rice_field_season_features_2017_2023.csv,(file),point_id,str,266,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\rice_field_season_features_2017_2023.csv,(file),latitude,float64,266,0,0.0,6,31.012854 || 31.112854
+data\processed\rice_field_season_features_2017_2023.csv,(file),longitude,float64,266,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\rice_field_season_features_2017_2023.csv,(file),season_start_date,str,266,0,0.0,7,2017-05-10
+data\processed\rice_field_season_features_2017_2023.csv,(file),season_end_date,str,266,0,0.0,7,2017-10-31
+data\processed\rice_field_season_features_2017_2023.csv,(file),weather_day_count,int64,266,0,0.0,1,175
+data\processed\rice_field_season_features_2017_2023.csv,(file),tmin_c_season_mean,float64,266,0,0.0,28,20.6513 || 20.3323
+data\processed\rice_field_season_features_2017_2023.csv,(file),tmax_c_season_mean,float64,266,0,0.0,28,35.2165 || 36.2024
+data\processed\rice_field_season_features_2017_2023.csv,(file),relative_humidity_pct_season_mean,float64,266,0,0.0,28,55.3132 || 54.087
+data\processed\rice_field_season_features_2017_2023.csv,(file),wind_speed_m_s_season_mean,float64,266,0,0.0,28,3.0455 || 2.7469
+data\processed\rice_field_season_features_2017_2023.csv,(file),solar_radiation_mj_m2_day_season_mean,float64,266,0,0.0,14,24.3676 || 23.9281
+data\processed\rice_field_season_features_2017_2023.csv,(file),pressure_kpa_season_mean,float64,266,0,0.0,28,101.1118 || 101.0585
+data\processed\rice_field_season_features_2017_2023.csv,(file),rainfall_season_mm,float64,266,0,0.0,28,63.65 || 74.02
+data\processed\rice_field_season_features_2017_2023.csv,(file),et0_season_mm,float64,266,0,0.0,84,1181.9163 || 1170.7573 || 1181.801
+data\processed\rice_field_season_features_2017_2023.csv,(file),estimated_etc_season_mm,float64,266,0,0.0,84,1313.1063 || 1300.6993 || 1312.9959
+data\processed\rice_field_season_features_2017_2023.csv,(file),estimated_etc_minus_rain_mm,float64,266,0,0.0,84,1249.4563 || 1226.6793 || 1249.3459
+data\processed\rice_field_season_features_2017_2023.csv,(file),water_values_status,str,266,0,0.0,1,MODEL_ESTIMATE_NOT_OBSERVED_IRRIGATION
+data\processed\rice_field_season_features_2017_2023.csv,(file),water_method,str,266,0,0.0,1,FAO56_PM_WITH_ESTIMATED_SEASONAL_KC
+data\processed\rice_field_season_features_2017_2023.csv,(file),variety,str,266,0,0.0,1,Not specified in regional reference
+data\processed\rice_field_season_features_2017_2023.csv,(file),calendar_status,str,266,0,0.0,1,REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records
+data\processed\rice_field_season_features_2017_2023.csv,(file),planting_window,str,266,0,0.0,7,2017-05-10 to 2017-05-31
+data\processed\rice_field_season_features_2017_2023.csv,(file),transplanting_window,str,266,0,0.0,7,2017-06-05 to 2017-06-21
+data\processed\rice_field_season_features_2017_2023.csv,(file),harvest_window,str,266,0,0.0,7,2017-08-15 to 2017-10-07
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_HWSD2_SMU_ID,int64,266,0,0.0,8,16413 || 7001
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_top_depth_cm,int64,266,0,0.0,1,0
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_bottom_depth_cm,int64,266,0,0.0,1,20
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_sand_pct,float64,266,7,2.63,5,21.0
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_silt_pct,float64,266,7,2.63,5,24.0
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_clay_pct,float64,266,7,2.63,5,55.0
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_bulk,float64,266,7,2.63,5,1.6399999856948853
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_organic_carbon,float64,266,7,2.63,5,0.9010000228881836
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_ph_water,float64,266,7,2.63,5,7.300000190734863
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_texture_usda,float64,266,14,5.26,4,3.0
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_texture_soter,str,266,0,0.0,3,F || -
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_soil_data_status,str,266,0,0.0,2,COMPLETE || INCOMPLETE
+data\processed\rice_field_season_features_2017_2023.csv,(file),soil_missing_properties,str,266,259,97.37,1,sand_pct;silt_pct;clay_pct;bulk;organic_carbon;ph_water
+data\processed\rice_field_season_features_2017_2023.csv,(file),actual_irrigation_m3_per_feddan,float64,266,266,100.0,0,
+data\processed\rice_field_season_features_2017_2023.csv,(file),actual_yield_ton_per_feddan,float64,266,266,100.0,0,
+data\processed\rice_field_season_features_2017_2023.csv,(file),actual_irrigation_label_status,str,266,0,0.0,1,NOT_AVAILABLE
+data\processed\rice_field_season_features_2017_2023.csv,(file),actual_yield_label_status,str,266,0,0.0,1,NOT_AVAILABLE
+data\processed\rice_field_season_features_2017_2023.csv,(file),training_readiness,str,266,0,0.0,1,FEATURES_READY_TARGET_LABELS_REQUIRED
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),year,int64,7,0,0.0,7,2017 || 2018 || 2019 || 2020 || 2021
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),country,str,7,0,0.0,1,Egypt
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),governorate,str,7,0,0.0,1,Kafr El Sheikh
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),governorate_ar,str,7,0,0.0,1,كفر الشيخ
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),crop,str,7,0,0.0,1,Rice
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),season,str,7,0,0.0,1,Summer
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),area_feddan,int64,7,0,0.0,7,258338 || 190460 || 265903 || 256127 || 251857
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),production_ton,int64,7,0,0.0,7,1026424 || 760126 || 1060012 || 1023101 || 1025309
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),governorate_yield_ton_per_feddan,float64,7,0,0.0,7,3.9732 || 3.991 || 3.9865 || 3.9945 || 4.071
+data\processed\rice_governorate_year_reference_2017_2023.csv,(file),data_level,str,7,0,0.0,1,GOVERNORATE_YEAR_AGGREGATE_NOT_FIELD_LABEL
+data\processed\rice_statistics_2017_2023.csv,(file),year,int64,7,0,0.0,7,2017 || 2018 || 2019 || 2020 || 2021
+data\processed\rice_statistics_2017_2023.csv,(file),country,str,7,0,0.0,1,Egypt
+data\processed\rice_statistics_2017_2023.csv,(file),governorate,str,7,0,0.0,1,Kafr El Sheikh
+data\processed\rice_statistics_2017_2023.csv,(file),governorate_ar,str,7,0,0.0,1,كفر الشيخ
+data\processed\rice_statistics_2017_2023.csv,(file),crop,str,7,0,0.0,1,Rice
+data\processed\rice_statistics_2017_2023.csv,(file),crop_ar,str,7,0,0.0,1,الأرز
+data\processed\rice_statistics_2017_2023.csv,(file),season,str,7,0,0.0,1,Summer
+data\processed\rice_statistics_2017_2023.csv,(file),season_year_label,str,7,0,0.0,7,Summer 2017 || Summer 2018 || Summer 2019 || Summer 2020 || Summer 2021
+data\processed\rice_statistics_2017_2023.csv,(file),area_feddan,int64,7,0,0.0,7,258338 || 190460 || 265903 || 256127 || 251857
+data\processed\rice_statistics_2017_2023.csv,(file),production_ton,int64,7,0,0.0,7,1026424 || 760126 || 1060012 || 1023101 || 1025309
+data\processed\rice_statistics_2017_2023.csv,(file),yield_ton_per_feddan,float64,7,0,0.0,7,3.9732 || 3.991 || 3.9865 || 3.9945 || 4.071
+data\processed\rice_water_scenarios_2017_2023.csv,(file),year,int64,266,0,0.0,7,2017
+data\processed\rice_water_scenarios_2017_2023.csv,(file),point_id,str,266,0,0.0,38,grid_0001 || grid_0002 || grid_0003 || grid_0004 || grid_0005
+data\processed\rice_water_scenarios_2017_2023.csv,(file),latitude,float64,266,0,0.0,6,31.012854 || 31.112854
+data\processed\rice_water_scenarios_2017_2023.csv,(file),longitude,float64,266,0,0.0,9,30.818041 || 30.918041 || 31.018041 || 30.718041
+data\processed\rice_water_scenarios_2017_2023.csv,(file),season_days,int64,266,0,0.0,1,175
+data\processed\rice_water_scenarios_2017_2023.csv,(file),estimated_etc_season_mm,float64,266,0,0.0,84,1313.11 || 1300.7 || 1313.0
+data\processed\rice_water_scenarios_2017_2023.csv,(file),rainfall_season_mm,float64,266,0,0.0,28,63.65 || 74.02
+data\processed\rice_water_scenarios_2017_2023.csv,(file),land_preparation_assumption_mm,int64,266,0,0.0,1,200
+data\processed\rice_water_scenarios_2017_2023.csv,(file),establishment_water_assumption_mm,int64,266,0,0.0,1,100
+data\processed\rice_water_scenarios_2017_2023.csv,(file),seepage_low_mm_day,int64,266,0,0.0,1,4
+data\processed\rice_water_scenarios_2017_2023.csv,(file),seepage_high_mm_day,int64,266,0,0.0,1,8
+data\processed\rice_water_scenarios_2017_2023.csv,(file),scenario_low_depth_mm,float64,266,0,0.0,84,2249.46 || 2226.68 || 2249.35
+data\processed\rice_water_scenarios_2017_2023.csv,(file),scenario_high_depth_mm,float64,266,0,0.0,84,2949.46 || 2926.68 || 2949.35
+data\processed\rice_water_scenarios_2017_2023.csv,(file),scenario_low_m3_per_feddan,float64,266,0,0.0,84,9447.72 || 9352.05 || 9447.25
+data\processed\rice_water_scenarios_2017_2023.csv,(file),scenario_high_m3_per_feddan,float64,266,0,0.0,84,12387.72 || 12292.05 || 12387.25
+data\processed\rice_water_scenarios_2017_2023.csv,(file),actual_irrigation_status,str,266,0,0.0,1,NOT_MEASURED
+data\processed\rice_water_scenarios_2017_2023.csv,(file),assumption_note,str,266,0,0.0,1,"All rainfall treated as effective; Kc, seepage, land preparation and establishment values require local validation."
+data\processed\rice_water_scenarios_2017_2023.csv,(file),method_status,str,266,0,0.0,1,SCENARIO_ESTIMATE_NOT_FIELD_VALIDATED
+data\processed\rice_water_scenarios_annual_summary.csv,(file),year,int64,7,0,0.0,7,2017 || 2018 || 2019 || 2020 || 2021
+data\processed\rice_water_scenarios_annual_summary.csv,(file),point_count,int64,7,0,0.0,1,38
+data\processed\rice_water_scenarios_annual_summary.csv,(file),mean_etc_mm,float64,7,0,0.0,7,1222.38 || 1229.15 || 1238.39 || 1218.08 || 1254.4
+data\processed\rice_water_scenarios_annual_summary.csv,(file),mean_rainfall_mm,float64,7,0,0.0,7,72.33 || 16.52 || 12.68 || 2.77 || 1.77
+data\processed\rice_water_scenarios_annual_summary.csv,(file),mean_low_scenario_m3_per_feddan,float64,7,0,0.0,7,9030.22 || 9293.05 || 9347.98 || 9304.32 || 9461.06
+data\processed\rice_water_scenarios_annual_summary.csv,(file),mean_high_scenario_m3_per_feddan,float64,7,0,0.0,7,11970.22 || 12233.05 || 12287.98 || 12244.32 || 12401.06
+data\processed\rice_water_scenarios_annual_summary.csv,(file),interpretation,str,7,0,0.0,1,Spatial-point scenario averages; not actual field irrigation measurements
+data\processed\sentinel2_scene_catalog.csv,(file),scene_id,str,3775,0,0.0,3775,S2A_MSIL2A_20231229T083351_N0510_R021_T36SUA_20231229T112451 || S2A_MSIL2A_20231229T083351_N0510_R021_T36STA_20231229T112451 || S2A_MSIL2A_20231229T083351_N0510_R021_T36RUV_20231229T112451 || S2A_MSIL2A_20231229T083351_N0510_R021_T36RTV_20231229T112451 || S2B_MSIL2A_20231227T084259_N0510_R064_T36SUA_20231227T101728
+data\processed\sentinel2_scene_catalog.csv,(file),datetime,str,3775,0,0.0,954,2023-12-29T08:33:51.024000Z || 2023-12-27T08:42:59.024000Z
+data\processed\sentinel2_scene_catalog.csv,(file),cloud_cover_percent,float64,3775,0,0.0,2482,12.39 || 32.72 || 18.58 || 19.21 || 32.38
+data\processed\sentinel2_scene_catalog.csv,(file),collection,str,3775,0,0.0,1,sentinel-2-l2a
+data\processed\sentinel2_scene_catalog.csv,(file),geometry_json,str,3775,0,0.0,2481,"{""type"": ""Polygon"", ""coordinates"": [[[31.09404275450212, 32.522071464430866], [30.893502699343124, 31.52941539145633], [ || {""type"": ""Polygon"", ""coordinates"": [[[30.832066716282625, 31.527751150780905], [30.996455422059658, 31.531070114585123], || {""type"": ""Polygon"", ""coordinates"": [[[30.891505967555467, 31.618135724824867], [30.91329390945727, 30.628070840187593],  || {""type"": ""Polygon"", ""coordinates"": [[[30.59921969910372, 30.621483282448487], [31.015280954117173, 30.629668013461], [30 || {""type"": ""Polygon"", ""coordinates"": [[[31.79414742029112, 32.530672953325535], [30.870715549367127, 32.519327665440926], "
+data\processed\sentinel2_scene_catalog.csv,(file),bbox_json,str,3775,0,0.0,2449,"[30.888555043777824, 31.52941539145633, 32.0497519019289, 32.53368692662537] || [30.832066716282625, 31.527751150780905, 30.996455422059658, 32.10786818355112] || [30.891505967555467, 30.628070840187593, 32.05868610559479, 31.632004205184607] || [30.599219699103717, 30.621483282448487, 31.015280954117173, 31.619796171169355] || [30.870715549367127, 31.52941539145633, 31.794147420291118, 32.530672953325535]"
+data\processed\sentinel2_scene_catalog.csv,(file),assets_json,str,3775,0,0.0,3775,"{""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/29/S2A_MSIL2A_20231229T083351_N0510_R021_T36SUA_20231229T11 || {""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/29/S2A_MSIL2A_20231229T083351_N0510_R021_T36STA_20231229T11 || {""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/29/S2A_MSIL2A_20231229T083351_N0510_R021_T36RUV_20231229T11 || {""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/29/S2A_MSIL2A_20231229T083351_N0510_R021_T36RTV_20231229T11 || {""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/27/S2B_MSIL2A_20231227T084259_N0510_R064_T36SUA_20231227T10"
+data\processed\sentinel2_scene_catalog.csv,(file),source,str,3775,0,0.0,1,Copernicus Data Space STAC
+data\processed\sentinel2_scene_catalog.parquet,(file),scene_id,str,3775,0,0.0,3775,S2A_MSIL2A_20231229T083351_N0510_R021_T36SUA_20231229T112451 || S2A_MSIL2A_20231229T083351_N0510_R021_T36STA_20231229T112451 || S2A_MSIL2A_20231229T083351_N0510_R021_T36RUV_20231229T112451 || S2A_MSIL2A_20231229T083351_N0510_R021_T36RTV_20231229T112451 || S2B_MSIL2A_20231227T084259_N0510_R064_T36SUA_20231227T101728
+data\processed\sentinel2_scene_catalog.parquet,(file),datetime,str,3775,0,0.0,954,2023-12-29T08:33:51.024000Z || 2023-12-27T08:42:59.024000Z
+data\processed\sentinel2_scene_catalog.parquet,(file),cloud_cover_percent,float64,3775,0,0.0,2482,12.39 || 32.72 || 18.58 || 19.21 || 32.38
+data\processed\sentinel2_scene_catalog.parquet,(file),collection,str,3775,0,0.0,1,sentinel-2-l2a
+data\processed\sentinel2_scene_catalog.parquet,(file),geometry_json,str,3775,0,0.0,2481,"{""type"": ""Polygon"", ""coordinates"": [[[31.09404275450212, 32.522071464430866], [30.893502699343124, 31.52941539145633], [ || {""type"": ""Polygon"", ""coordinates"": [[[30.832066716282625, 31.527751150780905], [30.996455422059658, 31.531070114585123], || {""type"": ""Polygon"", ""coordinates"": [[[30.891505967555467, 31.618135724824867], [30.91329390945727, 30.628070840187593],  || {""type"": ""Polygon"", ""coordinates"": [[[30.59921969910372, 30.621483282448487], [31.015280954117173, 30.629668013461], [30 || {""type"": ""Polygon"", ""coordinates"": [[[31.79414742029112, 32.530672953325535], [30.870715549367127, 32.519327665440926], "
+data\processed\sentinel2_scene_catalog.parquet,(file),bbox_json,str,3775,0,0.0,2449,"[30.888555043777824, 31.52941539145633, 32.0497519019289, 32.53368692662537] || [30.832066716282625, 31.527751150780905, 30.996455422059658, 32.10786818355112] || [30.891505967555467, 30.628070840187593, 32.05868610559479, 31.632004205184607] || [30.599219699103717, 30.621483282448487, 31.015280954117173, 31.619796171169355] || [30.870715549367127, 31.52941539145633, 31.794147420291118, 32.530672953325535]"
+data\processed\sentinel2_scene_catalog.parquet,(file),assets_json,str,3775,0,0.0,3775,"{""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/29/S2A_MSIL2A_20231229T083351_N0510_R021_T36SUA_20231229T11 || {""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/29/S2A_MSIL2A_20231229T083351_N0510_R021_T36STA_20231229T11 || {""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/29/S2A_MSIL2A_20231229T083351_N0510_R021_T36RUV_20231229T11 || {""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/29/S2A_MSIL2A_20231229T083351_N0510_R021_T36RTV_20231229T11 || {""AOT_10m"": {""href"": ""s3://eodata/Sentinel-2/MSI/L2A/2023/12/27/S2B_MSIL2A_20231227T084259_N0510_R064_T36SUA_20231227T10"
+data\processed\sentinel2_scene_catalog.parquet,(file),source,str,3775,0,0.0,1,Copernicus Data Space STAC

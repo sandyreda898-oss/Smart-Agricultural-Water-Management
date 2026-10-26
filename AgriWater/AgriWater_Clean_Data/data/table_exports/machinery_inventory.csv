@@ -1,0 +1,2 @@
+﻿inventory_id,survey_year,source_label,admin_level_status,mobile_count,stationary_count,total_count,source_url,data_status,notes
+1,2023,كفر الشيخ,location_level_requires_confirmation,11090,464,11554,https://www.agri.gov.eg/uploads/topics/17329953527147.pdf,official_table_row_transcription,Table 93: Numbers of stationary and mobile irrigation pumps by district/location. Label is retained exactly; confirm whether this row is city/center or governorate aggregate before joining to district data.

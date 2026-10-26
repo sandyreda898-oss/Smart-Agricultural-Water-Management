@@ -1,0 +1,29 @@
+{
+  "source": "NASA POWER Daily API",
+  "endpoint": "https://power.larc.nasa.gov/api/temporal/daily/point",
+  "retrieved_on": "2026-10-25",
+  "period_start": "2024-01-01",
+  "period_end": "2026-10-25",
+  "spatial_support": "Daily gridded meteorological estimates queried at the project's 38 grid points; not field weather-station measurements.",
+  "time_standard": "LST (NASA POWER Daily API default)",
+  "parameters": {
+    "T2M": "C",
+    "T2M_MAX": "C",
+    "T2M_MIN": "C",
+    "RH2M": "%",
+    "PRECTOTCORR": "mm/day",
+    "WS2M": "m/s",
+    "PS": "kPa",
+    "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+  },
+  "request_count": 114,
+  "point_count": 38,
+  "response_chunking": "One calendar-year request per point",
+  "records_added": 312816,
+  "raw_responses": "data/raw/nasa_power_daily_extension/{point_id}_{year}.json",
+  "processed_csv": "data/processed/nasa_power_daily_2024_onward.csv",
+  "database_table": "weather_daily",
+  "source_id": 1,
+  "quality_notes": "Raw responses retained. -999 source sentinels are stored as NULL. 2026 is near-real-time and partial-year; confirm source refresh lag before operational use.",
+  "exclusions": "No imagery or NDVI downloaded."
+}

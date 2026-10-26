@@ -1,0 +1,137 @@
+﻿AGRIWATER PROJECT STATUS REPORT
+Generated: 2026-10-22 12:37:19
+Project: C:\Users\D.L\Desktop\AgriWater_FIXED
+
+=== EXPECTED FILES ===
+[FOUND] data\processed\nasa_power_daily_units_fixed.csv | 74215.05 KB
+[FOUND] data\processed\hwsd2_soil_samples_clean.csv | 5.37 KB
+[FOUND] data\processed\crop_water_parameters.csv | 1.37 KB
+[FOUND] data\processed\rice_crop_calendar.csv | 3.87 KB
+[FOUND] data\processed\rice_statistics_2017_2023.csv | 0.82 KB
+[FOUND] reports\latest_report.json | 5.82 KB
+
+=== SOURCE REGISTRY SEARCH ===
+[FOUND] source_registry.json
+
+=== KEY CSV CHECKS ===
+
+File: data\processed\hwsd2_soil_samples_clean.csv
+Data rows: 38
+Columns: point_id, longitude, latitude, raster_row, raster_col, HWSD2_SMU_ID, nodata, top_depth_cm, bottom_depth_cm, sand_pct, silt_pct, clay_pct, bulk, organic_carbon, ph_water, texture_usda, texture_soter, match_found, soil_data_status, missing_soil_properties
+
+File: data\processed\crop_water_parameters.csv
+Data rows: 6
+Columns: crop, growth_stage, kc, parameter_name, parameter_value, unit, valid_conditions, source_url, data_status
+
+File: data\processed\rice_crop_calendar.csv
+Data rows: 7
+Columns: season_year, start_date, end_date, planting_date, transplanting_date, harvest_date, variety, growth_stage, stage_start_date, stage_end_date, source_url, data_status
+
+File: data\processed\rice_statistics_2017_2023.csv
+Data rows: 7
+Columns: year, country, governorate, governorate_ar, crop, crop_ar, season, season_year_label, area_feddan, production_ton, yield_ton_per_feddan
+
+=== ALL PROJECT FILES ===
+.env.example | 0.18 KB
+collect.py | 0.09 KB
+config.json | 2.16 KB
+data\metadata\boundary_metadata.json | 2.46 KB
+data\metadata\field_survey_schema.json | 1 KB
+data\metadata\README.txt | 0.1 KB
+data\metadata\sample_grid.geojson | 13.9 KB
+data\metadata\soilgrids_metadata.json | 0.56 KB
+data\processed\crop_water_parameters.csv | 1.37 KB
+data\processed\field_survey_template.csv | 0.37 KB
+data\processed\hwsd2_awc_database_audit.csv | 24.54 KB
+data\processed\hwsd2_awc_final.csv | 3.45 KB
+data\processed\hwsd2_awc_final_review.csv | 24.86 KB
+data\processed\hwsd2_awc_final_review_repaired.csv | 26.61 KB
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv | 1.75 KB
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv | 29.42 KB
+data\processed\hwsd2_awc_samples.csv | 3.74 KB
+data\processed\hwsd2_awc_semantics_audit.csv | 41.12 KB
+data\processed\hwsd2_awc_semantics_by_smu.csv | 3.62 KB
+data\processed\hwsd2_awc_source_layer_records.csv | 2.82 KB
+data\processed\hwsd2_awc_source_smu_records.csv | 0.2 KB
+data\processed\hwsd2_awc_validation.csv | 1.48 KB
+data\processed\hwsd2_data_dictionary.json | 1.68 KB
+data\processed\hwsd2_metadata_d_awc.csv | 0.06 KB
+data\processed\hwsd2_metadata_d_root_depth.csv | 0.11 KB
+data\processed\hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv | 0.15 KB
+data\processed\hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv | 0.15 KB
+data\processed\hwsd2_raster_spatial_check.csv | 6.99 KB
+data\processed\hwsd2_soil_model_candidates.csv | 31.81 KB
+data\processed\hwsd2_soil_model_screening.csv | 33.2 KB
+data\processed\hwsd2_soil_samples.csv | 4.92 KB
+data\processed\hwsd2_soil_samples_awc_review.csv | 15.9 KB
+data\processed\hwsd2_soil_samples_clean.csv | 5.37 KB
+data\processed\nasa_power_daily.csv | 71748.91 KB
+data\processed\nasa_power_daily.parquet | 1596.23 KB
+data\processed\nasa_power_daily_units_fixed.csv | 74215.05 KB
+data\processed\nasa_power_daily_units_fixed.parquet | 1598.36 KB
+data\processed\rice_crop_calendar.csv | 3.87 KB
+data\processed\rice_statistics_2017_2023.csv | 0.82 KB
+data\processed\sentinel2_scene_catalog.csv | 272769.79 KB
+data\processed\sentinel2_scene_catalog.parquet | 42781.72 KB
+data\raw\boundaries\egy_adm1.geojson | 3884.02 KB
+data\raw\boundaries\geoboundaries_metadata.json | 1.8 KB
+data\raw\boundaries\kafr_el_sheikh_adm1.geojson | 49.87 KB
+data\raw\boundaries\kafr_el_sheikh_adm1.gpkg | 104 KB
+data\raw\sentinel2_catalog\page_0001.json | 11220.57 KB
+data\raw\sentinel2_catalog\page_0002.json | 11282.61 KB
+data\raw\sentinel2_catalog\page_0003.json | 11284.11 KB
+data\raw\sentinel2_catalog\page_0004.json | 11283.97 KB
+data\raw\sentinel2_catalog\page_0005.json | 11283.85 KB
+data\raw\sentinel2_catalog\page_0006.json | 11284.75 KB
+data\raw\sentinel2_catalog\page_0007.json | 10496.77 KB
+data\raw\sentinel2_catalog\page_0008.json | 10268.68 KB
+data\raw\sentinel2_catalog\page_0009.json | 10205.84 KB
+data\raw\sentinel2_catalog\page_0010.json | 10201.72 KB
+data\raw\sentinel2_catalog\page_0011.json | 10211.74 KB
+data\raw\sentinel2_catalog\page_0012.json | 10256.35 KB
+data\raw\sentinel2_catalog\page_0013.json | 10937.11 KB
+data\raw\sentinel2_catalog\page_0014.json | 11282.8 KB
+data\raw\sentinel2_catalog\page_0015.json | 11282.1 KB
+data\raw\sentinel2_catalog\page_0016.json | 11281.55 KB
+data\raw\sentinel2_catalog\page_0017.json | 11281.82 KB
+data\raw\sentinel2_catalog\page_0018.json | 11282.24 KB
+data\raw\sentinel2_catalog\page_0019.json | 11282.66 KB
+data\raw\sentinel2_catalog\page_0020.json | 11281.67 KB
+data\raw\sentinel2_catalog\page_0021.json | 11281.64 KB
+data\raw\sentinel2_catalog\page_0022.json | 11282.14 KB
+data\raw\sentinel2_catalog\page_0023.json | 11281.41 KB
+data\raw\sentinel2_catalog\page_0024.json | 11281.48 KB
+data\raw\sentinel2_catalog\page_0025.json | 11281.58 KB
+data\raw\sentinel2_catalog\page_0026.json | 11282.74 KB
+data\raw\sentinel2_catalog\page_0027.json | 11281.94 KB
+data\raw\sentinel2_catalog\page_0028.json | 11282.04 KB
+data\raw\sentinel2_catalog\page_0029.json | 11282.32 KB
+data\raw\sentinel2_catalog\page_0030.json | 11283.34 KB
+data\raw\sentinel2_catalog\page_0031.json | 11282.55 KB
+data\raw\sentinel2_catalog\page_0032.json | 11282.58 KB
+data\raw\sentinel2_catalog\page_0033.json | 11282.21 KB
+data\raw\sentinel2_catalog\page_0034.json | 11281.98 KB
+data\raw\sentinel2_catalog\page_0035.json | 11281.46 KB
+data\raw\sentinel2_catalog\page_0036.json | 11281.67 KB
+data\raw\sentinel2_catalog\page_0037.json | 11282.08 KB
+data\raw\sentinel2_catalog\page_0038.json | 11282.39 KB
+data\raw\sentinel2_catalog\page_0039.json | 11281.63 KB
+data\raw\sentinel2_catalog\page_0040.json | 11281.7 KB
+data\raw\sentinel2_catalog\page_0041.json | 11281.57 KB
+data\raw\sentinel2_catalog\page_0042.json | 501.82 KB
+extract_hwsd2_samples.py | 2.7 KB
+logs\collector.log | 1.47 KB
+logs\README.txt | 0.04 KB
+README.md | 4.7 KB
+reports\coverage_summary.json | 0.7 KB
+reports\latest_report.json | 5.82 KB
+reports\README.txt | 0.08 KB
+requirements.txt | 0.13 KB
+RUN_COLLECTOR.bat | 1 KB
+source_registry.json | 2.36 KB
+src\__init__.py | 0 KB
+src\collector.py | 28.65 KB
+tests\test_project.py | 1 KB
+
+Inventory CSV: C:\Users\D.L\Desktop\AgriWater_FIXED\reports\project_file_inventory_20261022_123717.csv
+This scan did not edit or delete existing project data.

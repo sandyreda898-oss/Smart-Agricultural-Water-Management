@@ -1,0 +1,347 @@
+{
+  "version": 2,
+  "description_ar": "استبيان حقول الأرز في كفر الشيخ. الصف = موسم واحد لحقل واحد. القيم بتتحقق منها import_field_survey.py قبل ما تدخل القاعدة.",
+  "row_unit": "one rice season on one field",
+  "unique_key": [
+    "farmer_code",
+    "season_year"
+  ],
+  "privacy_note_ar": "ما تجمعش اسم الفلاح ولا رقم تليفونه في الملف ده. استخدم كود، واحتفظ بجدول الربط بين الكود والشخص في مكان منفصل. موافقة الفلاح لازم تتاخد قبل جمع بياناته.",
+  "date_format": "YYYY-MM-DD",
+  "columns": [
+    {
+      "name": "farmer_code",
+      "required": true,
+      "type": "text",
+      "maps_to": "field.farmer_consent_id",
+      "description_ar": "كود الحقل (مش اسم ولا رقم تليفون). لازم يفضل ثابت لنفس الحقل في كل المواسم",
+      "example": "KS-0001"
+    },
+    {
+      "name": "district",
+      "required": true,
+      "type": "text",
+      "maps_to": "field.district_id",
+      "description_ar": "المركز بالعربي أو الإنجليزي زي ما هو في جدول district",
+      "example": "قلين"
+    },
+    {
+      "name": "latitude",
+      "required": true,
+      "type": "float",
+      "maps_to": "field.latitude",
+      "description_ar": "خط العرض من GPS الموبايل (نقطة جوه الحقل)",
+      "example": "31.12"
+    },
+    {
+      "name": "longitude",
+      "required": true,
+      "type": "float",
+      "maps_to": "field.longitude",
+      "description_ar": "خط الطول من GPS الموبايل",
+      "example": "30.85"
+    },
+    {
+      "name": "area_feddan",
+      "required": true,
+      "type": "float",
+      "maps_to": "field.area_feddan",
+      "description_ar": "مساحة القطعة بالفدان (أكبر من صفر)",
+      "example": "3.5"
+    },
+    {
+      "name": "season_year",
+      "required": true,
+      "type": "int",
+      "maps_to": "field_season.season_year",
+      "description_ar": "سنة موسم الأرز",
+      "example": "2025"
+    },
+    {
+      "name": "variety",
+      "required": true,
+      "type": "text",
+      "maps_to": "field_season.variety_id",
+      "description_ar": "صنف الأرز بالعربي أو الإنجليزي زي ما هو في rice_variety",
+      "example": "جيزة 178"
+    },
+    {
+      "name": "establishment_method",
+      "required": false,
+      "type": "enum",
+      "maps_to": "field_season.establishment_method",
+      "description_ar": "طريقة تأسيس المحصول: شتل أو بذر مباشر. اختار not_sure لو غير معروف.",
+      "example": "transplanted",
+      "allowed": ["transplanted", "direct_seeded", "not_sure"]
+    },
+    {
+      "name": "sowing_date",
+      "required": false,
+      "type": "date",
+      "maps_to": "field_season.sowing_date",
+      "description_ar": "تاريخ البذر في المشتل، بصيغة YYYY-MM-DD",
+      "example": "2025-05-15"
+    },
+    {
+      "name": "transplanting_date",
+      "required": false,
+      "type": "date",
+      "maps_to": "field_season.transplanting_date",
+      "description_ar": "تاريخ الشتل، بصيغة YYYY-MM-DD",
+      "example": "2025-06-12"
+    },
+    {
+      "name": "harvest_date",
+      "required": false,
+      "type": "date",
+      "maps_to": "field_season.harvest_date",
+      "description_ar": "تاريخ الحصاد، بصيغة YYYY-MM-DD",
+      "example": "2025-10-01"
+    },
+    {
+      "name": "cultivated_area_feddan",
+      "required": false,
+      "type": "float",
+      "maps_to": "field_season.cultivated_area_feddan",
+      "description_ar": "المساحة المزروعة أرز فعلاً في الموسم لو أقل من مساحة القطعة",
+      "example": "3.5"
+    },
+    {
+      "name": "irrigation_method",
+      "required": true,
+      "type": "text",
+      "maps_to": "field_season.irrigation_method_id",
+      "description_ar": "طريقة الري. لازم تكون واحدة من المسجلة في irrigation_method: غمر تقليدي (continuous_flooding) أو ري متقطع (alternate_wetting_drying)",
+      "example": "غمر تقليدي"
+    },
+    {
+      "name": "pump_type",
+      "required": true,
+      "type": "text",
+      "maps_to": "field_season.pump_id",
+      "description_ar": "نوع ماكينة الري. لو الاسم جديد بيتضاف في pump_type",
+      "example": "ديزل 6 بوصة"
+    },
+    {
+      "name": "pump_power_hp",
+      "required": false,
+      "type": "float",
+      "maps_to": "pump_type.power_hp",
+      "description_ar": "قدرة الماكينة بالحصان (بتتسجل بس لو النوع جديد)",
+      "example": "12"
+    },
+    {
+      "name": "pump_discharge_m3_per_hour",
+      "required": false,
+      "type": "float",
+      "maps_to": "pump_type.discharge_m3_per_hour",
+      "description_ar": "تصرف الماكينة م3/ساعة (بتتسجل بس لو النوع جديد)",
+      "example": "90"
+    },
+    {
+      "name": "pump_fuel_type",
+      "required": false,
+      "type": "enum",
+      "maps_to": "pump_type.fuel_type",
+      "description_ar": "نوع الوقود",
+      "example": "diesel",
+      "allowed": [
+        "diesel",
+        "electric",
+        "solar",
+        "other"
+      ]
+    },
+    {
+      "name": "total_irrigation_m3_per_feddan",
+      "required": false,
+      "type": "float",
+      "maps_to": "field_season.total_irrigation_m3_per_feddan",
+      "description_ar": "إجمالي مية الري للموسم م3 للفدان. ده الهدف الأول للموديل",
+      "example": "5200",
+      "note": "لازم measurement_method معاه"
+    },
+    {
+      "name": "harvest_yield_ton_per_feddan",
+      "required": false,
+      "type": "float",
+      "maps_to": "field_season.harvest_yield_ton_per_feddan",
+      "description_ar": "إنتاجية المحصول طن للفدان. الهدف التاني",
+      "example": "4.1"
+    },
+    {
+      "name": "measurement_method",
+      "required": false,
+      "type": "enum",
+      "maps_to": "field_season.measurement_method",
+      "description_ar": "إزاي اتقاس إجمالي الري (مطلوب لو كتبت الإجمالي)",
+      "example": "pump_hours_x_discharge",
+      "allowed": [
+        "flow_meter",
+        "pump_hours_x_discharge",
+        "canal_gauge",
+        "farmer_recall"
+      ],
+      "note": "جودة الرقم: flow_meter وcanal_gauge أدق، وpump_hours_x_discharge متوسطة، وfarmer_recall أضعف"
+    },
+    {
+      "name": "data_collector",
+      "required": false,
+      "type": "text",
+      "maps_to": "field_season.data_collector",
+      "description_ar": "اسم أو كود الباحث اللي جمع البيانات",
+      "example": "R-01"
+    },
+    {
+      "name": "source_notes",
+      "required": false,
+      "type": "text",
+      "maps_to": "field_season.source_notes",
+      "description_ar": "أي ملاحظات",
+      "example": ""
+    },
+    {
+      "name": "prev_crop_1",
+      "required": false,
+      "type": "text",
+      "maps_to": "crop_history.crop_name",
+      "description_ar": "المحصول رقم 1 من آخر 3 محاصيل (1 = الأحدث)",
+      "example": "قمح"
+    },
+    {
+      "name": "prev_crop_1_year",
+      "required": false,
+      "type": "int",
+      "maps_to": "crop_history.season_year",
+      "description_ar": "سنة المحصول 1 (مطلوبة لو كتبت اسمه)",
+      "example": "2025"
+    },
+    {
+      "name": "prev_crop_1_season",
+      "required": false,
+      "type": "enum",
+      "maps_to": "crop_history.season_type",
+      "description_ar": "موسم المحصول 1",
+      "example": "winter",
+      "allowed": [
+        "winter",
+        "summer",
+        "nili"
+      ]
+    },
+    {
+      "name": "prev_crop_2",
+      "required": false,
+      "type": "text",
+      "maps_to": "crop_history.crop_name",
+      "description_ar": "المحصول رقم 2 من آخر 3 محاصيل (1 = الأحدث)",
+      "example": "ذرة"
+    },
+    {
+      "name": "prev_crop_2_year",
+      "required": false,
+      "type": "int",
+      "maps_to": "crop_history.season_year",
+      "description_ar": "سنة المحصول 2 (مطلوبة لو كتبت اسمه)",
+      "example": "2024"
+    },
+    {
+      "name": "prev_crop_2_season",
+      "required": false,
+      "type": "enum",
+      "maps_to": "crop_history.season_type",
+      "description_ar": "موسم المحصول 2",
+      "example": "summer",
+      "allowed": [
+        "winter",
+        "summer",
+        "nili"
+      ]
+    },
+    {
+      "name": "prev_crop_3",
+      "required": false,
+      "type": "text",
+      "maps_to": "crop_history.crop_name",
+      "description_ar": "المحصول رقم 3 من آخر 3 محاصيل (1 = الأحدث)",
+      "example": "برسيم"
+    },
+    {
+      "name": "prev_crop_3_year",
+      "required": false,
+      "type": "int",
+      "maps_to": "crop_history.season_year",
+      "description_ar": "سنة المحصول 3 (مطلوبة لو كتبت اسمه)",
+      "example": "2024"
+    },
+    {
+      "name": "prev_crop_3_season",
+      "required": false,
+      "type": "enum",
+      "maps_to": "crop_history.season_type",
+      "description_ar": "موسم المحصول 3",
+      "example": "winter",
+      "allowed": [
+        "winter",
+        "summer",
+        "nili"
+      ]
+    }
+  ],
+  "irrigation_events_columns": [
+    {
+      "name": "farmer_code",
+      "required": true,
+      "type": "text",
+      "maps_to": "field.farmer_consent_id",
+      "description_ar": "نفس كود الحقل في الاستبيان الرئيسي",
+      "example": "KS-0001"
+    },
+    {
+      "name": "season_year",
+      "required": true,
+      "type": "int",
+      "maps_to": "field_season.season_year",
+      "description_ar": "سنة الموسم (لازم يكون الموسم موجود في القاعدة أو في نفس الاستيراد)",
+      "example": "2025"
+    },
+    {
+      "name": "event_date",
+      "required": true,
+      "type": "date",
+      "maps_to": "irrigation_event.event_date",
+      "description_ar": "تاريخ الريّة YYYY-MM-DD",
+      "example": "2025-06-15"
+    },
+    {
+      "name": "volume_m3",
+      "required": false,
+      "type": "float",
+      "maps_to": "irrigation_event.volume_m3",
+      "description_ar": "حجم المية بالمتر المكعب للريّة (للحقل كله مش للفدان)",
+      "example": "380"
+    },
+    {
+      "name": "duration_hours",
+      "required": false,
+      "type": "float",
+      "maps_to": "irrigation_event.duration_hours",
+      "description_ar": "ساعات تشغيل الماكينة",
+      "example": "4.2"
+    },
+    {
+      "name": "measurement_method",
+      "required": false,
+      "type": "enum",
+      "maps_to": "irrigation_event.measurement_method",
+      "description_ar": "طريقة القياس",
+      "example": "pump_hours_x_discharge",
+      "allowed": [
+        "flow_meter",
+        "pump_hours_x_discharge",
+        "canal_gauge",
+        "farmer_recall"
+      ]
+    }
+  ]
+}

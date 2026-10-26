@@ -1,0 +1,9 @@
+﻿HWSD2_SMU_ID,component_count_in_D1_records,valid_component_count,component_shares_sum_pct,valid_component_shares_sum_pct,AWC_rootable_depth_weighted_mm_estimate,AWC_component_status,AWC_definition,AWC_unit,method,AWC_SMU_source_mm_per_m,ROOT_DEPTH_source_class,WRB4,FAO90,model_screening_status
+7001,1,1,100,100,0.0,PROVISIONAL_WEIGHTED_ROOTABLE_AWC,AWC for Rootable Soil Depth,mm,SHARE-weighted component estimate; not field validated,0,1,TC,UR,EXCLUDE_NON_SOIL_MAPPING
+16413,3,3,100,100,178.0,PROVISIONAL_WEIGHTED_ROOTABLE_AWC,AWC for Rootable Soil Depth,mm,SHARE-weighted component estimate; not field validated,172,1,FLca,FLc,PROVISIONAL_NOT_FIELD_VALIDATED
+16414,1,1,100,100,172.0,PROVISIONAL_WEIGHTED_ROOTABLE_AWC,AWC for Rootable Soil Depth,mm,SHARE-weighted component estimate; not field validated,172,1,FLca,FLc,PROVISIONAL_NOT_FIELD_VALIDATED
+16487,2,2,100,100,89.8,PROVISIONAL_WEIGHTED_ROOTABLE_AWC,AWC for Rootable Soil Depth,mm,SHARE-weighted component estimate; not field validated,90,1,SCha,SCh,PROVISIONAL_NOT_FIELD_VALIDATED
+16500,2,2,100,100,89.4,PROVISIONAL_WEIGHTED_ROOTABLE_AWC,AWC for Rootable Soil Depth,mm,SHARE-weighted component estimate; not field validated,89,1,SCgl,SCg,PROVISIONAL_NOT_FIELD_VALIDATED
+16501,1,1,100,100,89.0,PROVISIONAL_WEIGHTED_ROOTABLE_AWC,AWC for Rootable Soil Depth,mm,SHARE-weighted component estimate; not field validated,89,1,SCgl,SCg,PROVISIONAL_NOT_FIELD_VALIDATED
+16502,1,1,100,100,89.0,PROVISIONAL_WEIGHTED_ROOTABLE_AWC,AWC for Rootable Soil Depth,mm,SHARE-weighted component estimate; not field validated,89,1,SCgl,SCg,PROVISIONAL_NOT_FIELD_VALIDATED
+16511,1,1,100,100,0.0,PROVISIONAL_WEIGHTED_ROOTABLE_AWC,AWC for Rootable Soil Depth,mm,SHARE-weighted component estimate; not field validated,0,1,WR,WR,EXCLUDE_WATER_BODY

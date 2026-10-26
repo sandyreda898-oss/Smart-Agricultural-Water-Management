@@ -1,0 +1,613 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.818041,
+          31.012854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0001",
+        "longitude": 30.818041,
+        "latitude": 31.012854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.918041,
+          31.012854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0002",
+        "longitude": 30.918041,
+        "latitude": 31.012854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.018041,
+          31.012854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0003",
+        "longitude": 31.018041,
+        "latitude": 31.012854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.718041,
+          31.112854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0004",
+        "longitude": 30.718041,
+        "latitude": 31.112854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.818041,
+          31.112854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0005",
+        "longitude": 30.818041,
+        "latitude": 31.112854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.918041,
+          31.112854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0006",
+        "longitude": 30.918041,
+        "latitude": 31.112854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.018041,
+          31.112854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0007",
+        "longitude": 31.018041,
+        "latitude": 31.112854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.118041,
+          31.112854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0008",
+        "longitude": 31.118041,
+        "latitude": 31.112854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.218041,
+          31.112854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0009",
+        "longitude": 31.218041,
+        "latitude": 31.112854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.618041,
+          31.212854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0010",
+        "longitude": 30.618041,
+        "latitude": 31.212854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.718041,
+          31.212854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0011",
+        "longitude": 30.718041,
+        "latitude": 31.212854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.818041,
+          31.212854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0012",
+        "longitude": 30.818041,
+        "latitude": 31.212854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.918041,
+          31.212854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0013",
+        "longitude": 30.918041,
+        "latitude": 31.212854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.018041,
+          31.212854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0014",
+        "longitude": 31.018041,
+        "latitude": 31.212854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.118041,
+          31.212854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0015",
+        "longitude": 31.118041,
+        "latitude": 31.212854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.218041,
+          31.212854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0016",
+        "longitude": 31.218041,
+        "latitude": 31.212854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.618041,
+          31.312854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0017",
+        "longitude": 30.618041,
+        "latitude": 31.312854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.718041,
+          31.312854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0018",
+        "longitude": 30.718041,
+        "latitude": 31.312854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.818041,
+          31.312854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0019",
+        "longitude": 30.818041,
+        "latitude": 31.312854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.918041,
+          31.312854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0020",
+        "longitude": 30.918041,
+        "latitude": 31.312854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.018041,
+          31.312854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0021",
+        "longitude": 31.018041,
+        "latitude": 31.312854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.118041,
+          31.312854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0022",
+        "longitude": 31.118041,
+        "latitude": 31.312854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.218041,
+          31.312854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0023",
+        "longitude": 31.218041,
+        "latitude": 31.312854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.518041,
+          31.412854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0024",
+        "longitude": 30.518041,
+        "latitude": 31.412854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.618041,
+          31.412854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0025",
+        "longitude": 30.618041,
+        "latitude": 31.412854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.718041,
+          31.412854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0026",
+        "longitude": 30.718041,
+        "latitude": 31.412854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.818041,
+          31.412854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0027",
+        "longitude": 30.818041,
+        "latitude": 31.412854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.918041,
+          31.412854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0028",
+        "longitude": 30.918041,
+        "latitude": 31.412854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.018041,
+          31.412854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0029",
+        "longitude": 31.018041,
+        "latitude": 31.412854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.118041,
+          31.412854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0030",
+        "longitude": 31.118041,
+        "latitude": 31.412854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.218041,
+          31.412854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0031",
+        "longitude": 31.218041,
+        "latitude": 31.412854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.318041,
+          31.412854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0032",
+        "longitude": 31.318041,
+        "latitude": 31.412854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.818041,
+          31.512854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0033",
+        "longitude": 30.818041,
+        "latitude": 31.512854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.918041,
+          31.512854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0034",
+        "longitude": 30.918041,
+        "latitude": 31.512854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.018041,
+          31.512854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0035",
+        "longitude": 31.018041,
+        "latitude": 31.512854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.118041,
+          31.512854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0036",
+        "longitude": 31.118041,
+        "latitude": 31.512854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.218041,
+          31.512854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0037",
+        "longitude": 31.218041,
+        "latitude": 31.512854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.318041,
+          31.512854
+        ]
+      },
+      "properties": {
+        "point_id": "grid_0038",
+        "longitude": 31.318041,
+        "latitude": 31.512854,
+        "sampling_method": "regular_grid_inside_admin_polygon"
+      }
+    }
+  ]
+}

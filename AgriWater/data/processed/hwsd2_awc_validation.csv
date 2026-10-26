@@ -1,0 +1,9 @@
+﻿HWSD2_SMU_ID,WISE30s_SMU_ID,COVERAGE,SHARE,WRB4,WRB2,FAO90,TEXTURE_USDA,DRAINAGE,ROOT_DEPTH,AWC_raw,AWC_unit,AWC_model_value,validation_status,validation_note
+7001,WD30007001,1,100,TC,TC,UR,,,1,0,mm/m,,REVIEW_NOT_VALIDATED,Raw value preserved; do not use as a confirmed soil-water capacity until soil data are verified.
+16413,WD20016413,3,50,FLca,FL,FLc,9,MW,1,172,mm/m,172,VALID_METADATA_UNIT,"AWC unit mm/m confirmed in HWSD2_SMU_METADATA; spatial soil estimate, not a field measurement."
+16414,WD20016414,3,100,FLca,FL,FLc,9,MW,1,172,mm/m,172,VALID_METADATA_UNIT,"AWC unit mm/m confirmed in HWSD2_SMU_METADATA; spatial soil estimate, not a field measurement."
+16487,WD20016487,3,80,SCha,SC,SCh,10,MW,1,90,mm/m,90,VALID_METADATA_UNIT,"AWC unit mm/m confirmed in HWSD2_SMU_METADATA; spatial soil estimate, not a field measurement."
+16500,WD20016500,3,60,SCgl,SC,SCg,5,P,1,89,mm/m,89,VALID_METADATA_UNIT,"AWC unit mm/m confirmed in HWSD2_SMU_METADATA; spatial soil estimate, not a field measurement."
+16501,WD20016501,3,100,SCgl,SC,SCg,5,P,1,89,mm/m,89,VALID_METADATA_UNIT,"AWC unit mm/m confirmed in HWSD2_SMU_METADATA; spatial soil estimate, not a field measurement."
+16502,WD20016502,3,100,SCgl,SC,SCg,5,P,1,89,mm/m,89,VALID_METADATA_UNIT,"AWC unit mm/m confirmed in HWSD2_SMU_METADATA; spatial soil estimate, not a field measurement."
+16511,WD20016511,3,100,WR,WR,WR,,,1,0,mm/m,,REVIEW_NOT_VALIDATED,Raw value preserved; do not use as a confirmed soil-water capacity until soil data are verified.

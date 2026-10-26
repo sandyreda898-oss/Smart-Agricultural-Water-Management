@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "purpose_ar": "أقل عدد من الأسئلة اللازمة لعمل خطة إرشادية أولية للأرز، مع أسئلة اختيارية لتحسين دقة المياه والتسميد.",
+  "audience_ar": "الفلاح في كفر الشيخ",
+  "privacy_ar": "لا تطلب اسم الفلاح أو رقم هاتفه ضمن بيانات الحقل. استخدم كودًا داخليًا بعد أخذ الموافقة.",
+  "deferred_sources": ["Sentinel-2 NDVI/EVI", "FAO WaPOR raster products"],
+  "steps": [
+    {
+      "step": 1,
+      "title_ar": "حدد أرضك",
+      "fields": [
+        {"id":"field_location","label_ar":"حط دبوس في نص أرضك على الخريطة","required":true,"input":"map_point","database":"field.latitude, field.longitude","help_ar":"اختار نقطة جوه الأرض. حدود القطعة اختيارية لو رسمها صعب."},
+        {"id":"field_boundary","label_ar":"ارسم حدود الأرض بإصبعك (اختياري)","required":false,"input":"map_polygon","database":"field.polygon_geojson","help_ar":"لو رسمت الحدود، التطبيق يحسب المساحة تلقائيًا."},
+        {"id":"area_feddan","label_ar":"مساحة الأرض كام فدان؟","required_when":"field_boundary is absent","input":"number_feddan","database":"field.area_feddan","help_ar":"لو المساحة محسوبة من الخريطة تقدر تعدلها لو مختلفة."}
+      ]
+    },
+    {
+      "step": 2,
+      "title_ar": "احكي لنا عن زراعتك",
+      "fields": [
+        {"id":"previous_crops","label_ar":"زرعت إيه في الأرض آخر 3 مرات؟","required":true,"input":"three_repeating_crop_selects","choices_source":"crop_reference","allow_unknown":true,"database":"crop_history","help_ar":"اختار المحصول أو «مش فاكر». ده يساعدنا نفهم التاريخ الزراعي، لكنه لوحده مش تحليل تربة."},
+        {"id":"establishment_method","label_ar":"هتزرع الأرز إزاي؟","required":true,"input":"single_select","choices":[{"value":"transplanted","label_ar":"شتل"},{"value":"direct_seeded","label_ar":"بذر مباشر"},{"value":"not_sure","label_ar":"لسه محتار"}],"database":"field_season.establishment_method"},
+        {"id":"rice_variety","label_ar":"الصنف اللي ناوي تزرعه؟","required":true,"input":"variety_select_or_help","choices_source":"rice_variety","allow_unknown":true,"database":"field_season.variety_id","help_ar":"اختار «ساعدني أختار» لو لسه ما قررتش."},
+        {"id":"planned_sowing_date","label_ar":"ناوي تبدأ البذر إمتى؟","required":false,"input":"approximate_date","database":"field_season.sowing_date","help_ar":"لو مش عارف اليوم، اختار تاريخ تقريبي أو اتركه فاضي؛ ساعتها تظهر المواعيد بعدد الأيام من بداية الزراعة."}
+      ]
+    },
+    {
+      "step": 3,
+      "title_ar": "طريقة الري",
+      "fields": [
+        {"id":"irrigation_method","label_ar":"بتروي الأرض إزاي؟","required":true,"input":"single_select","choices":[{"value":"continuous_flooding","label_ar":"غمر"},{"value":"alternate_wetting_drying","label_ar":"ري وترك الأرض تنشف قليلًا"},{"value":"not_sure","label_ar":"مش عارف اسم الطريقة"}],"database":"field_season.irrigation_method_id","unknown_storage":"NULL; do not assign a default method"},
+        {"id":"pump_kind","label_ar":"ماكينة الري بتشتغل بإيه؟","required":true,"input":"single_select","choices":[{"value":"diesel","label_ar":"سولار"},{"value":"electric","label_ar":"كهرباء"},{"value":"solar","label_ar":"طاقة شمسية"},{"value":"other","label_ar":"نوع تاني"},{"value":"unknown","label_ar":"مش عارف"}],"database":"pump_type.name_ar/name_en","help_ar":"لو الماكينة على جرار، اختار نوع الوقود واكتب «على جرار» في السؤال الاختياري التالي."},
+        {"id":"pump_model_details","label_ar":"اسم أو موديل الماكينة (لو تعرفه)","required":false,"input":"short_text","database":"pump_type.name_en/name_ar","help_ar":"معلومة اختيارية؛ نوع الوقود وحده لا يكفي لحساب دقائق التشغيل."},
+        {"id":"pump_discharge","label_ar":"هل تعرف الماكينة بتضخ كام؟","required":false,"input":"number_with_unit","unit":"m3/hour","database":"pump_type.discharge_m3_per_hour","help_ar":"اختياري. لا نعرض مدة تشغيل دقيقة إلا لو التصرف موثق عند ارتفاع التشغيل الفعلي."}
+      ]
+    },
+    {
+      "step": 4,
+      "title_ar": "تحليل التربة (اختياري)",
+      "fields": [
+        {"id":"soil_test_available","label_ar":"معاك تحليل تربة حديث؟","required":false,"input":"yes_no","help_ar":"لو لأ، كمل عادي؛ هنعرض التوصيات العامة بوضوح إنها مش مبنية على تحليل حقلك."},
+        {"id":"soil_test_values","label_ar":"اكتب القيم الموجودة في التحليل فقط","required":false,"input":"optional_numeric_group","values":["pH","EC","available_N","available_P","available_K"],"database":"field_soil_test (to be added)","help_ar":"يُسجل تاريخ العينة والعمق والوحدات. ما تكتبش قيم بالتخمين."}
+      ]
+    },
+    {
+      "step": 5,
+      "title_ar": "لو في مشكلة في الزرع",
+      "fields": [
+        {"id":"crop_problem","label_ar":"هل شايف إصابة أو مشكلة دلوقتي؟","required":false,"input":"symptom_select_or_none","choices":["حشائش","بقع أو تغير لون","حشرات","ضعف نمو","مفيش مشكلة","مش متأكد"],"help_ar":"اختياري ويظهر وقت الحاجة. لا تُقترح رشة مبيد قبل تحديد المشكلة والتحقق من التوصية المعتمدة."}
+      ]
+    }
+  ],
+  "output_limits_ar": [
+    "يعرض تقويم العمليات كتاريخ إذا عُرف موعد البذر، أو كعدد أيام من البذر عند عدم معرفته.",
+    "يعرض خطة مياه استرشادية بنطاق ومصدر وافتراضات؛ لا يحولها لدقائق ماكينة من دون تصرف موثق عند نقطة التشغيل.",
+    "لا يعطي جرعة NPK دقيقة من المحاصيل السابقة وحدها؛ تحليل التربة اختياري لكنه مطلوب للتخصيص الدقيق.",
+    "يعرض الوقاية والمراقبة حسب مرحلة النمو؛ المبيد لا يُوصى به إلا بعد تشخيص ومصدر رسمي حالي ونطاق استخدام واضح."
+  ]
+}

@@ -1,0 +1,12 @@
+﻿district_id,name_en,name_ar,admin_level,parent_id
+1,Kafr El Sheikh,كفر الشيخ,1,
+2,Al Hamul,الحامول,2,1
+3,Biyalu,بيلا,2,1
+4,Burullus,البرلس,2,1
+5,Disuq,دسوق,2,1
+6,Fuwwa,فوه,2,1
+7,Kafr Al-Shaykh,كفر الشيخ,2,1
+8,Mitubas,مطوبس,2,1
+9,Qillin,قلين,2,1
+10,Riyad,الرياض,2,1
+11,Sidi Salim,سيدي سالم,2,1

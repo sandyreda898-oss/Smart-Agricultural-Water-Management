@@ -1,0 +1,658 @@
+===== FILE TREE =====
+./
+  .env.example  (0 KB)
+  build_agriwater_db.py  (14 KB)
+  collect.py  (0 KB)
+  config.json  (2 KB)
+  extract_hwsd2_samples.py  (3 KB)
+  make_snapshot.py  (1 KB)
+  project_file_inventory.csv  (713 KB)
+  project_snapshot.txt  (0 KB)
+  README.md  (5 KB)
+  requirements.txt  (0 KB)
+  RUN_COLLECTOR.bat  (1 KB)
+  scan_data.ps1  (7 KB)
+  schema.sql  (16 KB)
+  source_registry.json  (2 KB)
+  data/
+    metadata/
+      boundary_metadata.json  (2 KB)
+      field_survey_schema.json  (1 KB)
+      README.txt  (0 KB)
+      sample_grid.geojson  (14 KB)
+      soilgrids_metadata.json  (1 KB)
+    processed/
+      crop_water_parameters.csv  (1 KB)
+      field_survey_template.csv  (0 KB)
+      hwsd2_awc_database_audit.csv  (25 KB)
+      hwsd2_awc_final.csv  (3 KB)
+      hwsd2_awc_final_review.csv  (25 KB)
+      hwsd2_awc_final_review_repaired.csv  (27 KB)
+      hwsd2_awc_rootable_depth_by_smu.csv  (2 KB)
+      hwsd2_awc_rootable_depth_point_candidates.csv  (29 KB)
+      hwsd2_awc_samples.csv  (4 KB)
+      hwsd2_awc_semantics_audit.csv  (41 KB)
+      hwsd2_awc_semantics_by_smu.csv  (4 KB)
+      hwsd2_awc_source_layer_records.csv  (3 KB)
+      hwsd2_awc_source_smu_records.csv  (0 KB)
+      hwsd2_awc_validation.csv  (1 KB)
+      hwsd2_data_dictionary.json  (2 KB)
+      hwsd2_metadata_d_awc.csv  (0 KB)
+      hwsd2_metadata_d_root_depth.csv  (0 KB)
+      hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv  (0 KB)
+      hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv  (0 KB)
+      hwsd2_raster_spatial_check.csv  (7 KB)
+      hwsd2_soil_model_candidates.csv  (32 KB)
+      hwsd2_soil_model_screening.csv  (33 KB)
+      hwsd2_soil_samples.csv  (5 KB)
+      hwsd2_soil_samples_awc_review.csv  (16 KB)
+      hwsd2_soil_samples_clean.csv  (5 KB)
+      nasa_power_daily.csv  (71,749 KB)
+      nasa_power_daily.parquet  (1,596 KB)
+      nasa_power_daily_units_fixed.csv  (74,215 KB)
+      nasa_power_daily_units_fixed.parquet  (1,598 KB)
+      rice_crop_calendar.csv  (4 KB)
+      rice_daily_water_demand_2017_2023.csv  (7,165 KB)
+      rice_field_season_features_2017_2023.csv  (158 KB)
+      rice_governorate_year_reference_2017_2023.csv  (1 KB)
+      rice_statistics_2017_2023.csv  (1 KB)
+      rice_water_scenarios_2017_2023.csv  (70 KB)
+      rice_water_scenarios_annual_summary.csv  (1 KB)
+      sentinel2_scene_catalog.csv  (272,770 KB)
+      sentinel2_scene_catalog.parquet  (42,782 KB)
+    raw/
+      agri_bulletins/
+      boundaries/
+        egy_adm1.geojson  (3,884 KB)
+        geoboundaries_metadata.json  (2 KB)
+        kafr_el_sheikh_adm1.geojson  (50 KB)
+        kafr_el_sheikh_adm1.gpkg  (104 KB)
+      sentinel2_catalog/
+        page_0001.json  (11,221 KB)
+        page_0002.json  (11,283 KB)
+        page_0003.json  (11,284 KB)
+        page_0004.json  (11,284 KB)
+        page_0005.json  (11,284 KB)
+        page_0006.json  (11,285 KB)
+        page_0007.json  (10,497 KB)
+        page_0008.json  (10,269 KB)
+        page_0009.json  (10,206 KB)
+        page_0010.json  (10,202 KB)
+        page_0011.json  (10,212 KB)
+        page_0012.json  (10,256 KB)
+        page_0013.json  (10,937 KB)
+        page_0014.json  (11,283 KB)
+        page_0015.json  (11,282 KB)
+        page_0016.json  (11,282 KB)
+        page_0017.json  (11,282 KB)
+        page_0018.json  (11,282 KB)
+        page_0019.json  (11,283 KB)
+        page_0020.json  (11,282 KB)
+        page_0021.json  (11,282 KB)
+        page_0022.json  (11,282 KB)
+        page_0023.json  (11,281 KB)
+        page_0024.json  (11,281 KB)
+        page_0025.json  (11,282 KB)
+        page_0026.json  (11,283 KB)
+        page_0027.json  (11,282 KB)
+        page_0028.json  (11,282 KB)
+        page_0029.json  (11,282 KB)
+        page_0030.json  (11,283 KB)
+        page_0031.json  (11,283 KB)
+        page_0032.json  (11,283 KB)
+        page_0033.json  (11,282 KB)
+        page_0034.json  (11,282 KB)
+        page_0035.json  (11,281 KB)
+        page_0036.json  (11,282 KB)
+        page_0037.json  (11,282 KB)
+        page_0038.json  (11,282 KB)
+        page_0039.json  (11,282 KB)
+        page_0040.json  (11,282 KB)
+        page_0041.json  (11,282 KB)
+        page_0042.json  (502 KB)
+      soilgrids/
+  database/
+    agriwater_project.sqlite  (117,632 KB)
+    agriwater_v2.sqlite  (67,020 KB)
+  logs/
+    collector.log  (1 KB)
+    README.txt  (0 KB)
+  reports/
+    coverage_summary.json  (1 KB)
+    latest_report.json  (6 KB)
+    project_file_inventory_20261022_123717.csv  (10 KB)
+    project_status_20261022_123717.txt  (7 KB)
+    README.txt  (0 KB)
+    rice_annual_water_summary_2017_2023.csv  (1 KB)
+    sentinel2_annual_union_coverage.csv  (0 KB)
+    sentinel2_download_manifest.csv  (1 KB)
+    sentinel2_exact_intersection.csv  (175 KB)
+    sentinel2_monthly_union_coverage.csv  (2 KB)
+    sentinel2_overlap_projected_audit.csv  (16 KB)
+    sentinel2_rice_candidates.csv  (205 KB)
+    sentinel2_rice_shortlist.csv  (12 KB)
+    sentinel2_september_alternatives_projected.csv  (9 KB)
+    sentinel2_september_incremental_coverage.csv  (10 KB)
+    sentinel2_september_recommended_additions.csv  (1 KB)
+    database_inventory/
+      column_inventory.csv  (46 KB)
+      sqlite_objects.csv  (0 KB)
+      table_inventory.csv  (6 KB)
+    full_data_audit/
+      column_missingness.csv  (138 KB)
+      duplicate_rows.csv  (0 KB)
+      file_inventory.csv  (11 KB)
+      missing_values_only.csv  (16 KB)
+      read_errors.csv  (0 KB)
+      SUMMARY.txt  (1 KB)
+      table_inventory.csv  (22 KB)
+  review_output/
+    all_issues.csv  (254,175 KB)
+    automatic_changes_log.csv  (6 KB)
+    file_table_inventory.csv  (1,581 KB)
+    manual_review_queue.csv  (2,546 KB)
+    missing_values.csv  (251,868 KB)
+    SUMMARY.txt  (1 KB)
+    cleaned/
+      config.json  (2 KB)
+      project_file_inventory.csv  (654 KB)
+      source_registry.json  (2 KB)
+      data/
+      database/
+        agriwater_project.sqlite  (117,632 KB)
+  src/
+    build_rice_training_dataset.py  (6 KB)
+    calculate_rice_water_demand.py  (7 KB)
+    calculate_rice_water_scenarios.py  (4 KB)
+    collector.py  (29 KB)
+    __init__.py  (0 KB)
+  tests/
+    test_project.py  (1 KB)
+
+===== SCHEMA =====
+
+-- [index] idx_field_season_field
+CREATE INDEX idx_field_season_field ON field_season(field_id)
+
+-- [index] idx_irrigation_event_fs
+CREATE INDEX idx_irrigation_event_fs ON irrigation_event(field_season_id, event_date)
+
+-- [index] idx_s2_date
+CREATE INDEX idx_s2_date ON sentinel2_scene(acquired_at)
+
+-- [index] idx_weather_date_param
+CREATE INDEX idx_weather_date_param ON weather_daily(obs_date, parameter)
+
+-- [table] canal_schedule
+CREATE TABLE canal_schedule (                -- irrigation rotations (المناوبات)
+    schedule_id INTEGER PRIMARY KEY,
+    district_id INTEGER NOT NULL REFERENCES district(district_id),
+    season_year INTEGER REFERENCES season(season_year),
+    canal_name  TEXT,
+    start_date  TEXT,
+    end_date    TEXT,
+    flow_status TEXT CHECK (flow_status IN ('open', 'closed') OR flow_status IS NULL),
+    source_id   INTEGER REFERENCES data_source(source_id)
+)
+
+-- [table] crop_calendar
+CREATE TABLE crop_calendar (
+    calendar_id          INTEGER PRIMARY KEY,
+    season_year          INTEGER NOT NULL REFERENCES season(season_year),
+    variety_id           INTEGER NOT NULL REFERENCES rice_variety(variety_id),
+    growth_stage         TEXT,
+    season_start         TEXT,
+    season_end           TEXT,
+    planting_window      TEXT,
+    transplanting_window TEXT,
+    harvest_window       TEXT,
+    stage_start_date     TEXT,
+    stage_end_date       TEXT,
+    source_url           TEXT,
+    data_status          TEXT
+)
+
+-- [table] crop_history
+CREATE TABLE crop_history (                  -- last 3 crops per field
+    history_id  INTEGER PRIMARY KEY,
+    field_id    INTEGER NOT NULL REFERENCES field(field_id),
+    season_year INTEGER NOT NULL,
+    season_type TEXT,
+    crop_name   TEXT NOT NULL,
+    UNIQUE (field_id, season_year, season_type, crop_name)
+)
+
+-- [table] crop_water_parameter
+CREATE TABLE crop_water_parameter (          -- Kc and other FAO-56 parameters
+    parameter_id    INTEGER PRIMARY KEY,
+    crop            TEXT NOT NULL,
+    variety_id      INTEGER REFERENCES rice_variety(variety_id),
+    growth_stage    TEXT,
+    kc              REAL,
+    parameter_name  TEXT,
+    parameter_value REAL,
+    unit            TEXT,
+    valid_conditions TEXT,
+    source_url      TEXT,
+    data_status     TEXT
+)
+
+-- [table] data_source
+CREATE TABLE data_source (
+    source_id   INTEGER PRIMARY KEY,
+    name        TEXT NOT NULL UNIQUE,
+    url         TEXT,
+    notes       TEXT
+)
+
+-- [table] database_metadata
+CREATE TABLE database_metadata (
+    item    TEXT,
+    details TEXT
+)
+
+-- [table] district
+CREATE TABLE district (                      -- governorate (level 1) and markaz (level 2)
+    district_id INTEGER PRIMARY KEY,
+    name_en     TEXT NOT NULL,
+    name_ar     TEXT,
+    admin_level INTEGER NOT NULL DEFAULT 2 CHECK (admin_level IN (1, 2, 3)),
+    parent_id   INTEGER REFERENCES district(district_id),
+    UNIQUE (name_en, admin_level)
+)
+
+-- [table] field
+CREATE TABLE field (
+    field_id         INTEGER PRIMARY KEY,
+    point_id         TEXT REFERENCES grid_point(point_id),     -- nearest grid point
+    district_id      INTEGER REFERENCES district(district_id),
+    area_feddan      REAL CHECK (area_feddan > 0),
+    latitude         REAL,
+    longitude        REAL,
+    polygon_geojson  TEXT,
+    farmer_consent_id TEXT
+)
+
+-- [table] field_operation
+CREATE TABLE field_operation (               -- fertilizer, pesticide, other operations
+    op_id           INTEGER PRIMARY KEY,
+    field_season_id INTEGER NOT NULL REFERENCES field_season(field_season_id),
+    op_date         TEXT,
+    op_type         TEXT,
+    fertilizer_type TEXT,
+    amount_kg       REAL,
+    notes           TEXT
+)
+
+-- [table] field_season
+CREATE TABLE field_season (                  -- one rice season on one field
+    field_season_id  INTEGER PRIMARY KEY,
+    field_id         INTEGER NOT NULL REFERENCES field(field_id),
+    season_year      INTEGER NOT NULL REFERENCES season(season_year),
+    variety_id       INTEGER REFERENCES rice_variety(variety_id),
+    irrigation_method_id INTEGER REFERENCES irrigation_method(method_id),
+    pump_id          INTEGER REFERENCES pump_type(pump_id),
+    sowing_date      TEXT,
+    transplanting_date TEXT,
+    harvest_date     TEXT,
+    cultivated_area_feddan REAL,
+    total_irrigation_m3_per_feddan REAL,    -- TARGET LABEL 1
+    harvest_yield_ton_per_feddan   REAL,    -- TARGET LABEL 2
+    measurement_method TEXT,
+    data_collector   TEXT,
+    source_notes     TEXT,
+    UNIQUE (field_id, season_year)
+)
+
+-- [table] grid_point
+CREATE TABLE grid_point (                    -- the 38 NASA/soil sample points
+    point_id        TEXT PRIMARY KEY,
+    latitude        REAL NOT NULL CHECK (latitude  BETWEEN -90  AND 90),
+    longitude       REAL NOT NULL CHECK (longitude BETWEEN -180 AND 180),
+    district_id     INTEGER REFERENCES district(district_id),   -- fill after ADM2 spatial join
+    spatial_support TEXT
+)
+
+-- [table] groundwater_level
+CREATE TABLE groundwater_level (
+    measure_id  INTEGER PRIMARY KEY,
+    point_id    TEXT REFERENCES grid_point(point_id),
+    district_id INTEGER REFERENCES district(district_id),
+    measured_on TEXT,
+    depth_m     REAL,
+    source_id   INTEGER REFERENCES data_source(source_id),
+    CHECK (point_id IS NOT NULL OR district_id IS NOT NULL)
+)
+
+-- [table] irrigation_event
+CREATE TABLE irrigation_event (
+    event_id        INTEGER PRIMARY KEY,
+    field_season_id INTEGER NOT NULL REFERENCES field_season(field_season_id),
+    event_date      TEXT NOT NULL,
+    volume_m3       REAL CHECK (volume_m3 >= 0),
+    duration_hours  REAL CHECK (duration_hours >= 0),
+    measurement_method TEXT
+)
+
+-- [table] irrigation_method
+CREATE TABLE irrigation_method (
+    method_id   INTEGER PRIMARY KEY,
+    name_en     TEXT NOT NULL UNIQUE,
+    name_ar     TEXT,
+    notes       TEXT
+)
+
+-- [table] ministry_rule
+CREATE TABLE ministry_rule (                 -- Ministry of Agriculture / Irrigation recommendations
+    rule_id     INTEGER PRIMARY KEY,
+    topic       TEXT NOT NULL,
+    variety_id  INTEGER REFERENCES rice_variety(variety_id),
+    district_id INTEGER REFERENCES district(district_id),
+    rule_text   TEXT NOT NULL,
+    value_num   REAL,
+    unit        TEXT,
+    valid_from  TEXT,
+    valid_to    TEXT,
+    source_url  TEXT
+)
+
+-- [table] point_season_summary
+CREATE TABLE point_season_summary (          -- season aggregates per point (feature table)
+    season_year    INTEGER NOT NULL REFERENCES season(season_year),
+    point_id       TEXT    NOT NULL REFERENCES grid_point(point_id),
+    season_start_date TEXT,
+    season_end_date   TEXT,
+    weather_day_count INTEGER,
+    tmin_c_season_mean   REAL,
+    tmax_c_season_mean   REAL,
+    relative_humidity_pct_season_mean REAL,
+    wind_speed_m_s_season_mean        REAL,
+    solar_radiation_mj_m2_day_season_mean REAL,
+    pressure_kpa_season_mean REAL,
+    rainfall_season_mm   REAL,
+    et0_season_mm        REAL,
+    estimated_etc_season_mm      REAL,
+    estimated_etc_minus_rain_mm  REAL,
+    water_values_status  TEXT,
+    water_method         TEXT,
+    calendar_status      TEXT,
+    training_readiness   TEXT,
+    PRIMARY KEY (season_year, point_id)
+) WITHOUT ROWID
+
+-- [table] pump_type
+CREATE TABLE pump_type (                     -- [EMPTY] irrigation machines
+    pump_id               INTEGER PRIMARY KEY,
+    name_en               TEXT NOT NULL UNIQUE,
+    name_ar               TEXT,
+    power_hp              REAL,
+    discharge_m3_per_hour REAL,
+    fuel_type             TEXT,
+    notes                 TEXT
+)
+
+-- [table] regional_stats
+CREATE TABLE regional_stats (                -- governorate / markaz production statistics
+    stat_id        INTEGER PRIMARY KEY,
+    season_year    INTEGER NOT NULL REFERENCES season(season_year),
+    district_id    INTEGER NOT NULL REFERENCES district(district_id),
+    crop           TEXT NOT NULL,
+    season_label   TEXT,
+    area_feddan    REAL,
+    production_ton REAL,
+    yield_ton_per_feddan REAL,
+    data_level     TEXT,
+    UNIQUE (season_year, district_id, crop, season_label)
+)
+
+-- [table] rice_daily_water_demand
+CREATE TABLE rice_daily_water_demand (       -- derived: FAO-56 PM ET0 x Kc
+    point_id             TEXT NOT NULL REFERENCES grid_point(point_id),
+    obs_date             TEXT NOT NULL,
+    et0_mm_day           REAL,
+    estimated_kc         REAL,
+    estimated_etc_mm_day REAL,
+    method_note          TEXT,
+    PRIMARY KEY (point_id, obs_date)
+) WITHOUT ROWID
+
+-- [table] rice_variety
+CREATE TABLE rice_variety (                  -- [EMPTY] besides the placeholder row
+    variety_id          INTEGER PRIMARY KEY,
+    name_en             TEXT NOT NULL UNIQUE,
+    name_ar             TEXT,
+    season_length_days  INTEGER,
+    source_url          TEXT,
+    data_status         TEXT
+)
+
+-- [table] season
+CREATE TABLE season (
+    season_year INTEGER PRIMARY KEY,
+    start_date  TEXT,
+    end_date    TEXT
+)
+
+-- [table] sentinel2_scene
+CREATE TABLE sentinel2_scene (               -- lean catalog (no geometry/assets JSON)
+    scene_id             TEXT PRIMARY KEY,
+    tile_id              TEXT,
+    acquired_at          TEXT,
+    cloud_cover_percent  REAL,
+    collection           TEXT,
+    bbox_json            TEXT,
+    source_id            INTEGER REFERENCES data_source(source_id)
+)
+
+-- [table] sentinel2_shortlist
+CREATE TABLE sentinel2_shortlist (
+    scene_id TEXT PRIMARY KEY REFERENCES sentinel2_scene(scene_id),
+    dekad    INTEGER,
+    boundary_overlap_percent_approx REAL
+)
+
+-- [table] soil_awc
+CREATE TABLE soil_awc (                      -- available water capacity (not field-validated)
+    point_id                TEXT PRIMARY KEY REFERENCES grid_point(point_id),
+    smu_id                  INTEGER,
+    awc_smu_mm_per_m        REAL,
+    awc_rootable_mm_estimate REAL,
+    root_depth_class        TEXT,
+    awc_component_status    TEXT,
+    model_screening_status  TEXT,
+    awc_use_recommendation  TEXT,
+    review_status           TEXT
+)
+
+-- [table] soil_point
+CREATE TABLE soil_point (                    -- HWSD2 soil properties per point
+    point_id           TEXT PRIMARY KEY REFERENCES grid_point(point_id),
+    smu_id             INTEGER,
+    top_depth_cm       REAL,
+    bottom_depth_cm    REAL,
+    sand_pct           REAL,
+    silt_pct           REAL,
+    clay_pct           REAL,
+    bulk               REAL,
+    organic_carbon     REAL,
+    ph_water           REAL,
+    texture_usda       TEXT,
+    texture_soter      TEXT,
+    match_found        TEXT,
+    soil_data_status   TEXT,
+    missing_properties TEXT
+)
+
+-- [table] soil_salinity
+CREATE TABLE soil_salinity (
+    measure_id  INTEGER PRIMARY KEY,
+    point_id    TEXT NOT NULL REFERENCES grid_point(point_id),
+    measured_on TEXT,
+    depth_cm    REAL,
+    ec_ds_m     REAL,
+    esp_pct     REAL,
+    source_id   INTEGER REFERENCES data_source(source_id)
+)
+
+-- [table] vegetation_index
+CREATE TABLE vegetation_index (              -- [EMPTY] NDVI/EVI per point per scene
+    point_id   TEXT NOT NULL REFERENCES grid_point(point_id),
+    scene_id   TEXT NOT NULL REFERENCES sentinel2_scene(scene_id),
+    ndvi       REAL,
+    evi        REAL,
+    valid_pixel_pct REAL,
+    PRIMARY KEY (point_id, scene_id)
+) WITHOUT ROWID
+
+-- [table] water_scenario
+CREATE TABLE water_scenario (                -- low/high scenario estimates (NOT measured)
+    season_year  INTEGER NOT NULL REFERENCES season(season_year),
+    point_id     TEXT    NOT NULL REFERENCES grid_point(point_id),
+    season_days  INTEGER,
+    estimated_etc_season_mm REAL,
+    rainfall_season_mm      REAL,
+    land_preparation_assumption_mm    REAL,
+    establishment_water_assumption_mm REAL,
+    seepage_low_mm_day   REAL,
+    seepage_high_mm_day  REAL,
+    scenario_low_depth_mm  REAL,
+    scenario_high_depth_mm REAL,
+    scenario_low_m3_per_feddan  REAL,
+    scenario_high_m3_per_feddan REAL,
+    actual_irrigation_status TEXT,
+    assumption_note TEXT,
+    method_status   TEXT,
+    PRIMARY KEY (season_year, point_id)
+) WITHOUT ROWID
+
+-- [table] weather_daily
+CREATE TABLE weather_daily (
+    point_id  TEXT NOT NULL REFERENCES grid_point(point_id),
+    obs_date  TEXT NOT NULL,
+    parameter TEXT NOT NULL,
+    value     REAL,
+    unit      TEXT,
+    source_id INTEGER REFERENCES data_source(source_id),
+    PRIMARY KEY (point_id, obs_date, parameter)
+) WITHOUT ROWID
+
+-- [view] v_observed_labels
+CREATE VIEW v_observed_labels AS             -- real measurements joined to grid points
+SELECT f.point_id, fs.season_year, fs.field_id, fs.variety_id,
+       fs.irrigation_method_id, fs.pump_id, f.area_feddan,
+       fs.total_irrigation_m3_per_feddan, fs.harvest_yield_ton_per_feddan
+FROM field_season fs
+JOIN field f ON f.field_id = fs.field_id
+WHERE fs.total_irrigation_m3_per_feddan IS NOT NULL
+
+-- [view] v_point_season_features
+CREATE VIEW v_point_season_features AS
+SELECT pss.season_year, pss.point_id, gp.latitude, gp.longitude, gp.district_id,
+       pss.weather_day_count,
+       pss.tmin_c_season_mean, pss.tmax_c_season_mean,
+       pss.relative_humidity_pct_season_mean, pss.wind_speed_m_s_season_mean,
+       pss.solar_radiation_mj_m2_day_season_mean, pss.pressure_kpa_season_mean,
+       pss.rainfall_season_mm, pss.et0_season_mm,
+       pss.estimated_etc_season_mm, pss.estimated_etc_minus_rain_mm,
+       sp.sand_pct, sp.silt_pct, sp.clay_pct, sp.bulk, sp.organic_carbon,
+       sp.ph_water, sp.texture_usda,
+       sa.awc_rootable_mm_estimate, sa.model_screening_status,
+       ws.scenario_low_m3_per_feddan, ws.scenario_high_m3_per_feddan,
+       rs.area_feddan AS governorate_area_feddan,
+       rs.yield_ton_per_feddan AS governorate_yield_ton_per_feddan
+FROM point_season_summary pss
+JOIN grid_point gp         ON gp.point_id = pss.point_id
+LEFT JOIN soil_point sp    ON sp.point_id = pss.point_id
+LEFT JOIN soil_awc sa      ON sa.point_id = pss.point_id
+LEFT JOIN water_scenario ws ON ws.season_year = pss.season_year AND ws.point_id = pss.point_id
+LEFT JOIN regional_stats rs ON rs.season_year = pss.season_year
+                           AND rs.district_id = 1 AND rs.crop = 'Rice'
+
+-- [view] v_weather_daily_wide
+CREATE VIEW v_weather_daily_wide AS
+SELECT point_id, obs_date,
+       MAX(CASE WHEN parameter = 'T2M'               THEN value END) AS t2m_c,
+       MAX(CASE WHEN parameter = 'T2M_MAX'           THEN value END) AS tmax_c,
+       MAX(CASE WHEN parameter = 'T2M_MIN'           THEN value END) AS tmin_c,
+       MAX(CASE WHEN parameter = 'RH2M'              THEN value END) AS relative_humidity_pct,
+       MAX(CASE WHEN parameter = 'WS2M'              THEN value END) AS wind_speed_m_s,
+       MAX(CASE WHEN parameter = 'ALLSKY_SFC_SW_DWN' THEN value END) AS solar_radiation_mj_m2_day,
+       MAX(CASE WHEN parameter = 'PS'                THEN value END) AS pressure_kpa,
+       MAX(CASE WHEN parameter = 'PRECTOTCORR'       THEN value END) AS rainfall_mm_day
+FROM weather_daily
+GROUP BY point_id, obs_date
+
+===== ROW COUNTS =====
+canal_schedule: 0
+crop_calendar: 7
+crop_history: 0
+crop_water_parameter: 6
+data_source: 2
+database_metadata: 8
+district: 1
+field: 0
+field_operation: 0
+field_season: 0
+grid_point: 38
+groundwater_level: 0
+irrigation_event: 0
+irrigation_method: 2
+ministry_rule: 0
+point_season_summary: 266
+pump_type: 0
+regional_stats: 7
+rice_daily_water_demand: 46,550
+rice_variety: 1
+season: 7
+sentinel2_scene: 3,775
+sentinel2_shortlist: 119
+soil_awc: 38
+soil_point: 38
+soil_salinity: 0
+vegetation_index: 0
+water_scenario: 266
+weather_daily: 777,024
+
+===== SMALL TABLES CONTENT =====
+
+-- rice_variety
+['variety_id', 'name_en', 'name_ar', 'season_length_days', 'source_url', 'data_status']
+(1, 'NOT_SPECIFIED', None, None, None, 'PLACEHOLDER_FOR_REGIONAL_REFERENCE_ROWS')
+
+-- crop_water_parameter
+['parameter_id', 'crop', 'variety_id', 'growth_stage', 'kc', 'parameter_name', 'parameter_value', 'unit', 'valid_conditions', 'source_url', 'data_status']
+(1, 'rice', None, 'initial', 1.05, 'Kc', 1.05, 'dimensionless', 'FAO-56 reference for paddy rice under subhumid climate and calm-to-moderate wind; local adjustment required', 'https://www.fao.org/4/x0490e/x0490e0b.htm', 'FAO_REFERENCE_NOT_LOCALLY_CALIBRATED')
+(2, 'rice', None, 'mid_season', 1.2, 'Kc', 1.2, 'dimensionless', 'FAO-56 standard reference; adjust for local climate and crop conditions', 'https://www.fao.org/4/x0490e/x0490e0b.htm', 'FAO_REFERENCE_NOT_LOCALLY_CALIBRATED')
+(3, 'rice', None, 'late_season', '0.60-0.90', 'Kc', '0.60-0.90', 'dimensionless', 'FAO-56 reference range; exact value depends on harvest and crop conditions', 'https://www.fao.org/4/x0490e/x0490e0b.htm', 'FAO_REFERENCE_RANGE_NOT_LOCALLY_CALIBRATED')
+(4, 'rice', None, 'land_preparation', None, 'soil_saturation_requirement', 200.0, 'mm', 'General FAO manual assumption; not a local field measurement', 'https://www.fao.org/4/s2022e/s2022e08.htm', 'LITERATURE_ASSUMPTION_REQUIRES_LOCAL_VALIDATION')
+(5, 'rice', None, 'growing_season', None, 'seepage_percolation_rate', '4-8', 'mm/day', 'General FAO range depending on soil and field conditions; do not assign a single local value yet', 'https://www.fao.org/4/s2022e/s2022e08.htm', 'LITERATURE_RANGE_REQUIRES_LOCAL_VALIDATION')
+(6, 'rice', None, 'establishment', None, 'water_layer_establishment', 100.0, 'mm', 'General FAO manual assumption; actual field water management may differ', 'https://www.fao.org/4/s2022e/s2022e08.htm', 'LITERATURE_ASSUMPTION_REQUIRES_LOCAL_VALIDATION')
+
+-- crop_calendar
+['calendar_id', 'season_year', 'variety_id', 'growth_stage', 'season_start', 'season_end', 'planting_window', 'transplanting_window', 'harvest_window', 'stage_start_date', 'stage_end_date', 'source_url', 'data_status']
+(1, 2017, 1, 'whole_season_reference_window', '2017-05-10', '2017-10-31', '2017-05-10 to 2017-05-31', '2017-06-05 to 2017-06-21', '2017-08-15 to 2017-10-07', '2017-05-10', '2017-10-31', 'https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_KAFR_EL-SHEIKH_GOVERNORATE_EGYPT ; https://repository.tudelft.nl/file/File_8c5a6ccf-d81c-48e8-844e-1fc2c2f9530e', 'REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records')
+(2, 2018, 1, 'whole_season_reference_window', '2018-05-10', '2018-10-31', '2018-05-10 to 2018-05-31', '2018-06-05 to 2018-06-21', '2018-08-15 to 2018-10-07', '2018-05-10', '2018-10-31', 'https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_KAFR_EL-SHEIKH_GOVERNORATE_EGYPT ; https://repository.tudelft.nl/file/File_8c5a6ccf-d81c-48e8-844e-1fc2c2f9530e', 'REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records')
+(3, 2019, 1, 'whole_season_reference_window', '2019-05-10', '2019-10-31', '2019-05-10 to 2019-05-31', '2019-06-05 to 2019-06-21', '2019-08-15 to 2019-10-07', '2019-05-10', '2019-10-31', 'https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_KAFR_EL-SHEIKH_GOVERNORATE_EGYPT ; https://repository.tudelft.nl/file/File_8c5a6ccf-d81c-48e8-844e-1fc2c2f9530e', 'REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records')
+(4, 2020, 1, 'whole_season_reference_window', '2020-05-10', '2020-10-31', '2020-05-10 to 2020-05-31', '2020-06-05 to 2020-06-21', '2020-08-15 to 2020-10-07', '2020-05-10', '2020-10-31', 'https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_KAFR_EL-SHEIKH_GOVERNORATE_EGYPT ; https://repository.tudelft.nl/file/File_8c5a6ccf-d81c-48e8-844e-1fc2c2f9530e', 'REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records')
+(5, 2021, 1, 'whole_season_reference_window', '2021-05-10', '2021-10-31', '2021-05-10 to 2021-05-31', '2021-06-05 to 2021-06-21', '2021-08-15 to 2021-10-07', '2021-05-10', '2021-10-31', 'https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_KAFR_EL-SHEIKH_GOVERNORATE_EGYPT ; https://repository.tudelft.nl/file/File_8c5a6ccf-d81c-48e8-844e-1fc2c2f9530e', 'REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records')
+(6, 2022, 1, 'whole_season_reference_window', '2022-05-10', '2022-10-31', '2022-05-10 to 2022-05-31', '2022-06-05 to 2022-06-21', '2022-08-15 to 2022-10-07', '2022-05-10', '2022-10-31', 'https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_KAFR_EL-SHEIKH_GOVERNORATE_EGYPT ; https://repository.tudelft.nl/file/File_8c5a6ccf-d81c-48e8-844e-1fc2c2f9530e', 'REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records')
+(7, 2023, 1, 'whole_season_reference_window', '2023-05-10', '2023-10-31', '2023-05-10 to 2023-05-31', '2023-06-05 to 2023-06-21', '2023-08-15 to 2023-10-07', '2023-05-10', '2023-10-31', 'https://www.researchgate.net/publication/279845465_IMPACT_OF_CLIMATE_CHANGE_ON_IRRIGATION_WATER_DEMAND_FOR_RICE_CROP_IN_KAFR_EL-SHEIKH_GOVERNORATE_EGYPT ; https://repository.tudelft.nl/file/File_8c5a6ccf-d81c-48e8-844e-1fc2c2f9530e', 'REGIONAL_REFERENCE_WINDOW_NOT_YEAR_SPECIFIC;transplanting_window_is_derived_estimate;verify_against_annual_local_records')
+
+-- district
+['district_id', 'name_en', 'name_ar', 'admin_level', 'parent_id']
+(1, 'Kafr El Sheikh', 'كفر الشيخ', 1, None)
+
+-- season
+['season_year', 'start_date', 'end_date']
+(2017, '2017-05-10', '2017-10-31')
+(2018, '2018-05-10', '2018-10-31')
+(2019, '2019-05-10', '2019-10-31')
+(2020, '2020-05-10', '2020-10-31')
+(2021, '2021-05-10', '2021-10-31')
+(2022, '2022-05-10', '2022-10-31')
+(2023, '2023-05-10', '2023-10-31')
+
+-- data_source
+['source_id', 'name', 'url', 'notes']
+(1, 'NASA POWER Daily API', None, None)
+(2, 'Copernicus Data Space STAC', None, None)

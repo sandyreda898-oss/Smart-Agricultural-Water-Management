@@ -1,0 +1,45 @@
+﻿table_name,row_count,purpose_ar,export_file
+agronomy_recommendation,23,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,agronomy_recommendation.csv
+canal_schedule,0,مواعيد مناوبات/فتح المياه حسب الموقع والفترة؛ فارغ لعدم وجود مصدر محلي موثق.,
+crop_calendar,7,تقويم زراعي موسمي مرجعي للأرز.,crop_calendar.csv
+crop_history,0,تاريخ محاصيل قطعة المزارع؛ لا توجد سجلات حقول عامة.,
+crop_reference,7,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,crop_reference.csv
+crop_water_parameter,10,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,crop_water_parameter.csv
+data_source,21,مصادر البيانات وروابطها وملاحظاتها.,data_source.csv
+database_metadata,37,ملاحظات النسخ والاستيراد وإصدارات مراحل البناء.,database_metadata.csv
+district,11,المحافظة والمراكز الإدارية المستخدمة في الربط المكاني.,district.csv
+field,0,هوية/موقع قطعة المزارع؛ فارغ لعدم وجود بيانات حقول ميدانية.,
+field_operation,0,عمليات حقلية مسجلة من المزارع؛ فارغ.,
+field_season,0,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,
+grid_point,38,نقاط الشبكة المرجعية للطقس والتربة.,grid_point.csv
+groundwater_level,0,قياسات منسوب ماء جوفي نقطية؛ فارغ، مع وجود ملخص خريطة في الأدلة المنشورة.,
+irrigation_event,0,أحداث/ريات فعلية لحقول المستخدمين؛ فارغ.,
+irrigation_method,2,قاموس طرق الري.,irrigation_method.csv
+literature_environmental_measurement,104,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,literature_environmental_measurement.csv
+literature_evidence,19,نتائج واستنتاجات وصفية من دراسات منشورة.,literature_evidence.csv
+literature_study,18,بيانات تعريف الدراسات المنشورة وحدودها.,literature_study.csv
+literature_trial_observation,688,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,literature_trial_observation.csv
+literature_trial_result,470,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,literature_trial_result.csv
+machinery_inventory,1,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,machinery_inventory.csv
+ministry_rule,7,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,ministry_rule.csv
+plant_protection_reference,5,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,plant_protection_reference.csv
+point_season_summary,266,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,point_season_summary.csv
+pump_catalog_series,6,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,pump_catalog_series.csv
+pump_type,0,أنواع/تصرفات موحدة لمضخات مستخدمين؛ فارغ لغياب موديل ونقطة تشغيل مؤكدة.,
+regional_stats,7,إحصاءات الأرز السنوية على مستوى المحافظة.,regional_stats.csv
+rice_daily_water_demand,46550,تقدير يومي مرجعي لاحتياج ماء الأرز ETc.,rice_daily_water_demand.csv
+rice_variety,19,قاموس أصناف الأرز ومدد الموسم المتاحة.,rice_variety.csv
+rice_variety_field_guide,14,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,rice_variety_field_guide.csv
+rice_variety_reference,18,صفات مرجعية للأصناف من ARC.,rice_variety_reference.csv
+season,7,قاموس السنوات/المواسم.,season.csv
+sentinel2_scene,3775,فهرس مشاهد Sentinel-2، وليس الصور أو مؤشرات الغطاء النباتي.,sentinel2_scene.csv
+sentinel2_shortlist,119,المشاهد المرشحة للمعالجة اللاحقة.,sentinel2_shortlist.csv
+soil_awc,38,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,soil_awc.csv
+soil_point,38,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,soil_point.csv
+soil_salinity,0,قياس ملوحة نقطي/حقلي؛ فارغ. بعض دراسات الملوحة محفوظة في أدلة منفصلة.,
+vegetation_index,0,قيم NDVI/EVI؛ فارغ ومؤجل حسب نطاق المشروع.,
+water_scenario,266,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,water_scenario.csv
+water_scenario_by_variety,2660,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,water_scenario_by_variety.csv
+water_scenario_by_variety_clay,2660,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,water_scenario_by_variety_clay.csv
+water_scenario_by_variety_v3,9044,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,water_scenario_by_variety_v3.csv
+weather_daily,1089840,تقديرات طقس يومية شبكية من NASA POWER؛ ليست قياسات محطة/حقل.,weather_daily.csv.gz

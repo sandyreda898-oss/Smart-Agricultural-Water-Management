@@ -1,0 +1,88 @@
+{
+  "project_name": "AgriWater Intelligence",
+  "country": "Egypt",
+  "admin_name": "Kafr El Sheikh",
+  "iso3": "EGY",
+  "boundary": {
+    "enabled": true,
+    "release": "gbOpen",
+    "admin_level": "ADM1",
+    "url": "https://www.geoboundaries.org/api/current/gbOpen/EGY/ADM1/",
+    "fallback_geojson": ""
+  },
+  "date_range": {
+    "start": "2017-01-01",
+    "end": "2023-12-31"
+  },
+  "climate": {
+    "enabled": true,
+    "source": "NASA POWER Daily API",
+    "endpoint": "https://power.larc.nasa.gov/api/temporal/daily/point",
+    "community": "AG",
+    "parameters": [
+      "T2M",
+      "T2M_MAX",
+      "T2M_MIN",
+      "PRECTOTCORR",
+      "RH2M",
+      "WS2M",
+      "ALLSKY_SFC_SW_DWN",
+      "PS"
+    ],
+    "grid_spacing_degrees": 0.1,
+    "max_points": 250,
+    "chunk_days": 365,
+    "pause_seconds": 1.0
+  },
+  "soilgrids": {
+    "enabled": true,
+    "endpoint": "https://rest.isric.org/soilgrids/v2.0/properties/query",
+    "properties": [
+      "clay",
+      "sand",
+      "silt",
+      "phh2o",
+      "soc",
+      "bdod",
+      "nitrogen"
+    ],
+    "depths": [
+      "0-5cm",
+      "5-15cm",
+      "15-30cm",
+      "30-60cm",
+      "60-100cm",
+      "100-200cm"
+    ],
+    "max_points": 24,
+    "pause_seconds": 12.5,
+    "note": "SoilGrids point API has a fair-use rate limit; use official raster products for full-coverage analysis."
+  },
+  "sentinel2": {
+    "enabled": true,
+    "catalog_endpoint": "https://catalogue.dataspace.copernicus.eu/stac/search",
+    "collections": [
+      "sentinel-2-l2a"
+    ],
+    "cloud_cover_max": 80,
+    "page_size": 100,
+    "max_pages": 100,
+    "download_products": false,
+    "download_note": "Catalog metadata is public. Authenticated Sentinel Hub image processing/download requires Copernicus OAuth client credentials and is intentionally opt-in."
+  },
+  "output": {
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed",
+    "metadata_dir": "data/metadata",
+    "reports_dir": "reports",
+    "logs_dir": "logs",
+    "save_parquet": true
+  },
+  "runtime": {
+    "request_timeout_seconds": 60,
+    "max_retries": 4,
+    "backoff_seconds": 2,
+    "user_agent": "AgriWater-KafrElSheikh-Collector/1.0",
+    "force_refresh_climate": false
+  }
+}

@@ -1,0 +1,276 @@
+[
+  {
+    "source": "geoBoundaries gbOpen ADM1",
+    "url": "https://www.geoboundaries.org/api/current/gbOpen/EGY/ADM1/",
+    "dataset": "administrative boundary",
+    "coverage": "country admin level 1; filtered by name",
+    "access": "public HTTP",
+    "limitations": "Open boundary dataset, not a cadastral/legal parcel boundary."
+  },
+  {
+    "source": "NASA POWER Daily API",
+    "url": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+    "dataset": "daily gridded meteorological estimates",
+    "coverage": "38 project grid points; 2017-01-01 to 2026-10-25; 8 daily variables. The 2024-2026 extension was requested one calendar-year chunk per point and retained as raw JSON and processed CSV.",
+    "access": "public HTTP",
+    "limitations": "NASA POWER gridded/model estimates, not field station observations. Daily API default local solar time (LST). 2026 is a partial near-real-time year and may be revised or delayed; retain sentinels as NULL. No imagery or vegetation indices included.",
+    "extension_metadata": "data/metadata/nasa_power_weather_extension_2024_2026.json"
+  },
+  {
+    "source": "ISRIC SoilGrids REST API v2.0",
+    "url": "https://rest.isric.org/soilgrids/v2.0/docs",
+    "dataset": "soil property point queries",
+    "coverage": "one successful clay-value test point; one null point and a multi-property timeout; no SoilGrids values were merged into the project",
+    "access": "public HTTP, fair-use limit applies",
+    "limitations": "Point values are modelled predictions with uncertainty at 250 m, not field tests. Coverage and unit conversions must be checked before importing; current project test did not establish complete Kafr El Sheikh coverage."
+  },
+  {
+    "source": "Copernicus Data Space STAC Catalog",
+    "url": "https://documentation.dataspace.copernicus.eu/APIs.html",
+    "dataset": "Sentinel-2 L2A scene metadata",
+    "coverage": "scene footprints intersecting admin boundary and date window",
+    "access": "public catalog search",
+    "limitations": "Catalog records are not image downloads. Actual imagery processing/download may require OAuth credentials and quota."
+  },
+  {
+    "source": "Egypt Ministry of Agriculture",
+    "url": "https://www.agri.gov.eg/databases/42",
+    "dataset": "official rice area/production/irrigation records",
+    "coverage": "not automatically collected by this starter because no stable documented public API was verified",
+    "access": "manual/source-specific",
+    "limitations": "No official production numbers are fabricated; import verified tables when available."
+  },
+  {
+    "source": "CAPMAS Agricultural Areas Bulletin 2019/2020",
+    "url": "https://www.capmas.gov.eg/pdf/new_Pdf/2022228132150_%D9%86%D8%B4%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%AD%D8%A7%D8%AA%202020_Compressed.pdf",
+    "dataset": "rice area and production by governorate, 2019/2020",
+    "coverage": "Kafr El Sheikh area and production; yield in regional_stats is computed as production divided by area",
+    "access": "public CAPMAS statistical bulletin PDF",
+    "limitations": "The bulletin reports cereal-crop area and production, not yield; the database derives yield from those reported values."
+  },
+  {
+    "source": "Agricultural Research Center - Field Crops Research Institute product catalogue",
+    "url": "https://www.arc.sci.eg/Products/Search/15?TypeID=1&lang=1",
+    "dataset": "published rice variety attributes",
+    "coverage": "catalogue entries for selected rice varieties; retrieved traits are stored in rice_variety_reference_arc.csv",
+    "access": "public web catalogue",
+    "limitations": "Published yield ranges are catalogue figures, not guaranteed farm outcomes or local measurements."
+  },
+  {
+    "source": "Agricultural Research Center - Rice Research Department product catalogue",
+    "url": "https://www.arc.sci.eg/Products/Search/54?TypeID=1&lang=1",
+    "dataset": "published rice cultivar descriptions, growth duration, catalogue yield ranges, grain type, disease notes, soil suitability, and temperature range",
+    "coverage": "18 rice catalogue profiles with published traits transcribed to rice_variety_reference_arc.csv",
+    "access": "public ARC product catalogue; curated CSV extract",
+    "limitations": "Catalogue traits and yield ranges are not field guarantees or proof of current seed approval. ARC catalogue pages conflict for Sakha 109 yield and plant type; disputed traits are withheld. No irrigation requirement or Kafr El Sheikh planting calendar is provided by this extract."
+  },
+  {
+    "source": "Journal of Plant Production - Ghazy, Mikhael, and El-Refaee (2019)",
+    "url": "https://jpp.journals.ekb.eg/article_77743_f9b526e5d27c1bf722163cd4fc68665d.pdf",
+    "dataset": "Giza 179 station-trial grain yield and water productivity under three irrigation intervals and four plant spacings",
+    "coverage": "Sakha Research Station, Kafr El-Sheikh; seasons 2017 and 2018; 48 treatment-result observations",
+    "access": "Open journal PDF; DOI 10.21608/jpp.2019.77743; curated transcription",
+    "limitations": "Small research-station plots, not farmer-field records. The extracted tables report water productivity but not absolute treatment irrigation volumes; do not use for pump run-time calculations."
+  },
+  {
+    "source": "CAPMAS agricultural indicators",
+    "url": "https://old.capmas.gov.eg/Pages/IndicatorsPage.aspx?Ind_id=2370",
+    "dataset": "rice cultivated area and production indicators",
+    "coverage": "annual agricultural indicators; exact geographic and downloadable series availability must be checked per indicator",
+    "access": "public indicator page; series downloads may require page interaction",
+    "limitations": "Use only the geographic level and years explicitly shown by the source; do not derive field-level labels from governorate totals."
+  },
+  {
+    "source": "FAO WaPOR",
+    "url": "https://www.fao.org/in-action/remote-sensing-for-water-productivity/wapor-data/",
+    "dataset": "evapotranspiration/water productivity products",
+    "coverage": "WaPOR v3 continental/national products; the FAO data-access page documents Level 1/2 collections and an API without an API key. Product-specific Kafr El Sheikh spatial and temporal coverage still needs to be extracted and checked.",
+    "access": "Public FAO WaPOR v3 API; no credentials required per FAO access documentation",
+    "limitations": "Remote-sensing-derived ET/water productivity products, not farmer-metered irrigation. Check spatial support, resolution, product version, latency, and Kafr El Sheikh coverage before import; do not treat AET as applied irrigation volume."
+  },
+  {
+    "source": "Suteksan Egypt pump catalogue",
+    "url": "https://www.suteksanegypt.com/index.php/en/product-en/pumps/sep-6-pump-series",
+    "dataset": "SEP 6/7/8-inch submersible pump series family ranges",
+    "coverage": "Six frequency-specific catalogue rows transcribed to pump_catalog_suteksan.csv",
+    "access": "Public manufacturer pages",
+    "limitations": "Published family limits are not matched flow/head duty points; they do not establish farm discharge or run time."
+  },
+  {
+    "source": "Egypt Ministry of Agriculture, Economic Affairs Sector (2023)",
+    "url": "https://www.agri.gov.eg/uploads/topics/17329953527147.pdf",
+    "dataset": "Table 93 stationary/mobile irrigation pump census",
+    "coverage": "One row labelled Kafr El Sheikh transcribed to machinery_inventory_ministry.csv",
+    "access": "Public official PDF table extract",
+    "limitations": "The row's exact administrative level is ambiguous in the extracted table and must be confirmed before joining to district records; aggregate counts are not a farmer machine catalogue."
+  },
+  {
+    "source": "Agricultural Research Center - Rice technical recommendation bulletin (2026)",
+    "url": "https://www.arc.sci.eg/Products/Details/9704",
+    "dataset": "Rice recommendation excerpts from the ARC page and its PDF attachment",
+    "coverage": "18 ARC-specific rules and 5 Ministry-attributed nursery rules in rice_recommendations_arc.csv, including climate-adaptation cultivar list, method-scoped dry direct-seeding calendar, irrigation intervals, and fertilizer rules",
+    "access": "Public ARC page and indexed attachment excerpts",
+    "limitations": "The full attachment was not downloaded and parsed end-to-end; these are excerpts from indexed sections, tagged official_pdf_excerpt. Method-specific dry direct-seeding rules must not be applied to transplanted rice; salinity-only rules remain scoped, and fertilizer formulation must be checked before farm use."
+  },
+  {
+    "source": "El-Henawy (2013), Kafrelsheikh University farm rice/previous-crop soil trial",
+    "url": "https://journals.ekb.eg/article_50545_e9df9407d8656f4a38c6bfeeb8122da7.pdf",
+    "dataset": "Published soil and rice treatment means for wheat-rice and berseem-rice sequences, puddling treatments, and two soil depths",
+    "coverage": "Kafrelsheikh University Faculty of Agriculture farm; 2007 rice season; 104 transcribed values from Tables 1-5",
+    "access": "Open journal PDF",
+    "limitations": "One research-farm location and one season; grouped treatment means, not parcel-level measurements. Rice-yield treatment differences were reported as statistically non-significant. Use as local research evidence only, not as a fertilizer or field-soil prediction."
+  },
+  {
+    "source": "Gewaily et al. (2018), Sakha RRTC rice soil nutrient baseline",
+    "url": "https://jssae.journals.ekb.eg/article_35762_34ca5e21488d038f6d7de5b2469c83b6.pdf",
+    "dataset": "Published soil texture, pH, EC, organic matter, total N, available P/K/Zn at the Sakha rice research farm",
+    "coverage": "Two pre-plant baseline years, 2016 and 2017; 20 property-year observations transcribed from Table 1",
+    "access": "Open journal PDF",
+    "limitations": "Single experimental station; sampling depth and parcel coordinates are not reported with the table. Published baseline is not a current field test and does not by itself define nutrient deficiency thresholds."
+  },
+  {
+    "source": "Yageta et al. (2013), previous rice history and salinity near Sakha",
+    "url": "https://www.jstage.jst.go.jp/article/jdsa/8/2/8_119/_pdf/-char/en",
+    "dataset": "Study-level evidence from 15 sites on prior two-year rice history, soil salinity, drainage and irrigation-water quality",
+    "coverage": "One ARC site and 14 private farms within 5 km of Sakha RRTC; soils sampled at 0-20 cm in May 2010",
+    "access": "Open J-STAGE journal PDF",
+    "limitations": "Observational grouped study with no public parcel-level raw data. Prior rice frequency was not a significant salt-accumulation factor in this sample; area, subsurface drainage and irrigation-water quality mattered. Do not generalize as parcel-level cause or prediction."
+  },
+  {
+    "source": "Local crop-name and season normalization for Kafr El-Sheikh",
+    "url": "https://www.jstage.jst.go.jp/article/jdsa/8/2/8_119/_pdf/-char/en",
+    "dataset": "Arabic/English canonical labels, botanical names, typical season and crop functional group for seven common crops",
+    "coverage": "Rice, wheat, Egyptian clover, maize, cotton, sugar beet, and barley",
+    "access": "Curated ETL lookup based on local crop context and local Sakha trial terminology",
+    "limitations": "Normalization and feature engineering only. Legume/cereal group is not a numerical nutrient-credit or fertilizer recommendation."
+  },
+  {
+    "source": "Ibrahim (2002), rice following berseem or wheat at Tag El-Ezz, Dakahlia",
+    "url": "https://jpp.journals.ekb.eg/article_257186_9c13162afbfa131f3df085f05509a5d2.pdf",
+    "dataset": "Two-season Sakha 101 station experiment with soil N/P/K after prior winter crop and grain-yield means by preceding crop",
+    "coverage": "Tag El-Ezz Agricultural Research Station, Dakahlia; summer seasons 2000 and 2001; berseem vs wheat; four replicates",
+    "access": "Open journal PDF",
+    "limitations": "Neighboring Delta comparison, not Kafr El-Sheikh. Older station trial with nutrient/fertilizer interactions; do not transfer its soil values or fertilizer rates as current field recommendations."
+  },
+  {
+    "source": "Egypt Agricultural Portal - May 2025 rice recommendations",
+    "url": "https://misrelzraea.com/محصول-الأرز-توصيات-مايو-2025-للمزارعين/",
+    "dataset": "Variety-specific cultivation guide and nursery recommendations attributed to the Ministry of Agriculture extension sector",
+    "coverage": "13 cultivar rows and nursery/seed rules transcribed in the processed CSVs",
+    "access": "Public agricultural extension portal; article identifies the Ministry extension sector as issuer",
+    "limitations": "A dated repost of Ministry recommendations, not a current seed-availability list. Keep separate from ARC catalogue values; yield is a bulletin claim, not a local guarantee."
+  },
+  {
+    "source": "Darwesh, Abdelkhalek and Ibrahim (2016), rice irrigation periods and submerged depths in North Nile Delta",
+    "url": "https://jssae.journals.ekb.eg/article_39351_2bc01450304a3b34c9f247b4a7d2d871.pdf",
+    "dataset": "2013-2014 Sakha station trial: seasonal applied irrigation, yield, irrigation-water productivity, thousand-grain weight by variety/interval/depth; soil profile 0-60 cm; monthly station climate summaries",
+    "coverage": "Sakha Agricultural Research Station Farm, Kafr El-Sheikh; varieties Giza 177, Sakha 101, Orabi 1; 6/12 day interval; ponding 3/5/7 cm; 3 replications",
+    "access": "Open journal PDF; Tables 1-4 transcribed into data/processed/darwesh_sakha_irrigation_trial_2013_2014.csv and literature_trial_observation",
+    "limitations": "Single historical research-station site, not farmer-field labels. Seasonal water includes nursery, land preparation, and establishment. Treatment results are not pump runtime instructions. No DOI was recorded because it was not confirmed from the source page."
+  },
+  {
+    "source": "Moursi and Abdelkhalek (2015), water requirement components of Egyptian rice varieties in North Nile Delta",
+    "url": "https://asejaiqjsae.journals.ekb.eg/article_2859_6ce5a0229c306dd687cba488da0d80a1.pdf",
+    "dataset": "Sakha 2012-2013 climate summaries; irrigation/water-budget components; ETa lysimeter measurements, ETo/ETc method comparisons, and seasonal water/yield/productivity summaries for Giza 178, Sakha 102, Sakha 104",
+    "coverage": "Sakha Agricultural Research Station, Kafr El-Sheikh; two summer seasons 2012 and 2013; 144 transcribed observations from Tables 1, 3, 4, 5 and results text",
+    "access": "Open journal PDF; DOI 10.21608/asejaiqjsae.2015.2859; curated CSV extract and literature_trial_observation",
+    "limitations": "Research-station evidence, not farm labels. Contains two-season averages and per-year monthly weather. The source describes rainfall/runoff/drainage data as unavailable or negligible in its balance. Wind speed units are inconsistent in the article and are stored as ambiguous; keep source-reported units and qualifiers."
+  },
+  {
+    "source": "Ghazy, Hashem and Sheta (2024), Sakha 106 irrigation/compost/potassium-silicate trial",
+    "url": "https://jenvbs.journals.ekb.eg/article_381943_b6ecf5a9d1e34c93ee93c4aa9ae8bd96.pdf",
+    "dataset": "2022-2023 Sakha station Table 8: total irrigation water, yield, water saved and WUE for 4-, 8-, 12-day irrigation marginal means",
+    "coverage": "Sakha Agricultural Research Station, Kafr El-Sheikh; Sakha 106; three replications; factorial compost and potassium-silicate trial; 22 numeric table observations transcribed",
+    "access": "Open journal PDF; DOI 10.21608/jenvbs.2024.302891.1252; curated CSV and literature_trial_observation",
+    "limitations": "Station trial, not farmer field labels. Table 8 provides irrigation-interval marginal means across fertilizer treatments, not fertilizer-by-irrigation cell means. Total water is m3/ha and cannot be converted to pump run time without actual pump duty conditions."
+  },
+  {
+    "source": "Eid et al. (2025), planting methods and irrigation depth in Northern Nile Delta rice",
+    "url": "https://ejss.journals.ekb.eg/article_454852_c802bb5b9041bcd26fd8efe4eebbce92.pdf",
+    "dataset": "2023-2024 treatment table: applied irrigation, grain yield and water productivity for traditional/furrow/bed planting × 7/5/3 cm irrigation depth",
+    "coverage": "Northern Nile Delta study; exact station and cultivar not captured in the extracted Table 3 data; 54 numeric cells transcribed",
+    "access": "Open Egyptian Journal of Soil Science PDF; DOI 10.21608/ejss.2025.410842.2305",
+    "limitations": "Keep at Northern Delta regional study support until exact site/cultivar are verified from full methods. Treatment means are not farmer labels or parcel-specific Kafr El-Sheikh recommendations."
+  },
+  {
+    "source": "Basiouny et al. (2020), reuse of agricultural wastewater for rice in Kafr El-Sheikh",
+    "url": "https://journals.ekb.eg/article_405610_4813c5e09c67a3871e628c117ab7bab9.pdf",
+    "dataset": "Five irrigation-water blend cases, rice water needs, production, water-use efficiency and field water/soil salinity during 2018 summer season",
+    "coverage": "Meet Yazeed canal fresh water blended with private-drain water in Kafr El-Sheikh; precise field coordinates and complete numeric tables not yet extracted",
+    "access": "Open Engineering Research Journal PDF; DOI 10.21608/erjsh.2020.405610; extraction pending",
+    "limitations": "Field study in the governorate, but keep as study-site measurements and do not project to all fields or water sources. Numeric table rows and units must be transcribed and checked before import."
+  },
+  {
+    "source": "Abou El Hassan (2017), water deficit at critical rice growth stages at El-Karada",
+    "url": "https://jssae.journals.ekb.eg/article_37229_e5bf0274832efce6190833e3b1117c5b.pdf",
+    "dataset": "2014-2015 station study of continuous flooding and 12-day water withholding at mid-tillering, panicle initiation and heading; Table 8 reports seasonal water, yield, yield reduction, water saving and WUE",
+    "coverage": "El-Karada Research Station, Kafr El-Sheikh; 36 values transcribed from Table 8 into data/processed/abou_el_hassan_karada_water_deficit_2014_2015.csv and literature_trial_observation; irrigation means across three cultivars",
+    "access": "Open Journal of Soil Science and Agricultural Engineering PDF; DOI 10.21608/jssae.2017.37229; Table 8 transcription script included",
+    "limitations": "Research-station treatment means, not farmer records or cultivar-specific output. The 2014 mid-tillering water-saving value is 6.33% in Table 8 but 6.37% in the abstract; the table value is stored and discrepancy documented. Do not use as a farm pump-runtime prediction."
+  },
+  {
+    "source": "Agricultural Pesticides Committee (APC), approved pest-control recommendations, 2025 edition",
+    "url": "https://www.apc.gov.eg/Files/Releases/Recomm25.pdf",
+    "dataset": "Official recommendations and registered pesticide-use list, including crop-specific rice material; detailed table extraction not completed",
+    "coverage": "The 2025 edition is announced by the Ministry's APC; rice page/table numbers and entries remain to be verified from the official book",
+    "access": "Official APC PDF endpoint identified; PDF fetch was unavailable to the current reader. The APC announcement page is https://www.apc.gov.eg/AR/News.aspx?id=10226. Discovery notice: https://alfallahalyoum.news/لجنة-المبيدات-تتيح-دليل-مكافحة-الآفات-20.html/",
+    "limitations": "The 2025 book is not proof of current 2026 registration. Extract official rice crop pages and verify every product/use, dose, pre-harvest interval, and registration status before importing or displaying spray advice."
+  },
+  {
+    "source": "Agricultural Pesticides Committee (APC), rice pest/disease entries in the 2025 approved recommendations (secondary transcription)",
+    "url": "https://www.apc.gov.eg/Files/Releases/Recomm25.pdf",
+    "dataset": "Five rice pest/disease symptom and timing reference records (bloodworms, blast, false smut, bakanae, nematode white-tip)",
+    "coverage": "Rice only; pages 41-44 attributed to the APC 2025 booklet; copied from secondary pages that identify APC as author/source",
+    "access": "Official primary PDF identified but not readable through current retrieval; secondary transcripts searched and attributed to APC 2025",
+    "limitations": "No pesticide product, active ingredient, dose, or pre-harvest interval imported. Secondary transcription only; verify against the official APC booklet before operational use. Reference-only, not spray advice."
+  },
+  {
+    "source": "Kafrelsheikh University repository, Amgad Ahmed Essa Rehan thesis abstract (2013)",
+    "url": "https://kfs.edu.eg/post/pdf/98201523335246.pdf",
+    "dataset": "Two abstract-level grain-yield results for GZ 9057 transplanted on 15 April at Sakha: 4.31 t/feddan in 2012 and 4.65 t/feddan in 2013; trial compared three sowing dates and two planting methods",
+    "coverage": "Experimental farm of Sakha Agriculture Research Station, Kafr El-Sheikh; summer seasons 2012-2013",
+    "access": "Public university repository PDF; result transcribed from p.19 abstract into processed CSV and literature_evidence",
+    "limitations": "Abstract-only result from a DUS experiment; not a typical farm yield, current cultivar availability confirmation, or guaranteed recommendation. It must not be treated as a local farm label."
+  },
+  {
+    "source": "Gaber et al. (2025), Sakha irrigation water quality, soil quality and rice grain metals",
+    "url": "https://journals.ekb.eg/article_410567_0.html",
+    "dataset": "Tables 10-14: 398 numeric records for yield, grain traits and grain mineral/heavy-metal composition across 2022/2023, 4 cultivars and five water treatments; plus 3 abstract-level evidence statements.",
+    "coverage": "Two Sakha Agriculture Research Station summer trials, 2022 and 2023; four replicates; Giza 183, Giza 178, Sakha 106 and Sakha 108",
+    "access": "Publisher-indexed PDF full-text; numeric results transcribed into data/processed/sakha_water_quality_2022_2023_numeric_results.csv and literature_trial_result.",
+    "limitations": "Water and soil chemistry tables remain untranscribed. Grain mineral/heavy-metal values are treatment means from one research station, not farmer-field values or a standalone food-safety determination; water mixes are not universal blend recommendations."
+  },
+  {
+    "source": "El-Hadidi et al. (2008), Irrigation Water Management of Rice Crop in North Delta",
+    "url": "https://journals.ekb.eg/article_200433_76a9db2dced671a18307c7539bdfef08.pdf",
+    "dataset": "24 numeric results: total irrigation water applied and grain yield for six Sakha 104 transplanting layouts across 2006 and 2007 seasons",
+    "coverage": "El-Karada Water Requirements Research Station, Kafr El-Sheikh; 3 replicates; plot area 320 m2; six transplanting methods",
+    "access": "Open journal article indexed by EKB; tables 1-2 transcribed into CSV and literature_trial_result. ResearchGate copy also provides indexed full-text.",
+    "limitations": "Research-station trial from 2006-2007; not farmer labels or a current blanket recommendation. Do not conflate with another similarly themed Meleha et al. study. No pump runtime inferred.",
+    "doi": "10.21608/jssae.2008.200433"
+  },
+  {
+    "source": "Eid et al. (2022), Hammoul rice soil and irrigation-water chemistry",
+    "url": "https://jssae.journals.ekb.eg/article_243275_4763f4aa42c43aa2757cd3f2ece14627.pdf",
+    "dataset": "Published baseline soil chemistry, irrigation-water chemistry, and reported water-quality indices",
+    "coverage": "Hammoul District; two rice seasons 2020 and 2021; soil before cultivation and blended canal/drainage water samples",
+    "access": "Public publisher PDF; DOI 10.21608/jssae.2022.124127.1056",
+    "limitations": "Experimental-site observations only; not a spatial layer or farmer field measurements. Transcribed Tables 1, 2, and 4; Table 5 omitted because reported baseline EC values conflict. Values do not determine irrigation volume or pump runtime."
+  },
+  {
+    "source": "ARC Rice Research Department, Sakha Super 300 product page",
+    "url": "https://www.arc.sci.eg/products/details/9560",
+    "dataset": "Cultivar attributes and maturity duration by planting timing",
+    "coverage": "Sakha Super 300 cultivar; official ARC product page",
+    "access": "Public ARC page",
+    "limitations": "The source reports different duration for early versus late planting (147 versus 114 days); this is not a single fixed season length."
+  },
+  {
+    "source": "El-Banna et al. (2023), Kafr El-Sheikh geotechnical maps",
+    "url": "https://www.degruyterbrill.com/document/doi/10.1515/geo-2022-0495/html",
+    "dataset": "119 borehole investigations and interpolated spatial summaries including groundwater depth",
+    "coverage": "Kafr El-Sheikh Governorate; geotechnical boreholes with depth up to 20–30 m",
+    "access": "Public Open Geosciences article",
+    "limitations": "Area classes are a published interpolated map summary, not parcel-level agricultural groundwater monitoring. Reported mapped area 3835.461 km2 conflicts with article-stated governorate area 3716.68 km2. Do not use as field-specific groundwater depth."
+  }
+]

@@ -1,0 +1,20 @@
+﻿source_table,source_record_key,issue,required_action,priority
+soil_point,bulk / organic_carbon,The released columns do not guarantee an explicit source unit in the analytical table.,Verify original soil source/metadata and correct metric units before comparing or modelling.,high
+ministry_rule,1,Rule is not verified against a primary official source.,Check current ARC/MoA publication and update validity dates.,manual_review
+ministry_rule,2,Rule is not verified against a primary official source.,Check current ARC/MoA publication and update validity dates.,manual_review
+ministry_rule,3,Rule is not verified against a primary official source.,Check current ARC/MoA publication and update validity dates.,manual_review
+ministry_rule,4,Rule is not verified against a primary official source.,Check current ARC/MoA publication and update validity dates.,manual_review
+ministry_rule,5,Rule is not verified against a primary official source.,Check current ARC/MoA publication and update validity dates.,manual_review
+ministry_rule,6,Rule is not verified against a primary official source.,Check current ARC/MoA publication and update validity dates.,manual_review
+ministry_rule,7,Rule is not verified against a primary official source.,Check current ARC/MoA publication and update validity dates.,manual_review
+plant_protection_reference,apc25_rice_bloodworm,Pesticide product/rate/preharvest interval is incomplete.,Keep as symptom/monitoring context; never present as a spray instruction.,high
+plant_protection_reference,apc25_rice_blast,Pesticide product/rate/preharvest interval is incomplete.,Keep as symptom/monitoring context; never present as a spray instruction.,high
+plant_protection_reference,apc25_rice_false_smut,Pesticide product/rate/preharvest interval is incomplete.,Keep as symptom/monitoring context; never present as a spray instruction.,high
+plant_protection_reference,apc25_rice_bakanae,Pesticide product/rate/preharvest interval is incomplete.,Keep as symptom/monitoring context; never present as a spray instruction.,high
+plant_protection_reference,apc25_rice_nematode_whitetip,Pesticide product/rate/preharvest interval is incomplete.,Keep as symptom/monitoring context; never present as a spray instruction.,high
+pump_catalog_series,1,Published flow/head limits are not matched values on one duty curve and are not the farmer's installed pump.,"Record model, impeller, total dynamic head and measured discharge before converting seasonal volume to runtime.",manual_review
+pump_catalog_series,2,Published flow/head limits are not matched values on one duty curve and are not the farmer's installed pump.,"Record model, impeller, total dynamic head and measured discharge before converting seasonal volume to runtime.",manual_review
+pump_catalog_series,3,Published flow/head limits are not matched values on one duty curve and are not the farmer's installed pump.,"Record model, impeller, total dynamic head and measured discharge before converting seasonal volume to runtime.",manual_review
+pump_catalog_series,4,Published flow/head limits are not matched values on one duty curve and are not the farmer's installed pump.,"Record model, impeller, total dynamic head and measured discharge before converting seasonal volume to runtime.",manual_review
+pump_catalog_series,5,Published flow/head limits are not matched values on one duty curve and are not the farmer's installed pump.,"Record model, impeller, total dynamic head and measured discharge before converting seasonal volume to runtime.",manual_review
+pump_catalog_series,6,Published flow/head limits are not matched values on one duty curve and are not the farmer's installed pump.,"Record model, impeller, total dynamic head and measured discharge before converting seasonal volume to runtime.",manual_review

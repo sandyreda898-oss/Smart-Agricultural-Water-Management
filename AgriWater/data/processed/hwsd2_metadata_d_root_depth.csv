@@ -1,0 +1,5 @@
+﻿CODE,VALUE
+1,Deep  (> 100cm)
+2,Moderately Deep  (< 100cm)
+3,Shallow  (< 50cm)
+4,Very shallow  (< 10cm)

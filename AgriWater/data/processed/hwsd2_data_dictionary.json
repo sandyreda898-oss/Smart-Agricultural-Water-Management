@@ -1,0 +1,58 @@
+{
+  "dataset": "HWSD2 soil samples for Kafr El-Sheikh, Egypt",
+  "source_organization": "FAO",
+  "source_database": "Harmonized World Soil Database version 2.0",
+  "source_url": "https://www.fao.org/land-water/resources/tools/databases/hwsd/en",
+  "source_raster_resolution": "30 arc-seconds, approximately 1 km",
+  "sample_count": 38,
+  "soil_layer": "D1",
+  "depth_cm": [
+    0,
+    20
+  ],
+  "properties": {
+    "sand_pct": {
+      "description": "Sand fraction by weight",
+      "unit": "%"
+    },
+    "silt_pct": {
+      "description": "Silt fraction by weight",
+      "unit": "%"
+    },
+    "clay_pct": {
+      "description": "Clay fraction by weight",
+      "unit": "%"
+    },
+    "bulk": {
+      "description": "Bulk density",
+      "unit": "g/cm3"
+    },
+    "organic_carbon": {
+      "description": "Organic carbon content",
+      "unit": "% weight"
+    },
+    "ph_water": {
+      "description": "Soil pH measured in water",
+      "unit": "pH"
+    },
+    "top_depth_cm": {
+      "description": "Top of soil layer",
+      "unit": "cm"
+    },
+    "bottom_depth_cm": {
+      "description": "Bottom of soil layer",
+      "unit": "cm"
+    }
+  },
+  "missing_value_policy": "Original -9 sentinel values converted to blank in the clean CSV; incomplete samples retained and flagged.",
+  "quality": {
+    "complete_samples": 37,
+    "incomplete_samples": 1
+  },
+  "limitations": [
+    "HWSD2 values are mapped soil estimates, not direct field measurements.",
+    "Do not infer rice water requirements from texture alone.",
+    "Confirm additional units and methods before using other attributes in calculations."
+  ],
+  "documentation_created": "2026-10-22"
+}

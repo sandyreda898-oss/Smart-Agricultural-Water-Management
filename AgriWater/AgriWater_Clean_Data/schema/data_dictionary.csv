@@ -1,0 +1,462 @@
+﻿table_name,table_purpose_ar,column_name,declared_type,primary_key_order,not_null,default_value,foreign_key_table,foreign_key_column,row_count,null_count,null_percent,blank_string_count,numeric_min,numeric_max
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,recommendation_id,INTEGER,1,False,,,,23,0,0.0,0,1,23
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,crop,TEXT,0,True,'rice',,,23,0,0.0,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,topic,TEXT,0,True,,,,23,0,0.0,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,recommendation_text,TEXT,0,True,,,,23,0,0.0,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,value_min,REAL,0,False,,,,23,10,43.4783,0,2.0,100.0
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,value_max,REAL,0,False,,,,23,10,43.4783,0,3.0,100.0
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,unit,TEXT,0,False,,,,23,3,13.0435,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,condition_scope,TEXT,0,False,,,,23,11,47.8261,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,variety_scope,TEXT,0,False,,,,23,10,43.4783,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,stage_scope,TEXT,0,False,,,,23,0,0.0,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,geography_scope,TEXT,0,False,,,,23,0,0.0,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,publication_date,TEXT,0,False,,,,23,0,0.0,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,source_url,TEXT,0,True,,,,23,0,0.0,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,source_locator,TEXT,0,False,,,,23,0,0.0,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,confidence_status,TEXT,0,True,,,,23,0,0.0,0,,
+agronomy_recommendation,إرشادات زراعية مرجعية مع النطاق الجغرافي والصنف والمرحلة والمصدر.,notes,TEXT,0,False,,,,23,0,0.0,2,,
+canal_schedule,مواعيد مناوبات/فتح المياه حسب الموقع والفترة؛ فارغ لعدم وجود مصدر محلي موثق.,schedule_id,INTEGER,1,False,,,,0,0,0.0,0,,
+canal_schedule,مواعيد مناوبات/فتح المياه حسب الموقع والفترة؛ فارغ لعدم وجود مصدر محلي موثق.,district_id,INTEGER,0,True,,district,district_id,0,0,0.0,0,,
+canal_schedule,مواعيد مناوبات/فتح المياه حسب الموقع والفترة؛ فارغ لعدم وجود مصدر محلي موثق.,season_year,INTEGER,0,False,,season,season_year,0,0,0.0,0,,
+canal_schedule,مواعيد مناوبات/فتح المياه حسب الموقع والفترة؛ فارغ لعدم وجود مصدر محلي موثق.,canal_name,TEXT,0,False,,,,0,0,0.0,0,,
+canal_schedule,مواعيد مناوبات/فتح المياه حسب الموقع والفترة؛ فارغ لعدم وجود مصدر محلي موثق.,start_date,TEXT,0,False,,,,0,0,0.0,0,,
+canal_schedule,مواعيد مناوبات/فتح المياه حسب الموقع والفترة؛ فارغ لعدم وجود مصدر محلي موثق.,end_date,TEXT,0,False,,,,0,0,0.0,0,,
+canal_schedule,مواعيد مناوبات/فتح المياه حسب الموقع والفترة؛ فارغ لعدم وجود مصدر محلي موثق.,flow_status,TEXT,0,False,,,,0,0,0.0,0,,
+canal_schedule,مواعيد مناوبات/فتح المياه حسب الموقع والفترة؛ فارغ لعدم وجود مصدر محلي موثق.,source_id,INTEGER,0,False,,data_source,source_id,0,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,calendar_id,INTEGER,1,False,,,,7,0,0.0,0,1,7
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,season_year,INTEGER,0,True,,season,season_year,7,0,0.0,0,2017,2023
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,variety_id,INTEGER,0,True,,rice_variety,variety_id,7,0,0.0,0,1,1
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,growth_stage,TEXT,0,False,,,,7,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,season_start,TEXT,0,False,,,,7,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,season_end,TEXT,0,False,,,,7,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,planting_window,TEXT,0,False,,,,7,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,transplanting_window,TEXT,0,False,,,,7,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,harvest_window,TEXT,0,False,,,,7,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,stage_start_date,TEXT,0,False,,,,7,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,stage_end_date,TEXT,0,False,,,,7,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,source_url,TEXT,0,False,,,,7,0,0.0,0,,
+crop_calendar,تقويم زراعي موسمي مرجعي للأرز.,data_status,TEXT,0,False,,,,7,0,0.0,0,,
+crop_history,تاريخ محاصيل قطعة المزارع؛ لا توجد سجلات حقول عامة.,history_id,INTEGER,1,False,,,,0,0,0.0,0,,
+crop_history,تاريخ محاصيل قطعة المزارع؛ لا توجد سجلات حقول عامة.,field_id,INTEGER,0,True,,field,field_id,0,0,0.0,0,,
+crop_history,تاريخ محاصيل قطعة المزارع؛ لا توجد سجلات حقول عامة.,season_year,INTEGER,0,True,,,,0,0,0.0,0,,
+crop_history,تاريخ محاصيل قطعة المزارع؛ لا توجد سجلات حقول عامة.,season_type,TEXT,0,False,,,,0,0,0.0,0,,
+crop_history,تاريخ محاصيل قطعة المزارع؛ لا توجد سجلات حقول عامة.,crop_name,TEXT,0,True,,,,0,0,0.0,0,,
+crop_history,تاريخ محاصيل قطعة المزارع؛ لا توجد سجلات حقول عامة.,crop_code,TEXT,0,False,,crop_reference,crop_code,0,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,crop_code,TEXT,1,False,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,name_en,TEXT,0,True,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,name_ar,TEXT,0,True,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,botanical_name,TEXT,0,False,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,aliases_ar,TEXT,0,False,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,aliases_en,TEXT,0,False,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,typical_season,TEXT,0,False,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,functional_group,TEXT,0,False,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,legume_status,TEXT,0,False,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,source_url,TEXT,0,False,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,source_locator,TEXT,0,False,,,,7,0,0.0,0,,
+crop_reference,قاموس موحد للمحاصيل المستخدمة في التتابع الزراعي.,notes,TEXT,0,False,,,,7,0,0.0,0,,
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,parameter_id,INTEGER,1,False,,,,10,0,0.0,0,1,10
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,crop,TEXT,0,True,,,,10,0,0.0,0,,
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,variety_id,INTEGER,0,False,,rice_variety,variety_id,10,10,100.0,0,,
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,growth_stage,TEXT,0,False,,,,10,0,0.0,0,,
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,kc,REAL,0,False,,,,10,8,80.0,0,1.05,1.2
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,parameter_name,TEXT,0,False,,,,10,0,0.0,0,,
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,parameter_value,REAL,0,False,,,,10,2,20.0,0,1.05,200.0
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,unit,TEXT,0,False,,,,10,0,0.0,0,,
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,valid_conditions,TEXT,0,False,,,,10,0,0.0,0,,
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,source_url,TEXT,0,False,,,,10,0,0.0,0,,
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,data_status,TEXT,0,False,,,,10,0,0.0,0,,
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,value_min,REAL,0,False,,,,10,0,0.0,0,0.6,200.0
+crop_water_parameter,معاملات ومعلمات احتياج المياه، وبعضها مرجعي أو افتراضي.,value_max,REAL,0,False,,,,10,0,0.0,0,0.9,200.0
+data_source,مصادر البيانات وروابطها وملاحظاتها.,source_id,INTEGER,1,False,,,,21,0,0.0,0,1,21
+data_source,مصادر البيانات وروابطها وملاحظاتها.,name,TEXT,0,True,,,,21,0,0.0,0,,
+data_source,مصادر البيانات وروابطها وملاحظاتها.,url,TEXT,0,False,,,,21,2,9.5238,0,,
+data_source,مصادر البيانات وروابطها وملاحظاتها.,notes,TEXT,0,False,,,,21,2,9.5238,0,,
+database_metadata,ملاحظات النسخ والاستيراد وإصدارات مراحل البناء.,item,TEXT,0,False,,,,37,0,0.0,0,,
+database_metadata,ملاحظات النسخ والاستيراد وإصدارات مراحل البناء.,details,TEXT,0,False,,,,37,0,0.0,0,,
+district,المحافظة والمراكز الإدارية المستخدمة في الربط المكاني.,district_id,INTEGER,1,False,,,,11,0,0.0,0,1,11
+district,المحافظة والمراكز الإدارية المستخدمة في الربط المكاني.,name_en,TEXT,0,True,,,,11,0,0.0,0,,
+district,المحافظة والمراكز الإدارية المستخدمة في الربط المكاني.,name_ar,TEXT,0,False,,,,11,0,0.0,0,,
+district,المحافظة والمراكز الإدارية المستخدمة في الربط المكاني.,admin_level,INTEGER,0,True,2,,,11,0,0.0,0,1,2
+district,المحافظة والمراكز الإدارية المستخدمة في الربط المكاني.,parent_id,INTEGER,0,False,,district,district_id,11,1,9.0909,0,1,1
+field,هوية/موقع قطعة المزارع؛ فارغ لعدم وجود بيانات حقول ميدانية.,field_id,INTEGER,1,False,,,,0,0,0.0,0,,
+field,هوية/موقع قطعة المزارع؛ فارغ لعدم وجود بيانات حقول ميدانية.,point_id,TEXT,0,False,,grid_point,point_id,0,0,0.0,0,,
+field,هوية/موقع قطعة المزارع؛ فارغ لعدم وجود بيانات حقول ميدانية.,district_id,INTEGER,0,False,,district,district_id,0,0,0.0,0,,
+field,هوية/موقع قطعة المزارع؛ فارغ لعدم وجود بيانات حقول ميدانية.,area_feddan,REAL,0,False,,,,0,0,0.0,0,,
+field,هوية/موقع قطعة المزارع؛ فارغ لعدم وجود بيانات حقول ميدانية.,latitude,REAL,0,False,,,,0,0,0.0,0,,
+field,هوية/موقع قطعة المزارع؛ فارغ لعدم وجود بيانات حقول ميدانية.,longitude,REAL,0,False,,,,0,0,0.0,0,,
+field,هوية/موقع قطعة المزارع؛ فارغ لعدم وجود بيانات حقول ميدانية.,polygon_geojson,TEXT,0,False,,,,0,0,0.0,0,,
+field,هوية/موقع قطعة المزارع؛ فارغ لعدم وجود بيانات حقول ميدانية.,farmer_consent_id,TEXT,0,False,,,,0,0,0.0,0,,
+field_operation,عمليات حقلية مسجلة من المزارع؛ فارغ.,op_id,INTEGER,1,False,,,,0,0,0.0,0,,
+field_operation,عمليات حقلية مسجلة من المزارع؛ فارغ.,field_season_id,INTEGER,0,True,,field_season,field_season_id,0,0,0.0,0,,
+field_operation,عمليات حقلية مسجلة من المزارع؛ فارغ.,op_date,TEXT,0,False,,,,0,0,0.0,0,,
+field_operation,عمليات حقلية مسجلة من المزارع؛ فارغ.,op_type,TEXT,0,False,,,,0,0,0.0,0,,
+field_operation,عمليات حقلية مسجلة من المزارع؛ فارغ.,fertilizer_type,TEXT,0,False,,,,0,0,0.0,0,,
+field_operation,عمليات حقلية مسجلة من المزارع؛ فارغ.,amount_kg,REAL,0,False,,,,0,0,0.0,0,,
+field_operation,عمليات حقلية مسجلة من المزارع؛ فارغ.,notes,TEXT,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,field_season_id,INTEGER,1,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,field_id,INTEGER,0,True,,field,field_id,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,season_year,INTEGER,0,True,,season,season_year,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,variety_id,INTEGER,0,False,,rice_variety,variety_id,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,irrigation_method_id,INTEGER,0,False,,irrigation_method,method_id,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,pump_id,INTEGER,0,False,,pump_type,pump_id,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,sowing_date,TEXT,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,transplanting_date,TEXT,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,harvest_date,TEXT,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,cultivated_area_feddan,REAL,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,total_irrigation_m3_per_feddan,REAL,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,harvest_yield_ton_per_feddan,REAL,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,measurement_method,TEXT,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,data_collector,TEXT,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,source_notes,TEXT,0,False,,,,0,0,0.0,0,,
+field_season,موسم حقل ومخرجاته مثل إجمالي الري والغلة؛ فارغ.,establishment_method,TEXT,0,False,,,,0,0,0.0,0,,
+grid_point,نقاط الشبكة المرجعية للطقس والتربة.,point_id,TEXT,1,False,,,,38,0,0.0,0,,
+grid_point,نقاط الشبكة المرجعية للطقس والتربة.,latitude,REAL,0,True,,,,38,0,0.0,0,31.012854,31.512854
+grid_point,نقاط الشبكة المرجعية للطقس والتربة.,longitude,REAL,0,True,,,,38,0,0.0,0,30.518041,31.318041
+grid_point,نقاط الشبكة المرجعية للطقس والتربة.,district_id,INTEGER,0,False,,district,district_id,38,0,0.0,0,2,11
+grid_point,نقاط الشبكة المرجعية للطقس والتربة.,spatial_support,TEXT,0,False,,,,38,0,0.0,0,,
+groundwater_level,قياسات منسوب ماء جوفي نقطية؛ فارغ، مع وجود ملخص خريطة في الأدلة المنشورة.,measure_id,INTEGER,1,False,,,,0,0,0.0,0,,
+groundwater_level,قياسات منسوب ماء جوفي نقطية؛ فارغ، مع وجود ملخص خريطة في الأدلة المنشورة.,point_id,TEXT,0,False,,grid_point,point_id,0,0,0.0,0,,
+groundwater_level,قياسات منسوب ماء جوفي نقطية؛ فارغ، مع وجود ملخص خريطة في الأدلة المنشورة.,district_id,INTEGER,0,False,,district,district_id,0,0,0.0,0,,
+groundwater_level,قياسات منسوب ماء جوفي نقطية؛ فارغ، مع وجود ملخص خريطة في الأدلة المنشورة.,measured_on,TEXT,0,False,,,,0,0,0.0,0,,
+groundwater_level,قياسات منسوب ماء جوفي نقطية؛ فارغ، مع وجود ملخص خريطة في الأدلة المنشورة.,depth_m,REAL,0,False,,,,0,0,0.0,0,,
+groundwater_level,قياسات منسوب ماء جوفي نقطية؛ فارغ، مع وجود ملخص خريطة في الأدلة المنشورة.,source_id,INTEGER,0,False,,data_source,source_id,0,0,0.0,0,,
+irrigation_event,أحداث/ريات فعلية لحقول المستخدمين؛ فارغ.,event_id,INTEGER,1,False,,,,0,0,0.0,0,,
+irrigation_event,أحداث/ريات فعلية لحقول المستخدمين؛ فارغ.,field_season_id,INTEGER,0,True,,field_season,field_season_id,0,0,0.0,0,,
+irrigation_event,أحداث/ريات فعلية لحقول المستخدمين؛ فارغ.,event_date,TEXT,0,True,,,,0,0,0.0,0,,
+irrigation_event,أحداث/ريات فعلية لحقول المستخدمين؛ فارغ.,volume_m3,REAL,0,False,,,,0,0,0.0,0,,
+irrigation_event,أحداث/ريات فعلية لحقول المستخدمين؛ فارغ.,duration_hours,REAL,0,False,,,,0,0,0.0,0,,
+irrigation_event,أحداث/ريات فعلية لحقول المستخدمين؛ فارغ.,measurement_method,TEXT,0,False,,,,0,0,0.0,0,,
+irrigation_method,قاموس طرق الري.,method_id,INTEGER,1,False,,,,2,0,0.0,0,1,2
+irrigation_method,قاموس طرق الري.,name_en,TEXT,0,True,,,,2,0,0.0,0,,
+irrigation_method,قاموس طرق الري.,name_ar,TEXT,0,False,,,,2,0,0.0,0,,
+irrigation_method,قاموس طرق الري.,notes,TEXT,0,False,,,,2,2,100.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,measurement_id,INTEGER,1,False,,,,104,0,0.0,0,1,104
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,study_id,TEXT,0,True,,literature_study,study_id,104,0,0.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,sample_kind,TEXT,0,True,,,,104,0,0.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,sample_label,TEXT,0,True,,,,104,0,0.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,sample_year,INTEGER,0,False,,,,104,0,0.0,0,2020,2023
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,treatment_code,TEXT,0,False,,,,104,32,30.7692,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,depth_top_cm,REAL,0,False,,,,104,104,100.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,depth_bottom_cm,REAL,0,False,,,,104,104,100.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,parameter_name,TEXT,0,True,,,,104,0,0.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,parameter_value,REAL,0,True,,,,104,0,0.0,0,0.0,3835.461
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,unit,TEXT,0,True,,,,104,0,0.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,source_locator,TEXT,0,True,,,,104,0,0.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,data_status,TEXT,0,True,,,,104,0,0.0,0,,
+literature_environmental_measurement,قياسات بيئية منشورة طويلة الشكل: تربة/مياه/ملخصات خرائطية مع مصدر وحالة.,source_url,TEXT,0,True,,,,104,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,evidence_id,INTEGER,1,False,,,,19,0,0.0,0,7,25
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,study_id,TEXT,0,True,,literature_study,study_id,19,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,crop_of_interest,TEXT,0,False,,,,19,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,factor_name,TEXT,0,True,,,,19,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,factor_level,TEXT,0,False,,,,19,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,outcome,TEXT,0,True,,,,19,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,result_summary,TEXT,0,True,,,,19,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,statistical_result,TEXT,0,False,,,,19,15,78.9474,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,study_context,TEXT,0,False,,,,19,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,source_locator,TEXT,0,False,,,,19,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,data_status,TEXT,0,True,,,,19,0,0.0,0,,
+literature_evidence,نتائج واستنتاجات وصفية من دراسات منشورة.,source_url,TEXT,0,True,,,,19,0,0.0,0,,
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,study_id,TEXT,1,False,,,,18,0,0.0,0,,
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,title,TEXT,0,True,,,,18,0,0.0,0,,
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,authors,TEXT,0,False,,,,18,0,0.0,0,,
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,publication_year,INTEGER,0,False,,,,18,0,0.0,0,2002,2025
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,doi,TEXT,0,False,,,,18,4,22.2222,0,,
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,source_url,TEXT,0,True,,,,18,0,0.0,0,,
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,location_name,TEXT,0,False,,,,18,0,0.0,0,,
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,latitude,REAL,0,False,,,,18,13,72.2222,0,31.091944,31.1167
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,longitude,REAL,0,False,,,,18,13,72.2222,0,30.866667,30.95
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,methods_summary,TEXT,0,False,,,,18,0,0.0,0,,
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,limitations,TEXT,0,False,,,,18,0,0.0,0,,
+literature_study,بيانات تعريف الدراسات المنشورة وحدودها.,data_status,TEXT,0,True,,,,18,0,0.0,0,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,observation_id,INTEGER,1,False,,,,688,0,0.0,0,249,936
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,study_id,TEXT,0,True,,literature_study,study_id,688,0,0.0,0,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,study_year,INTEGER,0,False,,,,688,79,11.4826,0,2000,2024
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,observation_period,TEXT,0,True,,,,688,0,0.0,0,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,preceding_crop,TEXT,0,False,,,,688,358,52.0349,0,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,puddling,TEXT,0,False,,,,688,198,28.7791,64,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,depth_top_cm,REAL,0,False,,,,688,548,79.6512,0,0.0,45.0
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,depth_bottom_cm,REAL,0,False,,,,688,548,79.6512,0,15.0,60.0
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,metric_name,TEXT,0,True,,,,688,0,0.0,0,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,metric_value,REAL,0,True,,,,688,0,0.0,0,0.0052,14842.0
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,unit,TEXT,0,True,,,,688,0,0.0,0,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,aggregation_level,TEXT,0,True,,,,688,0,0.0,0,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,replicate_count,INTEGER,0,False,,,,688,398,57.8488,0,3,4
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,source_locator,TEXT,0,True,,,,688,0,0.0,0,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,data_status,TEXT,0,True,,,,688,0,0.0,0,,
+literature_trial_observation,ملاحظات طويلة الشكل من تجارب منشورة (تربة/ماء/مناخ/محصول).,source_url,TEXT,0,True,,,,688,0,0.0,0,,
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,result_id,INTEGER,1,False,,,,470,0,0.0,0,1,772
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,study_id,TEXT,0,True,,literature_study,study_id,470,0,0.0,0,,
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,season_year,INTEGER,0,True,,,,470,0,0.0,0,2006,2023
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,variety_id,INTEGER,0,False,,rice_variety,variety_id,470,110,23.4043,0,5,14
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,irrigation_regime,TEXT,0,True,,,,470,0,0.0,0,,
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,irrigation_interval_days,REAL,0,False,,,,470,438,93.1915,0,6.0,9.0
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,row_spacing_cm,REAL,0,False,,,,470,422,89.7872,0,15.0,30.0
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,hill_spacing_cm,REAL,0,False,,,,470,422,89.7872,0,20.0,20.0
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,metric_name,TEXT,0,True,,,,470,0,0.0,0,,
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,metric_value,REAL,0,True,,,,470,0,0.0,0,0.1,6617.0
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,unit,TEXT,0,True,,,,470,0,0.0,0,,
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,table_reference,TEXT,0,False,,,,470,0,0.0,0,,
+literature_trial_result,نتائج رقمية بحسب الدراسة والسنة والصنف والمعاملة والمقياس.,data_status,TEXT,0,True,,,,470,0,0.0,0,,
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,inventory_id,INTEGER,1,False,,,,1,0,0.0,0,1,1
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,survey_year,INTEGER,0,True,,,,1,0,0.0,0,2023,2023
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,source_label,TEXT,0,True,,,,1,0,0.0,0,,
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,admin_level_status,TEXT,0,True,,,,1,0,0.0,0,,
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,mobile_count,INTEGER,0,False,,,,1,0,0.0,0,11090,11090
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,stationary_count,INTEGER,0,False,,,,1,0,0.0,0,464,464
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,total_count,INTEGER,0,False,,,,1,0,0.0,0,11554,11554
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,source_url,TEXT,0,True,,,,1,0,0.0,0,,
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,data_status,TEXT,0,True,,,,1,0,0.0,0,,
+machinery_inventory,جرد حكومي إجمالي للآلات؛ لا يمثل قوائم مضخات مزارعين.,notes,TEXT,0,False,,,,1,0,0.0,0,,
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,rule_id,INTEGER,1,False,,,,7,0,0.0,0,1,7
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,topic,TEXT,0,True,,,,7,0,0.0,0,,
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,variety_id,INTEGER,0,False,,rice_variety,variety_id,7,7,100.0,0,,
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,district_id,INTEGER,0,False,,district,district_id,7,6,85.7143,0,1,1
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,rule_text,TEXT,0,True,,,,7,0,0.0,0,,
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,value_num,REAL,0,False,,,,7,0,0.0,0,15.0,1076000.0
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,unit,TEXT,0,False,,,,7,0,0.0,0,,
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,valid_from,TEXT,0,False,,,,7,7,100.0,0,,
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,valid_to,TEXT,0,False,,,,7,7,100.0,0,,
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,source_url,TEXT,0,False,,,,7,0,0.0,0,,
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,source_status,TEXT,0,False,,,,7,0,0.0,0,,
+ministry_rule,قواعد منسوبة لتوصيات إرشادية؛ بعض السجلات ثانوية وغير متحقق منها.,review_notes,TEXT,0,False,,,,7,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,reference_id,TEXT,1,False,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,crop,TEXT,0,True,'rice',,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,target_name_ar,TEXT,0,True,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,target_name_en,TEXT,0,False,,,,5,5,100.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,issue_type,TEXT,0,True,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,symptom_summary_ar,TEXT,0,False,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,observation_window_ar,TEXT,0,False,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,action_timing_ar,TEXT,0,False,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,management_note_ar,TEXT,0,False,,,,5,0,0.0,4,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,pesticide_product,TEXT,0,False,,,,5,5,100.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,active_ingredient,TEXT,0,False,,,,5,5,100.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,rate_value,REAL,0,False,,,,5,5,100.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,rate_unit,TEXT,0,False,,,,5,5,100.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,preharvest_interval_days,INTEGER,0,False,,,,5,5,100.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,source_year,INTEGER,0,False,,,,5,0,0.0,0,2025,2025
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,source_page,TEXT,0,False,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,source_url,TEXT,0,True,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,source_quality,TEXT,0,True,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,operational_status,TEXT,0,True,,,,5,0,0.0,0,,
+plant_protection_reference,أعراض ونوافذ رصد/توقيت؛ ليست وصفات مبيدات أو جرعات.,notes,TEXT,0,False,,,,5,0,0.0,0,,
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,season_year,INTEGER,1,True,,season,season_year,266,0,0.0,0,2017,2023
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,point_id,TEXT,2,True,,grid_point,point_id,266,0,0.0,0,,
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,season_start_date,TEXT,0,False,,,,266,0,0.0,0,,
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,season_end_date,TEXT,0,False,,,,266,0,0.0,0,,
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,weather_day_count,INTEGER,0,False,,,,266,0,0.0,0,175,175
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,tmin_c_season_mean,REAL,0,False,,,,266,0,0.0,0,20.3323,24.0279
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,tmax_c_season_mean,REAL,0,False,,,,266,0,0.0,0,29.0743,37.5357
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,relative_humidity_pct_season_mean,REAL,0,False,,,,266,0,0.0,0,53.0197,67.4287
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,wind_speed_m_s_season_mean,REAL,0,False,,,,266,0,0.0,0,2.7414,4.1949
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,solar_radiation_mj_m2_day_season_mean,REAL,0,False,,,,266,0,0.0,0,23.4187,24.6977
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,pressure_kpa_season_mean,REAL,0,False,,,,266,0,0.0,0,100.9721,101.1613
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,rainfall_season_mm,REAL,0,False,,,,266,0,0.0,0,1.08,84.28
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,et0_season_mm,REAL,0,False,,,,266,0,0.0,0,1023.7115,1222.9178
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,estimated_etc_season_mm,REAL,0,False,,,,266,0,0.0,0,1132.5125,1356.1185
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,estimated_etc_minus_rain_mm,REAL,0,False,,,,266,0,0.0,0,1084.9915,1354.7685
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,water_values_status,TEXT,0,False,,,,266,0,0.0,0,,
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,water_method,TEXT,0,False,,,,266,0,0.0,0,,
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,calendar_status,TEXT,0,False,,,,266,0,0.0,0,,
+point_season_summary,ملخصات مناخية ومائية مشتقة لكل نقطة وموسم.,training_readiness,TEXT,0,False,,,,266,0,0.0,0,,
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,pump_series_id,INTEGER,1,False,,,,6,0,0.0,0,1,6
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,manufacturer,TEXT,0,True,,,,6,0,0.0,0,,
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,series_name,TEXT,0,True,,,,6,0,0.0,0,,
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,pump_type,TEXT,0,False,,,,6,0,0.0,0,,
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,outlet_diameter_in,REAL,0,False,,,,6,0,0.0,0,6.0,8.0
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,min_flow_m3_h,REAL,0,False,,,,6,3,50.0,0,16.0,90.0
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,max_flow_m3_h,REAL,0,False,,,,6,0,0.0,0,80.0,220.0
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,max_head_m,REAL,0,False,,,,6,0,0.0,0,325.0,770.0
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,frequency_hz,TEXT,0,False,,,,6,0,0.0,0,,
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,power_min_kw,REAL,0,False,,,,6,6,100.0,0,,
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,power_max_kw,REAL,0,False,,,,6,6,100.0,0,,
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,operating_conditions,TEXT,0,False,,,,6,0,0.0,0,,
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,source_url,TEXT,0,True,,,,6,0,0.0,0,,
+pump_catalog_series,نطاقات مواصفات سلاسل مضخات من كتالوج مصنع، وليست نقاط أداء ميدانية.,data_status,TEXT,0,True,,,,6,0,0.0,0,,
+pump_type,أنواع/تصرفات موحدة لمضخات مستخدمين؛ فارغ لغياب موديل ونقطة تشغيل مؤكدة.,pump_id,INTEGER,1,False,,,,0,0,0.0,0,,
+pump_type,أنواع/تصرفات موحدة لمضخات مستخدمين؛ فارغ لغياب موديل ونقطة تشغيل مؤكدة.,name_en,TEXT,0,True,,,,0,0,0.0,0,,
+pump_type,أنواع/تصرفات موحدة لمضخات مستخدمين؛ فارغ لغياب موديل ونقطة تشغيل مؤكدة.,name_ar,TEXT,0,False,,,,0,0,0.0,0,,
+pump_type,أنواع/تصرفات موحدة لمضخات مستخدمين؛ فارغ لغياب موديل ونقطة تشغيل مؤكدة.,power_hp,REAL,0,False,,,,0,0,0.0,0,,
+pump_type,أنواع/تصرفات موحدة لمضخات مستخدمين؛ فارغ لغياب موديل ونقطة تشغيل مؤكدة.,discharge_m3_per_hour,REAL,0,False,,,,0,0,0.0,0,,
+pump_type,أنواع/تصرفات موحدة لمضخات مستخدمين؛ فارغ لغياب موديل ونقطة تشغيل مؤكدة.,fuel_type,TEXT,0,False,,,,0,0,0.0,0,,
+pump_type,أنواع/تصرفات موحدة لمضخات مستخدمين؛ فارغ لغياب موديل ونقطة تشغيل مؤكدة.,notes,TEXT,0,False,,,,0,0,0.0,0,,
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,stat_id,INTEGER,1,False,,,,7,0,0.0,0,1,7
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,season_year,INTEGER,0,True,,season,season_year,7,0,0.0,0,2017,2023
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,district_id,INTEGER,0,True,,district,district_id,7,0,0.0,0,1,1
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,crop,TEXT,0,True,,,,7,0,0.0,0,,
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,season_label,TEXT,0,False,,,,7,0,0.0,0,,
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,area_feddan,REAL,0,False,,,,7,0,0.0,0,190460.0,333160.0
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,production_ton,REAL,0,False,,,,7,0,0.0,0,760126.0,1319880.0
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,yield_ton_per_feddan,REAL,0,False,,,,7,0,0.0,0,3.9617,4.071
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,data_level,TEXT,0,False,,,,7,0,0.0,0,,
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,source_url,TEXT,0,False,,,,7,0,0.0,0,,
+regional_stats,إحصاءات الأرز السنوية على مستوى المحافظة.,source_status,TEXT,0,False,,,,7,0,0.0,0,,
+rice_daily_water_demand,تقدير يومي مرجعي لاحتياج ماء الأرز ETc.,point_id,TEXT,1,True,,grid_point,point_id,46550,0,0.0,0,,
+rice_daily_water_demand,تقدير يومي مرجعي لاحتياج ماء الأرز ETc.,obs_date,TEXT,2,True,,,,46550,0,0.0,0,,
+rice_daily_water_demand,تقدير يومي مرجعي لاحتياج ماء الأرز ETc.,et0_mm_day,REAL,0,False,,,,46550,0,0.0,0,2.1655,11.4547
+rice_daily_water_demand,تقدير يومي مرجعي لاحتياج ماء الأرز ETc.,estimated_kc,REAL,0,False,,,,46550,0,0.0,0,0.7582,1.2
+rice_daily_water_demand,تقدير يومي مرجعي لاحتياج ماء الأرز ETc.,estimated_etc_mm_day,REAL,0,False,,,,46550,0,0.0,0,1.7481,12.0274
+rice_daily_water_demand,تقدير يومي مرجعي لاحتياج ماء الأرز ETc.,method_note,TEXT,0,False,,,,46550,0,0.0,0,,
+rice_variety,قاموس أصناف الأرز ومدد الموسم المتاحة.,variety_id,INTEGER,1,False,,,,19,0,0.0,0,1,19
+rice_variety,قاموس أصناف الأرز ومدد الموسم المتاحة.,name_en,TEXT,0,True,,,,19,0,0.0,0,,
+rice_variety,قاموس أصناف الأرز ومدد الموسم المتاحة.,name_ar,TEXT,0,False,,,,19,1,5.2632,0,,
+rice_variety,قاموس أصناف الأرز ومدد الموسم المتاحة.,season_length_days,INTEGER,0,False,,,,19,2,10.5263,0,120,145
+rice_variety,قاموس أصناف الأرز ومدد الموسم المتاحة.,source_url,TEXT,0,False,,,,19,1,5.2632,0,,
+rice_variety,قاموس أصناف الأرز ومدد الموسم المتاحة.,data_status,TEXT,0,False,,,,19,0,0.0,0,,
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,guide_row_id,INTEGER,1,False,,,,14,0,0.0,0,1,14
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,variety_id,INTEGER,0,True,,rice_variety,variety_id,14,0,0.0,0,2,18
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,guide_date,TEXT,0,True,,,,14,0,0.0,0,,
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,maturity_days_min,REAL,0,False,,,,14,1,7.1429,0,114.0,150.0
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,maturity_days_max,REAL,0,False,,,,14,1,7.1429,0,120.0,150.0
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,yield_min_ton_feddan,REAL,0,False,,,,14,2,14.2857,0,4.0,5.5
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,yield_max_ton_feddan,REAL,0,False,,,,14,2,14.2857,0,4.3,6.5
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,planting_spacing_cm,TEXT,0,False,,,,14,3,21.4286,0,,
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,hills_per_m2,REAL,0,False,,,,14,3,21.4286,0,25.0,36.0
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,plants_per_hill_min,REAL,0,False,,,,14,5,35.7143,0,1.0,4.0
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,plants_per_hill_max,REAL,0,False,,,,14,5,35.7143,0,2.0,5.0
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,urea_bags_per_feddan,REAL,0,False,,,,14,5,35.7143,0,2.0,3.0
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,suitability_note,TEXT,0,False,,,,14,2,14.2857,0,,
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,salinity_response,TEXT,0,False,,,,14,3,21.4286,0,,
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,water_stress_response,TEXT,0,False,,,,14,9,64.2857,0,,
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,disease_note,TEXT,0,False,,,,14,2,14.2857,0,,
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,source_url,TEXT,0,True,,,,14,0,0.0,0,,
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,source_status,TEXT,0,True,,,,14,0,0.0,0,,
+rice_variety_field_guide,بطاقات إرشادية منفصلة للصنف مع مصدر وتاريخ ونطاق مدة عند توافره.,notes,TEXT,0,False,,,,14,2,14.2857,0,,
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,variety_id,INTEGER,1,False,,rice_variety,variety_id,18,0,0.0,0,2,19
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,expected_yield_min_ton_ha,REAL,0,False,,,,18,1,5.5556,0,6.8,11.5
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,expected_yield_max_ton_ha,REAL,0,False,,,,18,1,5.5556,0,6.8,13.0
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,grain_type,TEXT,0,False,,,,18,1,5.5556,0,,
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,quality_note,TEXT,0,False,,,,18,1,5.5556,0,,
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,plant_type_note,TEXT,0,False,,,,18,1,5.5556,0,,
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,lodging_note,TEXT,0,False,,,,18,16,88.8889,0,,
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,disease_note,TEXT,0,False,,,,18,1,5.5556,0,,
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,soil_suitability,TEXT,0,False,,,,18,1,5.5556,0,,
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,temperature_min_c,REAL,0,False,,,,18,0,0.0,0,25.0,25.0
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,temperature_max_c,REAL,0,False,,,,18,0,0.0,0,35.0,35.0
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,source_url,TEXT,0,True,,,,18,0,0.0,0,,
+rice_variety_reference,صفات مرجعية للأصناف من ARC.,data_status,TEXT,0,True,,,,18,0,0.0,0,,
+season,قاموس السنوات/المواسم.,season_year,INTEGER,1,False,,,,7,0,0.0,0,2017,2023
+season,قاموس السنوات/المواسم.,start_date,TEXT,0,False,,,,7,0,0.0,0,,
+season,قاموس السنوات/المواسم.,end_date,TEXT,0,False,,,,7,0,0.0,0,,
+sentinel2_scene,فهرس مشاهد Sentinel-2، وليس الصور أو مؤشرات الغطاء النباتي.,scene_id,TEXT,1,False,,,,3775,0,0.0,0,,
+sentinel2_scene,فهرس مشاهد Sentinel-2، وليس الصور أو مؤشرات الغطاء النباتي.,tile_id,TEXT,0,False,,,,3775,0,0.0,0,,
+sentinel2_scene,فهرس مشاهد Sentinel-2، وليس الصور أو مؤشرات الغطاء النباتي.,acquired_at,TEXT,0,False,,,,3775,0,0.0,0,,
+sentinel2_scene,فهرس مشاهد Sentinel-2، وليس الصور أو مؤشرات الغطاء النباتي.,cloud_cover_percent,REAL,0,False,,,,3775,0,0.0,0,0.0,79.97
+sentinel2_scene,فهرس مشاهد Sentinel-2، وليس الصور أو مؤشرات الغطاء النباتي.,collection,TEXT,0,False,,,,3775,0,0.0,0,,
+sentinel2_scene,فهرس مشاهد Sentinel-2، وليس الصور أو مؤشرات الغطاء النباتي.,bbox_json,TEXT,0,False,,,,3775,0,0.0,0,,
+sentinel2_scene,فهرس مشاهد Sentinel-2، وليس الصور أو مؤشرات الغطاء النباتي.,source_id,INTEGER,0,False,,data_source,source_id,3775,0,0.0,0,2,2
+sentinel2_shortlist,المشاهد المرشحة للمعالجة اللاحقة.,scene_id,TEXT,1,False,,sentinel2_scene,scene_id,119,0,0.0,0,,
+sentinel2_shortlist,المشاهد المرشحة للمعالجة اللاحقة.,dekad,INTEGER,0,False,,,,119,0,0.0,0,1,3
+sentinel2_shortlist,المشاهد المرشحة للمعالجة اللاحقة.,boundary_overlap_percent_approx,REAL,0,False,,,,119,0,0.0,0,0.011,60.149
+soil_awc,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,point_id,TEXT,1,False,,grid_point,point_id,38,0,0.0,0,,
+soil_awc,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,smu_id,INTEGER,0,False,,,,38,0,0.0,0,7001,16511
+soil_awc,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,awc_smu_mm_per_m,REAL,0,False,,,,38,0,0.0,0,0.0,172.0
+soil_awc,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,awc_rootable_mm_estimate,REAL,0,False,,,,38,0,0.0,0,0.0,178.0
+soil_awc,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,root_depth_class,TEXT,0,False,,,,38,0,0.0,0,,
+soil_awc,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,awc_component_status,TEXT,0,False,,,,38,0,0.0,0,,
+soil_awc,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,model_screening_status,TEXT,0,False,,,,38,0,0.0,0,,
+soil_awc,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,awc_use_recommendation,TEXT,0,False,,,,38,0,0.0,0,,
+soil_awc,السعة المائية المتاحة وتقدير عمق الجذر؛ مرجع خرائطي غير حقلي.,review_status,TEXT,0,False,,,,38,0,0.0,0,,
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,point_id,TEXT,1,False,,grid_point,point_id,38,0,0.0,0,,
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,smu_id,INTEGER,0,False,,,,38,0,0.0,0,7001,16511
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,top_depth_cm,REAL,0,False,,,,38,0,0.0,0,0.0,0.0
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,bottom_depth_cm,REAL,0,False,,,,38,0,0.0,0,20.0,20.0
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,sand_pct,REAL,0,False,,,,38,2,5.2632,0,21.0,50.0
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,silt_pct,REAL,0,False,,,,38,2,5.2632,0,24.0,40.0
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,clay_pct,REAL,0,False,,,,38,2,5.2632,0,20.0,55.0
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,bulk,REAL,0,False,,,,38,2,5.2632,0,1.3300000429153442,1.6399999856948853
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,organic_carbon,REAL,0,False,,,,38,2,5.2632,0,0.6200000047683716,0.9010000228881836
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,ph_water,REAL,0,False,,,,38,2,5.2632,0,7.300000190734863,8.5
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,texture_usda,TEXT,0,False,,,,38,2,5.2632,0,,
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,texture_soter,TEXT,0,False,,,,38,0,0.0,0,,
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,match_found,TEXT,0,False,,,,38,0,0.0,0,,
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,soil_data_status,TEXT,0,False,,,,38,0,0.0,0,,
+soil_point,خصائص تربة مرتبطة بنقاط الشبكة ووحدات الخريطة.,missing_properties,TEXT,0,False,,,,38,36,94.7368,0,,
+soil_salinity,قياس ملوحة نقطي/حقلي؛ فارغ. بعض دراسات الملوحة محفوظة في أدلة منفصلة.,measure_id,INTEGER,1,False,,,,0,0,0.0,0,,
+soil_salinity,قياس ملوحة نقطي/حقلي؛ فارغ. بعض دراسات الملوحة محفوظة في أدلة منفصلة.,point_id,TEXT,0,True,,grid_point,point_id,0,0,0.0,0,,
+soil_salinity,قياس ملوحة نقطي/حقلي؛ فارغ. بعض دراسات الملوحة محفوظة في أدلة منفصلة.,measured_on,TEXT,0,False,,,,0,0,0.0,0,,
+soil_salinity,قياس ملوحة نقطي/حقلي؛ فارغ. بعض دراسات الملوحة محفوظة في أدلة منفصلة.,depth_cm,REAL,0,False,,,,0,0,0.0,0,,
+soil_salinity,قياس ملوحة نقطي/حقلي؛ فارغ. بعض دراسات الملوحة محفوظة في أدلة منفصلة.,ec_ds_m,REAL,0,False,,,,0,0,0.0,0,,
+soil_salinity,قياس ملوحة نقطي/حقلي؛ فارغ. بعض دراسات الملوحة محفوظة في أدلة منفصلة.,esp_pct,REAL,0,False,,,,0,0,0.0,0,,
+soil_salinity,قياس ملوحة نقطي/حقلي؛ فارغ. بعض دراسات الملوحة محفوظة في أدلة منفصلة.,source_id,INTEGER,0,False,,data_source,source_id,0,0,0.0,0,,
+vegetation_index,قيم NDVI/EVI؛ فارغ ومؤجل حسب نطاق المشروع.,point_id,TEXT,1,True,,grid_point,point_id,0,0,0.0,0,,
+vegetation_index,قيم NDVI/EVI؛ فارغ ومؤجل حسب نطاق المشروع.,scene_id,TEXT,2,True,,sentinel2_scene,scene_id,0,0,0.0,0,,
+vegetation_index,قيم NDVI/EVI؛ فارغ ومؤجل حسب نطاق المشروع.,ndvi,REAL,0,False,,,,0,0,0.0,0,,
+vegetation_index,قيم NDVI/EVI؛ فارغ ومؤجل حسب نطاق المشروع.,evi,REAL,0,False,,,,0,0,0.0,0,,
+vegetation_index,قيم NDVI/EVI؛ فارغ ومؤجل حسب نطاق المشروع.,valid_pixel_pct,REAL,0,False,,,,0,0,0.0,0,,
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,season_year,INTEGER,1,True,,season,season_year,266,0,0.0,0,2017,2023
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,point_id,TEXT,2,True,,grid_point,point_id,266,0,0.0,0,,
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,season_days,INTEGER,0,False,,,,266,0,0.0,0,175,175
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,estimated_etc_season_mm,REAL,0,False,,,,266,0,0.0,0,1132.51,1356.12
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,rainfall_season_mm,REAL,0,False,,,,266,0,0.0,0,1.08,84.28
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,land_preparation_assumption_mm,REAL,0,False,,,,266,0,0.0,0,200.0,200.0
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,establishment_water_assumption_mm,REAL,0,False,,,,266,0,0.0,0,100.0,100.0
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,seepage_low_mm_day,REAL,0,False,,,,266,0,0.0,0,4.0,4.0
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,seepage_high_mm_day,REAL,0,False,,,,266,0,0.0,0,8.0,8.0
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,scenario_low_depth_mm,REAL,0,False,,,,266,0,0.0,0,2084.99,2354.77
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,scenario_high_depth_mm,REAL,0,False,,,,266,0,0.0,0,2784.99,3054.77
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,scenario_low_m3_per_feddan,REAL,0,False,,,,266,0,0.0,0,8756.96,9890.03
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,scenario_high_m3_per_feddan,REAL,0,False,,,,266,0,0.0,0,11696.96,12830.03
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,actual_irrigation_status,TEXT,0,False,,,,266,0,0.0,0,,
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,assumption_note,TEXT,0,False,,,,266,0,0.0,0,,
+water_scenario,سيناريوهات عامة لكمية الماء، وليست قياسًا فعليًا.,method_status,TEXT,0,False,,,,266,0,0.0,0,,
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,season_year,INTEGER,0,False,,,,2660,0,0.0,0,2017,2023
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,point_id,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,variety_id,INTEGER,0,False,,,,2660,0,0.0,0,2,9
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,duration_basis,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,transplant_date,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,harvest_date,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,field_days,INTEGER,0,False,,,,2660,0,0.0,0,101,143
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,missing_weather_days,INTEGER,0,False,,,,2660,0,0.0,0,0,0
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,estimated_etc_mm,REAL,0,False,,,,2660,0,0.0,0,705.2,1077.2
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,rainfall_mm,REAL,0,False,,,,2660,0,0.0,0,0.0,84.59
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,scenario_low_depth_mm,REAL,0,False,,,,2660,0,0.0,0,1404.5,1947.06
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,scenario_high_depth_mm,REAL,0,False,,,,2660,0,0.0,0,1808.5,2519.06
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,scenario_low_m3_per_feddan,REAL,0,False,,,,2660,0,0.0,0,5898.91,8177.65
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,scenario_high_m3_per_feddan,REAL,0,False,,,,2660,0,0.0,0,7595.71,10580.05
+water_scenario_by_variety,سيناريوهات أولية حسب الصنف؛ راجع الإصدار v3 قبل الاستخدام.,method_status,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,season_year,INTEGER,0,False,,,,2660,0,0.0,0,2017,2023
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,point_id,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,variety_id,INTEGER,0,False,,,,2660,0,0.0,0,2,9
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,duration_basis,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,transplant_date,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,harvest_date,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,field_days,INTEGER,0,False,,,,2660,0,0.0,0,101,143
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,missing_weather_days,INTEGER,0,False,,,,2660,0,0.0,0,0,0
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,estimated_etc_mm,REAL,0,False,,,,2660,0,0.0,0,705.2,1077.2
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,rainfall_mm,REAL,0,False,,,,2660,0,0.0,0,0.0,84.59
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,scenario_low_depth_mm,REAL,0,False,,,,2660,0,0.0,0,1189.48,1947.06
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,scenario_high_depth_mm,REAL,0,False,,,,2660,0,0.0,0,1391.48,2519.06
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,scenario_low_m3_per_feddan,REAL,0,False,,,,2660,0,0.0,0,4995.82,8177.65
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,scenario_high_m3_per_feddan,REAL,0,False,,,,2660,0,0.0,0,5844.22,10580.05
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,method_status,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,seepage_low_mm_day,REAL,0,False,,,,2660,0,0.0,0,1.0,4.0
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,seepage_high_mm_day,REAL,0,False,,,,2660,0,0.0,0,3.0,8.0
+water_scenario_by_variety_clay,سيناريوهات مكيّفة مع افتراضات القوام؛ ليست معايرة ميدانية.,seepage_class,TEXT,0,False,,,,2660,0,0.0,0,,
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,season_year,INTEGER,0,False,,,,9044,0,0.0,0,2017,2023
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,point_id,TEXT,0,False,,,,9044,0,0.0,0,,
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,variety_id,INTEGER,0,False,,,,9044,0,0.0,0,2,19
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,duration_basis,TEXT,0,False,,,,9044,0,0.0,0,,
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,transplant_date,TEXT,0,False,,,,9044,0,0.0,0,,
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,harvest_date,TEXT,0,False,,,,9044,0,0.0,0,,
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,field_days,INTEGER,0,False,,,,9044,0,0.0,0,96,145
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,missing_weather_days,INTEGER,0,False,,,,9044,0,0.0,0,0,0
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,estimated_etc_mm,REAL,0,False,,,,9044,0,0.0,0,682.74,1097.12
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,rainfall_mm,REAL,0,False,,,,9044,0,0.0,0,0.0,84.83
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,seepage_low_mm_day,REAL,0,False,,,,9044,0,0.0,0,4.0,4.0
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,seepage_high_mm_day,REAL,0,False,,,,9044,0,0.0,0,8.0,8.0
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,kc_scale,REAL,0,False,,,,9044,0,0.0,0,1.0,1.0
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,core_low_mm,REAL,0,False,,,,9044,0,0.0,0,1065.08,1675.11
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,core_high_mm,REAL,0,False,,,,9044,0,0.0,0,1449.08,2255.11
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,core_low_m3_per_feddan,REAL,0,False,,,,9044,0,0.0,0,4473.34,7035.48
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,core_high_m3_per_feddan,REAL,0,False,,,,9044,0,0.0,0,6086.14,9471.48
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,prep_establishment_mm,REAL,0,False,,,,9044,0,0.0,0,300.0,300.0
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,with_prep_low_m3_per_feddan,REAL,0,False,,,,9044,0,0.0,0,5733.34,8295.48
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,with_prep_high_m3_per_feddan,REAL,0,False,,,,9044,0,0.0,0,7346.14,10731.48
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,method_status,TEXT,0,False,,,,9044,0,0.0,0,,
+water_scenario_by_variety_v3,أحدث إصدار سيناريوهات كمية الماء حسب الصنف؛ تقديرات مشتقة.,wind_scale,REAL,0,False,,,,9044,0,0.0,0,1.0,1.0
+weather_daily,تقديرات طقس يومية شبكية من NASA POWER؛ ليست قياسات محطة/حقل.,point_id,TEXT,1,True,,grid_point,point_id,1089840,0,0.0,0,,
+weather_daily,تقديرات طقس يومية شبكية من NASA POWER؛ ليست قياسات محطة/حقل.,obs_date,TEXT,2,True,,,,1089840,0,0.0,0,,
+weather_daily,تقديرات طقس يومية شبكية من NASA POWER؛ ليست قياسات محطة/حقل.,parameter,TEXT,3,True,,,,1089840,0,0.0,0,,
+weather_daily,تقديرات طقس يومية شبكية من NASA POWER؛ ليست قياسات محطة/حقل.,value,REAL,0,False,,,,1089840,1292,0.1185,0,0.0,485.52
+weather_daily,تقديرات طقس يومية شبكية من NASA POWER؛ ليست قياسات محطة/حقل.,unit,TEXT,0,False,,,,1089840,0,0.0,0,,
+weather_daily,تقديرات طقس يومية شبكية من NASA POWER؛ ليست قياسات محطة/حقل.,source_id,INTEGER,0,False,,data_source,source_id,1089840,0,0.0,0,1,1

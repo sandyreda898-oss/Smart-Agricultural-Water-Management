@@ -1,0 +1,13 @@
+﻿object_name,object_type
+crop_calendar,table
+crop_water_parameters,table
+database_metadata,table
+field_season_features,table
+governorate_year_reference,table
+rice_daily_water_demand,table
+rice_statistics,table
+rice_water_scenarios,table
+soil_samples,table
+weather_daily,table
+v_field_season_with_scenarios,view
+v_field_season_with_soil,view

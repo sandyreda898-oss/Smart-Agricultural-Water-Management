@@ -1,0 +1,31 @@
+{
+  "study_id": "ghazy2019_giza179",
+  "title": "Improving Irrigation Regimes and Plant Spacing to Maximize Rice Grain Yield and Water Productivity",
+  "authors": "Hasnaa A. Ghazy; B. B. Mikhael; I. S. El-Refaee",
+  "publication_year": 2019,
+  "doi": "10.21608/jpp.2019.77743",
+  "source_url": "https://jpp.journals.ekb.eg/article_77743_f9b526e5d27c1bf722163cd4fc68665d.pdf",
+  "location_name": "Experimental Farm, Sakha Research Station, Kafr El-Sheikh, Egypt",
+  "latitude": null,
+  "longitude": null,
+  "seasons": [2017, 2018],
+  "variety": "Giza 179",
+  "irrigation_regimes": ["continuous flooding", "every 6 days", "every 9 days"],
+  "plant_spacing_cm": [[15, 20], [20, 20], [25, 20], [30, 20]],
+  "trial_details": {
+    "seedling_age_days": 30,
+    "sowing_dates": {"2017": "2017-05-13", "2018": "2018-05-15"},
+    "fertilizer_n_kg_ha": 165,
+    "soil_texture": "clayey",
+    "water_measurement": "calibrated water meter"
+  },
+  "extract_file": "data/processed/rice_irrigation_trial_results.csv",
+  "extracted_metrics": ["grain_yield (t/ha)", "water_productivity (kg/m3)"],
+  "limitations": [
+    "Small experimental station plots with three replications; results are not representative farmer-field observations.",
+    "The paper reports treatment water productivity but the extracted tables do not provide absolute seasonal applied-water volumes by treatment.",
+    "Do not convert these results directly into pump run-time recommendations without local pump discharge and field calibration.",
+    "Yield results are influenced by the study's cultivar, clayey soil, seedling age, spacing, fertilizer package, and trial management."
+  ],
+  "data_status": "PRIMARY_RESEARCH_STATION_RESULTS_TRANSCRIBED_NOT_FARM_LABELS"
+}

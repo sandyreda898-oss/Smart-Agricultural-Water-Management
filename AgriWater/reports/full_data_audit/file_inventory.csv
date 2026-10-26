@@ -1,0 +1,106 @@
+﻿source_file,file_type,size_bytes,status,details
+config.json,.json,2216,skipped,JSON structure not tabular: unhashable type: 'list'
+project_file_inventory.csv,.csv,730227,ok,8640 rows x 4 columns
+source_registry.json,.json,2417,ok,6 rows x 6 columns
+database\agriwater_project.sqlite,.sqlite,120455168,ok,12 tables/views inspected
+reports\coverage_summary.json,.json,718,skipped,JSON structure not tabular: Mixing dicts with non-Series may lead to ambiguous ordering.
+reports\latest_report.json,.json,5962,skipped,JSON structure not tabular: Mixing dicts with non-Series may lead to ambiguous ordering.
+reports\project_file_inventory_20261022_123717.csv,.csv,9878,ok,100 rows x 4 columns
+reports\rice_annual_water_summary_2017_2023.csv,.csv,1105,ok,7 rows x 9 columns
+reports\sentinel2_annual_union_coverage.csv,.csv,501,ok,7 rows x 8 columns
+reports\sentinel2_download_manifest.csv,.csv,643,ok,2 rows x 8 columns
+reports\sentinel2_exact_intersection.csv,.csv,179283,ok,1690 rows x 10 columns
+reports\sentinel2_monthly_union_coverage.csv,.csv,2347,ok,42 rows x 9 columns
+reports\sentinel2_overlap_projected_audit.csv,.csv,16022,ok,119 rows x 14 columns
+reports\sentinel2_rice_candidates.csv,.csv,209603,ok,1781 rows x 10 columns
+reports\sentinel2_rice_shortlist.csv,.csv,12676,ok,119 rows x 10 columns
+reports\sentinel2_september_alternatives_projected.csv,.csv,9634,ok,89 rows x 8 columns
+reports\sentinel2_september_incremental_coverage.csv,.csv,10032,ok,89 rows x 9 columns
+reports\sentinel2_september_recommended_additions.csv,.csv,539,ok,2 rows x 10 columns
+reports\database_inventory\column_inventory.csv,.csv,47459,ok,951 rows x 3 columns
+reports\database_inventory\sqlite_objects.csv,.csv,356,ok,12 rows x 2 columns
+reports\database_inventory\table_inventory.csv,.csv,5939,ok,46 rows x 6 columns
+data\metadata\boundary_metadata.json,.json,2518,skipped,JSON structure not tabular: invalid literal for int() with base 10: 'boundaryLicense'
+data\metadata\field_survey_schema.json,.json,1021,skipped,JSON structure not tabular: Mixing dicts with non-Series may lead to ambiguous ordering.
+data\metadata\soilgrids_metadata.json,.json,574,skipped,JSON structure not tabular: All arrays must be of the same length
+data\processed\crop_water_parameters.csv,.csv,1405,ok,6 rows x 9 columns
+data\processed\field_survey_template.csv,.csv,381,ok,0 rows x 23 columns
+data\processed\hwsd2_awc_database_audit.csv,.csv,25133,ok,92 rows x 53 columns
+data\processed\hwsd2_awc_final.csv,.csv,3530,ok,8 rows x 21 columns
+data\processed\hwsd2_awc_final_review.csv,.csv,25461,ok,38 rows x 44 columns
+data\processed\hwsd2_awc_final_review_repaired.csv,.csv,27246,ok,38 rows x 44 columns
+data\processed\hwsd2_awc_rootable_depth_by_smu.csv,.csv,1792,ok,8 rows x 15 columns
+data\processed\hwsd2_awc_rootable_depth_point_candidates.csv,.csv,30121,ok,38 rows x 48 columns
+data\processed\hwsd2_awc_samples.csv,.csv,3826,ok,38 rows x 8 columns
+data\processed\hwsd2_awc_semantics_audit.csv,.csv,42103,ok,38 rows x 50 columns
+data\processed\hwsd2_awc_semantics_by_smu.csv,.csv,3706,ok,8 rows x 11 columns
+data\processed\hwsd2_awc_source_layer_records.csv,.csv,2886,ok,84 rows x 10 columns
+data\processed\hwsd2_awc_source_smu_records.csv,.csv,204,ok,8 rows x 5 columns
+data\processed\hwsd2_awc_validation.csv,.csv,1513,ok,8 rows x 15 columns
+data\processed\hwsd2_data_dictionary.json,.json,1716,skipped,JSON structure not tabular: All arrays must be of the same length
+data\processed\hwsd2_metadata_d_awc.csv,.csv,59,ok,7 rows x 2 columns
+data\processed\hwsd2_metadata_d_root_depth.csv,.csv,111,ok,4 rows x 2 columns
+data\processed\hwsd2_metadata_hwsd2_layers_metadata_awc_rootdepth.csv,.csv,149,ok,2 rows x 6 columns
+data\processed\hwsd2_metadata_hwsd2_smu_metadata_awc_rootdepth.csv,.csv,151,ok,2 rows x 6 columns
+data\processed\hwsd2_raster_spatial_check.csv,.csv,7155,ok,38 rows x 26 columns
+data\processed\hwsd2_soil_model_candidates.csv,.csv,32572,ok,36 rows x 50 columns
+data\processed\hwsd2_soil_model_screening.csv,.csv,33996,ok,38 rows x 50 columns
+data\processed\hwsd2_soil_samples.csv,.csv,5038,ok,38 rows x 18 columns
+data\processed\hwsd2_soil_samples_awc_review.csv,.csv,16282,ok,38 rows x 28 columns
+data\processed\hwsd2_soil_samples_clean.csv,.csv,5498,ok,38 rows x 20 columns
+data\processed\nasa_power_daily.csv,.csv,73470883,ok,777024 rows x 9 columns
+data\processed\nasa_power_daily.parquet,.parquet,1634541,ok,777024 rows x 9 columns
+data\processed\nasa_power_daily_units_fixed.csv,.csv,75996208,ok,777024 rows x 9 columns
+data\processed\nasa_power_daily_units_fixed.parquet,.parquet,1636718,ok,777024 rows x 9 columns
+data\processed\rice_crop_calendar.csv,.csv,3966,ok,7 rows x 12 columns
+data\processed\rice_daily_water_demand_2017_2023.csv,.csv,7336692,ok,46550 rows x 16 columns
+data\processed\rice_field_season_features_2017_2023.csv,.csv,161731,ok,266 rows x 42 columns
+data\processed\rice_governorate_year_reference_2017_2023.csv,.csv,977,ok,7 rows x 10 columns
+data\processed\rice_statistics_2017_2023.csv,.csv,842,ok,7 rows x 11 columns
+data\processed\rice_water_scenarios_2017_2023.csv,.csv,71303,ok,266 rows x 18 columns
+data\processed\rice_water_scenarios_annual_summary.csv,.csv,921,ok,7 rows x 7 columns
+data\processed\sentinel2_scene_catalog.csv,.csv,279316265,ok,3775 rows x 8 columns
+data\processed\sentinel2_scene_catalog.parquet,.parquet,43808482,ok,3775 rows x 8 columns
+data\raw\boundaries\geoboundaries_metadata.json,.json,1847,skipped,"JSON structure not tabular: If using all scalar values, you must pass an index"
+data\raw\sentinel2_catalog\page_0001.json,.json,11489860,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0002.json,.json,11553388,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0003.json,.json,11554926,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0004.json,.json,11554786,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0005.json,.json,11554662,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0006.json,.json,11555581,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0007.json,.json,10748689,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0008.json,.json,10515124,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0009.json,.json,10450779,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0010.json,.json,10446564,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0011.json,.json,10456825,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0012.json,.json,10502507,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0013.json,.json,11199601,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0014.json,.json,11553583,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0015.json,.json,11552869,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0016.json,.json,11552312,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0017.json,.json,11552588,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0018.json,.json,11553014,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0019.json,.json,11553439,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0020.json,.json,11552428,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0021.json,.json,11552402,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0022.json,.json,11552912,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0023.json,.json,11552159,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0024.json,.json,11552234,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0025.json,.json,11552336,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0026.json,.json,11553530,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0027.json,.json,11552703,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0028.json,.json,11552814,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0029.json,.json,11553094,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0030.json,.json,11554140,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0031.json,.json,11553328,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0032.json,.json,11553357,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0033.json,.json,11552981,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0034.json,.json,11552751,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0035.json,.json,11552212,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0036.json,.json,11552427,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0037.json,.json,11552848,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0038.json,.json,11553168,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0039.json,.json,11552393,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0040.json,.json,11552456,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0041.json,.json,11552332,skipped,JSON structure not tabular: All arrays must be of the same length
+data\raw\sentinel2_catalog\page_0042.json,.json,513864,skipped,JSON structure not tabular: All arrays must be of the same length
