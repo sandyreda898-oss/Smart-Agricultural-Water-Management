@@ -1,0 +1,7 @@
+validation_check,result,status
+Existing scenario comparison,New model lower than previous scenario estimates,CONSISTENCY_CHECK_ONLY
+ETc comparison,New stage-based ETc lower than previous ETc estimate,CONSISTENCY_CHECK_ONLY
+Literature irrigation benchmark,Model range does not overlap literature benchmark (678.6–1570.5 mm). Results are scenario estimates and are not field validated.,BENCHMARK_DISCREPANCY_REQUIRES_CAUTION
+Environmental water validation,No relevant water/percolation measurements available,NOT_AVAILABLE
+Irrigation efficiency,"60%, 70%, and 80% sensitivity scenarios; no measured efficiency",ASSUMPTION_SENSITIVITY
+Stored soil water,Not deducted because actual initial soil moisture is unavailable,NOT_AVAILABLE
