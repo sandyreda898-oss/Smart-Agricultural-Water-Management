@@ -1,0 +1,8 @@
+dataset,original_rows,cleaned_rows,duplicate_rows,missing_cells,invalid_dates,saved
+water_variety,9044,9044,0,0,"{'transplant_date': 0, 'harvest_date': 0}",True
+water_scenario,266,266,0,0,{},True
+daily_demand,46550,46550,0,0,{'obs_date': 0},True
+soil_awc,38,38,0,0,{},True
+soil_point,38,38,0,50,{},True
+weather,1089840,1089840,0,1292,{'obs_date': 0},True
+crop_parameters,10,10,0,20,{},True

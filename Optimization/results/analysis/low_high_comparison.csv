@@ -1,0 +1,3 @@
+demand_scenario,experiments,avg_demand,avg_allocation,avg_unmet_demand
+HIGH,35,465699.26,372559.41,93139.85
+LOW,35,353979.26,283183.41,70795.85
