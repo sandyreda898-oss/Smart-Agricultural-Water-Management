@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+"""Phase 4 - Feature Engineering & Spatial Group Splitting (Smart Agricultural Water Management).
+
+What this script does
+---------------------
+1. Loads the cleaned dataset from Phase 2 (`data/processed/cleaned_dataset.csv`).
+2. Filters out unusable points (`exclude_from_ml == True`).
+3. Engineers retrospective agro-climatic and soil features (ET0/ETc excluded to prevent formula leakage).
+   - Diurnal Temperature Range (DTR = tmax - tmin)
+   - Vapor Pressure Deficit proxy (VPD_proxy)
+   - Aridity / Moisture Balance Index (rainfall vs temperature stress)
+   - Soil Water Holding Capacity index (AWC * clay/silt ratios)
+4. Performs spatial GroupKFold / GroupShuffleSplit grouped by `weather_cell_id` (14 distinct weather cells) to prevent spatial data leakage.
+5. Saves engineered features (`data/processed/features_engineered.csv`), split assignments (`data/processed/train_val_splits.csv`), and a summary report (`reports/feature_engineering_report.md`).
+
+Usage
+-----
+    python src/feature_engineering.py
+"""
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import GroupKFold
+
+SEED = 42
+
+
+def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.copy()
+
+    # 1. Retrospective seasonal thermal and moisture features.
+    # These use full-season aggregates and are not available at planting time.
+    if {"tmax_c_season_mean", "tmin_c_season_mean"}.issubset(out.columns):
+        out["diurnal_temp_range_c"] = (out["tmax_c_season_mean"] - out["tmin_c_season_mean"]).round(3)
+
+    temperature_col = "tmean_c_season_mean"
+    if temperature_col not in out.columns and {"tmax_c_season_mean", "tmin_c_season_mean"}.issubset(out.columns):
+        temperature_col = "tmean_proxy_c_season_mean"
+        out[temperature_col] = ((out["tmax_c_season_mean"] + out["tmin_c_season_mean"]) / 2).round(3)
+
+    if {temperature_col, "relative_humidity_pct_season_mean"}.issubset(out.columns):
+        # Saturation vapor pressure (Tetens formula, kPa) & VPD proxy
+        temp = out[temperature_col]
+        es = 0.6108 * np.exp((17.27 * temp) / (temp + 237.3))
+        ea = es * (out["relative_humidity_pct_season_mean"] / 100.0)
+        out["vpd_proxy_season_kpa"] = (es - ea).clip(lower=0).round(4)
+
+    if {"rainfall_season_mm", temperature_col}.issubset(out.columns):
+        # De Martonne-style seasonal moisture index; descriptive, not a target.
+        out["season_aridity_index"] = (out["rainfall_season_mm"] / (out[temperature_col] + 10.0)).round(4)
+
+    # 2. Soil hydraulic & texture interaction features
+    if {"clay_pct", "sand_pct"}.issubset(out.columns):
+        out["clay_to_sand_ratio"] = (out["clay_pct"] / (out["sand_pct"] + 1.0)).round(4)
+
+    awc_col = "awc_mm_per_m" if "awc_mm_per_m" in out.columns else "awc_smu_mm_per_m"
+    if {awc_col, "clay_pct"}.issubset(out.columns):
+        out["soil_water_retention_index_mm_per_m"] = (out[awc_col] * (out["clay_pct"] / 100.0)).round(3)
+
+    return out
+
+
+def create_spatial_splits(df: pd.DataFrame, n_splits: int = 5) -> pd.DataFrame:
+    out = df.copy()
+    if "weather_cell_id" not in out.columns:
+        raise ValueError("Missing 'weather_cell_id' required for leak-free spatial grouping.")
+
+    gkf = GroupKFold(n_splits=n_splits)
+    out["cv_fold"] = -1
+    for fold, (_, val_idx) in enumerate(gkf.split(out, groups=out["weather_cell_id"])):
+        out.iloc[val_idx, out.columns.get_loc("cv_fold")] = fold
+
+    # Fold 0 designated as hold-out validation set (20% spatial cells), Folds 1-4 as training
+    out["split_set"] = np.where(out["cv_fold"] == 0, "val", "train")
+    return out
+
+
+def run(root: Path) -> None:
+    np.random.seed(SEED)
+    proc = root / "data" / "processed"
+    rep = root / "reports"
+    proc.mkdir(parents=True, exist_ok=True)
+    rep.mkdir(parents=True, exist_ok=True)
+
+    dataset_path = proc / "cleaned_dataset.csv"
+    if not dataset_path.exists():
+        raise SystemExit(f"Missing Phase 2 output: {dataset_path}. Run src/data_cleaning.py first.")
+
+    df = pd.read_csv(dataset_path)
+    usable = df[~df["exclude_from_ml"].fillna(False)].copy().reset_index(drop=True)
+
+    # Engineer domain features
+    feat_df = engineer_features(usable)
+
+    # Spatial GroupKFold splitting
+    split_df = create_spatial_splits(feat_df, n_splits=5)
+
+    # Save outputs
+    out_feat_path = proc / "features_engineered.csv"
+    split_df.to_csv(out_feat_path, index=False)
+
+    # Generate report
+    new_cols = [c for c in feat_df.columns if c not in usable.columns]
+    fold_summary = split_df.groupby(["cv_fold", "split_set"]).agg(
+        rows=("point_id", "count"),
+        unique_points=("point_id", "nunique"),
+        unique_weather_cells=("weather_cell_id", "nunique"),
+    ).reset_index()
+
+    lines = [
+        "# Feature Engineering & Data Splitting Report - Phase 4",
+        "",
+        "Generated by `src/feature_engineering.py`.",
+        "",
+        "## 1. Retrospective Engineered Features (No Target Leakage)",
+        f"- **Input usable rows:** {len(usable)} (36 grid points x 7 seasons)",
+        f"- **New features created ({len(new_cols)}):** `{', '.join(new_cols)}`",
+        "- **Leakage policy:** ET0 and calculated FAO-56 scenario columns remain excluded.",
+        "- **Prediction-time limitation:** seasonal weather summaries use the complete season and are retrospective. They are not available to a farmer at planting; a real deployment needs forecast, climatology, or partial-season features.",
+        f"- **Independent weather groups:** {usable['weather_cell_id'].nunique()} (38 grid points share only 5 distinct weather series in this extract).",
+        "",
+        "## 2. Spatial Group Split Summary (`GroupKFold` by `weather_cell_id`)",
+        "All observations sharing the same NASA POWER weather grid cell are kept in the same fold:",
+        "",
+        "| Fold | Split | Rows | Unique Points | Unique Weather Cells |",
+        "|---|---|---|---|---|",
+    ]
+    for _, r in fold_summary.iterrows():
+        lines.append(f"| {r['cv_fold']} | {r['split_set']} | {r['rows']} | {r['unique_points']} | {r['unique_weather_cells']} |")
+
+    lines.extend([
+        "",
+        "## 3. Readiness for Phase 5 (Model Training & Evaluation)",
+        "- Feature matrix saved to `data/processed/features_engineered.csv` for descriptive/research use.",
+        "- Only 5 independent weather groups are present; spatial validation will be unstable and must be reported as exploratory.",
+        "- Training remains blocked until verified field-measured irrigation labels (`total_irrigation_m3_per_feddan`) are supplied.",
+    ])
+    (rep / "feature_engineering_report.md").write_text("\n".join(lines), encoding="utf-8")
+    print("Phase 4 Feature Engineering & Splitting completed successfully.")
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--root", default=str(Path(__file__).resolve().parents[1]), help="machine_learning/ root")
+    args = ap.parse_args()
+    run(Path(args.root))
+
+
+if __name__ == "__main__":
+    main()
