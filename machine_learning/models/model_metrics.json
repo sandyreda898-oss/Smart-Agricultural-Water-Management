@@ -1,0 +1,12 @@
+{
+  "training_status": "blocked",
+  "target": "total_irrigation_m3_per_feddan",
+  "unit": "m3/feddan",
+  "rows": 0,
+  "independent_groups": 0,
+  "metrics": null,
+  "reasons": [
+    "data/processed/training_dataset.csv is not present.",
+    "The project database has 0 field_season rows, 0 irrigation_event rows, and 0 observed labels."
+  ]
+}
