@@ -1,1 +1,23 @@
+project:
+  name: Smart Agricultural Water Management
+  area: Kafr El Sheikh, Egypt
+  crop: rice
+  random_seed: 42
 
+data:
+  database_env_var: AGRIWATER_DB
+  training_dataset: data/processed/training_dataset.csv
+  target_column: total_irrigation_m3_per_feddan
+  target_unit: m3/feddan
+  accepted_label_status: MEASURED_FIELD
+  group_column: field_group_id
+
+training:
+  enabled_only_with_verified_labels: true
+  min_independent_groups: 6
+  split_strategy: GroupShuffleSplit
+  cross_validation: GroupKFold
+
+model:
+  artifact_directory: models
+  version_when_untrained: not_trained
