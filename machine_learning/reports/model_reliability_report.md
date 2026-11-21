@@ -1,15 +1,14 @@
-# Model Reliability Report
+# Model reliability report
 
-**Status: no deployable model.** Prediction uncertainty and extrapolation checks cannot be calibrated without a valid field-measured training target and independent evaluation groups.
+**Status: no deployable model.** Uncertainty, calibration, and out-of-distribution behavior cannot be assessed without verified labels and independent grouped evaluation data.
 
-Before deployment, the model must:
+Before release, the model must:
 
-- validate required feature names, order, numeric types, and units;
-- flag values outside the training ranges and unsupported varieties/locations;
-- refuse predictions for missing or non-finite required inputs;
-- report the target unit and model version;
-- use an uncertainty method calibrated on independent grouped validation data;
-- warn that current seasonal aggregates are retrospective and unavailable at planting;
-- remain unavailable until the held-out evaluation and reliability review are complete.
+- validate required fields, data types, units, categories, and feature order;
+- flag inputs outside the training ranges and refuse unsupported or technically invalid values;
+- define when it will abstain or warn about extrapolation;
+- provide uncertainty only through a method calibrated on independent groups;
+- document geographical, temporal, soil-measurement, and target limitations;
+- pass a separate reliability review after the reserved test evaluation.
 
-Do not display a confidence percentage without a calibrated statistical interpretation.
+Do not show a confidence percentage without a valid calibrated statistical interpretation. The prediction interface remains disabled while `training_status` is `blocked` or pending reliability review.

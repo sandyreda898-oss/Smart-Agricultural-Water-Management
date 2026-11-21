@@ -1,8 +1,9 @@
-# Hyperparameter Tuning Report
+# Hyperparameter tuning
 
-**Status: BLOCKED - no search was run.**
+**Status: BLOCKED - no model was trained and no model artifact was created.**
 
-- data/processed/training_dataset.csv is not present.
-- The project database has 0 field_season rows, 0 irrigation_event rows, and 0 observed labels.
+- config.yaml does not mark the target as verified field measurement.
+- The target unit and measurement definition have not been confirmed by the data owner.
+- Verified training dataset is not present: data\processed\training_dataset.csv.
 
-The 14,364 scenario values are calculated estimates and are not accepted training labels.
+Calculated FAO-based water scenarios, ETc, recommendations, and published trial summaries are not accepted as measured farm-irrigation labels.

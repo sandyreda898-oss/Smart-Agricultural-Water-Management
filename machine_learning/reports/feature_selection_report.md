@@ -1,17 +1,28 @@
-# Feature Selection Report
+# Feature selection report
 
-**Status: exploratory candidates only; supervised selection is blocked.**
+**Status: descriptive candidate features only. Supervised selection is blocked because no verified field-measured target exists.**
 
-There are no verified field-measured irrigation labels. No target correlation, model-based feature ranking, or supervised feature selection was performed.
+No target correlation, model feature importance, or supervised selector was computed.
 
-## Candidate features produced
-
-| Feature | Unit | Input basis | Availability note |
+| Candidate feature | Unit | Definition | Availability / limitation |
 |---|---|---|---|
-| `diurnal_temp_range_c` | °C | Full-season average maximum minus minimum temperature | Retrospective; unavailable at planting |
-| `vpd_proxy_season_kpa` | kPa | Temperature proxy and full-season mean relative humidity | Retrospective approximation |
-| `season_aridity_index` | Unitless | Full-season rainfall divided by temperature proxy plus 10 | Retrospective |
-| `clay_to_sand_ratio` | Unitless | Mapped clay and sand percentages | Static soil map proxy |
-| `soil_water_retention_index_mm_per_m` | mm/m | Mapped available water capacity multiplied by clay fraction | Static coarse soil estimate |
+| `tmin_c_season_mean` | degC | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `tmax_c_season_mean` | degC | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `diurnal_temp_range_c` | degC | Seasonal mean daily max minus min temperature; retrospective. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `tmean_proxy_c_season_mean` | degC | Proxy: average of seasonal maximum and minimum means. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `relative_humidity_pct_season_mean` | % | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `vpd_proxy_season_kpa` | kPa | Vapor-pressure-deficit proxy based on seasonal mean temperature and humidity. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `wind_speed_m_s_season_mean` | m/s | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `solar_radiation_mj_m2_day_season_mean` | MJ/m2/day | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `pressure_kpa_season_mean` | kPa | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `rainfall_season_mm` | mm/season | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `sand_pct` | % | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `silt_pct` | % | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `clay_pct` | % | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `bulk` | g/cm3 (source metadata; verify) | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `organic_carbon` | % (source metadata; verify) | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `ph_water` | pH | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `latitude` | degrees north | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
+| `longitude` | degrees east | Source table field; review source metadata. | Seasonal aggregates are retrospective; mapped soil is coarse and not field-specific. |
 
-ET0, ETc, scenario volumes, IDs, and other target-derived or calculated-water fields are not candidate predictors. The actual cleaned sample has 5 independent weather series, so feature correlations are descriptive and highly dependent. A future feature set must be redefined around information available at the farmer's prediction time.
+Do not use seasonal weather summaries for a prediction made before that season ends. Do not use ET0, ETc, water scenarios, or any quantity derived from the target as a feature.
