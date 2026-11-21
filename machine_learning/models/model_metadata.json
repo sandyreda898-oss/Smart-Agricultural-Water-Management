@@ -1,8 +1,10 @@
 {
   "model_version": "not_trained",
   "training_status": "blocked",
-  "reason": "No verified field-measured irrigation labels exist in the current database.",
   "target": "total_irrigation_m3_per_feddan",
   "target_unit": "m3/feddan",
+  "reason": "No verified field-measured irrigation training dataset is available.",
+  "training_dataset": null,
+  "features": [],
   "seed": 42
 }

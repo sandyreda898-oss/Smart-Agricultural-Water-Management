@@ -1,13 +1,10 @@
 {
   "training_status": "blocked",
-  "features": [
-    "diurnal_temp_range_c",
-    "vpd_proxy_season_kpa",
-    "season_aridity_index",
-    "clay_to_sand_ratio",
-    "soil_water_retention_index_mm_per_m"
-  ],
+  "features": [],
   "target": "total_irrigation_m3_per_feddan",
   "target_unit": "m3/feddan",
-  "note": "Candidate research features only; this is not a deployable trained feature schema. Seasonal weather features are retrospective."
+  "candidate_features": [],
+  "feature_ranges": {},
+  "categorical_values": {},
+  "note": "Not a deployable prediction schema. Candidate inputs must be reviewed after field target verification."
 }
