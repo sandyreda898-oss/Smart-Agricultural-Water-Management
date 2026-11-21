@@ -1,1 +1,27 @@
+# Source datasets remain in their project folders; do not duplicate or overwrite raw data.
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+data/intermediate/*
+!data/intermediate/.gitkeep
+!data/intermediate/README.md
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/README.md
+!data/processed/cleaned_dataset.csv
+!data/processed/features_engineered.csv
 
+# Trained artifacts are generated only after verified field measurements arrive.
+models/*.joblib
+models/*.pkl
+!models/README.md
+!models/model_metadata.json
+!models/feature_schema.json
+!models/model_metrics.json
+!models/model_version.txt
+
+__pycache__/
+.ipynb_checkpoints/
+*.py[cod]
+.pytest_cache/
+*.log
