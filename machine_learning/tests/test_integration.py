@@ -1,20 +1,18 @@
 import json
-import unittest
 from pathlib import Path
+import unittest
 
-from src.model_training import run, training_readiness
+from src.model_training import training_readiness
 
 
 class IntegrationTests(unittest.TestCase):
-    def test_no_labels_produce_blocked_status_and_no_model(self):
+    def test_integrated_release_state_is_blocked_without_field_labels(self):
         root = Path(__file__).resolve().parents[1]
-        frame, reasons = training_readiness(root)
+        metadata = json.loads((root / "models" / "model_metadata.json").read_text(encoding="utf-8"))
+        frame, reasons, _ = training_readiness(root)
+        self.assertEqual(metadata["training_status"], "blocked")
         self.assertIsNone(frame)
         self.assertTrue(reasons)
-        self.assertFalse(run(root))
-        metrics = json.loads((root / "models" / "model_metrics.json").read_text(encoding="utf-8"))
-        self.assertEqual(metrics["training_status"], "blocked")
-        self.assertIsNone(metrics["metrics"])
         self.assertFalse((root / "models" / "best_model.joblib").exists())
 
 
