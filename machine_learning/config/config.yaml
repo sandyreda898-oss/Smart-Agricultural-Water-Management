@@ -1,23 +1,26 @@
 project:
   name: Smart Agricultural Water Management
-  area: Kafr El Sheikh, Egypt
-  crop: rice
+  version: 0.1.0
   random_seed: 42
 
 data:
-  database_env_var: AGRIWATER_DB
+  # Source exports already present in the repository. Do not copy the 1M-row weather file into this package.
+  repo_exports: AgriWater/AgriWater_Clean_Data/data/table_exports
   training_dataset: data/processed/training_dataset.csv
-  target_column: total_irrigation_m3_per_feddan
+  target: total_irrigation_m3_per_feddan
   target_unit: m3/feddan
-  accepted_label_status: MEASURED_FIELD
+  target_verified: false
+  target_unit_confirmed: false
+  target_status_column: target_status
   group_column: field_group_id
-
-training:
-  enabled_only_with_verified_labels: true
-  min_independent_groups: 6
-  split_strategy: GroupShuffleSplit
-  cross_validation: GroupKFold
+  prediction_unit: one measured field in one rice season
 
 model:
-  artifact_directory: models
-  version_when_untrained: not_trained
+  # Keep empty until the project team approves features available at prediction time.
+  features: []
+  test_fraction: 0.20
+  cv_splits: 5
+  minimum_independent_groups: 10
+  tuning_iterations: 12
+  release_status: blocked
+
