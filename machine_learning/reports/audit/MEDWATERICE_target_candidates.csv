@@ -1,0 +1,41 @@
+﻿year,workbook,site,irrigation_strategy,water_quality,cultivation_method,target_value,target_unit_from_Irrig_header,metadata_unit_from_General,measurement_flag_from_General,measurement_method_from_General,date,days_after_sowing,outflow_value,experiment_group_id
+2021,MEDWATERICE DMP_CS6_EGYPT_HYBRID-DRAINAGE WATER_2021.xlsx,Sakha (header/source workbook),Hybrid,drainage,,10559.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2021|Hybrid|not-specified
+2021,MEDWATERICE DMP_CS6_EGYPT_SPRINKLER_2021.xlsx,Sakha (header/source workbook),Sprinkler,unspecified,,9102.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2021|Sprinkler|not-specified
+2021,MEDWATERICE DMP_CS6_EGYPT_HYBRID-FRESHWATER_2021.xlsx,Sakha (header/source workbook),Hybrid,freshwater,,10559.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2021|Hybrid|not-specified
+2021,MEDWATERICE DMP_CS6_EGYPT_DRIP_2021.xlsx,Sakha (header/source workbook),Drip,unspecified,,7370.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2021|Drip|not-specified
+2021,MEDWATERICE DMP_CS6_EGYPT_WFL-DRAINAGE WATER_2021.xlsx,Sakha (header/source workbook),WFL,drainage,,14585.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2021|WFL|not-specified
+2021,MEDWATERICE DMP_CS6_EGYPT_WFL-FRESHWATER_2021.xlsx,Sakha (header/source workbook),WFL,freshwater,,14585.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2021|WFL|not-specified
+2020,MEDWATERICE DMP_CS6_EGYPT_WFL-DRAINAGE WATER_2020.xlsx,Sakha (header/source workbook),WFL,drainage,,14937.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2020|WFL|not-specified
+2020,MEDWATERICE DMP_CS6_EGYPT_HYBRID-DRAINAGE WATER_2020.xlsx,Sakha (header/source workbook),Hybrid,drainage,,11216.94,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2020|Hybrid|not-specified
+2020,MEDWATERICE DMP_CS6_EGYPT_WFL-FRESHWATER_2020.xlsx,Sakha (header/source workbook),WFL,freshwater,,14937.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2020|WFL|not-specified
+2020,MEDWATERICE DMP_CS6_EGYPT_DRIP_2020.xlsx,Sakha (header/source workbook),Drip,unspecified,,7894.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2020|Drip|not-specified
+2020,MEDWATERICE DMP_CS6_EGYPT_HYBRID-FRESHWATER_2020.xlsx,Sakha (header/source workbook),Hybrid,freshwater,,11216.94,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2020|Hybrid|not-specified
+2020,MEDWATERICE DMP_CS6_EGYPT_SPRINKLER_2020.xlsx,Sakha (header/source workbook),Sprinkler,unspecified,,9487.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2020|Sprinkler|not-specified
+2019,MEDWATERICE DMP_CS6_EGYPT_WFL-FRESHWATER_2019.xlsx,Sakha (header/source workbook),WFL,freshwater,Drill-seeds,10234.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2019|WFL|Drill-seeds
+2019,MEDWATERICE DMP_CS6_EGYPT_WFL-FRESHWATER_2019.xlsx,Sakha (header/source workbook),WFL,freshwater,Broadcast,10234.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2019|WFL|Broadcast
+2019,MEDWATERICE DMP_CS6_EGYPT_WFL-FRESHWATER_2019.xlsx,Sakha (header/source workbook),WFL,freshwater,Raised-bed,10115.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2019|WFL|Raised-bed
+2019,MEDWATERICE DMP_CS6_EGYPT_WFL-FRESHWATER_2019.xlsx,Sakha (header/source workbook),WFL,freshwater,SRI,11305.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2019|WFL|SRI
+2019,MEDWATERICE DMP_CS6_EGYPT_WFL-DRAINAGE WATER_2019.xlsx,Sakha (header/source workbook),WFL,drainage,Drill-seeds,10234.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2019|WFL|Drill-seeds
+2019,MEDWATERICE DMP_CS6_EGYPT_WFL-DRAINAGE WATER_2019.xlsx,Sakha (header/source workbook),WFL,drainage,Broadcast,10234.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2019|WFL|Broadcast
+2019,MEDWATERICE DMP_CS6_EGYPT_WFL-DRAINAGE WATER_2019.xlsx,Sakha (header/source workbook),WFL,drainage,Raised-bed,10115.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2019|WFL|Raised-bed
+2019,MEDWATERICE DMP_CS6_EGYPT_WFL-DRAINAGE WATER_2019.xlsx,Sakha (header/source workbook),WFL,drainage,SRI,11305.0,"Irrig inflow (m3/ha)
+Sakha",m3/h,     M,Mechanic and Ultrasonic water flowmeters at the plot and field scales,,,,2019|WFL|SRI
