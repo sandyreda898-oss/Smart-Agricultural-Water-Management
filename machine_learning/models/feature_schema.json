@@ -1,10 +1,181 @@
 {
-  "training_status": "blocked",
-  "features": [],
-  "target": "total_irrigation_m3_per_feddan",
-  "target_unit": "m3/feddan",
-  "candidate_features": [],
-  "feature_ranges": {},
-  "categorical_values": {},
-  "note": "Not a deployable prediction schema. Candidate inputs must be reviewed after field target verification."
+    "schema_version": "1.0",
+    "target": "estimated_etc_minus_rain_mm",
+    "input_features": [
+        {
+            "name": "season_year",
+            "dtype": "int64",
+            "role": "input"
+        },
+        {
+            "name": "tmin_c_season_mean",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "tmax_c_season_mean",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "relative_humidity_pct_season_mean",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "wind_speed_m_s_season_mean",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "solar_radiation_mj_m2_day_season_mean",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "pressure_kpa_season_mean",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "latitude",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "longitude",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "district_id",
+            "dtype": "int64",
+            "role": "input"
+        },
+        {
+            "name": "smu_id",
+            "dtype": "int64",
+            "role": "input"
+        },
+        {
+            "name": "sand_pct",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "silt_pct",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "clay_pct",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "bulk",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "organic_carbon",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "ph_water",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "texture_usda",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "texture_soter",
+            "dtype": "object",
+            "role": "input"
+        },
+        {
+            "name": "diurnal_temp_range_c",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "tmean_proxy_c_season_mean",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "vpd_proxy_season_kpa",
+            "dtype": "float64",
+            "role": "input"
+        },
+        {
+            "name": "clay_to_sand_ratio",
+            "dtype": "float64",
+            "role": "input"
+        }
+    ],
+    "input_feature_count": 23,
+    "numeric_features": [
+        "season_year",
+        "tmin_c_season_mean",
+        "tmax_c_season_mean",
+        "relative_humidity_pct_season_mean",
+        "wind_speed_m_s_season_mean",
+        "solar_radiation_mj_m2_day_season_mean",
+        "pressure_kpa_season_mean",
+        "latitude",
+        "longitude",
+        "district_id",
+        "smu_id",
+        "sand_pct",
+        "silt_pct",
+        "clay_pct",
+        "bulk",
+        "organic_carbon",
+        "ph_water",
+        "texture_usda",
+        "diurnal_temp_range_c",
+        "tmean_proxy_c_season_mean",
+        "vpd_proxy_season_kpa",
+        "clay_to_sand_ratio"
+    ],
+    "categorical_features": [
+        "texture_soter"
+    ],
+    "transformed_features": [
+        "num__season_year",
+        "num__tmin_c_season_mean",
+        "num__tmax_c_season_mean",
+        "num__relative_humidity_pct_season_mean",
+        "num__wind_speed_m_s_season_mean",
+        "num__solar_radiation_mj_m2_day_season_mean",
+        "num__pressure_kpa_season_mean",
+        "num__latitude",
+        "num__longitude",
+        "num__district_id",
+        "num__smu_id",
+        "num__sand_pct",
+        "num__silt_pct",
+        "num__clay_pct",
+        "num__bulk",
+        "num__organic_carbon",
+        "num__ph_water",
+        "num__texture_usda",
+        "num__diurnal_temp_range_c",
+        "num__tmean_proxy_c_season_mean",
+        "num__vpd_proxy_season_kpa",
+        "num__clay_to_sand_ratio",
+        "cat__texture_soter_-",
+        "cat__texture_soter_F",
+        "cat__texture_soter_M"
+    ],
+    "transformed_feature_count": 25,
+    "preprocessing_file": "preprocessing_pipeline.joblib",
+    "unknown_categories": "ignored_by_one_hot_encoder",
+    "missing_numeric_values": "median_imputation",
+    "missing_categorical_values": "most_frequent_imputation"
 }

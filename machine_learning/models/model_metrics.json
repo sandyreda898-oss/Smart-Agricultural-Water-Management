@@ -1,13 +1,10 @@
 {
-  "training_status": "blocked",
-  "target": "total_irrigation_m3_per_feddan",
-  "unit": "m3/feddan",
-  "rows": 0,
-  "independent_groups": 0,
-  "metrics": null,
-  "reasons": [
-    "config.yaml does not mark the target as verified field measurement.",
-    "The target unit and measurement definition have not been confirmed by the data owner.",
-    "Verified training dataset is not present: data\\processed\\training_dataset.csv."
-  ]
+    "target": "estimated_etc_minus_rain_mm",
+    "evaluation_method": "Grouped spatial holdout",
+    "test_rows": 56,
+    "MAE": 0.123898,
+    "RMSE": 0.314561,
+    "R2": 0.999987,
+    "metric_unit": "mm",
+    "interpretation_warning": "The target is an estimated ETc-minus-rainfall indicator, not field-measured irrigation. High performance does not establish real-world irrigation prediction accuracy."
 }
