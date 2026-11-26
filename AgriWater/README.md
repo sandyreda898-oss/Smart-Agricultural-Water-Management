@@ -104,3 +104,10 @@ Run `python import_delta_rotation_trial.py` to load 20 published means from a tw
 - STAC pagination now tracks URL + HTTP method + POST body, because a valid STAC service can reuse the same endpoint URL while changing its page-token body.
 - SoilGrids HTTP 504 errors are treated as an upstream gateway timeout: the collector records the remaining points as not requested and proceeds without repeatedly hitting an unavailable service. This does **not** make SoilGrids available or create synthetic soil data. Retry later or use official SoilGrids raster downloads when the REST API is unavailable.
 - This project has not been live-tested against external services as part of this patch. Run it and inspect `reports/latest_report.json`; successful syntax checks do not guarantee that remote APIs are available.
+
+## Project overview and ERD
+
+- Read the full Arabic project summary: [`reports/AgriWater_Project_Summary_Arabic.md`](reports/AgriWater_Project_Summary_Arabic.md).
+- Open the rendered relationship diagrams and their explanation: [`reports/AgriWater_ERD_Guide_Arabic.md`](reports/AgriWater_ERD_Guide_Arabic.md).
+- The original relational database ERDs are under `AgriWater_Clean_Data/schema/erd_core.mmd` and `erd_all_tables.mmd`; the complete analytical Star Schema diagram is `AgriWater_Clean_Data/schema/star_schema_overview.mmd`.
+- The data warehouse grain, table definitions, and manual review list are documented in `AgriWater_Clean_Data/schema/star_fact_grain.csv`, `AgriWater_Clean_Data/schema/star_schema.sql`, and `AgriWater_Clean_Data/metadata/manual_review_queue.csv`.

@@ -1,59 +1,219 @@
 erDiagram
-  DIM_DATE ||--o{ FACT_WEATHER_DAILY : day
-  DIM_DATE ||--o{ FACT_DAILY_CROP_WATER : day
-  DIM_LOCATION ||--o{ FACT_WEATHER_DAILY : grid_point
-  DIM_LOCATION ||--o{ FACT_SOIL_MEASUREMENT : mapped_point
-  DIM_LOCATION ||--o{ FACT_DAILY_CROP_WATER : grid_point
-  DIM_LOCATION ||--o{ FACT_SEASONAL_WATER_SCENARIO : grid_point
-  DIM_LOCATION ||--o{ FACT_BASELINE_WATER_SCENARIO : grid_point
-  DIM_LOCATION ||--o{ FACT_POINT_SEASON_SUMMARY : grid_point
-  DIM_SEASON ||--o{ FACT_SEASONAL_WATER_SCENARIO : season
-  DIM_SEASON ||--o{ FACT_BASELINE_WATER_SCENARIO : season
-  DIM_SEASON ||--o{ FACT_POINT_SEASON_SUMMARY : season
-  DIM_SEASON ||--o{ FACT_REGIONAL_CROP_STAT : season
-  DIM_SEASON ||--o{ FACT_TRIAL_RESULT : trial_year
-  DIM_SEASON ||--o{ FACT_TRIAL_OBSERVATION : trial_year
-  DIM_SEASON ||--o{ FACT_ENVIRONMENTAL_MEASUREMENT : sample_year
-  DIM_CROP ||--o{ FACT_DAILY_CROP_WATER : crop
-  DIM_CROP ||--o{ FACT_TRIAL_OBSERVATION : preceding_crop
-  DIM_CROP ||--o{ FACT_REGIONAL_CROP_STAT : crop
-  DIM_CROP ||--o{ FACT_AGRONOMY_GUIDANCE : guidance
-  DIM_CROP ||--o{ FACT_PLANT_PROTECTION_GUIDANCE : crop
-  DIM_VARIETY ||--o{ FACT_SEASONAL_WATER_SCENARIO : variety
-  DIM_VARIETY ||--o{ FACT_TRIAL_RESULT : variety
-  DIM_VARIETY ||--o{ FACT_CROP_CALENDAR : variety
-  DIM_VARIETY ||--o{ FACT_VARIETY_FIELD_GUIDE : guide
-  DIM_VARIETY ||--o{ FACT_AGRONOMY_GUIDANCE : variety
-  DIM_STUDY ||--o{ FACT_TRIAL_RESULT : publication
-  DIM_STUDY ||--o{ FACT_TRIAL_OBSERVATION : publication
-  DIM_STUDY ||--o{ FACT_ENVIRONMENTAL_MEASUREMENT : publication
-  DIM_STUDY ||--o{ FACT_LITERATURE_EVIDENCE : publication
-  DIM_METRIC ||--o{ FACT_WEATHER_DAILY : measure
-  DIM_METRIC ||--o{ FACT_SOIL_MEASUREMENT : property
-  DIM_METRIC ||--o{ FACT_TRIAL_RESULT : outcome
-  DIM_METRIC ||--o{ FACT_TRIAL_OBSERVATION : measure
-  DIM_METRIC ||--o{ FACT_ENVIRONMENTAL_MEASUREMENT : measure
-  DIM_TREATMENT ||--o{ FACT_TRIAL_RESULT : treatment
-  DIM_SAMPLE_CONTEXT ||--o{ FACT_ENVIRONMENTAL_MEASUREMENT : sample
-  DIM_WATER_MODEL ||--o{ FACT_SEASONAL_WATER_SCENARIO : model_version
-  DIM_ADMIN_AREA ||--o{ DIM_LOCATION : contains
-  DIM_ADMIN_AREA ||--o{ FACT_REGIONAL_CROP_STAT : reported_area
-  DIM_ADMIN_AREA ||--o{ FACT_AGRONOMY_GUIDANCE : geography
-  DIM_SOURCE ||--o{ FACT_WEATHER_DAILY : source
-  DIM_SOURCE ||--o{ FACT_REGIONAL_CROP_STAT : source
-  DIM_SOURCE ||--o{ FACT_AGRONOMY_GUIDANCE : source
-  DIM_SOURCE ||--o{ FACT_PLANT_PROTECTION_GUIDANCE : source
-  DIM_SOURCE ||--o{ FACT_MACHINERY_INVENTORY : source
-  DIM_SOURCE ||--o{ FACT_SATELLITE_SCENE : source
-  DIM_PUMP_SERIES ||--o{ FACT_PUMP_CATALOG : catalogue
-  DIM_IRRIGATION_METHOD ||--o{ FACT_FIELD_SEASON : method
-  DIM_PUMP ||--o{ FACT_FIELD_SEASON : installed_pump
-  DIM_FIELD ||--o{ FACT_FIELD_SEASON : future_parcel
-  DIM_SEASON ||--o{ FACT_FIELD_SEASON : season
-  DIM_VARIETY ||--o{ FACT_FIELD_SEASON : planted_variety
-  DIM_DATE ||--o{ FACT_FIELD_SEASON : input_dates
-  FACT_FIELD_SEASON ||--o{ FACT_IRRIGATION_EVENT : measured_irrigation
-  FACT_FIELD_SEASON ||--o{ FACT_FIELD_OPERATION : field_operation
-  DIM_FIELD ||--o{ FACT_CROP_HISTORY : previous_crop
-  DIM_CROP ||--o{ FACT_CROP_HISTORY : crop
-  DIM_SEASON ||--o{ FACT_CROP_HISTORY : history_year
+  DIM_DATE {
+    INTEGER date_key PK
+  }
+  DIM_ADMIN_AREA {
+    INTEGER admin_area_key PK
+  }
+  DIM_LOCATION {
+    INTEGER location_key PK
+  }
+  DIM_SEASON {
+    INTEGER season_key PK
+  }
+  DIM_CROP {
+    INTEGER crop_key PK
+  }
+  DIM_VARIETY {
+    INTEGER variety_key PK
+  }
+  DIM_STUDY {
+    INTEGER study_key PK
+  }
+  DIM_SOURCE {
+    INTEGER source_key PK
+  }
+  DIM_METRIC {
+    INTEGER metric_key PK
+  }
+  DIM_TREATMENT {
+    INTEGER treatment_key PK
+  }
+  DIM_SAMPLE_CONTEXT {
+    INTEGER sample_context_key PK
+  }
+  DIM_WATER_MODEL {
+    INTEGER water_model_key PK
+  }
+  DIM_SOIL_UNIT {
+    INTEGER soil_unit_key PK
+  }
+  DIM_PUMP_SERIES {
+    INTEGER pump_series_key PK
+  }
+  DIM_IRRIGATION_METHOD {
+    INTEGER irrigation_method_key PK
+  }
+  DIM_FIELD {
+    INTEGER field_key PK
+  }
+  DIM_PUMP {
+    INTEGER pump_key PK
+  }
+  FACT_WEATHER_DAILY {
+    INTEGER weather_fact_key PK
+  }
+  FACT_SOIL_MEASUREMENT {
+    INTEGER soil_fact_key PK
+  }
+  FACT_DAILY_CROP_WATER {
+    INTEGER crop_water_fact_key PK
+  }
+  FACT_SEASONAL_WATER_SCENARIO {
+    INTEGER water_scenario_fact_key PK
+  }
+  FACT_REGIONAL_CROP_STAT {
+    INTEGER regional_stat_fact_key PK
+  }
+  FACT_TRIAL_RESULT {
+    INTEGER trial_result_fact_key PK
+  }
+  FACT_TRIAL_OBSERVATION {
+    INTEGER trial_observation_fact_key PK
+  }
+  FACT_ENVIRONMENTAL_MEASUREMENT {
+    INTEGER environmental_fact_key PK
+  }
+  FACT_LITERATURE_EVIDENCE {
+    INTEGER evidence_fact_key PK
+  }
+  FACT_CROP_CALENDAR {
+    INTEGER calendar_fact_key PK
+  }
+  FACT_VARIETY_FIELD_GUIDE {
+    INTEGER variety_guide_fact_key PK
+  }
+  FACT_CROP_WATER_PARAMETER {
+    INTEGER crop_water_parameter_fact_key PK
+  }
+  FACT_AGRONOMY_GUIDANCE {
+    INTEGER guidance_fact_key PK
+  }
+  FACT_PLANT_PROTECTION_GUIDANCE {
+    INTEGER protection_fact_key PK
+  }
+  FACT_PUMP_CATALOG {
+    INTEGER pump_catalog_fact_key PK
+  }
+  FACT_SATELLITE_SCENE {
+    INTEGER scene_fact_key PK
+  }
+  FACT_MACHINERY_INVENTORY {
+    INTEGER machinery_fact_key PK
+  }
+  FACT_POINT_SEASON_SUMMARY {
+    INTEGER point_season_fact_key PK
+  }
+  FACT_BASELINE_WATER_SCENARIO {
+    INTEGER baseline_scenario_fact_key PK
+  }
+  FACT_FIELD_SEASON {
+    INTEGER field_season_fact_key PK
+  }
+  FACT_IRRIGATION_EVENT {
+    INTEGER irrigation_event_fact_key PK
+  }
+  FACT_FIELD_OPERATION {
+    INTEGER field_operation_fact_key PK
+  }
+  FACT_CROP_HISTORY {
+    INTEGER crop_history_fact_key PK
+  }
+  FACT_CANAL_SCHEDULE {
+    INTEGER canal_schedule_fact_key PK
+  }
+  FACT_GROUNDWATER_LEVEL {
+    INTEGER groundwater_fact_key PK
+  }
+  FACT_SOIL_SALINITY {
+    INTEGER soil_salinity_fact_key PK
+  }
+  FACT_VEGETATION_INDEX {
+    INTEGER vegetation_index_fact_key PK
+  }
+  DIM_ADMIN_AREA ||--o{ DIM_ADMIN_AREA : parent_admin_area_key
+  DIM_ADMIN_AREA ||--o{ DIM_LOCATION : admin_area_key
+  DIM_LOCATION ||--o{ DIM_FIELD : location_key
+  DIM_ADMIN_AREA ||--o{ DIM_FIELD : admin_area_key
+  DIM_DATE ||--o{ FACT_WEATHER_DAILY : date_key
+  DIM_LOCATION ||--o{ FACT_WEATHER_DAILY : location_key
+  DIM_SOURCE ||--o{ FACT_WEATHER_DAILY : source_key
+  DIM_METRIC ||--o{ FACT_WEATHER_DAILY : metric_key
+  DIM_LOCATION ||--o{ FACT_SOIL_MEASUREMENT : location_key
+  DIM_SOIL_UNIT ||--o{ FACT_SOIL_MEASUREMENT : soil_unit_key
+  DIM_METRIC ||--o{ FACT_SOIL_MEASUREMENT : metric_key
+  DIM_DATE ||--o{ FACT_DAILY_CROP_WATER : date_key
+  DIM_LOCATION ||--o{ FACT_DAILY_CROP_WATER : location_key
+  DIM_CROP ||--o{ FACT_DAILY_CROP_WATER : crop_key
+  DIM_SEASON ||--o{ FACT_SEASONAL_WATER_SCENARIO : season_key
+  DIM_LOCATION ||--o{ FACT_SEASONAL_WATER_SCENARIO : location_key
+  DIM_VARIETY ||--o{ FACT_SEASONAL_WATER_SCENARIO : variety_key
+  DIM_WATER_MODEL ||--o{ FACT_SEASONAL_WATER_SCENARIO : water_model_key
+  DIM_SEASON ||--o{ FACT_REGIONAL_CROP_STAT : season_key
+  DIM_ADMIN_AREA ||--o{ FACT_REGIONAL_CROP_STAT : admin_area_key
+  DIM_CROP ||--o{ FACT_REGIONAL_CROP_STAT : crop_key
+  DIM_SOURCE ||--o{ FACT_REGIONAL_CROP_STAT : source_key
+  DIM_STUDY ||--o{ FACT_TRIAL_RESULT : study_key
+  DIM_SEASON ||--o{ FACT_TRIAL_RESULT : season_key
+  DIM_VARIETY ||--o{ FACT_TRIAL_RESULT : variety_key
+  DIM_TREATMENT ||--o{ FACT_TRIAL_RESULT : treatment_key
+  DIM_METRIC ||--o{ FACT_TRIAL_RESULT : metric_key
+  DIM_STUDY ||--o{ FACT_TRIAL_OBSERVATION : study_key
+  DIM_SEASON ||--o{ FACT_TRIAL_OBSERVATION : season_key
+  DIM_CROP ||--o{ FACT_TRIAL_OBSERVATION : crop_key
+  DIM_METRIC ||--o{ FACT_TRIAL_OBSERVATION : metric_key
+  DIM_STUDY ||--o{ FACT_ENVIRONMENTAL_MEASUREMENT : study_key
+  DIM_SEASON ||--o{ FACT_ENVIRONMENTAL_MEASUREMENT : season_key
+  DIM_SAMPLE_CONTEXT ||--o{ FACT_ENVIRONMENTAL_MEASUREMENT : sample_context_key
+  DIM_METRIC ||--o{ FACT_ENVIRONMENTAL_MEASUREMENT : metric_key
+  DIM_STUDY ||--o{ FACT_LITERATURE_EVIDENCE : study_key
+  DIM_CROP ||--o{ FACT_LITERATURE_EVIDENCE : crop_key
+  DIM_SEASON ||--o{ FACT_CROP_CALENDAR : season_key
+  DIM_VARIETY ||--o{ FACT_CROP_CALENDAR : variety_key
+  DIM_VARIETY ||--o{ FACT_VARIETY_FIELD_GUIDE : variety_key
+  DIM_CROP ||--o{ FACT_CROP_WATER_PARAMETER : crop_key
+  DIM_VARIETY ||--o{ FACT_CROP_WATER_PARAMETER : variety_key
+  DIM_SOURCE ||--o{ FACT_CROP_WATER_PARAMETER : source_key
+  DIM_CROP ||--o{ FACT_AGRONOMY_GUIDANCE : crop_key
+  DIM_VARIETY ||--o{ FACT_AGRONOMY_GUIDANCE : variety_key
+  DIM_ADMIN_AREA ||--o{ FACT_AGRONOMY_GUIDANCE : admin_area_key
+  DIM_SOURCE ||--o{ FACT_AGRONOMY_GUIDANCE : source_key
+  DIM_CROP ||--o{ FACT_PLANT_PROTECTION_GUIDANCE : crop_key
+  DIM_SOURCE ||--o{ FACT_PLANT_PROTECTION_GUIDANCE : source_key
+  DIM_PUMP_SERIES ||--o{ FACT_PUMP_CATALOG : pump_series_key
+  DIM_DATE ||--o{ FACT_SATELLITE_SCENE : acquired_date_key
+  DIM_SOURCE ||--o{ FACT_SATELLITE_SCENE : source_key
+  DIM_SOURCE ||--o{ FACT_MACHINERY_INVENTORY : source_key
+  DIM_SEASON ||--o{ FACT_POINT_SEASON_SUMMARY : season_key
+  DIM_LOCATION ||--o{ FACT_POINT_SEASON_SUMMARY : location_key
+  DIM_SEASON ||--o{ FACT_BASELINE_WATER_SCENARIO : season_key
+  DIM_LOCATION ||--o{ FACT_BASELINE_WATER_SCENARIO : location_key
+  DIM_FIELD ||--o{ FACT_FIELD_SEASON : field_key
+  DIM_SEASON ||--o{ FACT_FIELD_SEASON : season_key
+  DIM_VARIETY ||--o{ FACT_FIELD_SEASON : variety_key
+  DIM_IRRIGATION_METHOD ||--o{ FACT_FIELD_SEASON : irrigation_method_key
+  DIM_PUMP ||--o{ FACT_FIELD_SEASON : pump_key
+  DIM_DATE ||--o{ FACT_FIELD_SEASON : sowing_date_key
+  DIM_DATE ||--o{ FACT_FIELD_SEASON : transplanting_date_key
+  DIM_DATE ||--o{ FACT_FIELD_SEASON : harvest_date_key
+  FACT_FIELD_SEASON ||--o{ FACT_IRRIGATION_EVENT : field_season_fact_key
+  DIM_DATE ||--o{ FACT_IRRIGATION_EVENT : event_date_key
+  FACT_FIELD_SEASON ||--o{ FACT_FIELD_OPERATION : field_season_fact_key
+  DIM_DATE ||--o{ FACT_FIELD_OPERATION : operation_date_key
+  DIM_FIELD ||--o{ FACT_CROP_HISTORY : field_key
+  DIM_SEASON ||--o{ FACT_CROP_HISTORY : season_key
+  DIM_CROP ||--o{ FACT_CROP_HISTORY : crop_key
+  DIM_ADMIN_AREA ||--o{ FACT_CANAL_SCHEDULE : admin_area_key
+  DIM_SEASON ||--o{ FACT_CANAL_SCHEDULE : season_key
+  DIM_DATE ||--o{ FACT_CANAL_SCHEDULE : start_date_key
+  DIM_DATE ||--o{ FACT_CANAL_SCHEDULE : end_date_key
+  DIM_SOURCE ||--o{ FACT_CANAL_SCHEDULE : source_key
+  DIM_LOCATION ||--o{ FACT_GROUNDWATER_LEVEL : location_key
+  DIM_ADMIN_AREA ||--o{ FACT_GROUNDWATER_LEVEL : admin_area_key
+  DIM_DATE ||--o{ FACT_GROUNDWATER_LEVEL : date_key
+  DIM_SOURCE ||--o{ FACT_GROUNDWATER_LEVEL : source_key
+  DIM_LOCATION ||--o{ FACT_SOIL_SALINITY : location_key
+  DIM_DATE ||--o{ FACT_SOIL_SALINITY : date_key
+  DIM_SOURCE ||--o{ FACT_SOIL_SALINITY : source_key
+  DIM_LOCATION ||--o{ FACT_VEGETATION_INDEX : location_key
+  FACT_SATELLITE_SCENE ||--o{ FACT_VEGETATION_INDEX : scene_fact_key
